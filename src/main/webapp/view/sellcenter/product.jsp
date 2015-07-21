@@ -47,9 +47,9 @@
                      <div class='formCondition'>
 	                      <table width="750px">
 	                         <tr>
-	                            <td class='tag'>HSCODE:</td>
+	                            <td class='tag'>HS CODE:</td>
 	                            <td><input class='inputNomarl' type="text" id="hs_code"/></td>
-	                            <td class='tag'>国家：</td>
+	                            <td class='tag'>Country：</td>
                                 <td> <input type="text" id='hs_country' ></td>
 	                            <td class='tag'>进出口类型：</td>
 	                            <td><input type="text" id='hs_io'></td>
@@ -61,8 +61,8 @@
 	                              </td>
 	                              <td></td>
 	                              <td></td>
-	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('hs')">确定</span>
-	                              <span class='buttonSpan' onclick="cancle('hs')">清空</span></td>
+	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('hs')">OK</span>
+	                              <span class='buttonSpan' onclick="cancle('hs')">Clear</span></td>
 	                         </tr>
 	                      </table>
                       </div>
@@ -76,7 +76,7 @@
                         <tr>
 	                            <td class='tag'>产品关键词:</td>
 	                            <td><input class='inputNomarl' type="text" id="de_desc"/></td>
-	                            <td class='tag'>国家：</td>
+	                            <td class='tag'>Country：</td>
                                 <td> <input type="text" id='de_country' ></td>
 	                            <td class='tag'>进出口类型：</td>
 	                            <td><input type="text" id='de_io'></td>
@@ -88,8 +88,8 @@
 	                              </td>
 	                              <td></td>
 	                              <td></td>
-	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('de')">确定</span>
-	                              <span class='buttonSpan' onclick="cancle('de')">清空</span></td>
+	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('de')">OK</span>
+	                              <span class='buttonSpan' onclick="cancle('de')">Clear</span></td>
 	                         </tr>
                         </table>
                      </div>
@@ -102,7 +102,7 @@
                         <table>
                         
                          <tr>
-	                            <td class='tag'>国家：</td>
+	                            <td class='tag'>Country：</td>
                                 <td> <input type="text" id='cy_country' ></td>
                                 <td class='tag'></td>
 	                            <td class='tag'>进出口类型：</td>
@@ -116,8 +116,8 @@
 	                              <td></td>
 	                              <td></td>
 	                              <td style='padding-left: 30px;'>
-		                              <span class='buttonSpan' onclick="addCar('cy')">确定</span>
-		                              <span class='buttonSpan' onclick="cancle('cy')">清空</span>
+		                              <span class='buttonSpan' onclick="addCar('cy')">OK</span>
+		                              <span class='buttonSpan' onclick="cancle('cy')">Clear</span>
 	                              </td>
 	                         </tr>
                         </table>
@@ -134,8 +134,8 @@
                            </tr>
                            <tr>
                              <td style="padding-left: 400px;">
-                                <span class='buttonSpan' onclick="addCar('nm')">确定</span>
-                                <span  class='buttonSpan' onclick="cancle('nm')">清空</span>
+                                <span class='buttonSpan' onclick="addCar('nm')">OK</span>
+                                <span  class='buttonSpan' onclick="cancle('nm')">Clear</span>
                              </td>
                            </tr>
                         </table>
@@ -147,7 +147,7 @@
           <div id='car'  class='car'>
                <div id="tool_bar">
                  	<a	href="javascript:void(0)"	class="easyui-linkbutton"	plain="true" onmouseover="this.style.background='#DA4653';" onmouseout="this.style.background='#EC5565';" onclick="deletePros()">
-							<font style="font-size:16px;color: #ffffff;font-family: Microsoft YaHei;">删除</font>
+							<font style="font-size:16px;color: #ffffff;font-family: Microsoft YaHei;">Delete</font>
 						</a>
                </div>
                <!-- 海关编码或者国家或者产品描述 -->
@@ -156,7 +156,7 @@
 		              </table>
                </div>
                <div class='formButtom' >
-                 <span class='buttonSpan' onclick='buyPro("car_table")'>立即购买</span>
+                 <span class='buttonSpan' onclick='buyPro("car_table")'>Buy now</span>
                </div>
           </div>
        </div>

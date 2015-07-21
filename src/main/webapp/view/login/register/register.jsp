@@ -57,7 +57,7 @@ $(document).ready(function(){
 	   </div>
 	   <!-- body -->
 	   <div class="sub">
-	    <div class='titleLeft'>会员注册中心</div>
+	    <div class='titleLeft'>Member registration center</div>
 	    <div class='titleRight'>
 	    	<div class='imgDiv'><a href="/gbdbas/view/login/infobase/login.jsp" target="_self"><img src="/gbdbas/static/img/login/login.png"/></a></div>
 	    	<div class='textDiv'>我已注册，现在就</div>
@@ -67,7 +67,7 @@ $(document).ready(function(){
 	         <div class='formDiv'>
 	         	 <ul>
 	         	  <li>
-	         	    <div class='a_text'>用户名:</div>
+	         	    <div class='a_text'>User name:</div>
 	         	    <div class="a_input">
 						<div>
 						   <input id="loginName" name="loginName" class="inputbox" /> 
@@ -75,7 +75,7 @@ $(document).ready(function(){
 	         	    </div>
 	         	  </li>
 	         	  <li>
-		         	  <div class='a_text'>密码:</div>
+		         	  <div class='a_text'>Password:</div>
 		         	    <div class="a_input">
 							<div>
 								<input name="loginPassword" id="loginPassword" type="password" class="inputbox" />
@@ -83,7 +83,7 @@ $(document).ready(function(){
 		         	    </div>
 	         	  </li>
 	         	  <li>
-	         	   <div class='a_text'>邮箱:</div>
+	         	   <div class='a_text'>Email:</div>
 	         	    <div class="a_input">
 						<div>
 							<input name="email" id="email" type="text" class="inputbox" />
