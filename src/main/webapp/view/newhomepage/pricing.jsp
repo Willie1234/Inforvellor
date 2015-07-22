@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <%
 String path = request.getContextPath();
@@ -28,20 +29,20 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- attach CSS styles -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet" />
+  <link href="${root }/static/css/newhomepage/bootstrap.min.css" rel="stylesheet">
+  <link href="${root }/static/css/newhomepage/style.css" rel="stylesheet" />
 
   <!-- Custom CSS -->
 
-  <link href="../css/scrolling-nav.css" rel="stylesheet">
-  <link href="../css/custom.css" rel="stylesheet">
-  <link href="../css/pricing.css" rel="stylesheet">
-  <link href="../carousel.css" rel="stylвesheet">
+  <link href="${root }/static/css/newhomepage/scrolling-nav.css" rel="stylesheet">
+  <link href="${root }/static/css/newhomepage/custom.css" rel="stylesheet">
+  <link href="${root }/static/css/newhomepage/pricing.css" rel="stylesheet">
+
   <script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
- <script type="text/javascript" src="${pageContext.request.contextPath }/webInfo/newregister.js"></script>
+ <script type="text/javascript" src="${root }/static/js/newhomepage/newregister.js"></script>
   <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
-  <link rel="stylesheet" href="./css/languages.min.css"/>
-  <script src="/js/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="${root }/static/css/newhomepage/languages.min.css"/>
+  <script src="${root }/static/js/newhomepage/jquery-2.1.3.min.js"></script>
    <style>
       h1            { padding-top: 50px; }
       .mynavigation { padding-top: 70px; }
@@ -376,7 +377,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 <div class="db-wrapper">
                     <div class="db-pricing-four">  
                     <div class="a" class="col-lg-3 text-left">
-                    <img class="img-square" src="/img/sale2.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
+                    <img class="img-square" src="${root }/static/img/newhomepage/sale2.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
                     </div>    
                                   
                         <ul>
@@ -406,7 +407,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 <div class="db-wrapper">
                     <div class="db-pricing-four">
                     <div class="a" class="col-lg-3 text-left">
-                    <img class="img-square" src="/img/sale3.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
+                    <img class="img-square" src="${root }/static/img/newhomepage/sale3.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
                     </div>
                     
                         <ul>
@@ -436,7 +437,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 <div class="db-wrapper">
                     <div class="db-pricing-four">
                     <div class="col-lg-3 text-left">
-                    <img class="img-square" src="/img/sale4.jpg" alt="Generic placeholder image" style="position:absolute; width: 101px; height: 101px; top:-40px; left:210px;">
+                    <img class="img-square" src="${root }/static/img/newhomepage/sale4.jpg" alt="Generic placeholder image" style="position:absolute; width: 101px; height: 101px; top:-40px; left:210px;">
                     </div>
                         <ul>
                             <li class="price">
@@ -735,12 +736,12 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   </div>
 </footer>
  <!-- attach JavaScripts -->
-  <script src="js/main.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/docs.min.js"></script>
+    <script src="${root }/static/js/newhomepage/bootstrap.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   
     <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+    <script src="${root }/static/js/newhomepage/jquery.easing.min.js"></script>
+    <script src="${root }/static/js/newhomepage/scrolling-nav.js"></script>
