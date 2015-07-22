@@ -56,6 +56,9 @@ public class CheckSessionFilter implements Filter {
 			} else if(path.indexOf("/findpwd.jsp") > -1) { //如果是找回密码页面，无需过滤
 				chain.doFilter(servletRequest, servletResponse);
 				return;
+			} else if(path.indexOf("/index.jsp")>-1){   //if it is index page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
 			}
 			// 如果用户为null,则跳转到login.jsp
 			if (null == userModel) {

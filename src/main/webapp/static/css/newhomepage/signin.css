@@ -1,5 +1,5 @@
 body{
-	background: url('../img/login.jpg');
+	background: url('../../img/newhomepage/login.jpg');
 	background-size: cover;
 	padding-top: 40px;
   	padding-bottom: 40px;
@@ -15,7 +15,7 @@ body{
 }
 
 .form-signin-heading{
-    color: #F0F;
+    color: #FFFFFF;
 }
 
 .form-signin .form-signin-heading,

@@ -28,7 +28,7 @@ nav{
 
 /* additional sections */
 #home {
-  background: url(../../img/homepage.jpg) no-repeat center center fixed; 
+  background: url(../../img/newhomepage/homepage.jpg) no-repeat center center fixed; 
   display: table;
   height: 100%;
   position: relative;
@@ -92,7 +92,7 @@ nav{
   color: white;
 }
 #b1{
-  background: url(../img/b1.jpg) no-repeat center center fixed; 
+  background: url(../../img/newhomepage/b1.jpg) no-repeat center center fixed; 
   display: table;
   height: 40%;
   position: relative;
@@ -104,7 +104,7 @@ nav{
 }
 
 #b2{
-  background: url(../img/b4.jpg) no-repeat center center fixed; 
+  background: url(../../img/newhomepage/b4.jpg) no-repeat center center fixed; 
   display: table;
   height: 40%;
   position: relative;
