@@ -59,6 +59,21 @@ public class CheckSessionFilter implements Filter {
 			} else if(path.indexOf("/index.jsp")>-1){   //if it is index page, do not need filter. 
 				chain.doFilter(servletRequest, servletResponse);
 				return;      
+			} else if(path.indexOf("/pricing.jsp")>-1){   //if it is pricing page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/payment.jsp")>-1){   //if it is payment page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/research.jsp")>-1){   //if it is research page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/buyers.jsp")>-1){   //if it is buyers page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/sellers.jsp")>-1){   //if it is sellers page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
 			}
 			// 如果用户为null,则跳转到login.jsp
 			if (null == userModel) {
