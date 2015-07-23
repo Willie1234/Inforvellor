@@ -158,7 +158,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="logo" href="index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+                <a class="logo" href="../view/newhomepage/index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
                 
             </div>
             
@@ -373,14 +373,14 @@ Based on our long industry background and years of experience in information tec
           <p><a class="btn btn-default" href="buyers.jsp" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-center">
-          <img class="img-circle" "<c:url value="/static/img/newhomepage/seller.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
+          <img class="img-circle" src="<c:url value="/static/img/newhomepage/seller.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           
-          <h2>For Sellers</h2>s
+          <h2>For Sellers</h2>
           <p>We help manufacturers look for exporters to move their international products. Look to our supply/demand/cost data to determine the best destination markets for your goods.</p>
           <p><a class="btn btn-default" href="sellers.jsp" role="button">View details »</a></p><br><br>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-center">
-          <img class="img-circle" src="<c:url value="/static/img/newhomepage/researcherh"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
+          <img class="img-circle" src="<c:url value="/static/img/newhomepage/researcherh.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           <h2>For Researchers</h2>
           <p>We combine traditional trade techniques and modern technology to provide optimal trade data, 24/7. Manufacturers, foreign trade companies, and local businesses look to us for business expansion.</p>
           <p><a class="btn btn-default" href="research.jsp" role="button">View details »</a></p><br><br><br><br><br>
@@ -815,15 +815,15 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 <!-- /footer -->
 
   <!-- attach JavaScripts -->
-  <script src="js/main.js"></script>
+  <script src="static/js/newhomepage/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/docs.min.js"></script>
+    <script src="static/js/newhomepage/bootstrap.min.js"></script>
+    <script src="static/js/newhomepage/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   
     <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+    <script src="static/js/newhomepage/jquery.easing.min.js"></script>
+    <script src="static/js/newhomepage/scrolling-nav.js"></script>
 
   <script>
     $('.carousel').carousel({

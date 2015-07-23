@@ -168,7 +168,8 @@ public class UserPasswordManageService implements IUserPasswordManageService {
 		emailParamMap.put("companyName", "江苏省南通趣易信息技术有限公司");
 		mailModel.setSubject(sb.toString());
 		mailModel.setToAddreress(userMdoel.getEmail());
-		mailModel.setFromAddress("TradeEasy@163.com");
+	//	mailModel.setFromAddress("TradeEasy@163.com");
+		mailModel.setFromAddress("noreply@inforvellor.com");
 		//发送邮件
 		iEamilService.sendAttachMail(mailModel, emailParamMap, "findPwdTemplate.html");
 		return true;
@@ -288,7 +289,7 @@ public class UserPasswordManageService implements IUserPasswordManageService {
 		MailModel mailModel = new MailModel();
 		mailModel.setSubject("帐号--邮箱找回密码");
 		mailModel.setToAddreress(userMdoel.getEmail());		
-		mailModel.setFromAddress("TradeEasy@163.com");
+		mailModel.setFromAddress("noreply@inforvellor.com");
 		//发送邮件
 		iEamilService.sendAttachMail(mailModel, emailParamMap, "findPwdTemplate.html");
 	}
