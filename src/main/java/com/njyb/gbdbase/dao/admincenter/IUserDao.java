@@ -12,7 +12,7 @@ import com.njyb.gbdbase.model.paypal.UserChargeModel;
  * 用户的Dao
  * @author chenhu
  * 2015年3月25日
- * 
+ *
  * 2015.07.22 Gavin has added several function to operate user charging
  */
 @MyBatisReposity
@@ -27,7 +27,7 @@ public interface IUserDao {
 	 */
 	void updateUserTime(String loginName,String beginTime, String endTime);
 	/**
-	 * 
+	 *
 	 * @param loginName
 	 * @return
 	 */
@@ -37,7 +37,7 @@ public interface IUserDao {
 	 * @param loginName
 	 * @param endTime
 	 */
-	
+
 	void addUserTime(String loginName, String endTime);
 	/**
 	 * Used to save charge information of user
@@ -47,13 +47,12 @@ public interface IUserDao {
 	 * @param model
 	 */
 	void saveUserCharge(UserChargeModel charemodel);
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	/**
 	 * 根据sql查询用户Model列表
 	 * @param userId
@@ -89,7 +88,7 @@ public interface IUserDao {
 	 * @return
 	 */
 	int queryUserCountByDesc(String userdesc);
-	
+
 	/**
 	 * 根据用户名修改用户的激活状态
 	 * @param loginName
@@ -117,13 +116,13 @@ public interface IUserDao {
 	 * @return
 	 */
 	int updateIsOpenSubService(UserModel userSonModel);
-	
+
 	/**
 	 * 添加新账户
 	 * @param model
 	 */
 	void addNewUser(UserModel model);
-    
+
 	/**
 	 * 根据用户ID删除当前用户的全部信息
 	 * @param userid
@@ -167,5 +166,5 @@ public interface IUserDao {
 	 * @param user
 	 */
 	void upUserInfo(UserModel user);
-	
+
 }

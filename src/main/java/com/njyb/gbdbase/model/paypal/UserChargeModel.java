@@ -1,11 +1,13 @@
 package com.njyb.gbdbase.model.paypal;
 
+
 import java.io.Serializable;
 /**
  * Used to manage the user charge information
  * @author hy_ho_000
  *
  */
+
 public class UserChargeModel implements Serializable{
 	private String username;
 	private String userip;
@@ -39,5 +41,7 @@ public class UserChargeModel implements Serializable{
 	public String getPaymentId(){
 		return paymentID;
 	}
-	
+
+
 }
+

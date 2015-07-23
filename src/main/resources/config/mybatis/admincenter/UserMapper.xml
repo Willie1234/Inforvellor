@@ -2,10 +2,6 @@
 <!DOCTYPE mapper  PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="com.njyb.gbdbase.dao.admincenter.IUserDao">
 
-
-
-
-
 	<resultMap type="com.njyb.gbdbase.model.admincenter.UserModel" id="userResult">
 		<id property="userId" column="USERID" />
 		<result property="loginName" column="LOGINNAME" />
@@ -37,6 +33,7 @@
 		<result property="mainId" column="MAINID"/>
 	</resultMap>
 	
+
 	<!-- gavin:get the endtime  of user -->
 	<select id="getEndTime" resultType="java.lang.String">
 		<![CDATA[
@@ -58,15 +55,18 @@
 	
 	</update>
 	<!-- gavin:after completing transaction, save transaction information -->
+
 	<insert id="saveUserCharge" parameterType="com.njyb.gbdbase.model.paypal.UserChargeModel">
 		<![CDATA[
 		INSERT INTO USER_CHARGE_LOG
 		(loginname,chargedate, chargeip,service,paymentID)
 		 VALUES(#{username},#{date},#{userip},#{userservice},#{paymentID})
+
 		
 		]]>
 	</insert>
 	
+
 	<!--chenhu:根据用户ID查询用户的所有子用户-->
 	<select id="queryUsersBySql" parameterType="com.njyb.gbdbase.model.usermanagement.QueryModel"  resultMap="userResult">
 		<![CDATA[
