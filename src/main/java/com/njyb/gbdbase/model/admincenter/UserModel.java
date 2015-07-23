@@ -71,6 +71,10 @@ public class UserModel  implements Serializable{
 	private String tel;
 	//自动登录
 	private String autoLogin;
+	//firstName
+	private String firstName;
+	//lastName
+	private String lastName;
 	public UserModel() 
 	{
 		
@@ -82,7 +86,7 @@ public class UserModel  implements Serializable{
 			String beginTime, String endTime, String userDesc,
 			int sonAccountTotal, boolean isActivated, int sonAccountNum,
 			boolean openService, boolean isLocked, int loginCount,
-			boolean isDisable, String sql,int relaId,int mainId) 
+			boolean isDisable, String sql,int relaId,int mainId, String firstName,String lastName) 
 	{
 		super();
 		this.userId = userId;
@@ -108,6 +112,8 @@ public class UserModel  implements Serializable{
 		this.sql = sql;
 		this.relaId=relaId;
 		this.mainId=mainId;
+		this.firstName=firstName;
+		this.lastName=lastName;
 	}
 
 	public int getUserId() {
@@ -348,5 +354,17 @@ public class UserModel  implements Serializable{
 
 	public void setAutoLogin(String autoLogin) {
 		this.autoLogin = autoLogin;
+	}
+	public String getFirstName(){
+		return firstName;
+	}
+	public void setFirstName(String firstName){
+		this.firstName=firstName;
+	}
+	public String getLastName(){
+		return lastName;
+	}
+	public void setLastName(String lastName){
+		this.lastName=lastName;
 	}
 }

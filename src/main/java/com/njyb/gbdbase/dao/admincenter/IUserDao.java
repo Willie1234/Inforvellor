@@ -5,15 +5,55 @@ import java.util.List;
 import com.njyb.gbdbas.mybatis.annotation.MyBatisReposity;
 import com.njyb.gbdbase.model.admincenter.UserModel;
 import com.njyb.gbdbase.model.usermanagement.QueryModel;
+import com.njyb.gbdbase.model.paypal.UserChargeModel;
 
 
 /**
  * 用户的Dao
  * @author chenhu
  * 2015年3月25日
+ * 
+ * 2015.07.22 Gavin has added several function to operate user charging
  */
 @MyBatisReposity
 public interface IUserDao {
+
+	/**
+	 * change user charing status
+	 * @param beginTime
+	 * @param endTime
+	 * @param userDesc
+	 * @param loginname
+	 */
+	void updateUserTime(String loginName,String beginTime, String endTime);
+	/**
+	 * 
+	 * @param loginName
+	 * @return
+	 */
+	String getEndTime(String loginName);
+	/**
+	 * add user time for user service
+	 * @param loginName
+	 * @param endTime
+	 */
+	
+	void addUserTime(String loginName, String endTime);
+	/**
+	 * Used to save charge information of user
+	 * @param loginName
+	 * @param date
+	 * @param ip
+	 * @param model
+	 */
+	void saveUserCharge(UserChargeModel charemodel);
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * 根据sql查询用户Model列表
 	 * @param userId
