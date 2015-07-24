@@ -1,5 +1,5 @@
 body{
-	background: url('../img/login.jpg');
+	background: url(../../img/newhomepage/log.jpg);
 	background-size: cover;
 	padding-top: 40px;
   	padding-bottom: 40px;
@@ -15,7 +15,7 @@ body{
 }
 
 .form-signin-heading{
-    color: #F0F;
+    color: #2D2C2D;
 }
 
 .form-signin .form-signin-heading,
@@ -24,6 +24,7 @@ body{
 }
 .form-signin .checkbox {
   font-weight: normal;
+  color:#FFFFFF;
 }
 .form-signin .form-control {
   position: relative;
