@@ -61,10 +61,7 @@ public class CheckSessionFilter implements Filter {
 				return;      
 			} else if(path.indexOf("/pricing.jsp")>-1){   //if it is pricing page, do not need filter. 
 				chain.doFilter(servletRequest, servletResponse);
-				return;      
-			} else if(path.indexOf("/payment.jsp")>-1){   //if it is payment page, do not need filter. 
-				chain.doFilter(servletRequest, servletResponse);
-				return;      
+				return;            
 			} else if(path.indexOf("/research.jsp")>-1){   //if it is research page, do not need filter. 
 				chain.doFilter(servletRequest, servletResponse);
 				return;      

@@ -95,7 +95,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("    <title>用户-登录</title>\r\n");
+      out.write("    <title>User-Login</title>\r\n");
       out.write("    <meta name=\"renderer\" content=\"webkit\">  \r\n");
       out.write("\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\"\thref=\"");
@@ -148,8 +148,8 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("/static/img/login/login_main_bg.png); background-repeat:no-repeat; margin-left:793px\">\r\n");
       out.write("            <table style=\"width:100%; font-family:Arial,微软雅黑;\">\r\n");
       out.write("                <tr style=\"height:40px;\">\r\n");
-      out.write("                    <td style=\"width:200px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#00a1be\">登录</td>\r\n");
-      out.write("                    <td id=\"shiyong\" style=\"width:201px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#ffffff\"><a href=\"#\">试用版本</a></td>\r\n");
+      out.write("                    <td style=\"width:200px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#00a1be\">Login</td>\r\n");
+      out.write("                    <td id=\"shiyong\" style=\"width:201px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#ffffff\"><a href=\"#\">Trial version</a></td>\r\n");
       out.write("                </tr>\r\n");
       out.write("                <tr style=\"height:70px;\">\r\n");
       out.write("                    <td colspan=\"2\">\r\n");
@@ -183,7 +183,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <br />\r\n");
       out.write("                        <br />\r\n");
       out.write("                        <br />\r\n");
-      out.write("                        <a href=\"javascript:forgetPass();\"; style=\"margin-left:30px; font-size:16px; color:#27afc8\">忘记密码？</a>\r\n");
+      out.write("                        <a href=\"javascript:forgetPass();\"; style=\"margin-left:30px; font-size:16px; color:#27afc8\">Forgot Password？</a>\r\n");
       out.write("                    </td>\r\n");
       out.write("                    <td>\r\n");
       out.write("                        <input type=\"button\" onclick=\"usersub();\" id =\"loginInput\" class=\"login_btn\" value=\"登录\" onmouseover=\"overlogin(this)\" onmouseout=\"outlogin(this)\"/>\r\n");

@@ -244,7 +244,8 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                    <span class=\"icon-bar\"></span>\r\n");
       out.write("                    <span class=\"icon-bar\"></span>\r\n");
       out.write("                </button>\r\n");
-      out.write("                <a class=\"logo\" href=\"../view/newhomepage/index.jsp#home\"><img class=\"img-square\" src=\"");
+      out.write("\r\n");
+      out.write("                <a class=\"logo\" href=\"view\\newhomepage\\index.jsp#home\"><img class=\"img-square\" src=\"");
       if (_jspx_meth_c_url_6(_jspx_page_context))
         return;
       out.write("\"  alt=\"Generic placeholder image\" style=\"width: 260px; height: 60px;\"> </a>\r\n");
@@ -851,13 +852,24 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("</select>                        </div>\r\n");
       out.write("                    </div>\r\n");
       out.write("                     <label>Gender : </label>                    <label class=\"radio-inline\">\r\n");
-      out.write("                        <input type=\"radio\" name=\"sex\" value=\"Male\" id=male />                        Male\r\n");
+      out.write("                        <input type=\"radio\" name=\"sex\" value=\"Male\" id=\"male\" />                        Male\r\n");
       out.write("                    </label>\r\n");
       out.write("                    <label class=\"radio-inline\">\r\n");
-      out.write("                        <input type=\"radio\" name=\"sex\" value=\"Female\" id=female />                        Female\r\n");
+      out.write("                        <input type=\"radio\" name=\"sex\" value=\"Female\" id=\"female\" />                        Female\r\n");
       out.write("                    </label>\r\n");
       out.write("                    <br />\r\n");
       out.write("              <span class=\"help-block\">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>\r\n");
+      out.write("               <div class='pact'>\r\n");
+      out.write("                     <div>\r\n");
+      out.write("                     <label>\r\n");
+      out.write("                     <input type=\"checkbox\"> <span>我已阅读</span><span><a href=\"");
+      out.print(basePath);
+      out.write("/view/login/register/argeement.pdf\" target=\"_blank\" title='用户注册协议'>《用户注册协议》</a></span>\r\n");
+      out.write("                         <span id=\"pactMessege\"></span>\r\n");
+      out.write("                  </label>\r\n");
+      out.write("                         \r\n");
+      out.write("                     </div>\r\n");
+      out.write("               </div>\r\n");
       out.write("                    <button class=\"btn btn-lg btn-primary btn-block signup-btn\" type=\"submit\">\r\n");
       out.write("                        Create my account</button>\r\n");
       out.write("            </form>          \t\r\n");
@@ -1086,7 +1098,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         out.write("\r\n");
         out.write("\t\t\t\t   <li>\r\n");
         out.write("               \r\n");
-        out.write("\t\t\t\t  <a class=\"btn btn-success\" role=\"button\" href=\"newLogin/login.jsp\" style=\"color:white; padding:15px; margin-right:10px;\">Login</a>\r\n");
+        out.write("\t\t\t\t  <a class=\"btn btn-success\" role=\"button\" href=\"view\\newhomepage\\login.jsp\" style=\"color:white; padding:15px; margin-right:10px;\">Login</a>\r\n");
         out.write("                 \r\n");
         out.write("\t\t\t\t  \r\n");
         out.write("\t\t\t\t   \r\n");
