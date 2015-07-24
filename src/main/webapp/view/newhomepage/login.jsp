@@ -78,6 +78,7 @@ request.getSession().setAttribute("language","message_en_US");
 		document.getElementById("prog").style.display="none";
 		document.getElementById("clossBtn").style.display="block";
 		$("#warn").text(m);
+<<<<<<< HEAD
 	}
 	function clearPrompt(){
 		document.getElementById("warn").style.display="none";
@@ -86,6 +87,16 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#myModalLabel").text('Loading');
 		$("#warn").text('');
 	}
+=======
+	}
+	function clearPrompt(){
+		document.getElementById("warn").style.display="none";
+		document.getElementById("prog").style.display="block";
+		document.getElementById("clossBtn").style.display="none";
+		$("#myModalLabel").text('Loading');
+		$("#warn").text('');
+	}
+>>>>>>> Willie
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
 // 		   $btnmy.value="loading..."
@@ -191,30 +202,52 @@ request.getSession().setAttribute("language","message_en_US");
 </script>
 </head><body>
 
-
     <div class="container">
-
+      <div class="col-md-12 col-md-push-0 text-center">
       <form class="form-signin" onsubmit="return usersubmit()" >
+      
+      <div class="col-lg-13 text-left">
         <h2 class="form-signin-heading">Please sign in</h2>
+        </div>
+        <div class="col-lg-13 text-left">
+
         <label for="inputUser" class="sr-only">Username</label>
         <input type="text" id="user_name" class="form-control" placeholder="Username" required="" autofocus="">
+        </div>
+        <div class="col-lg-13 text-left">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
-		<input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:155px"/>
-		<a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: 25px;padding-left: 5px;z-index: 100;position: absolute;"> 
-		<img align="bottom" id="createcheckcode" style="width:130px;height:45px;" border="0">
+        </div>
+        <div class="col-lg-5 text-left">
+		<input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:125px"/>
+		</div>
+		
+        <div class="col-lg-7 text-left">
+		<a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: -100px;padding-left: 10px;z-index: 100;position: absolute;"> 
+		<img align="bottom" id="createcheckcode" style="width:125px;height:43px;" border="0">
 		</a>
-		<a id="bjc" href="javascript:myRandReload()" style="text-decoration: none;color:#4a97e3;padding:2px 2px;padding-top: 33px;padding-left: 140px;z-index: 100;position: absolute;">
-			<img title="刷新" src="${ctx}/static/img/login/refresh.png" width="25px" height="25px"/>
+		<a id="bjc" href="javascript:myRandReload()" style="text-decoration: none;color:#4a97e3;padding:2px 2px;padding-top: 13px;padding-left: 150px;z-index: 100;position: absolute;">
+			
 		</a>
+		</div>
+<div class="col-lg-12 text-left">
+
         <div class="checkbox">
           <label>
             <input type="checkbox" value="forever" id="rPassword" name="rPassword"> Remember me
           </label>
  		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:white">Forget Password</a>
         </div>
+        </div>
+        <div class="col-lg-13 text-left">
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
+        </div>
+        <div class="col-lg-13 text-left">
         <a href="../" class="padding-left:50px" style="color:white">Go back to the home page</a>
+        </div>
+        </div>
+        
+
       </form>
   
 

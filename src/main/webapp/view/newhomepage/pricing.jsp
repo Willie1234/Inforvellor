@@ -43,6 +43,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   <link rel="stylesheet" href="${root }/static/css/newhomepage/languages.min.css"/>
   <script src="${root }/static/js/newhomepage/jquery-2.1.3.min.js"></script>
+    <script src="${root }/static/js/login/login.js"></script>
    <style>
       h1            { padding-top: 50px; }
       .mynavigation { padding-top: 70px; }
@@ -148,7 +149,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     function startTransaction(value){
 	var money=value;
 	
-	$.post("/saveMoneyAndCheckUser",{money:money},
+	$.post("/gbdbas/saveMoneyAndCheckUser",{money:money},
 		function(data){
 			if(data=="1"){
 				$("#checkUserName").modal('show');
@@ -177,7 +178,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   }
   
   
-  function usersub(){
+  function usersubmit(){
 //	   var $btnmy=document.getElementById("signIn");
 //	   $btnmy.value="loading..."
 	   //$(this).value="loading";
@@ -188,15 +189,11 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 		var loginName = $("#user_name").val();
 		var loginPassword = $("#user_pass").val();
 		var regCode = $("#checkcode").val();
-		var check  = document.getElementById("rPassword");
+	
 		var rPassword;
-		if(check!=null&&check.checked){
-			rPassword = check.value;
-		}else{
-			rPassword = "";
-		}
+		
 		$("#myModal").modal('show');
-		$.post("/customer_search/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
+		$.post("/gbdbas/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
 						function(data){
 						if("2" == data){
 							 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
@@ -677,14 +674,17 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   	
   	</div>
   	<div class="modal-body">
-      <form class="form-signin" onsubmit="return usersub()"  >
+      <form class="form-signin" onsubmit="return usersubmit()"  >
        
         <label for="inputUser" class="sr-only">Username</label>
         <input type="text" id="user_name" class="form-control" placeholder="Username" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
-         
+         <input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:155px"/>
+		<a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: 25px;padding-left: 5px;z-index: 100;position: absolute;"> 
+		<img align="bottom" id="createcheckcode" style="width:130px;height:45px;" border="0">
+		</a>
  		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:black">Forget Password</a>
         </div>
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"  type="submit" >Sign in</button>
