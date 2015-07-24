@@ -482,7 +482,8 @@ public class LoginService implements ILoginService {
 				//邮件地址
 				mailModel.setToAddreress(userMdoel.getEmail()); // TODO userMdoel.getEmail();
 				//发件人
-				mailModel.setFromAddress("nanjinginfobase@vip.163.com");
+			//	mailModel.setFromAddress("nanjinginfobase@vip.163.com");
+				mailModel.setFromAddress("noreply@inforvellor.com");
 				//发送邮件
 				if(!iEamilService.sendAttachMail(mailModel, emailParamMap, "activeUser.html")){
 					  //如果发送失败，则删除数据库中的用户，并删除保存在数据库中的信息提示用户邮箱错误
