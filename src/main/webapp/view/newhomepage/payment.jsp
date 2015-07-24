@@ -10,20 +10,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <c:set var="ctx" value="${pageContext.request.contextPath }"/>
+    <c:set var="root" value="${pageContext.request.contextPath }"/>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/payment.css" rel="stylesheet">
-	<script src="js/jquery-2.1.3.min.js"></script>  
-	<script src="js/bootstrap.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<link href="${root}/static/css/newhomepage/bootstrap-theme.css" rel="stylesheet">
+	<link href="${root}/static/css/newhomepage/bootstrap.css" rel="stylesheet">
+
+    <link href="${root}/static/css/newhomepage/payment.css" rel="stylesheet">
+	<script src="${root}/static/js/newhomepage/jquery-2.1.3.min.js"></script>  
+	<script src="${root}/static/js/newhomepage/bootstrap.js"></script>
+	<script src="${root}/static/js/newhomepage/bootstrap.min.js"></script>
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
@@ -103,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   <div class="col-lg-12 text-center">
   <p></p><br><br>
-        <img class="img-square" src="/img/INFORVELLOR LOGO.jpg" alt="Generic placeholder image" style="width: 640px; height: 150px;">
+        <img class="img-square" src="${root}/static/img/newhomepage/INFORVELLOR LOGO.jpg" alt="Generic placeholder image" style="width: 640px; height: 150px;">
         </div><br>
     
 <div class="container">

@@ -10,6 +10,7 @@ com\njyb\gbdbase\service\personalcenter\HomePageService.class
 com\njyb\gbdbase\dao\datasearch\country\IGuatemalaExportDao.class
 com\njyb\gbdbas\util\alipay\httpClient\HttpResultType.class
 com\njyb\gbdbase\service\datasearch\CommonSearchService.class
+com\njyb\service\paypal\IPayService.class
 com\njyb\gbdbase\service\datasearch\export\report\IExportDataService.class
 com\paypal\api\payments\FlowConfig.class
 com\njyb\gbdbase\controller\servicecenter\CustomerCenterController.class
@@ -20,6 +21,7 @@ com\njyb\gbdbase\model\datasearch\vietnam\VietnamExportModel.class
 com\njyb\gbdbase\model\admincenter\UserModel.class
 com\njyb\gbdbase\dao\datasearch\country\IChileImportDao.class
 com\njyb\gbdbase\service\alldb\commonrightlibrary\IDataConvertDBModel.class
+com\njyb\gbdbase\controller\paypal\TransactionController.class
 com\paypal\base\nvp\CertificateHttpHeaderAuthStrategy.class
 com\njyb\gbdbase\service\admincenter\imp\UserManageService.class
 com\njyb\gbdbas\util\alipay\AlipayNotify.class
@@ -187,6 +189,10 @@ com\njyb\gbdbase\model\datasearch\common\OrderModel.class
 com\njyb\gbdbase\dao\authcenter\IUserRightDao.class
 com\njyb\gbdbase\service\contrastreport\common\LuceneFileUtis.class
 com\paypal\base\codec\BinaryDecoder.class
+<<<<<<< HEAD
+com\njyb\service\paypal\PayService.class
+=======
+>>>>>>> master
 com\njyb\gbdbase\service\datasearch\IBuildChartService.class
 com\paypal\base\AuthenticationStrategy.class
 com\njyb\gbdbase\model\admincenter\UserSystemLogModel.class
@@ -522,6 +528,7 @@ com\njyb\gbdbase\model\datasearch\uk\UkImportModel.class
 com\njyb\gbdbase\service\common\intercontinental\GetParse.class
 com\njyb\gbdbase\model\datasearch\honduras\HondurasImportModel.class
 com\njyb\gbdbase\model\datasearch\common\SearchCommonParamModel.class
+com\njyb\gbdbase\model\paypal\UserChargeModel.class
 com\paypal\base\codec\Decoder.class
 com\njyb\gbdbas\util\translate\TransResult.class
 com\njyb\gbdbas\util\export\ExportReportUtil.class
