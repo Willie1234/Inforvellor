@@ -122,7 +122,6 @@ $(document).ready(function(){
 	          </div>
 	       </form>
 	    </div>
-	    
 	    <div id="regestButton" onclick="regest()"><div>注&nbsp;&nbsp;册</div></div>
 	   </div>
 	   <!-- bottom -->

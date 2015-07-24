@@ -3,7 +3,7 @@ var emailValue;
 /**
  * 更新选择状态
  */
-function changeSatus(){
+/*function changeSatus(){
     if(checkStatus){
     	$("#ug").css("display","block");
     	$("#ag").css("display","none");
@@ -15,6 +15,7 @@ function changeSatus(){
     	 $("#pactMessege").text("");
     }
 }
+*/
 
 /*
  * 实现回车键登入事件
@@ -38,11 +39,11 @@ function myRandReload(){
 /**
  * 注册
  */
-function regest(){
+/*function regest(){
 	 emailValue=$("#email").val();
-	$('#regestForm').form('submit', {   
+	$('#registerForm').form('submit', {   
 	       onSubmit: function(){ 
-	    	   if(!checkStatus){
+	    	  if(!checkStatus){
 	    		  $("#pactMessege").text("*请同意协议");
 	    		   return false;
 	    	   }
@@ -64,6 +65,36 @@ function regest(){
 	    		   $.messager.alert('提示','邮箱地址不正确','info');
 	    		   $("#email").val("");
 	    	  }
+	    	  
+	     }   
+	}); 
+}
+*/
+
+
+function register(){
+	 emailValue=$("#email").val();
+	$('#registerForm').form('submit', {   
+	       onSubmit: function(){ 
+	    	   /*
+	    	      if(!checkStatus){
+	    		  $("#pactMessege").text("*请同意协议");
+	    		   return false;
+	    	   }
+	    	   */
+	    	   location.href="/gbdbas/view/newhomepage/login.jsp";
+	        // return $(this).form('validate'); 
+	      } ,  
+	      success:function(data){   
+	    	 //if(data=='1' || data == '2'){
+	    		  //注册成功后跳转到邮箱激活页面
+	    	  openActiveDiv();
+	    	 //}
+	    	 // else{
+	    		//   $.messager.alert('提示','邮箱地址不正确','info');
+	    		//   $("#email").val("");
+	    	  //}
+	    	 // location.href="/gbdbas/view/newhomepage/login.jsp";
 	    	  
 	     }   
 	}); 
