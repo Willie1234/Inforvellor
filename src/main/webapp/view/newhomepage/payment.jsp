@@ -299,12 +299,58 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
       
 
-      <div class="form-group">
+      <div id="contract" class="pad-section">
+  <div class="container">
+    <div class="row col-md-8 col-md-push-2 text-center">
+    
+    
+      <div class="col-lg-12 text-center">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <b>
+          Customer Agreement
+          </b>
+        </a>
+      </h4>
+    </div>
+    
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body text-left" style="width:698px;height:160px; overflow-y:scroll; border:0px solid;"><b>
+        Inforvellor provides the most detailed data in a simple-to-use manner to help you Find Customers, Monitor Competitors, and Analyze Market Data. We give you timely product data including shipment information, buyer history, and market trends. We have connections with over 22 countries to help develop a dynamic trade database. We track nearly 730,000 active traders, which allows our detailed reports to continue expanding daily.
+       </b>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  <div class="checkbox">
+
+  <div class="col-lg-12 text-center">
+    <label>
+      <input type="checkbox"> I <b>accept</b> the Customer Agreement 
+    </label>
+</div>
+     </div>
+  </div>
+ </div>
+
+
+  <div class="form-group">
+  
         <div class="col-sm-offset-3 col-sm-9 text-right">
           <button type="submit" class="btn btn-success">Place your order</button>
           <p></p><br><br>
         </div>
+        
       </div>
+
+      
+
+      
+
+      
     </fieldset>
     </form>
   </div>

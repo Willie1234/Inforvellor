@@ -36,7 +36,7 @@
 <!-- 			<input style="width: 88px; height: 20px; border: 1px solid #95b8e7; border-color: #e5e5e5; border-radius: 4px 4px 4px 4px;" -->
 <%-- 				id="buyerEndDate" value="2012-12-31" onclick="WdatePicker({lang:'<%=dateLanguage %>',quickSel:['2010-12-31','2011-12-31','2012-12-31','2013-12-31','2014-12-31'],readOnly:true})" /> --%>
 				&nbsp;&nbsp;
-			<a class="btn_cls" onclick="queryBuyer(this)" title="立即查询">立即查询</a>
+			<a class="btn_cls" onclick="queryBuyer(this)" title="立即查询">Immediate Search</a>
 		</div>
 		
 		<!-- 进度条 -->

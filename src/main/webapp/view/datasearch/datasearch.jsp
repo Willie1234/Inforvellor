@@ -51,7 +51,7 @@
 			<div style="margin:0 auto;text-align:left;padding: 0;width: 100%;background-color: #f0f3f5;padding-top: 26px">
 				<div id="find" style="clear: both;width:1210px;height:auto;">
 					<div class="advancesearch">
-						<div style="padding-top: 10px;background-color: #F5FAF9;width: 1210px;height: 30px;"><b><font color="#1369c0" style="font-size:18px;padding-left: 36px">搜索条件</font></b></div>
+						<div style="padding-top: 10px;background-color: #F5FAF9;width: 1210px;height: 30px;"><b><font color="#1369c0" style="font-size:18px;padding-left: 36px">Search Conditions</font></b></div>
 						<div align="right" width="1100px" >
 							<!-- 动态生成的前台查询条件 -->
 							<div id="showQueryCondition"></div>
@@ -59,20 +59,20 @@
 						</div>
 						<div class = "tips" style="line-height: 20px;">
 						 	<img src="/gbdbas/static/img/datasearch/tips.png" style="width:25px;"></img>
-							<font size="2">关单数据指南：建议首选HS编码查询，因各国编码略有不同但全球前6位统一，所以建议使用6位HS编码查询；产品关键词查询时建议使用该国本土语言。 提单数据指南：建议首选产品KEY WORD进行查询。</font>
+							<font size="2">Custom Report Data Directory: It is recommended that you choose HS code as a search reference. Each country has its own code but the first six digits are unified. So, we recommend that you choose the six digit HS code to search. We also recommend that you use the local language as the key words of the product in your search. Records Guide: It is recommended that you choose product key words in your search.</font>
 						</div>
 						<!-- 查询按钮 -->
 						<div id="queryCollection" style="margin-left:930px;margin-top:-30px;height:60px;display: none;">
-							<a class="btn_cls" title="<fmt:message key="commonAll.queryImmediately" bundle="${messages}"/>" href="javascript:query();">立即查询</a>
-							<a id="downloadReport" class="btn_cls" title="<fmt:message key="commonAll.downloadReport" bundle="${messages}"/>" href="javascript:downloadReport()">下载报表</a>
+							<a class="btn_cls" title="<fmt:message key="commonAll.queryImmediately" bundle="${messages}"/>" href="javascript:query();">Immediate Search</a>
+							<a id="downloadReport" class="btn_cls" title="<fmt:message key="commonAll.downloadReport" bundle="${messages}"/>" href="javascript:downloadReport()">Download Report</a>
 						</div>
 						<div id="queryCollectionGrey" style="margin-left:930px;margin-top:-30px;height:60px;display: block;">
-							<a class="btn_cls" title="<fmt:message key="commonAll.queryImmediately" bundle="${messages}"/>" href="javascript:query();">立即查询</a>
-							<a id="downloadReportgrey" class="btnGrey_cls" title="<fmt:message key="commonAll.downloadReport" bundle="${messages}"/>" href="javascript:void(0)">下载报表</a>
+							<a class="btn_cls" title="<fmt:message key="commonAll.queryImmediately" bundle="${messages}"/>" href="javascript:query();">Immediate Search</a>
+							<a id="downloadReportgrey" class="btnGrey_cls" title="<fmt:message key="commonAll.downloadReport" bundle="${messages}"/>" href="javascript:void(0)">Download Report</a>
 						</div>
 						<div id="querygreyCollectionGrey" style="margin-left:930px;margin-top:-30px;height:60px;display: none;">
-							<a class="btnGrey_cls" title="<fmt:message key="commonAll.queryImmediately" bundle="${messages}"/>" href="javascript:void(0);">立即查询</a>
-							<a id="downloadReportgrey" class="btnGrey_cls" title="<fmt:message key="commonAll.downloadReport" bundle="${messages}"/>" href="javascript:void(0)">下载报表</a>
+							<a class="btnGrey_cls" title="<fmt:message key="commonAll.queryImmediately" bundle="${messages}"/>" href="javascript:void(0);">Immediate Search</a>
+							<a id="downloadReportgrey" class="btnGrey_cls" title="<fmt:message key="commonAll.downloadReport" bundle="${messages}"/>" href="javascript:void(0)">Download Report</a>
 						</div>
 					</div>
 				</div>
@@ -110,13 +110,13 @@
 						<!-- 导出PDF和导出EXCEL -->
 						<div id="exportPDForExcel"  style="margin-top: 20px;z-index: 100;float: right;">
 							<a class="addFavorites_cls" onclick="addFavorites()" title="<fmt:message key="commonAll.favoriteQueryConditions" bundle="${messages}"/>">
-								<font style="padding-left: 30px;">收 藏</font>
+								<font style="padding-left: 30px;">Save</font>
 							</a>&nbsp;
 							<a class="exportPdf_cls" onclick="exportFile('2')" title="<fmt:message key="common.exportPDF" bundle="${messages}"/>">
-								<font style="padding-left: 30px;">导 出</font>
+								<font style="padding-left: 30px;">Export</font>
 							</a>&nbsp;
 							<a class="exportExcl_cls" onclick="exportFile('1')" title="<fmt:message key="common.exportExcel" bundle="${messages}"/>">
-								<font style="padding-left: 30px;">导 出</font>
+								<font style="padding-left: 30px;">Export</font>
 							</a>&nbsp;
 						</div>
 						<div id="resultFieldDiv" style="padding-top: 56px">
@@ -126,8 +126,8 @@
 							<div id="selectFieldDiv" style="width:300px;font-size: 12px;">
 							</div>
 							<div id="selectFieldButton" style="padding:40px 0px 30px 60px ;z-index: 110;">
-								<a class="confirmOrcancel_cls" title="保存" onclick="selectField();">保存</a>
-								<a class="confirmOrcancel_cls" title="取消" onclick="javascript:$('#selectFieldDialog').css('display','none');">取消</a>
+								<a class="confirmOrcancel_cls" title="保存" onclick="selectField();">Save</a>
+								<a class="confirmOrcancel_cls" title="取消" onclick="javascript:$('#selectFieldDialog').css('display','none');">Cancel</a>
 							</div>
 						</div>
 					</div>

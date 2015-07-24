@@ -90,7 +90,8 @@
 				</div>
 				<!-- 国家 -->
 				<div style="height: 65px;width: 25%;border: 0px solid red;line-height: 50px;margin-left: 20px;float: left;">
-					<font class="fieldname">国家:</font>
+					<font class="fieldname">country:</font>
+
 					<select id="dowloadCountry" name="dowloadCountryName" style="width:170%;height:22px;border-color: #e2e5e7"></select>
 					<div id="dowloadSpanel"></div>
 				</div>
