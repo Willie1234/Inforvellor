@@ -38,11 +38,11 @@
                      <input type='text' class='showText' style='width:50px;' readonly="readonly" id='city'>
                   </td>
               </tr>
-              <tr><td><span class='tag' >地址:</span></td><td><input type='text' class='showText' readonly="readonly" id='address'></td></tr>
-              <tr><td><span class='tag' >公司名称：</span></td><td><input type='text' class='showText' readonly="readonly" id='company'></td></tr>
-              <tr><td><span class='tag' >手机号码：</span></td><td><input type='text' class='showText' readonly="readonly" id='phone'></td></tr>
-              <tr><td><span class='tag' >电子邮件：</span></td><td><input type='text' class='showText' readonly="readonly" id='email'></td></tr>
-              <tr><td><span class='tag' >邮政编码：</span></td><td><input type='text' class='showText' readonly="readonly" id='postalNum'></td></tr>
+              <tr><td><span class='tag' >Address:</span></td><td><input type='text' class='showText' readonly="readonly" id='address'></td></tr>
+              <tr><td><span class='tag' >Company name：</span></td><td><input type='text' class='showText' readonly="readonly" id='company'></td></tr>
+              <tr><td><span class='tag' >Cell phone number：</span></td><td><input type='text' class='showText' readonly="readonly" id='phone'></td></tr>
+              <tr><td><span class='tag' >Email：</span></td><td><input type='text' class='showText' readonly="readonly" id='email'></td></tr>
+              <tr><td><span class='tag' >Zip code：</span></td><td><input type='text' class='showText' readonly="readonly" id='postalNum'></td></tr>
               <tr><td><span class='tag' >是否开据发票：</span></td><td><input type='text' class='showText' readonly="readonly" id='invoiceType'></td></tr>
               </table>
               <div style='padding-left: 5px;' id='showInvoice'>

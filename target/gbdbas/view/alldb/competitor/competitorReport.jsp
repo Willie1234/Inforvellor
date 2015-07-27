@@ -45,7 +45,7 @@
 				<div align="left" width="920px">
 					<div class="alldb_firstcols">
 						<font class="alldb_fieldname">
-							公司名称
+							Company name
 							&nbsp;:&nbsp;
 						</font>
 						<input type="text" id="jzcompanytext" name="jzexporter"
@@ -53,7 +53,7 @@
 					</div>
 					<div class="alldb_secondcols">
 						<font class="alldb_fieldname">
-							选择国家&nbsp;:&nbsp;
+							Select country&nbsp;:&nbsp;
 						</font>
 						<select id="equirementSelects36" style="width: 190px"></select>
 						<div id="sps36"></div>
@@ -79,7 +79,7 @@
 					</div>
 					<div class="alldb_firstcols" style="height: 40px">
 						<div id="" style="float: left; margin-left: 550px; margin-top: -5px; padding-bottom: 20px;">
-							<a class="btn_cls" title="立即查询" href="javascript:quankuCompsent(this);">立即查询</a>
+							<a class="btn_cls" title="立即查询" href="javascript:quankuCompsent(this);">Immediate Search</a>
 					</div>
 				</div>
 			</div>

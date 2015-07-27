@@ -33,7 +33,7 @@
 		           <form id="addrForm">
 		               <table cellspacing="5px">
 		                    <tr>
-		                        <td><span  class='tag'>公司名称:</span></td>
+		                        <td><span  class='tag'>Company Name:</span></td>
 		                        <td><input id="company"  class='inputNomarl' class="easyui-validatebox" validtype="realname"
 		                         name='company' type="text"></td>
 		                    </tr>
@@ -54,11 +54,11 @@
 			                      <td><textarea id="address" name='address'  ></textarea></td>
 			                </tr>
 			                <tr>
-			                   <td><span  class='tag'>邮政编码:</span></td>
+			                   <td><span  class='tag'>Zip code:</span></td>
 			                   <td><input id="postalNum" type="text" class='inputNomarl'></td>
 			                </tr>
 			                <tr>
-			                    <td><span  class='tag'>手机号码:</span></td>
+			                    <td><span  class='tag'>Cell phone number:</span></td>
 			                    <td><input id="phone" type="text" class='inputNomarl'></td>
 			               </tr>
 		               </table>
