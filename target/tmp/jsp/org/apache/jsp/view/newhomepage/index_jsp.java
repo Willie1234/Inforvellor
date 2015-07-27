@@ -1190,7 +1190,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         out.write("\t\t\t\t   \r\n");
         out.write("\t\t\t\t  </li>\r\n");
         out.write("\t\t\t\t  <li>\r\n");
-        out.write("                   <a class=\"btn btn-primary2\" href=\"view/chinese/menu/country.jsp\" role=\"button\" style=\"color:white; padding:15px; margin-right:10px;\">Go to database</a>\r\n");
+        out.write("                   <a class=\"btn btn-primary2\" href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("/pageJump\" role=\"button\" style=\"color:white; padding:15px; margin-right:10px;\">Go to database</a>\r\n");
         out.write("                  </li>\r\n");
         out.write("\t\t\t\t \r\n");
         out.write("\t\t\t\t  ");
