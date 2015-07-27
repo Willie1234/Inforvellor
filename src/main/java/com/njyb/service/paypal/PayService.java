@@ -5,16 +5,24 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.njyb.gbdbase.model.paypal.UserChargeModel;
+import com.njyb.gbdbase.service.personalcenter.password.UserPasswordManageService;
 import com.njyb.gbdbase.dao.admincenter.IUserDao;
 import com.paypal.api.payments.Amount;
 import com.paypal.api.payments.Payment;
 import com.paypal.api.payments.Transaction;
 @Service
 public class PayService implements IPayService{
+	
+	// 日志
+		private static final Logger log = Logger
+				.getLogger(UserPasswordManageService.class);
+	
+	
 	@Autowired
 	private IUserDao iUserDao;
 	/**

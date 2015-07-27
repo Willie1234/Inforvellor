@@ -48,22 +48,19 @@ public class TransactionController {
     public void beginTransaction(HttpServletRequest request, HttpServletResponse response)
     throws Exception{
 		
-
+		LOGGER.info("before createPayment");
 		Payment payment=createPayment(request,response);
 		if(payment!=null)
 		{
 			try{
+				LOGGER.info("afterCreatePayment");
 			if(payment.getState().equals("approved")){
-				System.out.print("afterApproved\n");
+			LOGGER.info("payment create successfully");
 				UserModel user=(UserModel)request.getSession().getAttribute("user");
 				String loginName=user.getLoginName();
-				System.out.print(loginName+"\n");
-			//	iUserCharge.logInformation(payment,loginName);
 				int model=iUserService.checkTransactionModel(payment);
 				iUserService.recordUserCharge(payment, loginName,model);
-				System.out.print("afterlogInFormation\n");
 				iUserService.updateUserCharge(payment, loginName,model);
-		//		iUserCharge.chargeUser(payment, loginName);
 				response.getWriter().write("1");
 			}
 			}catch(Exception e){
@@ -150,6 +147,7 @@ public void successTransaction(HttpServletRequest request,HttpServletResponse re
 }
 
 public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) throws IOException{
+	LOGGER.info("begin transaction");
 	String billAddress1=req.getParameter("billing-address-line1");
 	String billAddress2=req.getParameter("billing-address-line2");
 	String city=req.getParameter("city");
@@ -159,6 +157,7 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 	String billFirstName=req.getParameter("billing-name1");
 	String billLastName=req.getParameter("billing-name2");
 	String phone=req.getParameter("phone-number");
+	LOGGER.info("names");
 	String firstName=req.getParameter("card-holder-firstname");
 	String lastName=req.getParameter("card-holder-lastname");
 	String cardNumber=req.getParameter("card-number");
@@ -166,7 +165,7 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 	String expireYear=req.getParameter("expiry-year");
 	String cvv=req.getParameter("cvv");
 	String moneyAmmount=(String) req.getSession().getAttribute("moneyAmmount");
-	
+	LOGGER.info(lastName);
 	Map<String, String> sdkConfig = new HashMap<String, String>();
 	sdkConfig.put("mode", "sandbox");
 	Address billingAddress = new Address();
@@ -189,7 +188,8 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 	//creditCard.setLastName("Shopper");
 	//creditCard.setNumber("4032034879726365");
 	creditCard.setType("visa");
-	
+	LOGGER.info(cvv);
+	//creditCard.setCvv2(Integer.parseInt(cvv));
 	creditCard.setCvv2(Integer.parseInt(cvv));
 	creditCard.setExpireMonth(Integer.parseInt(expireMonth));
 	creditCard.setExpireYear(Integer.parseInt(expireYear));
