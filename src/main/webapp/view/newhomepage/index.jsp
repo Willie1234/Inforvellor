@@ -355,7 +355,7 @@ Based on our long industry background and years of experience in information tec
   
         
         <div class="row">
-         <h2 class="col-md-10 col-md-push-1 text-center" style="color:#FFF"><p></p><br><br>“I have been trading for decades and I am still standing. I have seen a lot of traders come and go. They have a system or a program that works in some specific environments and fails in others. In contrast, my strategy is dynamic and ever evolving. I constantly learn and change.” <br><br>- Thomas Busby in Trade To Win</h2>
+         <h2 class="col-md-10 col-md-push-1 text-center" style="color:#FFF"><p></p><br><br>“Trade is the arena of globalization where international collaboration and rules are best established. But the demands on an open and rules-based trading system are bound to increase, and the sharp rise in competition from all sources could accentuate protectionist pressures.”<br><br>- Uri Dadush & William Shaw in “Juggernaut: How Emerging Markets Are Reshaping Globalization”</h2>
 
         </div>
 

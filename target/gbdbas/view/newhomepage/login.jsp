@@ -78,7 +78,6 @@ request.getSession().setAttribute("language","message_en_US");
 		document.getElementById("prog").style.display="none";
 		document.getElementById("clossBtn").style.display="block";
 		$("#warn").text(m);
-<<<<<<< HEAD
 	}
 	function clearPrompt(){
 		document.getElementById("warn").style.display="none";
@@ -87,16 +86,7 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#myModalLabel").text('Loading');
 		$("#warn").text('');
 	}
-=======
-	}
-	function clearPrompt(){
-		document.getElementById("warn").style.display="none";
-		document.getElementById("prog").style.display="block";
-		document.getElementById("clossBtn").style.display="none";
-		$("#myModalLabel").text('Loading');
-		$("#warn").text('');
-	}
->>>>>>> Willie
+
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
 // 		   $btnmy.value="loading..."

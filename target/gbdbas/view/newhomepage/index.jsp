@@ -215,7 +215,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 				   
 				  </li>
 				  <li>
-                   <a class="btn btn-primary2" href="view/chinese/menu/country.jsp" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
+                   <a class="btn btn-primary2" href="${root}/pageJump" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
                   </li>
 				 
 				  </c:if>
