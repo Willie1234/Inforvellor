@@ -44,7 +44,7 @@ public class TransactionController {
 	@Autowired
 	private IPayService iUserService;
 
-	@RequestMapping (value = "/gavin2")
+	@RequestMapping (value = "/creditCardTransaction")
     public void beginTransaction(HttpServletRequest request, HttpServletResponse response)
     throws Exception{
 		
