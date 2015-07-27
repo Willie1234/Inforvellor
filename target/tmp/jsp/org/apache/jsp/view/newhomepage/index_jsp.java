@@ -12,6 +12,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.Vector _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_set_var_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
 
@@ -22,11 +23,13 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
+    _jspx_tagPool_c_set_var_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
+    _jspx_tagPool_c_set_var_value_nobody.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_c_if_test.release();
   }
@@ -56,6 +59,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
+      out.write("\r\n");
+      if (_jspx_meth_c_set_0(_jspx_page_context))
+        return;
       out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
 
@@ -245,7 +251,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                    <span class=\"icon-bar\"></span>\r\n");
       out.write("                </button>\r\n");
       out.write("\r\n");
-      out.write("                <a class=\"logo\" href=\"view\\newhomepage\\index.jsp#home\"><img class=\"img-square\" src=\"");
+      out.write("                <a class=\"logo\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\\view\\newhomepage\\index.jsp#home\"><img class=\"img-square\" src=\"");
       if (_jspx_meth_c_url_6(_jspx_page_context))
         return;
       out.write("\"  alt=\"Generic placeholder image\" style=\"width: 260px; height: 60px;\"> </a>\r\n");
@@ -272,7 +280,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                        </ul>\r\n");
       out.write("                    </li>\r\n");
       out.write("                    <li>\r\n");
-      out.write("                      <a href=\"pricing.jsp\">Pricing</a>\r\n");
+      out.write("                      <a href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\\view\\newhomepage\\pricing.jsp\">Pricing</a>\r\n");
       out.write("                    </li>\r\n");
       out.write("                    <li>\r\n");
       out.write("                        <a class=\"page-scroll\" href=\"#services\">Services</a>\r\n");
@@ -457,7 +467,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("\" alt=\"Generic placeholder image\" style=\"width: 210px; height: 210px;\"><p></p><br>\r\n");
       out.write("          <h2>For Buyers</h2>\r\n");
       out.write("          <p>We help foreign trade companies seek new importers. Look to us to find the highest quality supplies in the world.</p>\r\n");
-      out.write("          <p><a class=\"btn btn-default\" href=\"buyers.jsp\" role=\"button\">View details »</a></p>\r\n");
+      out.write("          <p><a class=\"btn btn-default\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\\view\\newhomepage\\buyers.jsp\" role=\"button\">View details »</a></p>\r\n");
       out.write("        </div><!-- /.col-lg-4 -->\r\n");
       out.write("        <div class=\"col-lg-4 text-center\">\r\n");
       out.write("          <img class=\"img-circle\" src=\"");
@@ -467,7 +479,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("          \r\n");
       out.write("          <h2>For Sellers</h2>\r\n");
       out.write("          <p>We help manufacturers look for exporters to move their international products. Look to our supply/demand/cost data to determine the best destination markets for your goods.</p>\r\n");
-      out.write("          <p><a class=\"btn btn-default\" href=\"sellers.jsp\" role=\"button\">View details »</a></p><br><br>\r\n");
+      out.write("          <p><a class=\"btn btn-default\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\\view\\newhomepage\\sellers.jsp\" role=\"button\">View details »</a></p><br><br>\r\n");
       out.write("        </div><!-- /.col-lg-4 -->\r\n");
       out.write("        <div class=\"col-lg-4 text-center\">\r\n");
       out.write("          <img class=\"img-circle\" src=\"");
@@ -476,7 +490,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("\" alt=\"Generic placeholder image\" style=\"width: 210px; height: 210px;\"><p></p><br>\r\n");
       out.write("          <h2>For Researchers</h2>\r\n");
       out.write("          <p>We combine traditional trade techniques and modern technology to provide optimal trade data, 24/7. Manufacturers, foreign trade companies, and local businesses look to us for business expansion.</p>\r\n");
-      out.write("          <p><a class=\"btn btn-default\" href=\"research.jsp\" role=\"button\">View details »</a></p><br><br><br><br><br>\r\n");
+      out.write("          <p><a class=\"btn btn-default\" href=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\\view\\newhomepage\\research.jsp\" role=\"button\">View details »</a></p><br><br><br><br><br>\r\n");
       out.write("        </div><!-- /.col-lg-4 -->\r\n");
       out.write("        <!--\r\n");
       out.write("        <h2 class=\"text-center\" style=\"color:#CD9898\">A few of our employer partners:</h2><p></p><br><br>\r\n");
@@ -923,15 +939,21 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("<!-- /footer -->\r\n");
       out.write("\r\n");
       out.write("  <!-- attach JavaScripts -->\r\n");
-      out.write("  <script src=\"static/js/newhomepage/main.js\"></script>\r\n");
       out.write("  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\r\n");
-      out.write("    <script src=\"static/js/newhomepage/bootstrap.min.js\"></script>\r\n");
-      out.write("    <script src=\"static/js/newhomepage/docs.min.js\"></script>\r\n");
+      out.write("    <script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/static/js/newhomepage/bootstrap.min.js\"></script>\r\n");
+      out.write("\r\n");
       out.write("    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\r\n");
       out.write("  \r\n");
       out.write("    <!-- Scrolling Nav JavaScript -->\r\n");
-      out.write("    <script src=\"static/js/newhomepage/jquery.easing.min.js\"></script>\r\n");
-      out.write("    <script src=\"static/js/newhomepage/scrolling-nav.js\"></script>\r\n");
+      out.write("    <script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/static/js/newhomepage/jquery.easing.min.js\"></script>\r\n");
+      out.write("    <script src=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/static/js/newhomepage/scrolling-nav.js\"></script>\r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("  <script>\r\n");
       out.write("    $('.carousel').carousel({\r\n");
@@ -955,6 +977,25 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_set_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:set
+    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_0 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
+    _jspx_th_c_set_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_set_0.setParent(null);
+    _jspx_th_c_set_0.setVar("root");
+    _jspx_th_c_set_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_set_0 = _jspx_th_c_set_0.doStartTag();
+    if (_jspx_th_c_set_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
+      return true;
+    }
+    _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
+    return false;
   }
 
   private boolean _jspx_meth_c_url_0(PageContext _jspx_page_context)
@@ -1098,13 +1139,17 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         out.write("\r\n");
         out.write("\t\t\t\t   <li>\r\n");
         out.write("               \r\n");
-        out.write("\t\t\t\t  <a class=\"btn btn-success\" role=\"button\" href=\"view\\newhomepage\\login.jsp\" style=\"color:white; padding:15px; margin-right:10px;\">Login</a>\r\n");
+        out.write("\t\t\t\t  <a class=\"btn btn-success\" role=\"button\" href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\\view\\newhomepage\\login.jsp\" style=\"color:white; padding:15px; margin-right:10px;\">Login</a>\r\n");
         out.write("                 \r\n");
         out.write("\t\t\t\t  \r\n");
         out.write("\t\t\t\t   \r\n");
         out.write("\t\t\t\t  </li>\r\n");
         out.write("\t\t\t\t  <li>\r\n");
-        out.write("                   <a class=\"btn btn-primary\" href=\"#signup\" role=\"button\" data-toggle=\"modal\" style=\"color:white; padding:15px; margin-right:10px;\">Sign up today</a>\r\n");
+        out.write("                   <a class=\"btn btn-primary\" href=\"");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("\\view\\newhomepage\\index.jsp#signup\" role=\"button\" data-toggle=\"modal\" style=\"color:white; padding:15px; margin-right:10px;\">Sign up today</a>\r\n");
         out.write("                  </li>\r\n");
         out.write("\t\t\t\t   ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();

@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <%
 String path = request.getContextPath();
@@ -159,7 +160,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="logo" href="view\newhomepage\index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+                <a class="logo" href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
                 
             </div>
             
@@ -183,7 +184,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                         </ul>
                     </li>
                     <li>
-                      <a href="pricing.jsp">Pricing</a>
+                      <a href="${pageContext.request.contextPath }\view\newhomepage\pricing.jsp">Pricing</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">Services</a>
@@ -196,13 +197,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            <c:if test="${sessionScope.user  eq null}">
 				   <li>
                
-				  <a class="btn btn-success" role="button" href="view\newhomepage\login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+				  <a class="btn btn-success" role="button" href="${pageContext.request.contextPath }\view\newhomepage\login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
                  
 				  
 				   
 				  </li>
 				  <li>
-                   <a class="btn btn-primary" href="#signup" role="button" data-toggle="modal" style="color:white; padding:15px; margin-right:10px;">Sign up today</a>
+                   <a class="btn btn-primary" href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#signup" role="button" data-toggle="modal" style="color:white; padding:15px; margin-right:10px;">Sign up today</a>
                   </li>
 				   </c:if>
 				  <c:if test="${sessionScope.user  ne null}">
@@ -371,20 +372,20 @@ Based on our long industry background and years of experience in information tec
           <img class="img-square" src="<c:url value="/static/img/newhomepage/buyerh.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           <h2>For Buyers</h2>
           <p>We help foreign trade companies seek new importers. Look to us to find the highest quality supplies in the world.</p>
-          <p><a class="btn btn-default" href="buyers.jsp" role="button">View details »</a></p>
+          <p><a class="btn btn-default" href="${pageContext.request.contextPath }\view\newhomepage\buyers.jsp" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-center">
           <img class="img-circle" src="<c:url value="/static/img/newhomepage/seller.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           
           <h2>For Sellers</h2>
           <p>We help manufacturers look for exporters to move their international products. Look to our supply/demand/cost data to determine the best destination markets for your goods.</p>
-          <p><a class="btn btn-default" href="sellers.jsp" role="button">View details »</a></p><br><br>
+          <p><a class="btn btn-default" href="${pageContext.request.contextPath }\view\newhomepage\sellers.jsp" role="button">View details »</a></p><br><br>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-center">
           <img class="img-circle" src="<c:url value="/static/img/newhomepage/researcherh.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           <h2>For Researchers</h2>
           <p>We combine traditional trade techniques and modern technology to provide optimal trade data, 24/7. Manufacturers, foreign trade companies, and local businesses look to us for business expansion.</p>
-          <p><a class="btn btn-default" href="research.jsp" role="button">View details »</a></p><br><br><br><br><br>
+          <p><a class="btn btn-default" href="${pageContext.request.contextPath }\view\newhomepage\research.jsp" role="button">View details »</a></p><br><br><br><br><br>
         </div><!-- /.col-lg-4 -->
         <!--
         <h2 class="text-center" style="color:#CD9898">A few of our employer partners:</h2><p></p><br><br>
@@ -825,15 +826,15 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 <!-- /footer -->
 
   <!-- attach JavaScripts -->
-  <script src="static/js/newhomepage/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="static/js/newhomepage/bootstrap.min.js"></script>
-    <script src="static/js/newhomepage/docs.min.js"></script>
+    <script src="${root }/static/js/newhomepage/bootstrap.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   
     <!-- Scrolling Nav JavaScript -->
-    <script src="static/js/newhomepage/jquery.easing.min.js"></script>
-    <script src="static/js/newhomepage/scrolling-nav.js"></script>
+    <script src="${root }/static/js/newhomepage/jquery.easing.min.js"></script>
+    <script src="${root }/static/js/newhomepage/scrolling-nav.js"></script>
+
 
   <script>
     $('.carousel').carousel({

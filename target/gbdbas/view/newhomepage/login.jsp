@@ -16,18 +16,18 @@ request.getSession().setAttribute("language","message_en_US");
 %>
 <fmt:setBundle basename="<%=language%>" var="messages"/>
 
-<c:set var="root" value="${pageContext.request.contextPath }"/>
+<c:set var="ctx" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
     <meta name="renderer" content="webkit">  
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="../favicon.ico">
 
-	<script type="text/javascript" src="${root }/static/js/newhomepage/jquery.js"></script>
+	<script type="text/javascript" src="${ctx }/static/js/newhomepage/jquery.js"></script>
 	
 	
-	<script type="text/javascript" src="${root }/static/js/login/login.js" ></script>
-    <script type="text/javascript" src="${root}/static/js/login/findpwd.js"></script>
+	<script type="text/javascript" src="${ctx }/static/js/login/login.js" ></script>
+    
 	
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/newhomepage/jquery-2.1.3.min.js" ></script>
     <script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
@@ -64,14 +64,7 @@ request.getSession().setAttribute("language","message_en_US");
 	}
 	
 
-	$(document).ready(function(){
-		$("#timer_id").one("click", function(){
-			//发送邮件
-			sendEmail();
-		    //触发定时器，定时器回调函数里再使用one绑定div的点击事件
-			sendValidate(60);
-		})
-	})
+	
 	
 
 
@@ -85,7 +78,7 @@ request.getSession().setAttribute("language","message_en_US");
 		document.getElementById("prog").style.display="none";
 		document.getElementById("clossBtn").style.display="block";
 		$("#warn").text(m);
-
+<<<<<<< HEAD
 	}
 	function clearPrompt(){
 		document.getElementById("warn").style.display="none";
@@ -94,8 +87,16 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#myModalLabel").text('Loading');
 		$("#warn").text('');
 	}
-
-
+=======
+	}
+	function clearPrompt(){
+		document.getElementById("warn").style.display="none";
+		document.getElementById("prog").style.display="block";
+		document.getElementById("clossBtn").style.display="none";
+		$("#myModalLabel").text('Loading');
+		$("#warn").text('');
+	}
+>>>>>>> Willie
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
 // 		   $btnmy.value="loading..."
@@ -115,7 +116,7 @@ request.getSession().setAttribute("language","message_en_US");
 				rPassword = "";
 			}
 			$("#myModal").modal('show');
-			$.post("${root}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
+			$.post("${ctx}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
 							function(data){
 							if("2" == data){
 								 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
@@ -129,7 +130,7 @@ request.getSession().setAttribute("language","message_en_US");
 								
 							}else if("1"==data){
 								clearPrompt();
-								location.href = "${root}/pageJump";
+								location.href = "${ctx}/pageJump";
 							}else if("6"==data){
 								promptMessage('<fmt:message key="common.addisnotlogin" bundle="${messages}"/>')	;
 								
@@ -242,7 +243,7 @@ request.getSession().setAttribute("language","message_en_US");
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
         </div>
         <div class="col-lg-13 text-left">
-        <a href="${root}/view/newhomepage/index.jsp " class="padding-left:50px" style="color:white">Go back to the home page</a>
+        <a href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home" class="padding-left:50px" style="color:white">Go back to the home page</a>
         </div>
         </div>
         
@@ -270,9 +271,8 @@ request.getSession().setAttribute("language","message_en_US");
      
         <p>Please enter your email.&hellip;</p>
         <input type="text" id="loginName"  name="loginName" class="form-control" placeholder="Email" required="" autofocus="">
- 		<input type="text" id="verifiedCode"  name="loginName" class="form-control" placeholder="" required="" autofocus="">   
- 		<button type="button" class="btn btn-default" id="timer_id">Get Verify Code</button>
- 		 </div>
+      
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" onclick="subEmail();">Send Email</button>
