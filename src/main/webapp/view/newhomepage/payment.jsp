@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	$('#invoice').modal('hide');
        $('#myModal').modal('show');
    		
-       $.post("${root}/gavin2", {$("#wholeForm1").serialize(),$("#wholeForm2").serialize()},
+       $.post("${root}/creditCardTransaction", $(".myform").serialize(),
 			function(data){
     	   		if("0"==data){
     	   			promptMessage('Sorry, there is something wrong with your payment information. Please have a check.');
@@ -329,7 +329,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   <div class="col-lg-12 text-center">
     <label>
-      <input type="checkbox"> I <b>accept</b> the Customer Agreement 
+      <input type="checkbox" required="true"> I <b>accept</b> the Customer Agreement 
     </label>
 </div>
      </div>
