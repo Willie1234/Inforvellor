@@ -52,16 +52,16 @@
 			<div style="width:974px;position: absolute;padding-left: 200px;padding-top: 20px;">
 				<div style="padding-bottom: 10px;">
 			    	<span style="color: #0066cc;font-family: 宋体;font-size: 14px;">
-			    		<img alt="账号登录日志" style="vertical-align:middle;" src="${root }/static/img/usermanagement/sonAccount.png"> <b>我的子账户管理</b>
+			    		<img alt="账号登录日志" style="vertical-align:middle;" src="${root }/static/img/usermanagement/sonAccount.png"> <b>Sub-Account Management</b>
 			    	</span>
 			    </div>
 				<div id="buttonDiv">
 		   	 	    <!-- 新增用户 -->
-					<a class="btn_alldb_add" onclick="addUser()" title="新增用户"  href="javascript:void(0);">&nbsp;&nbsp;新增</a>
+					<a class="btn_alldb_add" onclick="addUser()" title="新增用户"  href="javascript:void(0);">&nbsp;&nbsp;Add</a>
 					<!-- 修改用户 -->
-					<a class="btn_alldb_eit"  onclick="updateUser()" title="编辑用户"  href="javascript:void(0);">&nbsp;&nbsp;编辑</a>
+					<a class="btn_alldb_eit"  onclick="updateUser()" title="编辑用户"  href="javascript:void(0);">&nbsp;&nbsp;Refine</a>
 					<!-- 删除用户 -->
-					<a class="btn_alldb_remove" onclick="deleteUsers()" title="删除用户" href="javascript:void(0);">&nbsp;&nbsp;删除</a>
+					<a class="btn_alldb_remove" onclick="deleteUsers()" title="删除用户" href="javascript:void(0);">&nbsp;&nbsp;Delete</a>
 					<div style="float: right;">
 				    	<img src="/gbdbas/static/img/datasearch/tips.png" style="width:25px;vertical-align: middle;">
 						<span class="showfontCls" id="subSumCount"></span>

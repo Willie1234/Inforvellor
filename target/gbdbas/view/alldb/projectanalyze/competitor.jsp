@@ -34,15 +34,15 @@
 <body>
 	<div id="bqCompetitors" style="width: 100%; height: 550px; display: none;border: 0px solid red;overflow: scroll;">
 		<div id="bqjzsearchtools" style="padding: 15px 0px 5px 0px; width:80%; height: 58px; background-color: #ffffff; border-bottom-color: #ffffff; border-bottom-width: 1px;">
-			<span>国家名称:</span> 
+			<span>Country name:</span> 
 				<select id="competorCountry" name="competorCountry" style="width: 198px; height: 24px;">
 				</select>
 			<div id="bqspanel"></div>
 			<span style="margin-left: 36px;">
-				公司名称:</span> 
+				Company name:</span> 
 				<input type="text" id="bqcompanyName" value="" style="width: 198px; 
 				height: 24px; border: 1px solid #e5e5e5; border-radius: 4px; margin-right: 36px;" />
-			<a class="btn_cls" href="#" onclick="queryCompany();" title="立即查询">立即查询</a>
+			<a class="btn_cls" href="#" onclick="queryCompany();" title="立即查询">Immediate Search</a>
 			<input type="hidden" id="competitorHsCode" name="competitorHsCode"/>
 			<input type="hidden" id="competitorGoodsDesp" name="competitorGoodsDesp"/>
 		</div>
@@ -56,12 +56,12 @@
 				<tr>
 					<th field="country" width="160" align="center" formatter="isNullFormat">
 						<span style="font-size: 14px;">
-							国家名称
+							Country name
 						</span>
 					</th>
 					<th field="exporter" width="140" align="center" formatter="isNullFormat">
 						<span style="font-size: 14px;">
-							出口商
+							Exporter
 						</span>
 					</th>
 					<th field="tradeCount" width="100" align="center" sortable="true">
@@ -76,7 +76,7 @@
 					</th>
 					<th field="tradeWeight" width="100" align="center" sortable="true" formatter="checkValueSmall">
 						<span style="font-size: 14px;">
-							重量
+							Weight
 						</span>
 					</th>
 					<th field="tradeQuantity" width="100" align="center" sortable="true" formatter="checkValueSmall">
@@ -86,7 +86,7 @@
 					</th>
 					<th field="opt" width="280" formatter="bqaddOpss" align="center">
 						<span style="font-size: 14px;">
-							功能大全
+							Other Functions
 						</span>
 					</th>
 				</tr>
@@ -107,7 +107,7 @@
 					</th>
 					<th field="importer" width="180" align="center" formatter="isNullFormat">
 						<span style="font-size: 14px;">
-							进口商
+							Importer
 						</span>
 					</th>
 					<th field="tradeQuantity" width="120" align="center" sortable="true" formatter="checkValueSmall">
@@ -117,7 +117,7 @@
 					</th>
 					<th field="tradeWeight" width="120" align="center" sortable="true" formatter="checkValueSmall">
 						<span style="font-size: 14px;">
-							重量
+							Weight
 						</span>
 					</th>
 					<th field="tradeMoney" width="120" align="center" sortable="true" formatter="checkValueSmall">
@@ -127,12 +127,12 @@
 					</th>
 					<th field="country" width="160" align="center">
 						<span style="font-size: 14px;">
-							国家
+							Country
 						</span>
 					</th>
 					<th field="opt" width="280" formatter="bqaddOpssbuyer" align="center">
 						<span style="font-size: 14px;">
-							功能大全
+							Other Functions
 						</span>
 					</th>
 				</tr>

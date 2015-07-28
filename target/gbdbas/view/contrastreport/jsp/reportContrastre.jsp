@@ -39,7 +39,7 @@
 						<div align="right" width="1100px" >
 							<div style="padding-left: 80px;">
 								<div class="queryCss">
-									<font class="fontCss">国家：</font>
+									<font class="fontCss">Country：</font>
 									<input id="countryName" readonly="readonly" value="请选择国家" onclick="changeCountryRepost()" class="inpText2"/>
 								</div>
 								<div class="queryCss">
