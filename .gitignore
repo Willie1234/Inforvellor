@@ -1,2 +1,6 @@
 /target/*
-/log/*
+/logs/*
+.project
+
+
+/target

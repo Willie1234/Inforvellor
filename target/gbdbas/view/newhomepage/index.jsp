@@ -160,7 +160,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                     <span class="icon-bar"></span>
                 </button>
 
+
                 <a class="logo" href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+
                 
             </div>
             
@@ -197,7 +199,9 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            <c:if test="${sessionScope.user  eq null}">
 				   <li>
                
+
 				  <a class="btn btn-success" role="button" href="${pageContext.request.contextPath }\view\newhomepage\login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+
                  
 				  
 				   

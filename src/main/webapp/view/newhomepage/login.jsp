@@ -26,12 +26,13 @@ request.getSession().setAttribute("language","message_en_US");
 	<script type="text/javascript" src="${ctx }/static/js/newhomepage/jquery.js"></script>
 	
 	
-	<script type="text/javascript" src="${ctx }/static/js/login/login.js" ></script>
+
     
+
 	
-	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/newhomepage/jquery-2.1.3.min.js" ></script>
-    <script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
-	<script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/newhomepage/bootstrap.js"></script>
+	
+	<script type="text/javascript" src="${root}/static/js/newhomepage/jquery-2.1.3.min.js" ></script>
+  
 
     <title>Sign in</title>
 
@@ -63,6 +64,12 @@ request.getSession().setAttribute("language","message_en_US");
 		 return true;
 	}
 	
+
+	function getCode(){
+		getVeryfiedCode()
+		
+		
+	}
 
 	
 	
@@ -141,55 +148,15 @@ request.getSession().setAttribute("language","message_en_US");
 		
 	
 	}
-		function subEmail(){
-			var loginValue = $("#loginName").val();
-			$("#myModal").modal('show');
-			if(loginValue.trim().length==0){
-		//	alert('<fmt:message key="loss.message12" bundle="${messages}"/>');
-			promptMessage('Email address cannot be empty. Please type in your email for account!')	
-			return;
-			 }
-			$.post("${pageContext.request.contextPath }/isUserExit",
-				{loginName : loginValue},
-				function(flag){
-					if(flag=="0"){
-					//	alert('<fmt:message key="loss.message8" bundle="${messages}"/>');
-						promptMessage('<fmt:message key="loss.message8" bundle="${messages}"/>')	
-						return;
-					}else if(flag=="1"){
-						//用户存在
-						
-					$("#autoInfo").css("background-image","url(${pageContext.request.contextPath }/static/img/button/infoSend.png)");
-					$("#emailState").html("<fmt:message key="loss.message9" bundle="${messages}"></fmt:message>");
-					$("#emailState").css("left",43);
-					$("#show").empty();
-					$.post("${pageContext.request.contextPath }/sendEmail",
-							{loginName : loginValue},
-							function(data){
-								if(data == 1){
-							//	alert('<fmt:message key="loss.message10" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message10" bundle="${messages}"/>')		
-								}else if(data==2){
-							//	alert('<fmt:message key="loss.message11" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message11" bundle="${messages}"/>')		
-								 }else if(data==3){
-							//	 alert('<fmt:message key="loss.message12" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message12" bundle="${messages}"/>')		
-								 }else if(data==4){
-							//	 alert('<fmt:message key="loss.message13" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message13" bundle="${messages}"/>')		
-								}
-								 $("#autoInfo").css("background-image","url(${pageContext.request.contextPath }/static/img/button/infoAuto.png)");
-									 $("#emailState").css("left",57);
-									 $("#emailState").html("<fmt:message key="loss.ok" bundle="${messages}"></fmt:message>");
-							},"json");
-					}
-				},"text");
-		}
-
-
+		
 	
 </script>
+	<script type="text/javascript" src="${root }/static/js/login/login.js" ></script>
+    <script type="text/javascript" src="${root}/static/js/newhomepage/findpwd.js"></script>
+      <script type="text/javascript"	src="${root }/static/js/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript"	src="${root }/static/js/newhomepage/bootstrap.js"></script>
+
+
 </head><body>
 
     <div class="container">
@@ -260,9 +227,12 @@ request.getSession().setAttribute("language","message_en_US");
       <div class="modal-body">
      
         <p>Please enter your email.&hellip;</p>
-        <input type="text" id="loginName"  name="loginName" class="form-control" placeholder="Email" required="" autofocus="">
-      
-      </div>
+
+        <input type="text" id="loginEmail"  name="loginEmail" class="form-control" placeholder="Login Email" required="" autofocus="">
+ 		<input type="text" id="verifiedCode"  name="loginName" class="form-control" placeholder="" required="" autofocus="">   
+ 		<button type="button" class="btn btn-default" id="timer_id" onClick="getCode()">Get Verify Code</button>
+ 		 </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" onclick="subEmail();">Send Email</button>
@@ -301,4 +271,5 @@ request.getSession().setAttribute("language","message_en_US");
 </div>
 
 </body>
+
 </html>

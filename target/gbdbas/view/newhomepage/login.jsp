@@ -16,22 +16,20 @@ request.getSession().setAttribute("language","message_en_US");
 %>
 <fmt:setBundle basename="<%=language%>" var="messages"/>
 
-<c:set var="ctx" value="${pageContext.request.contextPath }"/>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
     <meta name="renderer" content="webkit">  
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="../favicon.ico">
 
-	<script type="text/javascript" src="${ctx }/static/js/newhomepage/jquery.js"></script>
+	<script type="text/javascript" src="${root }/static/js/newhomepage/jquery.js"></script>
 	
 	
-	<script type="text/javascript" src="${ctx }/static/js/login/login.js" ></script>
-    
 	
-	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/newhomepage/jquery-2.1.3.min.js" ></script>
-    <script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
-	<script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/newhomepage/bootstrap.js"></script>
+	
+	<script type="text/javascript" src="${root}/static/js/newhomepage/jquery-2.1.3.min.js" ></script>
+  
 
     <title>Sign in</title>
 
@@ -63,7 +61,11 @@ request.getSession().setAttribute("language","message_en_US");
 		 return true;
 	}
 	
-
+	function getCode(){
+		getVeryfiedCode()
+		
+		
+	}
 	
 	
 
@@ -78,6 +80,7 @@ request.getSession().setAttribute("language","message_en_US");
 		document.getElementById("prog").style.display="none";
 		document.getElementById("clossBtn").style.display="block";
 		$("#warn").text(m);
+
 	}
 	function clearPrompt(){
 		document.getElementById("warn").style.display="none";
@@ -86,6 +89,7 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#myModalLabel").text('Loading');
 		$("#warn").text('');
 	}
+
 
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
@@ -106,7 +110,7 @@ request.getSession().setAttribute("language","message_en_US");
 				rPassword = "";
 			}
 			$("#myModal").modal('show');
-			$.post("${ctx}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
+			$.post("${root}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
 							function(data){
 							if("2" == data){
 								 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
@@ -120,7 +124,7 @@ request.getSession().setAttribute("language","message_en_US");
 								
 							}else if("1"==data){
 								clearPrompt();
-								location.href = "${ctx}/pageJump";
+								location.href = "${root}/pageJump";
 							}else if("6"==data){
 								promptMessage('<fmt:message key="common.addisnotlogin" bundle="${messages}"/>')	;
 								
@@ -141,56 +145,18 @@ request.getSession().setAttribute("language","message_en_US");
 		
 	
 	}
-		function subEmail(){
-			var loginValue = $("#loginName").val();
-			$("#myModal").modal('show');
-			if(loginValue.trim().length==0){
-		//	alert('<fmt:message key="loss.message12" bundle="${messages}"/>');
-			promptMessage('Email address cannot be empty. Please type in your email for account!')	
-			return;
-			 }
-			$.post("${pageContext.request.contextPath }/isUserExit",
-				{loginName : loginValue},
-				function(flag){
-					if(flag=="0"){
-					//	alert('<fmt:message key="loss.message8" bundle="${messages}"/>');
-						promptMessage('<fmt:message key="loss.message8" bundle="${messages}"/>')	
-						return;
-					}else if(flag=="1"){
-						//用户存在
-						
-					$("#autoInfo").css("background-image","url(${pageContext.request.contextPath }/static/img/button/infoSend.png)");
-					$("#emailState").html("<fmt:message key="loss.message9" bundle="${messages}"></fmt:message>");
-					$("#emailState").css("left",43);
-					$("#show").empty();
-					$.post("${pageContext.request.contextPath }/sendEmail",
-							{loginName : loginValue},
-							function(data){
-								if(data == 1){
-							//	alert('<fmt:message key="loss.message10" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message10" bundle="${messages}"/>')		
-								}else if(data==2){
-							//	alert('<fmt:message key="loss.message11" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message11" bundle="${messages}"/>')		
-								 }else if(data==3){
-							//	 alert('<fmt:message key="loss.message12" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message12" bundle="${messages}"/>')		
-								 }else if(data==4){
-							//	 alert('<fmt:message key="loss.message13" bundle="${messages}"/>');
-								promptMessage('<fmt:message key="loss.message13" bundle="${messages}"/>')		
-								}
-								 $("#autoInfo").css("background-image","url(${pageContext.request.contextPath }/static/img/button/infoAuto.png)");
-									 $("#emailState").css("left",57);
-									 $("#emailState").html("<fmt:message key="loss.ok" bundle="${messages}"></fmt:message>");
-							},"json");
-					}
-				},"text");
-		}
-
-
+		
 	
 </script>
+	<script type="text/javascript" src="${root }/static/js/login/login.js" ></script>
+    <script type="text/javascript" src="${root}/static/js/newhomepage/findpwd.js"></script>
+      <script type="text/javascript"	src="${root }/static/js/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript"	src="${root }/static/js/newhomepage/bootstrap.js"></script>
+
+
+
 </head><body>
+
 
     <div class="container">
       <div class="col-md-12 col-md-push-0 text-center">
@@ -233,7 +199,9 @@ request.getSession().setAttribute("language","message_en_US");
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
         </div>
         <div class="col-lg-13 text-left">
+
         <a href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home" class="padding-left:50px" style="color:white">Go back to the home page</a>
+
         </div>
         </div>
         
@@ -260,9 +228,10 @@ request.getSession().setAttribute("language","message_en_US");
       <div class="modal-body">
      
         <p>Please enter your email.&hellip;</p>
-        <input type="text" id="loginName"  name="loginName" class="form-control" placeholder="Email" required="" autofocus="">
-      
-      </div>
+        <input type="text" id="loginEmail"  name="loginEmail" class="form-control" placeholder="Login Email" required="" autofocus="">
+ 		<input type="text" id="verifiedCode"  name="loginName" class="form-control" placeholder="" required="" autofocus="">   
+ 		<button type="button" class="btn btn-default" id="timer_id" onClick="getCode()">Get Verify Code</button>
+ 		 </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" onclick="subEmail();">Send Email</button>
@@ -301,4 +270,5 @@ request.getSession().setAttribute("language","message_en_US");
 </div>
 
 </body>
+
 </html>

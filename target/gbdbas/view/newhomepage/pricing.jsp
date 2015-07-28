@@ -681,6 +681,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
+
         <div class="col-md-12 col-md-push-3 text-center">
          <div class="col-lg-6 text-right">
     <input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:100px;height:43px;"/>
@@ -694,6 +695,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     </div>
     </div>
     </div>
+
  		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:black">Forget Password</a>
         
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"  type="submit" >Sign in</button>
