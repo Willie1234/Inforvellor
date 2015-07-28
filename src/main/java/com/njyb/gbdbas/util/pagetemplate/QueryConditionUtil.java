@@ -113,7 +113,9 @@ public class QueryConditionUtil
 		//拼凑出待生成的html
 		StringBuffer buf = new StringBuffer();
 		//获取搜索条件的中文名
-		String [] fieldZhName = map.get(country+DataSearchConstantUtil.CONDITIONZHNAME).toString().split(",");
+	//	String [] fieldZhName = map.get(country+DataSearchConstantUtil.CONDITIONZHNAME).toString().split(",");
+		//get search english name
+		String [] fieldZhName = map.get(country+DataSearchConstantUtil.CONDITIONENNAME).toString().split(",");
 		//获取搜索条件字段id名
 		String [] fieldId = map.get(country+DataSearchConstantUtil.CONDITIONFIELDID).toString().split(",");
 		//获取需要添加翻译的字段id
