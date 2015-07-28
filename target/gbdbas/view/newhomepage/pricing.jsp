@@ -43,6 +43,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   <link rel="stylesheet" href="${root }/static/css/newhomepage/languages.min.css"/>
   <script src="${root }/static/js/newhomepage/jquery-2.1.3.min.js"></script>
+    <script src="${root }/static/js/login/login.js"></script>
    <style>
       h1            { padding-top: 50px; }
       .mynavigation { padding-top: 70px; }
@@ -148,7 +149,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     function startTransaction(value){
 	var money=value;
 	
-	$.post("/saveMoneyAndCheckUser",{money:money},
+	$.post("/gbdbas/saveMoneyAndCheckUser",{money:money},
 		function(data){
 			if(data=="1"){
 				$("#checkUserName").modal('show');
@@ -177,7 +178,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   }
   
   
-  function usersub(){
+  function usersubmit(){
 //	   var $btnmy=document.getElementById("signIn");
 //	   $btnmy.value="loading..."
 	   //$(this).value="loading";
@@ -188,15 +189,11 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 		var loginName = $("#user_name").val();
 		var loginPassword = $("#user_pass").val();
 		var regCode = $("#checkcode").val();
-		var check  = document.getElementById("rPassword");
+	
 		var rPassword;
-		if(check!=null&&check.checked){
-			rPassword = check.value;
-		}else{
-			rPassword = "";
-		}
+		
 		$("#myModal").modal('show');
-		$.post("/customer_search/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
+		$.post("/gbdbas/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
 						function(data){
 						if("2" == data){
 							 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
@@ -293,7 +290,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            <c:if test="${sessionScope.user  eq null}">
 				   <li>
                
-				  <a class="btn btn-success" role="button" href="newLogin/login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+				  <a class="btn btn-success" role="button" href="login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
                  
 				  
 				   
@@ -672,21 +669,33 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     <div class="modal-header">
   	
   		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       			 <h4 class="modal-title" id="gridSystemModalLabel">Please sign in:</h4>
+       			 <h4 class="modal-title" id="gridSystemModalLabel"><font size="5">Please sign in:</font></h4>
   	
   	
   	</div>
   	<div class="modal-body">
-      <form class="form-signin" onsubmit="return usersub()"  >
+      <form class="form-signin" onsubmit="return usersubmit()"  >
        
         <label for="inputUser" class="sr-only">Username</label>
         <input type="text" id="user_name" class="form-control" placeholder="Username" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
-         
+        <div class="col-md-12 col-md-push-3 text-center">
+         <div class="col-lg-6 text-right">
+    <input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:100px;height:43px;"/>
+    </div>
+    
+        <div class="col-lg-6 text-left">
+    <a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: -100px;padding-left: -100px;z-index: 100;position: absolute;"> 
+    <img align="bottom" id="createcheckcode" style="width:115px;height:43px;" border="0">
+    </a>
+    
+    </div>
+    </div>
+    </div>
  		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:black">Forget Password</a>
-        </div>
+        
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"  type="submit" >Sign in</button>
       </form>
     </div>

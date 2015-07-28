@@ -56,7 +56,7 @@
 	  <div style="width: 80%;height: 200px; border: 0px solid red;margin: 0 auto;">
 		<div class="alldb_down_advancesearch">
 			<div title="全库下载" style="width:100%;height:200px;padding-top: 30px;">
-				<div style="padding-top: 10px;background-color: #F5FAF9;width: 100%;height: 30px;"><b><font color="#1369c0" style="font-size:18px;padding-left: 36px">全库下载</font></b></div>
+				<div style="padding-top: 10px;background-color: #F5FAF9;width: 100%;height: 30px;"><b><font color="#1369c0" style="font-size:18px;padding-left: 36px">All Library Download</font></b></div>
 <!-- 				<div style="border:0px solid #E5E5E5;width:80%; margin-top:10px;margin-left: 25px; border-radius:5px;font-size: 14px;color:#777f7f;height: 35px;"> -->
 <!-- 					<span style=" vertical-align:top; margin-top:20px;">请选择适合你的查询下载条件：</span> -->
 <!-- 					<label title="按hscode查询"> -->
@@ -74,23 +74,23 @@
 <!-- 				</div> -->
 				<!-- 日期 -->
 				<div style="height: 50px;width:20%;border: 0px solid red;line-height: 50px;margin-left: 20px;float: left;">
-					<font class="fieldname">日期:</font>
+					<font class="fieldname">Date:</font>
 					<input id="dowloadStartDate" name="dowloadStartDate"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> -
 					<input id="dowloadEndDate" name="dowloadEndDate"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-12-31','2011-12-31','2012-12-31','2013-12-31','2014-12-31'],readOnly:true})"/>
 				</div>
 				<!-- 海关编码 -->
 				<div id="hscodeDiv" style="height: 45px;width: 26%;border: 0px solid red;line-height: 50px; float: left;">
-					<font class="fieldname">海关编码 :</font>
+					<font class="fieldname">Custom number:</font>
 					<input id="dowloadHscode" name="dowloadHscode" class="inpText"/>
 				</div>
 				<!-- 产品描述 -->
 				<div id="productDiv" style="height: 50px; width: 25%;line-height: 50px; float: left; border: 0px solid red;">
-					<font class="fieldname">产品描述:</font>
+					<font class="fieldname">Product Description:</font>
 					<input id="dowloadProductDesc" name="dowloadProductDesc" class="inpText"/> 
 				</div>
 				<!-- 国家 -->
 				<div style="height: 65px;width: 25%;border: 0px solid red;line-height: 50px;margin-left: 20px;float: left;">
-					<font class="fieldname">国家:</font>
+					<font class="fieldname">Country:</font>
 					<select id="dowloadCountry" name="dowloadCountryName" style="width:170%;height:22px;border-color: #e2e5e7"></select>
 					<div id="dowloadSpanel"></div>
 				</div>
@@ -100,11 +100,11 @@
 						<img src="/gbdbas/static/img/datasearch/tips.png" style="width:25px;"></img>
 					</div>
 					<div style="float: left;width: 30%;height: 25px; border: 0px solid green;margin-top: 2px;">
-						<font size="2" style="line-height: 20px;">下载数据的查询时间段最多为31天。</font>
+						<font size="2" style="line-height: 20px;">Query time of download data is up to 31 days.</font>
 					</div>
 					<div style="float: right;">
 						<a class="btn_cls" title="立即下载" href="javascript:dowloadAllDataClick(this);" style="float: right;margin-top: 10px;">
-						立即下载
+						Immediate Download
 						</a>
 					</div>
 				</div>

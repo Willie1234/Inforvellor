@@ -2968,7 +2968,7 @@ select[multiple].form-group-lg .form-control {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 19px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: center;
@@ -3120,7 +3120,7 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #fff;
-  background-color: #449d44;
+  background-color: #647AA1;
   border-color: #398439;
 }
 .btn-success:active,

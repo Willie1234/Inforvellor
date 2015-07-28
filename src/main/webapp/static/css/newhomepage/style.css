@@ -286,6 +286,11 @@ a {
   color: #333;
   text-decoration: none;
 }
+@media (min-width: 1200px) {
+  #loginDialog .col-lg-6 {
+  width: 21%;
+}
+}
 
 .btn-circle i.animated {
     -webkit-transition-property: -webkit-transform;

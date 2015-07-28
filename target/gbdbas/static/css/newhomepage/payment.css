@@ -39,3 +39,19 @@ legend {
     padding: 0;
 }
 
+#contract {
+  
+  display: table;
+  height: 420px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+#collapseOne{
+  background-color: #FCFDC8;
+}

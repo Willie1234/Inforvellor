@@ -78,7 +78,6 @@ request.getSession().setAttribute("language","message_en_US");
 		document.getElementById("prog").style.display="none";
 		document.getElementById("clossBtn").style.display="block";
 		$("#warn").text(m);
-
 	}
 	function clearPrompt(){
 		document.getElementById("warn").style.display="none";
@@ -87,7 +86,6 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#myModalLabel").text('Loading');
 		$("#warn").text('');
 	}
-
 
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
@@ -235,7 +233,7 @@ request.getSession().setAttribute("language","message_en_US");
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
         </div>
         <div class="col-lg-13 text-left">
-        <a href="../" class="padding-left:50px" style="color:white">Go back to the home page</a>
+        <a href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home" class="padding-left:50px" style="color:white">Go back to the home page</a>
         </div>
         </div>
         
