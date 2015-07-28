@@ -430,6 +430,7 @@ C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\api\payments\Phone.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\api\payments\Agreement.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\admincenter\ISearchLogService.java
+C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\service\paypal\PayService.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\model\personalcenter\alipay\AliPalyEntity.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\common\componet\report\strategy\impl\SingleListSummaryStragey.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\api\payments\ErrorDetails.java
@@ -478,6 +479,7 @@ C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\a
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\common\engine\builder\componet\impl\SearchQuery.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\api\payments\Transactions.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\api\payments\PayoutBatchHeader.java
+C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\model\paypal\UserChargeModel.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\common\engine\api\filter\strategy\AbstractFilterStrategy.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\model\datasearch\nicaragua\NicaraguaImportModel.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\personalcenter\alipay\UserAlipay.java
@@ -530,6 +532,7 @@ C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\g
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\controller\servicecenter\CustomerCenterController.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbas\util\export\ExportExcelUtil.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbas\util\ds\java\ThreadContextUtil.java
+C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\service\paypal\IPayService.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\base\exception\HttpErrorException.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\common\engine\builder\impl\director\ResultDataDirector.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\alldb\buyerresource\BuyerResourceService.java
@@ -562,6 +565,7 @@ C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\g
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\paypal\api\payments\AgreementTransaction.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\alldb\competitor\CompetitorService.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\model\datasearch\common\SearchPropertiesModel.java
+C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\controller\paypal\TransactionController.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\common\engine\api\query\impl\MultiFieldQuery.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\dao\datasearch\country\ISalvatoreImportDao.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\model\personalcenter\CountryUpdateTimeModel.java
@@ -703,4 +707,3 @@ C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\g
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\dao\datasearch\country\IVenezuelaExportDao.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\model\authcenter\CountRightModel.java
 C:\Users\hy_ho_000\Desktop\newVersionSystem\Inforvellor\src\main\java\com\njyb\gbdbase\service\alldb\convertdata\KoreaConvertModel.java
-

@@ -17,6 +17,7 @@
 				<!-- 阿根廷进口搜索条件字段-->
 				<entry key="argentina_import_conditionzhname" value="国家：,海关编码：,CIF价格：,重量：,产品描述：,日期：,FOB价格：,数量：,采购商：,原产国："></entry>
 				<entry key="argentina_import_conditionfieldid" value="country,hscode,cifstartprice/cifendprice,startweight/endweight,goodsdesc,startdate/enddate,fobstartprice/fobendprice,startquantity/endquantity,importer,origin_country"></entry>
+				<entry key="argentina_import_conditionenname" value="country,hscode,CIF,startweight/endweight,goodsdesc,startdate/enddate,fobstartprice/fobendprice,startquantity/endquantity,importer,origin_country"></entry>
 				<!-- 需要添加翻译的字段id -->
 				<entry key="argentina_import_trans" value="goodsdesc,importer,origin_country"></entry>
 				<!-- 需要添加文本框描述的字段id -->
@@ -519,6 +520,7 @@
 				<!--中国搜索条件字段-->
 				<entry key="china_conditionzhname" value="国家：,海关编码：,CIF价格：,数量：,收发货地：,公司名称：,日期：,贸易类型：,报告口岸：,产销国："></entry>
 				<entry key="china_conditionfieldid" value="country,hscode,cifstartprice/cifendprice,startquantity/endquantity,product_place,companyname,startdate/enddate,trade_type,start_port,origin_country"></entry>
+				<entry key="china_conditionenname" value="country,hscode,cifstartprice/cifendprice,startquantity/endquantity,product_place,companyname,startdate/enddate,trade_type,start_port,origin_country"></entry>
 				<!-- 需要添加翻译的字段id -->
 				<entry key="china_trans" value=""></entry>
 				<!-- 需要添加文本框描述的字段id -->
