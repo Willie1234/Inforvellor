@@ -35,13 +35,52 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <!-- Custom CSS -->
   <link href="<c:url value="/static/css/newhomepage/scrolling-nav.css" />" rel="stylesheet">
   <link href="<c:url value="/static/css/newhomepage/custom.css" />" rel="stylesheet">
-
-  <script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-   <script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
-    <script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/newregister.js'></script>
-  <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/artdialog/artDialog.source.js?skin=twitter"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/artdialog/artdialogopen.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/regest.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/common/check.js"></script>
+<script type="text/javascript" 	src="${pageContext.request.contextPath }/static/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/login.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/login/supersized.3.2.7.min.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/supersized-init.js" ></script>
+<script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
+<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/newregister.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	myRandReload();
+	checkStatus=true;
+	$('#loginName').validatebox({    
+	    required: true,   
+	    validType: ['account[4,12]',"remote['/gbdbas/userSon/checkUserSonName','loginName']"],
+	    missingMessage:'账号必须由英文字母、数字(0-9)、汉字组成，长度在4-12个字符之间。',
+	    delay:300
+	}); 
+	$('#loginPassword').validatebox({    
+	    required: true,    
+	    validType: 'passwd[6,20]',
+	    missingMessage:'只能包含字母、数字以及标点符号，长度为6～12。'
+	}); 
+	$('#email').validatebox({    
+	    required: true,    
+	    validType: 'myEmail',
+	    missingMessage:'邮箱不能为空'
+	}); 
+	//关键激活窗口时刷新验证码
+	$('#activeDiv').dialog({
+	    onClose:function(){
+	    	myRandReload();
+	    }
+	});
+});
+</script>
+  
+  <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   <link href="<c:url value="/static/css/newhomepage/languages.min.css" />" rel="stylesheet">
   <link href="<c:url value="/static/css/newhomepage/font-awesome.min.css" />" rel="stylesheet">
  
@@ -158,7 +197,8 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="logo" href="../view/newhomepage/index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+
+                <a class="logo" href="view\newhomepage\index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
                 
             </div>
             
@@ -195,7 +235,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            <c:if test="${sessionScope.user  eq null}">
 				   <li>
                
-				  <a class="btn btn-success" role="button" href="newLogin/login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+				  <a class="btn btn-success" role="button" href="view\newhomepage\login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
                  
 				  
 				   
@@ -612,17 +652,17 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
       <div class = "modal-body">
               <div class="row">
         <div class="container-modal">
-           <form onsubmit="return userSubmit()" action="${pageContext.request.contextPath }/registerUser" method="post" accept-charset="utf-8" class="form" role="form"> 
+           <form id="regestForm"  action="/gbdbas/userRegest" method="post" accept-charset="utf-8" > 
                     <h4>You will be able to select the payment options later on.</h4>
                     <div class="row">
                            <div class="col-xs-6 col-md-6">
-                            <input type="text" id="inputFirstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
+                            <input type="text" id="FirstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
                         <div class="col-xs-6 col-md-6">
-                            <input type="text" id="inputLastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
+                            <input type="text" id="LastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
                     </div>
-                    <input type="text" id="inputUserName" name="loginName" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
-                    <input type="password" id="inputPassword" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
-                    <input type="password" id="reinputPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                    <label>Birth Date</label>                    <div class="row">
+                    <input type="text" id="email" name="email" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
+                    <input type="password" id="Password" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
+                    <input type="password" id="confirmPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                    <label>Birth Date</label>                    <div class="row">
                         <div class="col-xs-4 col-md-4">
                             <select name="month" class = "form-control input-lg">
                             <option value="01">Jan</option>
@@ -757,14 +797,23 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 </select>                        </div>
                     </div>
                      <label>Gender : </label>                    <label class="radio-inline">
-                        <input type="radio" name="sex" value="Male" id=male />                        Male
+                        <input type="radio" name="sex" value="Male" id="male" />                        Male
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="sex" value="Female" id=female />                        Female
+                        <input type="radio" name="sex" value="Female" id="female" />                        Female
                     </label>
                     <br />
               <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
-                    <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
+               <div class='pact'>
+                     <div>
+                     <label>
+                     <input id = "checkRead" type="checkbox" required ="true"> <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
+                         <span id="pactMessege"></span>
+                  </label>
+                         
+                     </div>
+               </div>
+                    <button id="regestButton" class="btn btn-lg btn-primary btn-block signup-btn" onclick ="regest()" type="button">
                         Create my account</button>
             </form>          	
           </div>
@@ -775,6 +824,20 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
   </div>
 </div>
 
+
+
+ <div  id="activeDiv" closed="true" class="easyui-dialog" style="border-width:1px; width:400px;height:400px;padding:10px 20px;overflow-x:hidden;">
+       <div class="toMail">
+       <font  >恭喜您！<span id="name"></span></font><br/>
+       <font >我们已经向您的邮箱  发送了一封激活邮件，请点击邮件中的链接完成激活！</font><br/>
+                前往 <a id='emailId' href="#" style='font-size:16px;'></a> 激活  <br/>
+       </div>
+</div>
+   
+   
+   
+   
+
 <div class = "modal fade" id = "contacts" role = "dialog">
   <div class = "modal-dialog">
     <div class = "modal-content">
@@ -784,7 +847,7 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
       <div class = "modal-body">
               <div class="row">
          <div class="container-modal">
-            <form action="${pageContext.request.contextPath }/sendUsEmail" method="post" accept-charset="utf-8" class="form" role="form"> 
+            <form action="${pageContext.request.contextPath }/sendUsEmail" method="post" accept-charset="utf-8" > 
               <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <input type="text" required=""  name="fromEmail" value="" class="form-control input-lg" placeholder="From" />                        </div>

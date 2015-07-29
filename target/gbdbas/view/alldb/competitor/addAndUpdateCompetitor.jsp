@@ -43,10 +43,10 @@
 				<div style="padding-top: 2px;padding-left: 85px;">
 					<p>
 						<font style="font-size: 14px; font-weight: border; color: #000000;padding-right:25px;">
-							公司名称
+							Company name
 						</font> 
 						<input name="companyName" style="width: 274px; height: 26px; border: 1px solid #95b8e7; border-color: #e5e5e5; border-radius: 4px 4px 4px 4px;"/>
-						<span id='showSpanOfPage' style="display: none;color: red;">请输入英文</span>
+						<span id='showSpanOfPage' style="display: none;color: red;">Please enter English</span>
 					</p>
 				</div>
 				
@@ -73,7 +73,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									国家
+									Country
 								</font>
 							</td>
 							<td>
@@ -83,7 +83,7 @@
 							
 							<td>
 								<font class="characterStyle">
-									电话
+									Tel
 								</font>
 							</td>
 							<td>
@@ -93,7 +93,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									传真
+									Fax
 								</font>
 							</td>
 							<td>
@@ -112,7 +112,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									电子邮件
+									Email
 								</font>
 							</td>
 							<td>
@@ -205,13 +205,13 @@
 		<div id="buttonImage" style="padding-left: 280px; padding-top: 20px">
 			<c:if test="${language eq 'message_zh_CN'}">
 				<span id="sureSpan" style="padding-right: 13px;">
-					<a class="confirmOrcancel_cls" title="保存" onclick="saveCompetitorForAllDB()">保存</a>
+					<a class="confirmOrcancel_cls" title="保存" onclick="saveCompetitorForAllDB()">Save</a>
 				</span>
 				<span id="updateSpan" style="padding-right: 13px;">
-					<a class="confirmOrcancel_cls" title="修改" onclick="updateCompetitorForAllDB()">修改</a>
+					<a class="confirmOrcancel_cls" title="修改" onclick="updateCompetitorForAllDB()">Refine</a>
 				</span>
 				<span>
-					<a class="confirmOrcancel_cls" title="取消" onclick="closeCompetitorForAllDB()">取消</a>
+					<a class="confirmOrcancel_cls" title="取消" onclick="closeCompetitorForAllDB()">Delete</a>
 				</span>
 			</c:if>
 		</div>

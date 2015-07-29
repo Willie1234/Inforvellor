@@ -50,19 +50,19 @@
 					<thead>
 						<tr>
 							<th field="byHsCode" Width="150" align="center">
-								<font style="font-size: 14px;">海关编码</font>
+								<font style="font-size: 14px;">Custom Code</font>
 							</th>
 							<th field="byProductDesc" Width="150" align="center">
-								<font style="font-size: 14px;">产品描述</font>
+								<font style="font-size: 14px;">Product Description</font>
 							</th>
 							<th field="byCountry" Width="150" align="center">
-								<font style="font-size: 14px;">国家</font>
+								<font style="font-size: 14px;">Country</font>
 							</th>
 							<th field="startTime" Width="150" align="center">
-								<font style="font-size: 14px;">开始时间</font>
+								<font style="font-size: 14px;">Start time</font>
 							</th>
 							<th field="endTime" Width="150" align="center">
-								<font style="font-size: 14px;">结束时间</font>
+								<font style="font-size: 14px;">End time</font>
 							</th>
 							<th field="iExportType" Width="150" align="center">
 								<font style="font-size: 14px;">进出口类型</font>

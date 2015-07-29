@@ -52,7 +52,7 @@ $(document).ready(function(){
 		       	<p class="account-info">为了你的帐号安全，请完成身份验证</p>   
 		       	<div class="emailValidate">邮箱验证：</div> 
 		       	<div class="clearfix pass-input-container"> 
-			       	<label class="form-2-label">邮箱：</label> 
+			       	<label class="form-2-label">Email：</label> 
 			       	<div class="form-2-content line-32" id="userEmail"> ${sessionScope.user.email} </div> 
 		       	</div>
 		       	<div class="form-2-item clearfix"> 

@@ -22,8 +22,8 @@
 						<div id="sp"></div>
 					</div>
 					<div id="customerbuttonFlexBr" style="padding-top: 240px;padding-left: 100px">
-						<a class="confirmOrcancel_cls"  onclick="saveDb();">确定</a>&nbsp;&nbsp;&nbsp;
-						<a class="confirmOrcancel_cls"  onclick="javascript:art.dialog({id:'duibi'}).close();">取消</a>
+						<a class="confirmOrcancel_cls"  onclick="saveDb();">OK</a>&nbsp;&nbsp;&nbsp;
+						<a class="confirmOrcancel_cls"  onclick="javascript:art.dialog({id:'duibi'}).close();">Cancel</a>
 					</div>
 			</div>
 		</div>

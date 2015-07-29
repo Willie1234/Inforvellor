@@ -31,19 +31,19 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            </td>
          </tr>
          <tr>
-           <td style="text-align: right;color:#777f7f;font-size: 16px;height:40px;">HS编码:</td>
+           <td style="text-align: right;color:#777f7f;font-size: 16px;height:40px;">HS code:</td>
            <td>&nbsp;&nbsp;<input  name="hscode" id="hscode2" style="border: 1px solid #e2e5e7;margin-right:8px; border-radius: 4px;width: 190px; height: 30px;"/>
           	 <span style="color: #0066ff;font-size: 12px;text-align: center;">*必填项</span>
            </td>
          </tr>
          <tr>
-            <td style="text-align: right;color:#777f7f;font-size: 16px;">产品描述:</td>
+            <td style="text-align: right;color:#777f7f;font-size: 16px;">Product Description:</td>
            <td>&nbsp;&nbsp;<input name="productName" id="productName" style="border: 1px solid #e2e5e7;margin-right:8px; border-radius: 4px;width: 190px; height: 30px;"/>
            	<span style="color: #0066ff;font-size: 12px;text-align: center;">*必填项(可添加多个,用空格分开)</span>
            </td>
          </tr>
          <tr style="display: none">
-            <td style="text-align: right;color:#777f7f;font-size: 16px;">产品描述:</td>
+            <td style="text-align: right;color:#777f7f;font-size: 16px;">Product Description:</td>
            <td>&nbsp;&nbsp;<input name="productId" id="productId" style="border: 1px solid #e2e5e7;margin-right:8px; border-radius: 4px;width: 190px; height: 30px;"/>
            	<span style="color: #0066ff;font-size: 12px;text-align: center;">*必填项(可添加多个,用空格分开)</span>
            </td>
@@ -51,8 +51,8 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
          <tr>
             <td colspan="2" style="padding-left:200px;padding-top: 30px;">
             <div style="width: 350px; height: 100px;border: 0px solid red;">
-            	<a class="btn_cls" href="#" title="保存" style="padding: 5px 31.5px 5px; margin-right: 9px;" onclick="addProInfo();">保存</a>
-               	<a class="btn_cls" href="#" title="取消" style="padding: 5px 31.5px 5px;" onclick="closeArtDlg();">取消</a>
+            	<a class="btn_cls" href="#" title="保存" style="padding: 5px 31.5px 5px; margin-right: 9px;" onclick="addProInfo();">Save</a>
+               	<a class="btn_cls" href="#" title="取消" style="padding: 5px 31.5px 5px;" onclick="closeArtDlg();"></a>
 	        </div>
             </td>
          </tr>
