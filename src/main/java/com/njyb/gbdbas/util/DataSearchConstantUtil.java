@@ -10,6 +10,8 @@ public interface DataSearchConstantUtil {
 	
 	//搜索条件字段中文名
 	public final static String CONDITIONZHNAME="_conditionzhname";
+	//search English name
+	public final static String CONDITIONENNAME="_conditionenname";
 	//搜索条件字段id名
 	public final static String CONDITIONFIELDID = "_conditionfieldid";
 	//搜索条件字段中文名

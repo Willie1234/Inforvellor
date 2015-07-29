@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	$('#invoice').modal('hide');
        $('#myModal').modal('show');
    		
-       $.post("${root}/gavin2", {$("#wholeForm1").serialize(),$("#wholeForm2").serialize()},
+       $.post("${ctx}/gavin2", $("#wholeForm").serialize(),
 			function(data){
     	   		if("0"==data){
     	   			promptMessage('Sorry, there is something wrong with your payment information. Please have a check.');
@@ -95,7 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     }
     function jumpToSystem(){
     	
-    	window.location.replace("${root}/pageJump");
+    	window.location.replace("${ctx}/view/chinese/menu/country.jsp");
     }
 </script>
   </head>
@@ -109,7 +109,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="container">
 <p></p><br><br>
 <div class="span12 panel relative" style="display: block;">
-    <form class="myform" id="wholeForm1" role="form" onsubmit=" return showModal()">
+    <form class="myform" id="wholeForm" role="form" onsubmit=" return showModal()">
     
     <fieldset>
 
@@ -203,7 +203,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <div class="container">
 <div class="span12 panel relative" style="display: block;">
-<form class="myform" id="wholeForm2" role="form" onsubmit=" return showModal()">
+<form class="myform" id="wholeForm" role="form" onsubmit=" return showModal()">
     <fieldset>
       <legend>Payment</legend>
       <div class="pad-section col-md-10 col-md-push-1 text-left">
@@ -329,7 +329,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   <div class="col-lg-12 text-center">
     <label>
-      <input type="checkbox"> I <b>accept</b> the Customer Agreement 
+      <input type="checkbox" required="true"> I <b>accept</b> the Customer Agreement 
     </label>
 </div>
      </div>

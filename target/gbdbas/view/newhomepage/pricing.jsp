@@ -290,7 +290,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            <c:if test="${sessionScope.user  eq null}">
 				   <li>
                
-				  <a class="btn btn-success" role="button" href="newLogin/login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+				  <a class="btn btn-success" role="button" href="login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
                  
 				  
 				   
@@ -669,7 +669,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
     <div class="modal-header">
   	
   		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       			 <h4 class="modal-title" id="gridSystemModalLabel">Please sign in:</h4>
+       			 <h4 class="modal-title" id="gridSystemModalLabel"><font size="5">Please sign in:</font></h4>
   	
   	
   	</div>
@@ -681,12 +681,30 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
+<<<<<<< HEAD
          <input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:155px"/>
 		<a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: 25px;padding-left: 5px;z-index: 100;position: absolute;"> 
 		<img align="bottom" id="createcheckcode" style="width:130px;height:45px;" border="0">
 		</a>
+=======
+
+        <div class="col-md-12 col-md-push-3 text-center">
+         <div class="col-lg-6 text-right">
+    <input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:100px;height:43px;"/>
+    </div>
+    
+        <div class="col-lg-6 text-left">
+    <a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: -100px;padding-left: -100px;z-index: 100;position: absolute;"> 
+    <img align="bottom" id="createcheckcode" style="width:115px;height:43px;" border="0">
+    </a>
+    
+    </div>
+    </div>
+    </div>
+
+>>>>>>> 0b5eb2ca079e6cd856545b5845c169d1dfb31078
  		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:black">Forget Password</a>
-        </div>
+        
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"  type="submit" >Sign in</button>
       </form>
     </div>

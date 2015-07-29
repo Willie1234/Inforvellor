@@ -75,7 +75,7 @@ public class CheckSessionFilter implements Filter {
 			// 如果用户为null,则跳转到login.jsp
 			if (null == userModel) {
 				// 跳转login.jsp
-				servletResponse.sendRedirect(servletRequest.getContextPath() + "/view/login/infobase/login.jsp");
+				servletResponse.sendRedirect(servletRequest.getContextPath() + "/view/newhomepage/login.jsp");
 			} else {
 				chain.doFilter(request, response);
 			}
