@@ -229,10 +229,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="col-xs-9">
               <select class="form-control col-sm-7" name="visa" id="visa" required>
                 <option selected disabled hidden value=''>Select</option>
-                <option value="1">Visa</option>
-                <option value="2">MasterCard</option>
-                <option value="3">Discover</option>
-                <option value="4">American Express</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="discover">Discover</option>
+                <option value="amex">American Express</option>
                 
               </select>
             </div>

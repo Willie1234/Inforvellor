@@ -53,9 +53,9 @@ public class TransactionController {
 		if(payment!=null)
 		{
 			try{
-				LOGGER.info("afterCreatePayment");
+			//	LOGGER.info("afterCreatePayment");
 			if(payment.getState().equals("approved")){
-			LOGGER.info("payment create successfully");
+	//		LOGGER.info("payment create successfully");
 				UserModel user=(UserModel)request.getSession().getAttribute("user");
 				String loginName=user.getLoginName();
 				int model=iUserService.checkTransactionModel(payment);
@@ -102,7 +102,7 @@ public void transactionThroughPayPal(HttpServletRequest request, HttpServletResp
 	String accessToken = new OAuthTokenCredential(clientID, clientSecret,sdkConfig).getAccessToken();
 	APIContext apiContext = new APIContext(accessToken);
 	apiContext.setConfigurationMap(sdkConfig);
-	System.out.print("111a\n");
+	
 	Amount amount = new Amount();
 	amount.setCurrency("USD");
 	amount.setTotal("12");
@@ -125,9 +125,9 @@ public void transactionThroughPayPal(HttpServletRequest request, HttpServletResp
 	redirectUrls.setCancelUrl("https://devtools-paypal.com/guide/pay_paypal?cancel=true");
 	redirectUrls.setReturnUrl("https://www.inforvellor.com/index.jsp");
 	payment.setRedirectUrls(redirectUrls);
-	System.out.print("111a\n");
+	
 	Payment createdPayment = payment.create(apiContext);
-	System.out.print("111a\n");
+	
 	Iterator<Links> links = createdPayment.getLinks().iterator();
 	while (links.hasNext()) {
 		Links link = links.next();
@@ -147,7 +147,7 @@ public void successTransaction(HttpServletRequest request,HttpServletResponse re
 }
 
 public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) throws IOException{
-	LOGGER.info("begin transaction");
+	//LOGGER.info("begin transaction");
 	String billAddress1=req.getParameter("billing-address-line1");
 	String billAddress2=req.getParameter("billing-address-line2");
 	String city=req.getParameter("city");
@@ -157,7 +157,7 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 	String billFirstName=req.getParameter("billing-name1");
 	String billLastName=req.getParameter("billing-name2");
 	String phone=req.getParameter("phone-number");
-	LOGGER.info("names");
+	String cardType=req.getParameter("visa");
 	String firstName=req.getParameter("card-holder-firstname");
 	String lastName=req.getParameter("card-holder-lastname");
 	String cardNumber=req.getParameter("card-number");
@@ -165,7 +165,7 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 	String expireYear=req.getParameter("expiry-year");
 	String cvv=req.getParameter("cvv");
 	String moneyAmmount=(String) req.getSession().getAttribute("moneyAmmount");
-	LOGGER.info(lastName);
+	//LOGGER.info(lastName);
 	Map<String, String> sdkConfig = new HashMap<String, String>();
 	sdkConfig.put("mode", "sandbox");
 	Address billingAddress = new Address();
@@ -187,8 +187,9 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 	//creditCard.setFirstName("Joe");
 	//creditCard.setLastName("Shopper");
 	//creditCard.setNumber("4032034879726365");
-	creditCard.setType("visa");
-	LOGGER.info(cvv);
+//	creditCard.setType("visa");
+	creditCard.setType(cardType);
+//	LOGGER.info(cvv);
 	//creditCard.setCvv2(Integer.parseInt(cvv));
 	creditCard.setCvv2(Integer.parseInt(cvv));
 	creditCard.setExpireMonth(Integer.parseInt(expireMonth));
@@ -228,7 +229,7 @@ public Payment createPayment(HttpServletRequest req, HttpServletResponse resp) t
 		//String accessToken = GenerateAccessToken.getAccessToken();
 		APIContext apiContext = new APIContext(accessToken);
 		apiContext.setConfigurationMap(sdkConfig);
-		System.out.print("\n3");
+
 		createdPayment = payment.create(apiContext);
 	
 	
