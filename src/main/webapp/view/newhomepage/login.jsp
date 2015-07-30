@@ -16,14 +16,14 @@ request.getSession().setAttribute("language","message_en_US");
 %>
 <fmt:setBundle basename="<%=language%>" var="messages"/>
 
-<c:set var="ctx" value="${pageContext.request.contextPath }"/>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
     <meta name="renderer" content="webkit">  
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="../favicon.ico">
 
-	<script type="text/javascript" src="${ctx }/static/js/newhomepage/jquery.js"></script>
+	<script type="text/javascript" src="${root }/static/js/newhomepage/jquery.js"></script>
 	
 	
 
@@ -113,7 +113,7 @@ request.getSession().setAttribute("language","message_en_US");
 				rPassword = "";
 			}
 			$("#myModal").modal('show');
-			$.post("${ctx}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
+			$.post("${root}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
 							function(data){
 							if("2" == data){
 								 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
@@ -127,7 +127,7 @@ request.getSession().setAttribute("language","message_en_US");
 								
 							}else if("1"==data){
 								clearPrompt();
-								location.href = "${ctx}/pageJump";
+								location.href = "${root}/pageJump";
 							}else if("6"==data){
 								promptMessage('<fmt:message key="common.addisnotlogin" bundle="${messages}"/>')	;
 								

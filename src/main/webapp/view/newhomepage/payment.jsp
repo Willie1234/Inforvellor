@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	$('#invoice').modal('hide');
        $('#myModal').modal('show');
    		
-       $.post("${ctx}/gavin2", $("#wholeForm").serialize(),
+       $.post("${root}/creditCardTransaction", $(".myform").serialize(),
 			function(data){
     	   		if("0"==data){
     	   			promptMessage('Sorry, there is something wrong with your payment information. Please have a check.');
@@ -95,7 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     }
     function jumpToSystem(){
     	
-    	window.location.replace("${ctx}/view/chinese/menu/country.jsp");
+    	window.location.replace("${root}/view/chinese/menu/country.jsp");
     }
 </script>
   </head>
