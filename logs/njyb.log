@@ -48,3 +48,12 @@
 
 2015-07-28 11:20:48 [ qtp102577332-25:440988 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
 2015-07-28 11:33:51 [ qtp1167916234-20:36873 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-07-28 13:49:21 [ qtp102577332-23:40511 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-07-28 14:57:46 [ qtp1441999009-25:64809 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-07-28 14:58:14 [ qtp1441999009-26:93308 ] - [ INFO ] before createPayment
+2015-07-28 14:58:14 [ qtp1441999009-26:93321 ] - [ INFO ] 111
+2015-07-28 14:58:17 [ qtp1441999009-26:96726 ] - [ ERROR ] Error code : 400 with response : {"name":"VALIDATION_ERROR","details":[{"field":"payer.funding_instruments[0].credit_card.type","issue":"Value is invalid (must be visa, mastercard, amex, or discover)"}],"message":"Invalid request - see details","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#VALIDATION_ERROR","debug_id":"3f9361522b385"}
+2015-07-28 14:59:53 [ qtp1441999009-22:191912 ] - [ INFO ] before createPayment
+2015-07-28 14:59:53 [ qtp1441999009-22:191915 ] - [ INFO ] 111
+2015-07-28 14:59:56 [ qtp1441999009-22:195730 ] - [ INFO ] afterCreatePayment
+2015-07-28 14:59:56 [ qtp1441999009-22:195731 ] - [ INFO ] payment create successfully
