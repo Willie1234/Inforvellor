@@ -16,36 +16,32 @@
 <script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/login/findpwd.js"></script>
-<title>英蓓-重置密码成功</title>
+<title>Password reset successfully</title>
 </head>
 <body>
    <!--主DIV-->
-   <div class="all">
+   <div class="container">
+     <div class="col-md-12 col-md-push-0  panel panel-primary">
 	   <!-- head -->
-	   <div class="header">
+	    <div class="panel-heading text-center">Password Retrieve Processing
 	   </div>
 	   <!-- body -->
-	   <div class="sub">
-	    <div class='titleLeft'>会员找回密码</div>
-	    <div class='titleRight'>
-	    </div>
+	     <div class="panel-body">
+	   
 	    <div class="find_div">
-	       <ul class="mod-sub-nav">
-	         <li class="mod-sub-list1" style="font-size: 16px;">确认帐号  </li>
-	         <li class="mod-sub-list2" style="font-size: 16px;">安全验证  </li>
-	         <li class="mod-sub-list3 list3-active" style="font-size: 16px;">重置密码 </li>
-	       </ul>
+	      
 	       <div class="mod-step-detail"> 
 	       	<div class="result-info"> 
 	       		<div class="result-message"> 
 	       			<img src="/gbdbas/static/img/login/success_icon.png"> 
-	       			<span style="font-size: 18px;">恭喜，平台账号${sessionScope.user.loginName }重置密码成功</span> 
+	       			<span style="font-size: 18px;">Congratulations! You have successfully reset password for ${sessionScope.user.loginName }</span> 
 	       			<div class="login_div_cls">
-	       				<a class="result-title-btn" href="/gbdbas/UserPassword/login">直接登录</a> 
+	       				<a class="result-title-btn" href="/gbdbas/UserPassword/login">Log in directly</a> 
 	       			</div>
 	       		</div>
 		   </div>
 	    </div>
+	   </div>
 	   </div>
    </div>
 </body>

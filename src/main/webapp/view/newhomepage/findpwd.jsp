@@ -1,3 +1,17 @@
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<c:set var="root" value="${pageContext.request.contextPath }"/>
+<link href="${root}/static/css/newhomepage/bootstrap.css" rel="stylesheet">
+  <script src="${root }/static/js/newhomepage/jquery-2.1.3.min.js"></script>
+<script src="${root}/static/js/newhomepage/findpwd2.js" /></script>
 <div class="container">
 <div class="row">
 <div class="col-sm-12">
@@ -30,3 +44,4 @@
 </div><!--/col-sm-6-->
 </div><!--/row-->
 </div>
+</html>
