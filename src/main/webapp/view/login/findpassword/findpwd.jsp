@@ -35,7 +35,7 @@ $(document).ready(function(){
 			$(this).removeClass('blue_cls'); 
 			$("#loginName").addClass('red_cls'); 
 			$("#loginName_msg").empty();
-			$("#loginName_msg").append("请您输入用户名");
+			$("#loginName_msg").append("*Please enter your account");
 			$("#loginName_msg").css("display","block");
 		}
 		else
@@ -58,7 +58,7 @@ $(document).ready(function(){
 			$(this).removeClass('blue_cls'); 
 			$("#veritycode").addClass('red_cls'); 
 			$("#veritycode_msg").empty();
-			$("#veritycode_msg").append("请您输入验证码");
+			$("#veritycode_msg").append("*Please enter check code");
 			$("#veritycode_msg").css("display","block");
 		}
 		else

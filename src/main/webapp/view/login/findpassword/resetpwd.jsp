@@ -17,7 +17,7 @@
 <script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/login/findpwd.js"></script>
-<title>英蓓-重置密码</title>
+<title>Password reset</title>
 <script type="text/javascript">
 //初始化页面
 $(document).ready(function(){

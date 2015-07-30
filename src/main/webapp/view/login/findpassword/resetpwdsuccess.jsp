@@ -13,6 +13,7 @@
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/login/findpwd.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/easyui/icon.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/easyui/easyui.css">
+<link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/newhomepage/bootstrap.css">
 <script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/login/findpwd.js"></script>
@@ -21,7 +22,7 @@
 <body>
    <!--主DIV-->
    <div class="container">
-     <div class="col-md-12 col-md-push-0  panel panel-primary">
+     <div class="col-md-12 col-md-push-0  panel panel-primary text-center">
 	   <!-- head -->
 	    <div class="panel-heading text-center">Password Retrieve Processing
 	   </div>
@@ -36,7 +37,7 @@
 	       			<img src="/gbdbas/static/img/login/success_icon.png"> 
 	       			<span style="font-size: 18px;">Congratulations! You have successfully reset password for ${sessionScope.user.loginName }</span> 
 	       			<div class="login_div_cls">
-	       				<a class="result-title-btn" href="/gbdbas/UserPassword/login">Log in directly</a> 
+	       				<a class="btn btn-default" href="/gbdbas/UserPassword/login">Log in directly</a> 
 	       			</div>
 	       		</div>
 		   </div>

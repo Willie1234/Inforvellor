@@ -57,7 +57,7 @@ function netSetp(){
 			{
 				$("#veritycode").addClass('red_cls'); 
 				$("#veritycode_msg").empty();
-				$("#veritycode_msg").append("Check Code Error);
+				$("#veritycode_msg").append("Check Code Error");
 				$("#veritycode_msg").css("display","block");
 			}
 			else if (data == "2")

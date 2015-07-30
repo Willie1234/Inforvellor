@@ -56,3 +56,7 @@
 2015-07-30 12:22:44 [ qtp1012613647-25:585585 ] - [ INFO ] before createPayment
 2015-07-30 12:23:31 [ qtp1012613647-24:632933 ] - [ INFO ] before createPayment
 2015-07-30 12:23:35 [ qtp1012613647-24:636448 ] - [ ERROR ] Error code : 500 with response : {"name":"INTERNAL_SERVICE_ERROR","message":"An internal service error has occurred","information_link":"https://developer.paypal.com/webapps/developer/docs/api/#INTERNAL_SERVICE_ERROR","debug_id":"e262df3551d53"}
+2015-07-30 16:30:04 [ qtp1790598448-24:723197 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-07-30 16:46:34 [ qtp1790598448-22:1713005 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-07-30 16:47:33 [ qtp1790598448-22:1771681 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-07-30 16:50:22 [ qtp1790598448-22:1940401 ] - [ INFO ] before createPayment
