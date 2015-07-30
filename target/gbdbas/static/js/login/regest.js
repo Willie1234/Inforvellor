@@ -38,35 +38,39 @@ function myRandReload(){
 /**
  * 注册
  */
+
+function checkRequired(){
+	if ($("#field").val() != "" )
+        regest();
+    
+	
+}
+
+
+
 function regest(){
 	 emailValue=$("#email").val();
-	$('#regestForm').form('submit', {   
-	       onSubmit: function(){ 
-	    	   if(!checkStatus){
-	    		  $("#pactMessege").text("*请同意协议");
-	    		   return false;
-	    	   }
-	         return $(this).form('validate'); 
-	      } ,  
-	      success:function(data){   
-	    	  if(data=='1'){
-	    		  //注册成功后跳转到邮箱激活页面
-	    		  openActiveDiv();
-	    	  }else if(data=='2'){
-	    		  $('#checkCode').val('验证码错误...');
-	    		  $('#checkCode').css({
-	    			   'font-size':'12px',
-	    			   'color':'skyblue',
-	    			   'background-color':'#FFF3F3'
-	    		  });
+	//firstName = $("#FirstName").val();
+	 //lastName = $("#LastName").val();
+	 //password = $("#Password").val();
+	// confirmPassword = $("#confirmPassword").val();
+	// male = $("#male").val();
+	// female = $("#female").val();
+	// checkRead = $("#checkRead").val();
+	$.post("/gbdbas/userRegest", $("#regestForm").serialize() ,
+	      function(data){   
+	    	  if(data=='1'|| data == '2'){
+
+	    			  openActiveDiv();
+
 	    	  }
 	    	  else{
 	    		   $.messager.alert('提示','邮箱地址不正确','info');
 	    		   $("#email").val("");
 	    	  }
 	    	  
-	     }   
-	}); 
+	     }    
+	);
 }
 /**
  * 清理验证码
@@ -100,6 +104,8 @@ function openActiveDiv(){
 /**
  * 根据输入的email跳转到要激活邮箱的email
  */
+
+
 function getEmailUrl(email) {
 	if (email) {
 		var emails = [ {

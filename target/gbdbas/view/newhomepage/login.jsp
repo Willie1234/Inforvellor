@@ -90,7 +90,11 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#warn").text('');
 	}
 
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> 0b5eb2ca079e6cd856545b5845c169d1dfb31078
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
 // 		   $btnmy.value="loading..."
@@ -153,11 +157,14 @@ request.getSession().setAttribute("language","message_en_US");
       <script type="text/javascript"	src="${root }/static/js/easyui/jquery.easyui.min.js"></script>
 	<script type="text/javascript"	src="${root }/static/js/newhomepage/bootstrap.js"></script>
 
+<<<<<<< HEAD
+=======
 
 
 </head><body>
 
 
+>>>>>>> 0b5eb2ca079e6cd856545b5845c169d1dfb31078
     <div class="container">
       <div class="col-md-12 col-md-push-0 text-center">
       <form class="form-signin" onsubmit="return usersubmit()" >
@@ -199,9 +206,13 @@ request.getSession().setAttribute("language","message_en_US");
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
         </div>
         <div class="col-lg-13 text-left">
+<<<<<<< HEAD
+        <a href="../" class="padding-left:50px" style="color:white">Go back to the home page</a>
+=======
 
         <a href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home" class="padding-left:50px" style="color:white">Go back to the home page</a>
 
+>>>>>>> 0b5eb2ca079e6cd856545b5845c169d1dfb31078
         </div>
         </div>
         
