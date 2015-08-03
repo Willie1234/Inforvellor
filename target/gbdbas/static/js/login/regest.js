@@ -50,28 +50,48 @@ function checkRequired(){
 
 function regest(){
 	 emailValue=$("#email").val();
-	//firstName = $("#FirstName").val();
-	 //lastName = $("#LastName").val();
-	 //password = $("#Password").val();
-	// confirmPassword = $("#confirmPassword").val();
-	// male = $("#male").val();
-	// female = $("#female").val();
-	// checkRead = $("#checkRead").val();
-	$.post("/gbdbas/userRegest", $("#regestForm").serialize() ,
+	 firstName = $("#FirstName").val();
+	 lastName = $("#LastName").val();
+	 password = $("#Password").val();
+	 confirmPassword = $("#confirmPassword").val();
+	 male = $("#male").val();
+	 female = $("#female").val();
+	 checkRead = $("#checkRead").val();
+	 
+	 if (emailValue != "" & firstName != "" & lastName != "" & password != "" & confirmPassword != "" & document.getElementById('checkRead').checked){
+	   $.post("/gbdbas/userRegest", $("#regestForm").serialize(), 
 	      function(data){   
 	    	  if(data=='1'|| data == '2'){
-
-	    			  openActiveDiv();
-
+	    			 openActiveDiv();
+	    		 
 	    	  }
 	    	  else{
 	    		   $.messager.alert('提示','邮箱地址不正确','info');
 	    		   $("#email").val("");
-	    	  }
-	    	  
+	    	  }  
 	     }    
-	);
-}
+	   );
+	 }
+	 else if(firstName == ""){
+		 $("#requiredField").text('*First name is required');
+	 }
+	 else if(lastName == ""){
+		 $("#requiredField").text('*Last name is required');
+	 }
+	 else if(emailValue == ""){
+		 $("#requiredField").text('*Email is required');
+	 }
+	 else if(password == ""){
+		 $("#requiredField").text('*Password is required');
+	 }
+	 else  if(confirmPassword == ""){
+		 $("#requiredField").text('*You must confirm your password');
+	 }
+	 else if(!document.getElementById('checkRead').checked){
+		 $("#requiredField").text('*You must agree with our contact');
+	 }
+
+		  }
 /**
  * 清理验证码
  */
@@ -104,6 +124,7 @@ function openActiveDiv(){
 /**
  * 根据输入的email跳转到要激活邮箱的email
  */
+
 
 
 function getEmailUrl(email) {

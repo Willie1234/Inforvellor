@@ -136,7 +136,6 @@ $(document).ready(function(){
        <font >我们已经向您的邮箱  发送了一封激活邮件，请点击邮件中的链接完成激活！</font><br/>
                 前往 <a id='emailId' href="#" style='font-size:16px;'></a> 激活  <br/>
        </div>
-        <!--  <button id="redoButton" onclick="sendAgin()">重新发送</button>-->
    </div>
    
 </body>

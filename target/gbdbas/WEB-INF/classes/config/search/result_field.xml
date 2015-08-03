@@ -16,6 +16,7 @@
 				<!-- 巴西进口查询结果展示字段 -->
 				<entry key="brazil_import_resultdisplayzhname" value="选择字段,到港日期,采购商,海关编码,产品描述,重量,原产国,FOB总价"></entry>
 				<entry key="brazil_import_resultdisplayfield" value="viewdetail,date,importer,hscode,goosDesc,netWeight,originCountry,fobValue"></entry>
+				
 				<!-- 巴西进口查询结果隐藏字段 -->
 				<entry key="brazil_import_resulthidezhname" value="目的地,数量,单位类型,FOB单价,运输方式"></entry>
 				<entry key="brazil_import_resulthidefield" value="destCountry,quantity,unitType,fobUnit,transType"></entry>
