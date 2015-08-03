@@ -329,7 +329,7 @@ function sendLoadData(){
 					var pieData = pieCreateEcharts(data);
 					if (pieData) {
 						$("#echartsDiv").show();
-						showPieChart('echartsDiv', pieData, getTitle(param.reportType), '',950, 500,'重量');
+						showPieChart('echartsDiv', pieData, getTitle(param.reportType), '',950, 500,'Quantity');
 					} else {
 						$("#echartsDiv").hide();
 					}
@@ -344,7 +344,7 @@ function sendLoadData(){
 					}
 				}
 			} else {
-				$.messager.alert("提示","未查询到数据!",'info');
+				$.messager.alert("Prompt","未查询到数据!",'info');
 				$("#echartsDiv").html('');
 				$("#conten").hide();
 			}
@@ -374,11 +374,11 @@ function validateDate(firstStart, firstEnd, secondStart, secondEnd, message,
 		reporttype) {
 	// 验证第一段日期
 	if (firstStart == null || firstStart == '') {
-		alertMessage("提示", "开始日期不能为空!", "info");
+		alertMessage("Prompt", "开始日期不能为空!", "info");
 		return false;
 	}
 	if (firstEnd == null || firstEnd == '') {
-		alertMessage("提示", "结束日期不能为空!", "info");
+		alertMessage("Prompt", "结束日期不能为空!", "info");
 		return false;
 	}
 	var fsDate = new Date(firstStart);
@@ -387,12 +387,12 @@ function validateDate(firstStart, firstEnd, secondStart, secondEnd, message,
 	var etime = feDate.getTime(firstEnd);
 	var time = parseInt(etime) - parseInt(btime);
 	if (fsDate > feDate) {
-		alertMessage("提示", message, "info");
+		alertMessage("Prompt", message, "info");
 		return false;
 	}
 	// 验证时间段不超过一年
 	if (time > 31536000000) {
-		alertMessage("提示", "查询最大的时间差不能超过一年!", "info");
+		alertMessage("Prompt", "查询最大的时间差不能超过一年!", "info");
 		return false;
 	}
 	// 判断当报告类型为新增，流失进口商，新增流失出口商时校验第二段日期
@@ -400,11 +400,11 @@ function validateDate(firstStart, firstEnd, secondStart, secondEnd, message,
 			|| reporttype == 'ADDEXPORTER' || reporttype == 'REDURCEEXPORTER') {
 		// 验证第二段日期
 		if (secondStart == null || secondStart == '') {
-			alertMessage("提示", "新增时间段开始日期不能为空!", "info");
+			alertMessage("Prompt", "新增时间段开始日期不能为空!", "info");
 			return false;
 		}
 		if (secondEnd == null || secondEnd == '') {
-			alertMessage("提示", "新增时间段结束日期不能为空!", "info");
+			alertMessage("Prompt", "新增时间段结束日期不能为空!", "info");
 			return false;
 		}
 		var ssDate = new Date(secondStart);
@@ -413,12 +413,12 @@ function validateDate(firstStart, firstEnd, secondStart, secondEnd, message,
 		var setime = seDate.getTime(secondEnd);
 		var stime = parseInt(setime) - parseInt(sbtime);
 		if (ssDate > seDate) {
-			alertMessage("提示", message, "info");
+			alertMessage("Prompt", message, "info");
 			return false;
 		}
 		// 验证新增时间不超过一年
 		if (stime > 31536000000) {
-			alertMessage("提示", "查询最大的时间差不能超过一年!", "info");
+			alertMessage("Prompt", "查询最大的时间差不能超过一年!", "info");
 			return false;
 		}
 	}
@@ -437,24 +437,24 @@ function validateDate(firstStart, firstEnd, secondStart, secondEnd, message,
 function checkSibmitHtml(params) {
 	if (params) {
 		if (!params.countrySelect) {
-			$.messager.alert("提示", "国家不能为空!");
+			$.messager.alert("Prompt", "国家不能为空!");
 			return false;
 		}
 		if ((params.beginDateFlex.trim() != "" && params.endDateFlex.trim() == "")
 				|| (params.beginDateFlex.trim() == "" && params.endDateFlex
 						.trim() != "")) {
-			$.messager.alert("提示", "时间不能为空");
+			$.messager.alert("Prompt", "时间不能为空");
 			return false;
 		}
 		if (params.endDateFlex.trim() != "") {
 			if (!(verifyDate(params.beginDateFlex) && verifyDate(params.endDateFlex))) {
-				$.messager.alert("提示", "时间格式不正确!");
+				$.messager.alert("Prompt", "时间格式不正确!");
 				return false;
 			}
 			var sDate = new Date(params.beginDateFlex);
 			var eDate = new Date(params.endDateFlex);
 			if (eDate < sDate) {
-				$.messager.alert("提示", "您输入的查询结束时间不能够小于查询开始时间!");
+				$.messager.alert("Prompt", "您输入的查询结束时间不能够小于查询开始时间!");
 				return false;
 			}
 			var date1 = new Date(params.beginDateFlex);
@@ -463,7 +463,7 @@ function checkSibmitHtml(params) {
 			var etime = date2.getTime(params.endDateFlex);
 			var time = parseInt(etime) - parseInt(btime);
 			if (time > 31536000000) {
-				$.messager.alert("提示", "查询最大的时间差不能超过一年!");
+				$.messager.alert("Prompt", "查询最大的时间差不能超过一年!");
 				return false;
 			}
 		}
@@ -1535,7 +1535,7 @@ function countTotal(){
 	if (countryIndex == countryArray.length) {
 		clearInterval(timeInit);		//结束定时
 		changeValue(progressbars,99);	//国家已加载完,等待被销毁
-		showText.text('正在查询' + resultText + "99%");
+		showText.text('Searching' + resultText + "99%");
 	} else {
 		index = index + 1;
 		resultText = countryArray[countryIndex];
@@ -1545,7 +1545,7 @@ function countTotal(){
 			resultText += countryArray[countryIndex];
 			countryIndex += 1;
 		}
-		showText.text('正在查询' + resultText + '  ' + index +"%");
+		showText.text('Searching' + resultText + '  ' + index +"%");
 	}
 }
 
@@ -1573,7 +1573,7 @@ function CheckDataOver(obj){
 	countryIndex = 0;
 	index = 0;
 	changeValue(progressbars,100);
-	showText.text('所有国家查询完毕!');
+	showText.text('All country search complete!');
 	setTimeout(function(){
 		obj.hide(1000);
 	},1000);
@@ -1634,7 +1634,7 @@ function closeDataDown(obj){
 	countryIndex = 0;
 	index = 0;
 	changeValue(progressbars,100);
-	showText.text('所有国家下载完毕!');
+	showText.text('ALl country data download complete!');
 	setTimeout(function(){
 		obj.hide(1000);
 	},1000);
