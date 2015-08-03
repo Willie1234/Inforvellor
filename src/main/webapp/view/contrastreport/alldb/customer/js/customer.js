@@ -186,7 +186,7 @@ function mycompetitorcountrys() {
 			if (e == 0) {
 				var option = document.createElement("option");
 				option.width = "190px"
-				option.value = "选择全部";
+				option.value = "Select All";
 				option.innerHTML = allDataJs.all_selectAll;
 				document.getElementById("opponentcountry").appendChild(option);
 			}
@@ -244,7 +244,7 @@ function GetQueryString(name) {
 function checkCountryName(countryName) {
 	if (countryName) {
 		countryName = countryName.val();
-		if (countryName == '选择全部') {
+		if (countryName == 'Select All') {
 			countryName = null;
 		}
 	}
@@ -408,7 +408,7 @@ function competitorDeal(v){
 function showCountryCombo(){
 	var countryArray = reportArray.ALL;
 	$("#sps1").empty();
-	$("#sps1").append("<input type=\"checkbox\" onClick=\"selectManayAllCountry('customerlang','custselectedcountry',this,'equirementSelects1')\" id=\"customerAllCountry\" name=\"customerAllCountry\"><span>选择全部</span><br/>")
+	$("#sps1").append("<input type=\"checkbox\" onClick=\"selectManayAllCountry('customerlang','custselectedcountry',this,'equirementSelects1')\" id=\"customerAllCountry\" name=\"customerAllCountry\"><span>Select All</span><br/>")
 	for(var i=0;i < countryArray.length; i++){
 		$("#sps1").append("<input type=\"checkbox\" onClick=\"changeOnlyCountryNameAddText('customerlang','custselectedcountry','equirementSelects1')\" name=\"customerlang\"  value=\""+countryArray[i]+"\"><span>"+countryArray[i]+"</span><br/>")
 	}

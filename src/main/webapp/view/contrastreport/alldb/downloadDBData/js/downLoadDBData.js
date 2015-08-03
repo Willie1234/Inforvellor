@@ -89,7 +89,7 @@ function initCountrySelect() {
 	var countryArray = reportArray.ALLDBDOWN;
 	var countrySelect = $("#dowloadSpanel");
 	countrySelect.empty();
-	countrySelect.append("<input type=\"checkbox\" onClick=\"selAllCountryChange(this)\" name=\"allDowloadNames\"><span>选择全部</span><br/>")
+	countrySelect.append("<input type=\"checkbox\" onClick=\"selAllCountryChange(this)\" name=\"allDowloadNames\"><span>Select All</span><br/>")
 	for(var i=0;i<countryArray.length;i++){
 		countrySelect.append("<input type=\"checkbox\" onClick=\"selOnlyCountryAddText(this)\" name=\"dowloadName\"  value=\""+countryArray[i]+"\"><span>"+countryArray[i]+"</span><br/>")
 	}

@@ -27,7 +27,7 @@ $(function() {
  * 展示所有国家下拉列表 --WangBo
  */
 function allCountryOptionShow36() {
-	$("#sps36").append("<input type=\"checkbox\" onClick=\"selectManayAllCountry('complang','alreadyselectcountry',this,'equirementSelects36')\" id=\"quankuallCompCountry\" name=\"quankuallCompCountry\"><span>选择全部</span><br/>")
+	$("#sps36").append("<input type=\"checkbox\" onClick=\"selectManayAllCountry('complang','alreadyselectcountry',this,'equirementSelects36')\" id=\"quankuallCompCountry\" name=\"quankuallCompCountry\"><span>Select All</span><br/>")
 	for(var i=0; i < countryArray.length; i++){
 		if (countryArray[i]) {
 			$("#sps36").append("<input type=\"checkbox\" onClick=\"changeOnlyCountryNameAddText('complang','alreadyselectcountry','equirementSelects36')\" name=\"complang\"  value=\""+countryArray[i]+"\"><span>"+countryArray[i]+"</span><br/>")

@@ -59,7 +59,7 @@ function allCountryOptionShow() {
 	$("#sps").empty();
 	$("#sps")
 			.append(
-					"<input type=\"checkbox\" onClick=\"selectCompAllChangeClick(this,'equirementSelects')\" name=\"all\"><span>选择全部</span><br/>")
+					"<input type=\"checkbox\" onClick=\"selectCompAllChangeClick(this,'equirementSelects')\" name=\"all\"><span>Select All</span><br/>")
 	for (var i = 0; i < countryArray.length; i++) {
 		$("#sps")
 				.append(
