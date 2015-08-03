@@ -44,7 +44,7 @@ function searchGroupClick(){
  * 进度条初始化
  */
 function downLoadDialog(){
-	InitCueBox("全库下载", "数据正在下载中……", "mydlog", 400, 120, true, 0.3, true);
+	InitCueBox("全库下载", "Data Downloading……", "mydlog", 400, 120, true, 0.3, true);
 //	art.dialog({
 //		title:"全库下载",
 //	    content: "<div style='text-align: center; color:#0066CC'>数据正在下载中……</div><br/><div id='downLoadPro' style='width:300px;'></div>",  
@@ -164,13 +164,13 @@ function dowloadAllDataClick(v){
 		} else {
 		    var test = /^\d{6,10}$/;
 		    if(!test.test(hscode)){
-		    	$.messager.alert('提示',"您好,请输入海关编码必须是大于6位小于10位的数字!");
+		    	$.messager.alert('Prompt',"Hs Code must be 6-10 digits!");
 				return;
 		    }
 		}
 	}else if ('product' == radioVal){			//产品描述
 		if(productDesc==""){
-			$.messager.alert('提示',"产品描述不能为空！");
+			$.messager.alert('Prompt',"Product Description CAN NOT be Empty！");
 			return;
 		}
 	}
