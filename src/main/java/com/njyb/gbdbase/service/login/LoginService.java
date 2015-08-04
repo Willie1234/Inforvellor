@@ -405,18 +405,18 @@ public class LoginService implements ILoginService {
 
 
 	@Override
-	public String regestUser(UserModel user, String code,
-			HttpServletRequest request, HttpServletResponse response) {
+	public String regestUser(UserModel user, String code, HttpServletRequest request, HttpServletResponse response) {
 		String flag="3";
 		try{
 				log.info("注册新用户");
 				String chechCode=(String)request.getSession().getAttribute("randCode");
 				//当验证码为空或者验证码不正确时直接返回2
-					if((chechCode==null)||("".equals(code))||!(chechCode.equals(code))){
-						return "2";
-					}
+					//if((chechCode==null)||("".equals(code))||!(chechCode.equals(code))){
+						//return "2";
+					//}
+				    user.setLoginName(user.getEmail());
 					//添加用户
-					if(user!=null&&(user.getLoginName()!=null)&&(user.getLoginPassword()!=null)){
+					if( user!=null && (user.getEmail()!=null) && (user.getLoginPassword()!=null )){
 						//添加用户
 						user.setUserDesc(IConstantUtil.TRIAL_USER);
 						String passwd=MD5Util.getInstance().generateEncrypte(user.getLoginPassword());
@@ -428,13 +428,31 @@ public class LoginService implements ILoginService {
 						user.setBeginTime(this.getDateStr());
 						//设置结束时间  默认一年
 					    user.setEndTime(this.getNextDateStr());
-						iLoginDao.addNewUser(user);
-						//根据loginName获取整个用户的信息
-						QueryModel query=new QueryModel();
-						 query.setWhereSql(" loginName='"+user.getLoginName()+"'");
-						UserModel userModle=iLoginDao.queryUserBySql(query);
+					    
+				
+					    
+					    //Find whether the current user has been register
+					    QueryModel query=new QueryModel();
+						query.setWhereSql(" loginName='"+user.getEmail()+"'");
+						UserModel userModel=iLoginDao.queryUserBySql(query);
+					    int userNum = iLoginDao.checkLoginName(userModel);
+					    if(userNum!=0){
+					    	
+					    	if(!userModel.getIsActivated()){
+					    		return "4";
+					    	}
+					    	return "3";
+					    }
+					    
+					    
+					    // if this user has been registered and has been activated , then add this user to database
+					    else {
+					    	iLoginDao.addNewUser(user);
+					    }
+					    
+						
 						//发送邮件
-						if(this.sendActiveEmail(userModle,request)){
+						if(this.sendActiveEmail(userModel,request)){
 							//如果发送成功，则返回1
 							return "1";
 						}
@@ -451,15 +469,16 @@ public class LoginService implements ILoginService {
 	@Override
 	public boolean sendActiveEmail(UserModel userMdoel, HttpServletRequest request) {
 		      // 判断用户是否注册成功
-				if ((userMdoel.getUserId() == 0)&&(userMdoel.getIsActivated())) {
-					return false;
-				}
+				//if (userMdoel.getIsActivated()) {
+					//return false;
+				//}
 				//获取上次的email
 				EmailModel emailModel = new EmailModel();
 				emailModel.setEmailCount(emailModel.getEmailCount() + 1);
 				emailModel.setSendTime(new Date());
-				emailModel.setUserId(userMdoel.getUserId());
-				String key = MD5Util.encodeByMD5(emailModel.getSendTime() + UUID.randomUUID().toString() + emailModel.getUserId());
+				//emailModel.setUserId(userMdoel.getUserId());
+				//String key = MD5Util.encodeByMD5(emailModel.getSendTime() + UUID.randomUUID().toString() + emailModel.getUserId());
+				String key = MD5Util.encodeByMD5(emailModel.getSendTime() + UUID.randomUUID().toString() );
 				emailModel.setsId(key);
 				iUserPasswordDao.addEmailModelByModel(emailModel);		//添加
 				//拼接可变部分
@@ -467,13 +486,15 @@ public class LoginService implements ILoginService {
 				.append(request.getServerPort())
 				.append(request.getContextPath())
 				.append("/emailToIndex")
-				.append("?sId=" + key + "&loginName=" + userMdoel.getLoginName());
+				.append("?sId=" + key + "&loginName=" + userMdoel.getEmail());
+				//.append("?sId=" + key + "&loginName=" + userMdoel.getLoginName());
 				//获取主域名
 				String contextUrl = GetDoMainNameUtil.getContextDoMain(request);
 				//填充模板里的变量
 				Map<String,Object> emailParamMap = Maps.newHashMap();
 				emailParamMap.put("updateUrl", contextUrl);
-				emailParamMap.put("username", userMdoel.getLoginName());
+				emailParamMap.put("username", userMdoel.getEmail());
+				//emailParamMap.put("username", userMdoel.getLoginName());
 				emailParamMap.put("url", sb.toString());
 				//邮件model
 				MailModel mailModel = new MailModel();

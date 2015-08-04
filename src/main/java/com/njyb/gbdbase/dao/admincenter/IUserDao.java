@@ -47,8 +47,12 @@ public interface IUserDao {
 	 * @param model
 	 */
 	void saveUserCharge(UserChargeModel charemodel);
-
-
+	/**
+	 * Used to check if LoginName exits
+	 * @param userModel
+	 * @return
+	 */
+	int checkLoginName(UserModel userModel);
 
 
 

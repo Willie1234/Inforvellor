@@ -658,12 +658,12 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
                    <h5 style="color:#A91A1A" id = requiredField>  </h5>
                     <div class="row">
                            <div class="col-xs-6 col-md-6">
-                            <input type="text" id="FirstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
+                            <input type="text" id="firstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
                         <div class="col-xs-6 col-md-6">
-                            <input type="text" id="LastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
+                            <input type="text" id="lastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
                     </div>
                     <input type="text" id="email" name="email" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
-                    <input type="password" id="Password" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
+                    <input type="password" id="loginPassword" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
                     <input type="password" id="confirmPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                                 
                        
                      

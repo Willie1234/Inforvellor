@@ -86,7 +86,7 @@
 		<![CDATA[
 			SELECT 
 				USERID, LOGINNAME,LOGINPASSWORD, EMAIL, PHONE, QQ,
-				USERNAME, ADDRESS, REGISTERTIME, ENDLOGINTIME, BEGINTIME, ENDTIME, 
+				USERNAME, ADDRESS, REGISTERTIME, ENDLOGINTIME, BEGINTIME, ENDTIME,    
 				USERDESC, SONACCOUNTTOTAL, ISACTIVATED, TEL,
 				SONACCOUNTNUM, OPENSERVICE,ISLOCKED,LOGINCOUNT,ISDISABLE,RELAID,MAINID
 				,unitName,country,province,city,postalNum
@@ -195,7 +195,7 @@
 	<!--chenhu:用户名是否已经注册-->
 	<select id="checkLoginName" parameterType="com.njyb.gbdbase.model.admincenter.UserModel" resultType="java.lang.Integer">
 		<![CDATA[
-			SELECT COUNT(1) FROM SYS_USER WHERE LOGINNAME = #{userLoginName}
+			SELECT COUNT(1) FROM SYS_USER WHERE LOGINNAME = #{loginName}
 		]]>
 	</select>
 	

@@ -200,6 +200,7 @@ public class LoginController {
 	@RequestMapping(value = "/userRegest")
 	public void userRegest(HttpServletRequest request,HttpServletResponse response, String checkCode,UserModel user){
 		response.setContentType("text/plain;charset=utf-8");
+		log.info("enter userRegest");
 		  String result="1";
 		  result= iLoginService.regestUser(user, checkCode, request, response);
 		try {
