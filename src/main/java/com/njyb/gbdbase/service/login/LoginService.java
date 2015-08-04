@@ -518,7 +518,8 @@ public class LoginService implements ILoginService {
 	    					   iLoginDao.updateUserBySql(query);
 	    					   //跳转到主页面
 	    					   request.getSession().setAttribute("user", user);
-	    					   this.jugeUserRole(request, response);
+	    						response.getWriter().println("<script type='text/javascript'>location.href='/gbdbas/view/login/register/activeSuccess.jsp'</script>");
+	    					//   this.jugeUserRole(request, response);
 	    				   }else
 	    				   {
 	    					   //跳转到重新发页面

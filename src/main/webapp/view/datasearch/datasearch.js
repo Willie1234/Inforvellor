@@ -2037,7 +2037,7 @@ function loadDepthDiggingData(url,value,reportTypeArray)
 						$("#"+reportDiv).html("");
 					} 
 					else{
-						openCompareDataDialog("深度挖取数据","depthDiggingDialog","depthDiggingDialog",900, 600,true);
+						openCompareDataDialog("Advanced Search","depthDiggingDialog","depthDiggingDialog",900, 600,true);
 						//混合图形div的id
 						var mixChartDivId = data.reportType+"_depthdigging_mixchart";
 						//饼图形div的id

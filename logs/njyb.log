@@ -9,3 +9,5 @@
 2015-08-03 16:39:09 [ qtp1356419559-24:432316 ] - [ INFO ] 缓存中usa_import;hscode;This country do not use Hs Code！;date;2014-01-01,2014-05-30;元素被更新了
 2015-08-03 16:39:09 [ qtp1356419559-24:432333 ] - [ INFO ] 向缓存存放了一个新的元素:usa_import;hscode;This country do not use Hs Code！;date;2014-06-01,2014-12-31;,包含对象数量是:2,对象占有内存大小是:2
 2015-08-03 16:39:09 [ qtp1356419559-24:432338 ] - [ INFO ] 缓存中usa_import;hscode;This country do not use Hs Code！;date;2014-06-01,2014-12-31;元素被更新了
+2015-08-03 17:52:56 [ qtp102577332-23:70899 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 17:53:32 [ qtp102577332-24:106911 ] - [ ERROR ] ResourceManager : unable to find resource 'alldb/downloadDBData/downLoadAllData.vm' in any resource loader.
