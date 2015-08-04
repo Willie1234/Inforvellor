@@ -1,1 +1,7 @@
-/target/
+/target/*
+/logs/*
+.project
+
+*.js
+
+

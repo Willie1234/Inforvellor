@@ -200,6 +200,7 @@ public class LoginController {
 	@RequestMapping(value = "/userRegest")
 	public void userRegest(HttpServletRequest request,HttpServletResponse response, String checkCode,UserModel user){
 		response.setContentType("text/plain;charset=utf-8");
+		log.info("enter userRegest");
 		  String result="1";
 		  result= iLoginService.regestUser(user, checkCode, request, response);
 		try {
@@ -262,7 +263,7 @@ public class LoginController {
 		response.setContentType("text/html;charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
 		//跳转登录页面
-		response.getWriter().print("<script>alert('欢迎使用本系统!');location.href='"+request.getContextPath()+"/view/login/infobase/login.jsp';</script>");
+		response.getWriter().print("<script>alert('Welcome back!');location.href='"+request.getContextPath()+"/view/newhomepage/login.jsp';</script>");
 		return null;
 	}
 }

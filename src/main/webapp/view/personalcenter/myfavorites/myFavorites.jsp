@@ -19,7 +19,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>国际商业智能化数据信息平台</title>
+	<title>Inforvellor</title>
     <head>
     	<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,28 +53,28 @@
 			<div id="userCollectionDiv" style="width: 1000px; display:inline-block">
 				<div style="padding-bottom: 10px;padding-top: 32px;">
 			    	<span style="color: #0066cc;font-family: 宋体;font-size: 14px;">
-			    		<img alt="我的收藏夹" style="vertical-align:middle;" src="${root }/static/img/personalcenter/favorites.png"> 我的收藏夹
+			    		<img alt="我的收藏夹" style="vertical-align:middle;" src="${root }/static/img/personalcenter/favorites.png"> My Favorites
 			    	</span>
 			    </div>
 				<!-- 查询条件 -->
 				<div style="font-size: 12px;padding-bottom: 5px;">
 					<!-- hscode -->
-					HS编码：
+					HS code：
 					<input id="faHscode" class="inpText"/>&nbsp;&nbsp;
 					<!-- 国家 -->
-					国家：
+					Country：
 					<select id="faCountry" name="faCountry" style="width: 100px;border:1px solid #e5e5e5;border-radius: 4px 4px 4px 4px;height: 26px;">
-						<option value="">请选择国家</option>
+						<option value="">Please Select a Country</option>
 					</select>&nbsp;&nbsp;
 					<!-- 时间 -->
-					收藏时间：
+					Collection data：
 					<input name="beginDate"  class="doubleinpText" id="beginDate" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})" />
 				    <font class="henggang">-</font> 
 				    <input name="endDate" class="doubleinpText" id="endDate" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-12-31','2011-12-31','2012-12-31','2013-12-31','2014-12-31'],readOnly:true})" />&nbsp;&nbsp;
 				    <!-- 立即查询按钮 -->
-				    <a class="sub_cls" title="查询" onclick="queryAllFav()">查询</a>
+				    <a class="sub_cls" title="查询" onclick="queryAllFav()">Query</a>
 				    <!-- 删除按钮 -->
-				    <a class="btn_alldb_remove" onclick="delFaving()" title="删除" href="javascript:void(0);" style="float: right;">&nbsp;&nbsp;删除</a>
+				    <a class="btn_alldb_remove" onclick="delFaving()" title="删除" href="javascript:void(0);" style="float: right;">&nbsp;&nbsp;Delete</a>
 				</div>
 			    <!-- 用户收藏表 -->
 			    <table id='collectionTable' fitColumns="false" pagination="true" singleSelect="false" loadMsg="正在查询..." checkbox="true" style="height: 300px;">		
@@ -82,29 +82,29 @@
 						<tr>
 							<th field="ck" checkbox="true"></th>
 							<th field="name" Width="100" align="center">
-								<font style="font-size: 14px;">用户姓名</font>
+								<font style="font-size: 14px;">User Name</font>
 							</th>
 							<th field="saveTime" Width="150" align="center">
-								<font style="font-size: 14px;">收藏时间</font>
+								<font style="font-size: 14px;">Time Saved</font>
 							</th>
 							<th field="queryKey" Width="201" align="center" formatter="formatTitle">
-								<font style="font-size: 14px;">中文查询条件</font>
+								<font style="font-size: 14px;">Chinese Search Conditions</font>
 							</th>
 							<th field="queryValue" Width="201" align="center" formatter="formatTitle">
-								<font style="font-size: 14px;">英文查询条件</font>
+								<font style="font-size: 14px;">English Search Conditions</font>
 							</th>
 							<th field="country" Width="150" align="center">
-								<font style="font-size: 14px;">国家</font>
+								<font style="font-size: 14px;">Country</font>
 							</th>
 							<th data-options="field:'id',width:150,formatter:  searchData"  align="center">
-								<font style="font-size: 14px;">详情</font>
+								<font style="font-size: 14px;">Details</font>
 							</th>
 						</tr>
 					</thead>
 				</table>
 			 	<div id="searchResult" style="display:none;width: 100%;margin-top: 20px;height: 30px;">
 	 		 		<span style="color: #0066cc;font-family: 宋体;font-size: 14px;">
-		    			查看详情
+		    			View details
 		    		</span>
 			 	</div>
 				<div id="autoExpandFav">
@@ -115,8 +115,8 @@
 						<div id="selectFieldDiv" style="width:300px;font-size: 12px;">
 						</div>
 						<div id="selectFieldButton" style="padding:40px 0px 30px 60px;z-index: 110;">
-							<a class="btn_cls" title="保存" onclick="selectField();">保存</a>
-							<a class="btn_cls" title="取消" onclick="javascript:$('#selectFieldDialog').css('display','none');">取消</a>
+							<a class="btn_cls" title="保存" onclick="selectField();">Save</a>
+							<a class="btn_cls" title="取消" onclick="javascript:$('#selectFieldDialog').css('display','none');">Cancel</a>
 						</div>
 					</div>	
 				</div>

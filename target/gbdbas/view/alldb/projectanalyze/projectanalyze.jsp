@@ -26,7 +26,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>全库分析</title>
+<title>All Library Download</title>
 <link href="${root }/static/css/alldb/alldb.css" rel="stylesheet" type="text/css" />
 <link href="${root }/static/css/easyui/easyui.css" rel="stylesheet" type="text/css" />
 <link href="/gbdbas/static/css/common/button/button.css" rel="stylesheet" type="text/css" />
@@ -57,15 +57,15 @@
 		<div style="padding-top: 10px;background-color: #F5FAF9;width: 100%;height: 32px;text-align: left;">
 			<div style="width: 27px; height: 30px;float: left;"><img src="${pageContext.request.contextPath }/static/img/alldb/buyer.png"/></div>
 			<div style="width: 150px; height: 30px;float: left; line-height: 30px;">
-				<b><font color="#1369c0" style="font-size:18px;padding-left: 5px;">我的产品标签</font></b>
+				<b><font color="#1369c0" style="font-size:18px;padding-left: 5px;">My Product Label</font></b>
 			</div>
 		</div>
 		<div id="center" style="width:100%; height: 400px;margin-top: 5px;border: 0px solid red;">
 			 <div id="customerDg" style="height:30px;line-height:30px;display:none; font-size: 16px;font-family:Microsoft YaHei;background-color:#E7F1FB;">
 			   	<div style="width:100%; height: 30px;line-height: 26px;">
-					<a href="javascript:addProduct();" title="立即查询" class="btn_alldb_add"><span style="margin-left: 15px;">新增</span></a>
-					<a href="javascript:updateproduct();" title="立即查询" class="btn_alldb_eit"><span style="margin-left: 15px;">修改</span></a>
-					<a href="javascript:delproduct();" title="立即查询" class="btn_alldb_remove"><span style="margin-left: 15px;">删除</span></a>
+					<a href="javascript:addProduct();" title="立即查询" class="btn_alldb_add"><span style="margin-left: 15px;">New</span></a>
+					<a href="javascript:updateproduct();" title="立即查询" class="btn_alldb_eit"><span style="margin-left: 15px;">Refine</span></a>
+					<a href="javascript:delproduct();" title="立即查询" class="btn_alldb_remove"><span style="margin-left: 15px;">Delete</span></a>
 			   		<span style="float: right; margin-top: 5px;">
 						<input class="easyui-searchbox" id="queryHscode" style="width: 200px;">
 					</span>
@@ -81,14 +81,14 @@
 							<tr>
 								<th data-options="field:'ck',checkbox:true"></th>
 								<th field="verifycode" align="center" width="200"
-									style="color: #656565;"><font style="font-size: 14px">标签名称</font></th>
+									style="color: #656565;"><font style="font-size: 14px">Label Name</font></th>
 								<th field="hscode" width="200" align="center"
-									style="color: #656565;"><font style="font-size: 14px">必须含有HS编码
+									style="color: #656565;"><font style="font-size: 14px">HS code
 								</font></th>
 								<th field="productName" width="200" align="center"
-									style="color: #656565;"><font style="font-size: 14px">可能含有关键字</font></th>
+									style="color: #656565;"><font style="font-size: 14px">Key Word</font></th>
 								<th field="opt" width="510" align="center" formatter="addOps"><font
-									style="font-size: 14px">功能大全</font></th>
+									style="font-size: 14px">Other Functions</font></th>
 							</tr>
 						</thead>
 				</table>

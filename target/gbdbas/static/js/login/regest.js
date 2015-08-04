@@ -38,36 +38,87 @@ function myRandReload(){
 /**
  * 注册
  */
+
+function checkRequired(){
+	if ($("#field").val() != "" )
+        regest();
+    
+	
+}
+
+
+
 function regest(){
 	 emailValue=$("#email").val();
-	$('#regestForm').form('submit', {   
-	       onSubmit: function(){ 
-	    	   if(!checkStatus){
-	    		  $("#pactMessege").text("*请同意协议");
-	    		   return false;
-	    	   }
-	         return $(this).form('validate'); 
-	      } ,  
-	      success:function(data){   
-	    	  if(data=='1'){
-	    		  //注册成功后跳转到邮箱激活页面
-	    		  openActiveDiv();
-	    	  }else if(data=='2'){
-	    		  $('#checkCode').val('验证码错误...');
-	    		  $('#checkCode').css({
-	    			   'font-size':'12px',
-	    			   'color':'skyblue',
-	    			   'background-color':'#FFF3F3'
-	    		  });
+<<<<<<< HEAD
+	 firstName = $("#firstName").val();
+	 lastName = $("#lastName").val();
+	 password = $("#loginPassword").val();
+	 confirmPassword = $("#confirmPassword").val();
+	 
+	 if (emailValue != "" & firstName != "" & lastName != "" & password != "" & confirmPassword != "" & document.getElementById('checkRead').checked & (password == confirmPassword)){
+=======
+	 firstName = $("#FirstName").val();
+	 lastName = $("#LastName").val();
+	 password = $("#Password").val();
+	 confirmPassword = $("#confirmPassword").val();
+	 male = $("#male").val();
+	 female = $("#female").val();
+	 checkRead = $("#checkRead").val();
+	 
+	 if (emailValue != "" & firstName != "" & lastName != "" & password != "" & confirmPassword != "" & document.getElementById('checkRead').checked){
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
+	   $.post("/gbdbas/userRegest", $("#regestForm").serialize(), 
+	      function(data){   
+	    	  if(data=='1'|| data == '2'){
+	    			 openActiveDiv();
+	    		 
+<<<<<<< HEAD
+	    	  }
+	    	  else if(data == '3'){
+	    		  $("#requiredField").text('*You have registed');
+	    	  }
+	    	  else if (data == '4'){
+	    		  $("#requiredField").text('*This user has been activated');
+	    	  }
+
+
+=======
 	    	  }
 	    	  else{
 	    		   $.messager.alert('提示','邮箱地址不正确','info');
 	    		   $("#email").val("");
-	    	  }
-	    	  
-	     }   
-	}); 
-}
+	    	  }  
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
+	     }    
+	   );
+	 }
+	 else if(firstName == ""){
+		 $("#requiredField").text('*First name is required');
+	 }
+	 else if(lastName == ""){
+		 $("#requiredField").text('*Last name is required');
+	 }
+	 else if(emailValue == ""){
+		 $("#requiredField").text('*Email is required');
+	 }
+	 else if(password == ""){
+		 $("#requiredField").text('*Password is required');
+	 }
+	 else  if(confirmPassword == ""){
+		 $("#requiredField").text('*You must confirm your password');
+	 }
+<<<<<<< HEAD
+	 else if (password != confirmPassword){
+		 $("#requiredField").text('*Passwords do not match');
+	 }
+=======
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
+	 else if(!document.getElementById('checkRead').checked){
+		 $("#requiredField").text('*You must agree with our contact');
+	 }
+
+		  }
 /**
  * 清理验证码
  */
@@ -100,6 +151,9 @@ function openActiveDiv(){
 /**
  * 根据输入的email跳转到要激活邮箱的email
  */
+
+
+
 function getEmailUrl(email) {
 	if (email) {
 		var emails = [ {

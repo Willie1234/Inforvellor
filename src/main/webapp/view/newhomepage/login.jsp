@@ -1,13 +1,10 @@
-
-<%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%
 String language = (String)request.getSession().getAttribute("language");
 if(language == null || "".equals(language) || "pleaseSelect".equals(language))
@@ -18,47 +15,37 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 request.getSession().setAttribute("language","message_en_US");
 %>
 <fmt:setBundle basename="<%=language%>" var="messages"/>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <c:set var="ctx" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="数据, 趣易贸易数据系统,海关数据,进出口数据,海关数据查询,中国出口数据,中国海关数据,海关统计数据,免费海关数据,美国海关数据,印度海关数据,全球海关数据查询,免费数据" /><meta name="description" content="趣易贸易数据系统为您提供：权威、及时、专业的海关信息在线数据订单下载系统。趣易贸易数据平台第一时间发布中国海关数据，关注中国外贸形式发展，提供8位海关数据编码统计信息和全球买家资源的在线查询服务。趣易您专业的信息资讯服务提供商。全国统一热线：400-1816-008" />
-	<meta name="description" content="南通趣易专业致力于挖掘海关数据,整合全球海关数据带来价值,趣易全球贸易通帮助用户了解国外买家的信息,预测未来防范风险,开发国际贸易市场.趣易全球贸易通主要提供美国,墨西哥,阿根廷,智利,秘鲁,哥伦比亚,乌拉圭,巴拉圭,厄瓜多尔,巴西,委内瑞拉,玻利维亚,俄罗斯,乌克兰,韩国,印度,巴基斯坦,英国,西班牙共二十一个国家的海量贸易数据和数据分析报告,同时趣易提供免费数据样本下载"/>
-	<meta name="copyright" content="Inforvellor inc." />
-	<meta name="MSSmartTagsPreventParsing" content="True" />
-	<meta http-equiv="MSThemeCompatible" content="Yes" />
-	<meta http-equiv="Expires" CONTENT="0">
-	<meta http-equiv="Cache-Control" CONTENT="no-cache">
-	<meta http-equiv="Pragma" CONTENT="no-cache"> 
+    <meta name="renderer" content="webkit">  
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="../favicon.ico">
-    <script type="text/javascript" async="" src="${ctx }/static/js/newhomepage/js/ga.js"></script>
+
 	<script type="text/javascript" src="${ctx }/static/js/newhomepage/jquery.js"></script>
-	<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
-	<script type="text/javascript" src="${ctx }/static/js/newhomepage/infologin.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath }/static/js/newhomepage/newregister.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath }/static/artDialog4.1.6/artDialog.source.js?skin=twitter"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath }/static/artDialog4.1.6/plugins/iframeTools.source.js" ></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/newhomepage/artdialogopen.js" ></script>
+	
+	
+	<script type="text/javascript" src="${ctx }/static/js/login/login.js" ></script>
+    
+	
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/newhomepage/jquery-2.1.3.min.js" ></script>
     <script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/newhomepage/bootstrap.js"></script>
+
     <title>Sign in</title>
 
     <!-- Bootstrap core CSS -->
     <!-- will from webapps -->
-    <link href="<c:url value="/static/css/newhomepage/bootstrap.min.css" />" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/static/css/newhomepage/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
     
-    <link href="<c:url value="/static/css/newhomepage/signin.css" />" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/static/css/newhomepage/signin.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./js/ie-emulation-modes-warning.js"></script>
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -70,33 +57,62 @@ request.getSession().setAttribute("language","message_en_US");
 
 
 	function loginSubmit(){	
-		 if(checkAccount()&&checkPassword()){
+		 
 			 $("#loginWait").empty();
-			 
-			 return true;
-		 }
-		 return false;
+		
+		 return true;
 	}
 	
 
 	
-	document.onkeydown = function (e) {
-	var theEvent = window.event || e;
-	var code = theEvent.keyCode || theEvent.which;
-	if (code == 13) {
-	$("#login").click();
-	}
-	} 
+	
 
 
 </script>
 <script type="text/javascript">
-	function test()
-	{
-		window.location="NewFile.jsp";
+	
+
+	function promptMessage(m){
+		$("#myModalLabel").text('Prompt');
+		document.getElementById("warn").style.display="block";
+		document.getElementById("prog").style.display="none";
+		document.getElementById("clossBtn").style.display="block";
+		$("#warn").text(m);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 72ec3ca86f3ce484c4a748363fe7377ef9242403
 	}
-	function usersub(){
-		if(loginSubmit()){
+	function clearPrompt(){
+		document.getElementById("warn").style.display="none";
+		document.getElementById("prog").style.display="block";
+		document.getElementById("clossBtn").style.display="none";
+		$("#myModalLabel").text('Loading');
+		$("#warn").text('');
+	}
+<<<<<<< HEAD
+
+=======
+=======
+	}
+	function clearPrompt(){
+		document.getElementById("warn").style.display="none";
+		document.getElementById("prog").style.display="block";
+		document.getElementById("clossBtn").style.display="none";
+		$("#myModalLabel").text('Loading');
+		$("#warn").text('');
+	}
+>>>>>>> Willie
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
+		  function usersubmit(){
+// 		   var $btnmy=document.getElementById("signIn");
+// 		   $btnmy.value="loading..."
+		   //$(this).value="loading";
+		
+   		 // business logic...
+   		 if(loginSubmit()){
+     
 			var loginName = $("#user_name").val();
 			var loginPassword = $("#user_pass").val();
 			var regCode = $("#checkcode").val();
@@ -107,85 +123,207 @@ request.getSession().setAttribute("language","message_en_US");
 			}else{
 				rPassword = "";
 			}
+			$("#myModal").modal('show');
 			$.post("${ctx}/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
 							function(data){
 							if("2" == data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.passiscorr" bundle="${messages}"/>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
-								$("#user_pass").val("");
-								
+								 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
 							}
 							else if("3" == data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.Usernotexist" bundle="${messages}"/>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
-								$("#user_pass").val("");
-								
+								promptMessage('<fmt:message key="common.Usernotexist" bundle="${messages}"/>')	;								
 							}else if("4"  == data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','The identity code is not correct!','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
-								
+								promptMessage('The identity code is not correct!');	
 							}else if("5"  == data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.usenotplacelogin" bundle="${messages}"/>,<fmt:message key="common.pleaseContact" bundle="${messages}"/><a class="kefuMenu1" href="http://wpa.qq.com/msgrd?v=3&uin=2949978339&site=qq&menu=yes" target="_blank"><fmt:message key="common.customerService" bundle="${messages}"/></a>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
+								promptMessage('<fmt:message key="common.usenotplacelogin" bundle="${messages}"/>')	;
 								
 							}else if("1"==data){
-								location.href = "${ctx}/goToIndex";
+								clearPrompt();
+								location.href = "${ctx}/pageJump";
 							}else if("6"==data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.addisnotlogin" bundle="${messages}"/>,<fmt:message key="common.pleaseContact" bundle="${messages}"/><a class="kefuMenu1" href="http://wpa.qq.com/msgrd?v=3&uin=2949978339&site=qq&menu=yes" target="_blank"><fmt:message key="common.customerService" bundle="${messages}"/></a>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
+								promptMessage('<fmt:message key="common.addisnotlogin" bundle="${messages}"/>')	;
 								
 							}else if("7"==data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.hasbeendisabled" bundle="${messages}"/>,<fmt:message key="common.pleaseContact" bundle="${messages}"/><a class="kefuMenu1" href="http://wpa.qq.com/msgrd?v=3&uin=2949978339&site=qq&menu=yes" target="_blank"><fmt:message key="common.customerService" bundle="${messages}"/></a>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
+								promptMessage('<fmt:message key="common.hasbeendisabled" bundle="${messages}"/>')	;
 								
 							}else if("8"==data){
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.isnotactive" bundle="${messages}"/>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
-								
+								promptMessage('<fmt:message key="common.isnotactive" bundle="${messages}"/>');	
 							}else{
-								$.messager.alert('<fmt:message key="common.Prompt" bundle="${messages}"/>','<fmt:message key="common.istemlocke" bundle="${messages}"/>,<fmt:message key="common.pleaseContact" bundle="${messages}"/><a class="kefuMenu1" href="http://wpa.qq.com/msgrd?v=3&uin=2949978339&site=qq&menu=yes" target="_blank"><fmt:message key="common.customerService" bundle="${messages}"/></a>','info');
-								$("#loginWait").empty();
-								$("#loginWait").append("<input type=\"button\" name=\"login\" class=\"dl\" value=\"登录\" onclick=\"javascript:usersub();\"/>");
-								$("#user_pass").val("");
-								
+								promptMessage('<fmt:message key="common.istemlocke" bundle="${messages}"/>');	
 							}
 						}
 					);
 		}
+		return false;
+   			 
+	
+		
+	
 	}
+		function subEmail(){
+			var loginValue = $("#loginName").val();
+			$("#myModal").modal('show');
+			if(loginValue.trim().length==0){
+		//	alert('<fmt:message key="loss.message12" bundle="${messages}"/>');
+			promptMessage('Email address cannot be empty. Please type in your email for account!')	
+			return;
+			 }
+			$.post("${pageContext.request.contextPath }/isUserExit",
+				{loginName : loginValue},
+				function(flag){
+					if(flag=="0"){
+					//	alert('<fmt:message key="loss.message8" bundle="${messages}"/>');
+						promptMessage('<fmt:message key="loss.message8" bundle="${messages}"/>')	
+						return;
+					}else if(flag=="1"){
+						//用户存在
+						
+					$("#autoInfo").css("background-image","url(${pageContext.request.contextPath }/static/img/button/infoSend.png)");
+					$("#emailState").html("<fmt:message key="loss.message9" bundle="${messages}"></fmt:message>");
+					$("#emailState").css("left",43);
+					$("#show").empty();
+					$.post("${pageContext.request.contextPath }/sendEmail",
+							{loginName : loginValue},
+							function(data){
+								if(data == 1){
+							//	alert('<fmt:message key="loss.message10" bundle="${messages}"/>');
+								promptMessage('<fmt:message key="loss.message10" bundle="${messages}"/>')		
+								}else if(data==2){
+							//	alert('<fmt:message key="loss.message11" bundle="${messages}"/>');
+								promptMessage('<fmt:message key="loss.message11" bundle="${messages}"/>')		
+								 }else if(data==3){
+							//	 alert('<fmt:message key="loss.message12" bundle="${messages}"/>');
+								promptMessage('<fmt:message key="loss.message12" bundle="${messages}"/>')		
+								 }else if(data==4){
+							//	 alert('<fmt:message key="loss.message13" bundle="${messages}"/>');
+								promptMessage('<fmt:message key="loss.message13" bundle="${messages}"/>')		
+								}
+								 $("#autoInfo").css("background-image","url(${pageContext.request.contextPath }/static/img/button/infoAuto.png)");
+									 $("#emailState").css("left",57);
+									 $("#emailState").html("<fmt:message key="loss.ok" bundle="${messages}"></fmt:message>");
+							},"json");
+					}
+				},"text");
+		}
+
+<<<<<<< HEAD
+
 	
 </script>
-</head>
-  <body>
+</head><body>
 
+=======
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
     <div class="container">
+      <div class="col-md-12 col-md-push-0 text-center">
+      <form class="form-signin" onsubmit="return usersubmit()" >
+      
+      <div class="col-lg-13 text-left">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        </div>
+        <div class="col-lg-13 text-left">
 
-      <form class="form-signin" >
-        <h2 class="form-signin-heading">Please yo sign in</h2>
         <label for="inputUser" class="sr-only">Username</label>
         <input type="text" id="user_name" class="form-control" placeholder="Username" required="" autofocus="">
+        </div>
+        <div class="col-lg-13 text-left">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
+        </div>
+        <div class="col-lg-5 text-left">
+		<input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:125px"/>
+		</div>
+		
+        <div class="col-lg-7 text-left">
+		<a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: -100px;padding-left: 10px;z-index: 100;position: absolute;"> 
+		<img align="bottom" id="createcheckcode" style="width:125px;height:43px;" border="0">
+		</a>
+		<a id="bjc" href="javascript:myRandReload()" style="text-decoration: none;color:#4a97e3;padding:2px 2px;padding-top: 13px;padding-left: 150px;z-index: 100;position: absolute;">
+			
+		</a>
+		</div>
+<div class="col-lg-12 text-left">
+
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me" id="rPassword" name="rPassword"> Remember me
+            <input type="checkbox" value="forever" id="rPassword" name="rPassword"> Remember me
           </label>
+ 		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:white">Forget Password</a>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="usersub()">Sign ьныу in</button>
+        </div>
+        <div class="col-lg-13 text-left">
+        <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
+        </div>
+        <div class="col-lg-13 text-left">
+<<<<<<< HEAD
+        <a href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home" class="padding-left:50px" style="color:white">Go back to the home page</a>
+=======
+        <a href="../" class="padding-left:50px" style="color:white">Go back to the home page</a>
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
+        </div>
+        </div>
+        
+
       </form>
+  
+
+
 
     </div> <!-- /container -->
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./js/ie10-viewport-bug-workaround.js"></script>
-  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <!-- the dialog for retrive password-->
+<div class="modal fade" id="passwordRetrive" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Retrive your password</h4>
+      </div>
+      <div class="modal-body">
+     
+        <p>Please enter your email.&hellip;</p>
+        <input type="text" id="loginName"  name="loginName" class="form-control" placeholder="Email" required="" autofocus="">
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="subEmail();">Send Email</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-</body></html>
+  <!-- the dialog for promptMessage-->
+
+<div class="modal fade  bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Loading...</h4>
+      </div>
+      <div class="modal-body">
+		       <div class="progress" id="prog" >
+		  			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+		    			
+		  			</div>
+				</div>
+				<div id = "warn" style="display:none">
+				
+				</div>
+				
+      </div>
+      <div class="modal-footer" id="clossBtn" style="display:none">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearPrompt()">Close</button>
+       
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

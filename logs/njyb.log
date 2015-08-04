@@ -1,11 +1,13 @@
-2015-07-14 12:45:10 [ qtp1653153736-24:37957 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
-2015-07-14 12:45:10 [ qtp1653153736-27:38048 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
-2015-07-14 12:45:34 [ qtp1653153736-24:62292 ] - [ INFO ] 进入数据检索业务逻辑方法...
-2015-07-14 12:55:59 [ qtp1653153736-25:687230 ] - [ INFO ] 进入数据检索业务逻辑方法...
-2015-07-14 14:45:09 [ Thread-1:7236469 ] - [ INFO ] Closing WebApplicationContext for namespace 'spring-servlet': startup date [Tue Jul 14 12:44:53 EDT 2015]; parent: Root WebApplicationContext
-2015-07-14 14:45:09 [ Thread-1:7236476 ] - [ INFO ] Closing Root WebApplicationContext: startup date [Tue Jul 14 12:44:32 EDT 2015]; root of context hierarchy
-2015-07-14 16:21:33 [ qtp1030384622-31:628473 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
-2015-07-14 16:21:35 [ qtp1030384622-32:630949 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
-2015-07-14 16:21:36 [ qtp1030384622-28:631346 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
-2015-07-14 16:27:09 [ Thread-1:964680 ] - [ INFO ] Closing WebApplicationContext for namespace 'spring-servlet': startup date [Tue Jul 14 16:11:14 EDT 2015]; parent: Root WebApplicationContext
-2015-07-14 16:27:09 [ Thread-1:964687 ] - [ INFO ] Closing Root WebApplicationContext: startup date [Tue Jul 14 16:11:04 EDT 2015]; root of context hierarchy
+2015-08-03 14:26:33 [ qtp102577332-26:50870 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 14:27:21 [ qtp102577332-26:98230 ] - [ INFO ] 进入数据检索业务逻辑方法...
+2015-08-03 14:40:27 [ qtp1790598448-23:60269 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 14:41:55 [ qtp1790598448-26:27555 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 14:45:56 [ qtp717998169-24:153658 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 14:46:15 [ qtp717998169-25:173055 ] - [ INFO ] 进入数据检索业务逻辑方法...
+2015-08-03 16:38:33 [ qtp1356419559-24:396096 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 16:39:09 [ qtp1356419559-24:432312 ] - [ INFO ] 向缓存存放了一个新的元素:usa_import;hscode;This country do not use Hs Code！;date;2014-01-01,2014-05-30;,包含对象数量是:1,对象占有内存大小是:1
+2015-08-03 16:39:09 [ qtp1356419559-24:432316 ] - [ INFO ] 缓存中usa_import;hscode;This country do not use Hs Code！;date;2014-01-01,2014-05-30;元素被更新了
+2015-08-03 16:39:09 [ qtp1356419559-24:432333 ] - [ INFO ] 向缓存存放了一个新的元素:usa_import;hscode;This country do not use Hs Code！;date;2014-06-01,2014-12-31;,包含对象数量是:2,对象占有内存大小是:2
+2015-08-03 16:39:09 [ qtp1356419559-24:432338 ] - [ INFO ] 缓存中usa_import;hscode;This country do not use Hs Code！;date;2014-06-01,2014-12-31;元素被更新了
+2015-08-03 17:52:56 [ qtp102577332-23:70899 ] - [ INFO ] 进入方法/userLogin，当前的登录状态码为:1
+2015-08-03 17:53:32 [ qtp102577332-24:106911 ] - [ ERROR ] ResourceManager : unable to find resource 'alldb/downloadDBData/downLoadAllData.vm' in any resource loader.

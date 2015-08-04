@@ -21,7 +21,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>添加客户信息</title>
+<title>Add customer information</title>
 <script type="text/javascript" src="${root }/view/alldb/customer/js/addAndUpdateCustomer.js"></script>
 <style type="text/css">
 	.characterStyle{font-size: 14px;color: #000000;}
@@ -45,7 +45,7 @@
 							<fmt:message key="common.customerName" bundle="${messages}" />
 						</font>
 						<input style="width: 274px; height: 26px; border: 1px solid #95b8e7; border-color: #e5e5e5; border-radius: 4px 4px 4px 4px;" name="companyName">
-						<span id='showSpanOfPage' style="display: none;color: red;">请输入英文</span>
+						<span id='showSpanOfPage' style="display: none;color: red;">Please input in English</span>
 					</p>
 				</div>
 				<div style="padding-left: 80px;">
@@ -259,13 +259,13 @@
 		<div id="buttonImage" style="padding-left: 280px; padding-top: 20px">
 			<c:if test="${language eq 'message_zh_CN'}">
 				<span id="sureSpan" style="padding-right: 13px;">
-					<a class="confirmOrcancel_cls" title="保存" onclick="saveCustomer()">保存</a>
+					<a class="confirmOrcancel_cls" title="保存" onclick="saveCustomer()">Save</a>
 				</span>
 				<span id="updateSpan" style="padding-right: 13px;">
-					<a class="confirmOrcancel_cls" title="修改" onclick="updateCustomer()">修改</a>
+					<a class="confirmOrcancel_cls" title="修改" onclick="updateCustomer()">Revise</a>
 				</span>
 				<span>
-					<a class="confirmOrcancel_cls" title="取消" onclick="closeCustomer()">取消</a>
+					<a class="confirmOrcancel_cls" title="取消" onclick="closeCustomer()">Cancel</a>
 				</span>
 			</c:if>
 		</div>

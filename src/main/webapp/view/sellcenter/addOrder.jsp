@@ -9,7 +9,7 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<title>订单</title>
+<title>Orders</title>
 <link href="<%=basePath%>static/css/sellcenter/myeasyui.css" rel="stylesheet" type="text/css" />
 <link style="text/css" rel="stylesheet" href='<%=basePath%>/static/css/sellcenter/addOrder.css'>
 
@@ -26,23 +26,23 @@
          <!-- 订单form -->
 		      <!-- 用户地址信息 -->
 		      <div class='userInfo'>
-		       <div class='myT'><span>填写订单信息  </span></div>
+		       <div class='myT'><span>Fill in order information  </span></div>
 		       <div class="showInfo">
-		         <div id='mr'><span  onclick="upAddr()">设置默认地址</span></div>
+		         <div id='mr'><span  onclick="upAddr()">Set Default Address</span></div>
 		          <!-- 用户地址表单 -->
 		           <form id="addrForm">
 		               <table cellspacing="5px">
 		                    <tr>
-		                        <td><span  class='tag'>公司名称:</span></td>
+		                        <td><span  class='tag'>Company Name:</span></td>
 		                        <td><input id="company"  class='inputNomarl' class="easyui-validatebox" validtype="realname"
 		                         name='company' type="text"></td>
 		                    </tr>
 			                <tr>
-			                    <td><span  class='tag'>收货人:</span></td>
+			                    <td><span  class='tag'>Consignee:</span></td>
 			                    <td><input id="consignee" class='inputNomarl' name='consignee' type="text"></td>
 			                </tr>
 			                <tr>
-			                    <td><span  class='tag'>所在地</span></td>
+			                    <td><span  class='tag'>Location</span></td>
 			                    <td><input id="country"  name='country'>
 		                         <input id="province" name='province' >  </td>
 		                    </tr>
@@ -50,15 +50,15 @@
 			                       <td></td><td><input id="city" name='city'></td>
 			                </tr>
 			                <tr>
-			                       <td><span  class='tag'>详细地址:</span></td>
+			                       <td><span  class='tag'>Address:</span></td>
 			                      <td><textarea id="address" name='address'  ></textarea></td>
 			                </tr>
 			                <tr>
-			                   <td><span  class='tag'>邮政编码:</span></td>
+			                   <td><span  class='tag'>Zip code:</span></td>
 			                   <td><input id="postalNum" type="text" class='inputNomarl'></td>
 			                </tr>
 			                <tr>
-			                    <td><span  class='tag'>手机号码:</span></td>
+			                    <td><span  class='tag'>Cell phone number:</span></td>
 			                    <td><input id="phone" type="text" class='inputNomarl'></td>
 			               </tr>
 		               </table>
@@ -68,20 +68,20 @@
 		      </div>
 		      <!-- 支付方式 :暂时只提供支付宝-->
 		      <div class='myT'>
-		          <span>支付方式及发票信息</span>
+		          <span>Payment And Invoice Information</span>
 		      </div>
 		      <div class='showInfo'>
 		         <input type="hidden" id='rid' name='rid'>
 		          <table cellspacing="5px" height="100px" align="top">
-		            <tr><td><span class='tag' style='font-weight: bolder;'>支付方式：</span></td>
+		            <tr><td><span class='tag' style='font-weight: bolder;'>Payment Method：</span></td>
 		                <td>
 		                    <input type="radio"  id='payType'  name='payType' checked="checked"/><span class='tag'>支付宝</span>
 		                </td>
 		            </tr>
                      <tr>
-                        <td><span class='tag' style='font-weight: bolder;'>发票信息：</span></td>
+                        <td><span class='tag' style='font-weight: bolder;'>Invoice Information：</span></td>
                         <td>
-                          <input type="radio"  id='invoiceType' name='invoiceType' checked="checked" value='0'/><span class='tag'>不开发票</span>
+                          <input type="radio"  id='invoiceType' name='invoiceType' checked="checked" value='0'/><span class='tag'>Not Invoiced</span>
                         </td>
                         <td>
                            <input type="radio"  id='invoiceType' name='invoiceType' value='1' /><span class='tag'>增值税专用发票</span>
@@ -94,14 +94,14 @@
 		          </table>
 		       </div>
 		        <div style="width:400px;margin-left: 600px;padding-left: 200px;">
-		          <span class='tag'>应付金额：</span>
+		          <span class='tag'>Amount payable：</span>
 		           <span >
 		           <input type='text' id='sumMoney' name='sumMoney' readonly="readonly"  align="right" 
 		           style="border: none;background-color: #f8f8f8; font-size: 24px; color:red; width: 100px;"/>
 		            </span>
 		        </div>
 		        <div style="width:300px;margin-left: 600px;padding-left: 240px; margin-top: 10px;">
-		          <span class='buttonSpan' onclick="subOrder()">提交订单</span>
+		          <span class='buttonSpan' onclick="subOrder()">Submit order</span>
 		        </div>
 		    </form>
    </div>

@@ -18,7 +18,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>国际商业智能化数据信息平台</title>
+	<title>Inforvellor</title>
 <head>
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,18 +52,18 @@
 			<div style="width:1000px;position: absolute;padding-left: 200px;padding-top: 20px;">
 				<div style="padding-bottom: 10px;">
 			    	<span style="color: #0066cc;font-family: 宋体;font-size: 14px;">
-			    		<img alt="账号登录日志" style="vertical-align:middle;" src="${root }/static/img/personalcenter/loginLog.png"> 账号登录日志
+			    		<img alt="账号登录日志" style="vertical-align:middle;" src="${root }/static/img/personalcenter/loginLog.png"> Log-in History
 			    	</span>
 			    </div>
 				<!-- 查询条件 -->
 				<div style="font-size: 12px;padding-bottom: 5px;">
-					 <font style="font-size: 14px">账号名称：</font>
+					 <font style="font-size: 14px">Username：</font>
 					 <select class="easyui-combobox" name="c_origin_country" id="loginName" style="width:180px;height:28px;"></select>&nbsp;
-				     <font style="font-size: 14px">登录时间：</font>
+				     <font style="font-size: 14px">Login time：</font>
 				     <input id="beginDate"  style="height: 22px;border-radius: 4px 4px 4px 4px;border: 1px solid #e5e5e5;" id="beginDate" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})" />
 				     <font>-</font> 
 				     <input name="endDate"style="height: 22px;border-radius: 4px 4px 4px 4px;border: 1px solid #e5e5e5;" id="endDate" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-12-31','2011-12-31','2012-12-31','2013-12-31','2014-12-31'],readOnly:true})" />&nbsp;&nbsp;
-				     <a class="sub_cls" title="查询" onclick="selectByLogin()">查询</a>
+				     <a class="sub_cls" title="查询" onclick="selectByLogin()">Query</a>
 				</div>
 				<div id="rightDiv" style="width:900px;">
 				     <table id='userlogin'   style="height: 530px;width:900px;"  singleSelect="false"  loadMsg="<fmt:message key="common.querying" bundle="${messages}"/>">

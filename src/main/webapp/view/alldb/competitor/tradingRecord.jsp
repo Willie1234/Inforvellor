@@ -38,23 +38,23 @@
 			<div align="left" width="95%" class="alldb_advancesearch">
 				<div style="padding-top: 14px; background-color: #F5FAF9; width: 100%; height: 30px;">
 					<b><font color="#478DE3" id="fontText" style="font-size: 18px; font-family: 微软雅黑, 宋体; padding-left: 16px">
-							数据列表
+							Data List
 						</font>
 					</b>
 				</div>
 				<div style="width: 100%;height: 90%;margin-top: 10px;">
 					<div style="height: 60px; width: 30%;float: left;">
-						<font class="alldb_fieldname">公司名称&nbsp;:&nbsp;</font>
+						<font class="alldb_fieldname">Company name&nbsp;:&nbsp;</font>
 						<input id="companyNameByTradingRecord" name="companyNameByTradingRecord" class="reportinpText" />
 					</div>
 					<div style="height: 60px;  width: 32%;float: left;">
 						<font class="alldb_fieldname">
-							产品描述&nbsp;:&nbsp;
+							Product Description&nbsp;:&nbsp;
 						</font>
 						<input id="compProductDesc" name="compProductDesc" class="reportinpText" />
 					</div>
 					<div style="height: 60px;  width: 30%;float: left;">
-						<font class="alldb_fieldname">日期&nbsp;:&nbsp;</font> 
+						<font class="alldb_fieldname">Date&nbsp;:&nbsp;</font> 
 							<input id="compTradestartDate" name="compTradestartDate" class="reportinpText" style="width: 85px;"
 							onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})" />
 							- 
@@ -63,24 +63,24 @@
 					</div>
 					<div style="height: 50px;  width: 30%;float: left;">
 						<font class="alldb_fieldname">
-							海关编码&nbsp;:&nbsp;
+							Custom Code&nbsp;:&nbsp;
 						</font> 
 						<input id="compHscode" name="compHscode" class="reportinpText"/>
 					</div>
 					<div style="height:50px; width: 32%;float: left;">
 						<font class="alldb_fieldname">
-							贸易类型&nbsp;:&nbsp;</font>
+							Trade Type&nbsp;:&nbsp;</font>
 						<select class="easyui-combobox" panelHeight="auto"
 							style="width: 202px; height: 22px; border-color: #e2e5e7"
 							editable="false" id="competitorIexportType" name="custIexportType">
-							<option value="I,E">全部</option>
-							<option value="I">进口</option>
-							<option value="E">出口</option>
+							<option value="I,E">All</option>
+							<option value="I">Import</option>
+							<option value="E">Export</option>
 						</select>
 					</div>
 					<div style="height: 50px; width: 30%;float: left;">
 						<font class="alldb_fieldname">
-							原产国&nbsp;:&nbsp;</font> 
+							Country of Origin&nbsp;:&nbsp;</font> 
 							<select id="equirementSelects" name="equirementSelects" 
 								style="width: 205px; height: 22px; border-color: #e2e5e7">
 							</select>
@@ -88,7 +88,7 @@
 					</div>
 					<div id="" style="width: 87%;height: 100%;">
 						<div style="float:right;margin-top: 5px; padding-bottom: 20px;">
-							<a class="btn_cls" title="立即查询" href="javascript:queriesCompiterorShow(this);">立即查询</a>
+							<a class="btn_cls" title="立即查询" href="javascript:queriesCompiterorShow(this);">Immediate Search</a>
 						</div>
 					</div>
 				</div>

@@ -38,39 +38,71 @@ function myRandReload(){
 /**
  * 注册
  */
+
 function regest(){
 	 emailValue=$("#email").val();
-	$('#regestForm').form('submit', {   
-	       onSubmit: function(){ 
-	    	   if(!checkStatus){
-	    		  $("#pactMessege").text("*请同意协议");
-	    		   return false;
-	    	   }
-	         return $(this).form('validate'); 
-	      } ,  
-	      success:function(data){   
-	    	  if(data=='1'){
-	    		  //注册成功后跳转到邮箱激活页面
-	    		  openActiveDiv();
-	    	  }else if(data=='2'){
-	    		  $('#checkCode').val('验证码错误...');
-	    		  $('#checkCode').css({
-	    			   'font-size':'12px',
-	    			   'color':'skyblue',
-	    			   'background-color':'#FFF3F3'
-	    		  });
+
+	 firstName = $("#firstName").val();
+	 lastName = $("#lastName").val();
+	 password = $("#loginPassword").val();
+	 confirmPassword = $("#confirmPassword").val();
+	 
+	 if (emailValue != "" & firstName != "" & lastName != "" & password != "" & confirmPassword != "" & document.getElementById('checkRead').checked & (password == confirmPassword)){
+	   $.post("/gbdbas/userRegest", $("#regestForm").serialize(), 
+	      function(data){   
+	    	  if(data=='1'|| data == '2'){
+	    			 openActiveDiv();
+	    		 
 	    	  }
-	    	  else{
-	    		   $.messager.alert('提示','邮箱地址不正确','info');
-	    		   $("#email").val("");
+	    	  else if(data == '3'){
+	    		  $("#requiredField").text('*This user exists, please log in.');
 	    	  }
-	    	  
-	     }   
-	}); 
-}
+
+	    	  else if (data == '4'){
+	    		  $("#requiredField").text('*This user has not been activated, please check your email');
+	    	  }
+
+
+	     }    
+	   );
+	 }
+	 else if(firstName == ""){
+		 $("#requiredField").text('*First name is required.');
+	 }
+	 else if(lastName == ""){
+		 $("#requiredField").text('*Last name is required.');
+	 }
+	 else if(emailValue == ""){
+		 $("#requiredField").text('*Email is required.');
+	 }
+	 else if(password == ""){
+		 $("#requiredField").text('*Password is required.');
+	 }
+	 else if(confirmPassword == ""){
+		 $("#requiredField").text('*Please confirm your password.');
+	 }
+	 else if (password != confirmPassword){
+		 $("#requiredField").text('*Passwords do not match.');
+	 }
+	 else if(!document.getElementById('checkRead').checked){
+		 $("#requiredField").text('*Please agree to our Customer Agreement.');
+	 }
+
+		  }
+
+
+
+
+
 /**
  * 清理验证码
  */
+
+
+
+
+
+
 function clearMessage(){
 	$('#checkCode').val('');
 	$('#checkCode').css({
@@ -90,6 +122,7 @@ function clearMessage(){
  * 打开激活窗口
  */
 function openActiveDiv(){
+	emailValue=$("#email").val();
 	//根据用户输入的email 获取正确的email地址
 	var url=getEmailUrl(emailValue);
 	//清空页面上的标签地址

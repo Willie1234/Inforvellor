@@ -870,7 +870,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.3</version>
 				<configuration>
 					<!-- 指定java类文件编译时候的jdk版本 -->
 					<source>1.7</source>

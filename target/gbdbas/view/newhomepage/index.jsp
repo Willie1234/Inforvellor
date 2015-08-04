@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <%
 String path = request.getContextPath();
@@ -35,13 +36,52 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <!-- Custom CSS -->
   <link href="<c:url value="/static/css/newhomepage/scrolling-nav.css" />" rel="stylesheet">
   <link href="<c:url value="/static/css/newhomepage/custom.css" />" rel="stylesheet">
-
-  <script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-   <script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
-    <script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/newregister.js'></script>
-  <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript"	src="${pageContext.request.contextPath }/static/js/artdialog/artDialog.source.js?skin=twitter"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/artdialog/artdialogopen.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/regest.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/common/check.js"></script>
+<script type="text/javascript" 	src="${pageContext.request.contextPath }/static/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/login.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/login/supersized.3.2.7.min.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/login/supersized-init.js" ></script>
+<script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/promptmessage.js'></script>
+<script type='text/javascript' src='${pageContext.request.contextPath }/static/js/newhomepage/newregister.js'></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	myRandReload();
+	checkStatus=true;
+	$('#loginName').validatebox({    
+	    required: true,   
+	    validType: ['account[4,12]',"remote['/gbdbas/userSon/checkUserSonName','loginName']"],
+	    missingMessage:'账号必须由英文字母、数字(0-9)、汉字组成，长度在4-12个字符之间。',
+	    delay:300
+	}); 
+	$('#loginPassword').validatebox({    
+	    required: true,    
+	    validType: 'passwd[6,20]',
+	    missingMessage:'只能包含字母、数字以及标点符号，长度为6～12。'
+	}); 
+	$('#email').validatebox({    
+	    required: true,    
+	    validType: 'myEmail',
+	    missingMessage:'邮箱不能为空'
+	}); 
+	//关键激活窗口时刷新验证码
+	$('#activeDiv').dialog({
+	    onClose:function(){
+	    	myRandReload();
+	    }
+	});
+});
+</script>
+  
+  <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
   <link href="<c:url value="/static/css/newhomepage/languages.min.css" />" rel="stylesheet">
   <link href="<c:url value="/static/css/newhomepage/font-awesome.min.css" />" rel="stylesheet">
  
@@ -158,7 +198,12 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="logo" href="index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+
+<<<<<<< HEAD
+                <a class="logo" href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+=======
+                <a class="logo" href="view\newhomepage\index.jsp#home"><img class="img-square" src="<c:url value="/static/img/newhomepage/white.png"/>"  alt="Generic placeholder image" style="width: 260px; height: 60px;"> </a>
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
                 
             </div>
             
@@ -182,7 +227,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                         </ul>
                     </li>
                     <li>
-                      <a href="pricing.jsp">Pricing</a>
+                      <a href="${pageContext.request.contextPath }\view\newhomepage\pricing.jsp">Pricing</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">Services</a>
@@ -195,13 +240,17 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            <c:if test="${sessionScope.user  eq null}">
 				   <li>
                
-				  <a class="btn btn-success" role="button" href="newLogin/login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+<<<<<<< HEAD
+				  <a class="btn btn-success" role="button" href="${pageContext.request.contextPath }\view\newhomepage\login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+=======
+				  <a class="btn btn-success" role="button" href="view\newhomepage\login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
                  
 				  
 				   
 				  </li>
 				  <li>
-                   <a class="btn btn-primary" href="#signup" role="button" data-toggle="modal" style="color:white; padding:15px; margin-right:10px;">Sign up today</a>
+                   <a class="btn btn-primary" href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#signup" role="button" data-toggle="modal" style="color:white; padding:15px; margin-right:10px;">Sign up today</a>
                   </li>
 				   </c:if>
 				  <c:if test="${sessionScope.user  ne null}">
@@ -213,7 +262,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 				   
 				  </li>
 				  <li>
-                   <a class="btn btn-primary2" href="view/chinese/menu/country.jsp" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
+                   <a class="btn btn-primary2" href="${root}/pageJump" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
                   </li>
 				 
 				  </c:if>
@@ -353,7 +402,7 @@ Based on our long industry background and years of experience in information tec
   
         
         <div class="row">
-         <h2 class="col-md-10 col-md-push-1 text-center" style="color:#FFF"><p></p><br><br>“I have been trading for decades and I am still standing. I have seen a lot of traders come and go. They have a system or a program that works in some specific environments and fails in others. In contrast, my strategy is dynamic and ever evolving. I constantly learn and change.” <br><br>- Thomas Busby in Trade To Win</h2>
+         <h2 class="col-md-10 col-md-push-1 text-center" style="color:#FFF"><p></p><br><br>“Trade is the arena of globalization where international collaboration and rules are best established. But the demands on an open and rules-based trading system are bound to increase, and the sharp rise in competition from all sources could accentuate protectionist pressures.”<br><br>- Uri Dadush & William Shaw in “Juggernaut: How Emerging Markets Are Reshaping Globalization”</h2>
 
         </div>
 
@@ -370,20 +419,20 @@ Based on our long industry background and years of experience in information tec
           <img class="img-square" src="<c:url value="/static/img/newhomepage/buyerh.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           <h2>For Buyers</h2>
           <p>We help foreign trade companies seek new importers. Look to us to find the highest quality supplies in the world.</p>
-          <p><a class="btn btn-default" href="buyers.jsp" role="button">View details »</a></p>
+          <p><a class="btn btn-default" href="${pageContext.request.contextPath }\view\newhomepage\buyers.jsp" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-center">
-          <img class="img-circle" "<c:url value="/static/img/newhomepage/seller.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
+          <img class="img-circle" src="<c:url value="/static/img/newhomepage/seller.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           
-          <h2>For Sellers</h2>s
+          <h2>For Sellers</h2>
           <p>We help manufacturers look for exporters to move their international products. Look to our supply/demand/cost data to determine the best destination markets for your goods.</p>
-          <p><a class="btn btn-default" href="sellers.jsp" role="button">View details »</a></p><br><br>
+          <p><a class="btn btn-default" href="${pageContext.request.contextPath }\view\newhomepage\sellers.jsp" role="button">View details »</a></p><br><br>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 text-center">
-          <img class="img-circle" src="<c:url value="/static/img/newhomepage/researcherh"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
+          <img class="img-circle" src="<c:url value="/static/img/newhomepage/researcherh.jpg"/>" alt="Generic placeholder image" style="width: 210px; height: 210px;"><p></p><br>
           <h2>For Researchers</h2>
           <p>We combine traditional trade techniques and modern technology to provide optimal trade data, 24/7. Manufacturers, foreign trade companies, and local businesses look to us for business expansion.</p>
-          <p><a class="btn btn-default" href="research.jsp" role="button">View details »</a></p><br><br><br><br><br>
+          <p><a class="btn btn-default" href="${pageContext.request.contextPath }\view\newhomepage\research.jsp" role="button">View details »</a></p><br><br><br><br><br>
         </div><!-- /.col-lg-4 -->
         <!--
         <h2 class="text-center" style="color:#CD9898">A few of our employer partners:</h2><p></p><br><br>
@@ -607,19 +656,37 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
   <div class = "modal-dialog">
     <div class = "modal-content">
      <div class = "modal-header">
-       <h4>Please Sign Up</h4>
+       <h4>Sign Up</h4>
       </div>
       <div class = "modal-body">
+      
               <div class="row">
         <div class="container-modal">
-           <form onsubmit="return userSubmit()" action="${pageContext.request.contextPath }/registerUser" method="post" accept-charset="utf-8" class="form" role="form"> 
-                    <h4>You will be able to select the payment options later on.</h4>
+           <form id="regestForm" action="/gbdbas/userRegest" method="post" accept-charset="utf-8" > 
+                   <h5 style="color:#A91A1A" id = requiredField>  </h5>
                     <div class="row">
                            <div class="col-xs-6 col-md-6">
-                            <input type="text" id="inputFirstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
+                            <input type="text" id="firstName" name="firstName" required="" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
                         <div class="col-xs-6 col-md-6">
-                            <input type="text" id="inputLastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
+                            <input type="text" id="lastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
                     </div>
+<<<<<<< HEAD
+                    <input type="text" id="email" name="email" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
+<<<<<<< HEAD
+                    <input type="password" id="loginPassword" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
+=======
+                    <input type="password" id="Password" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
+                    <input type="password" id="confirmPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                                 
+                       
+                     
+                    <br />
+             
+               <div class='pact'>
+                     <div>
+                     <label>
+                     <input id = "checkRead" type="checkbox" required ="true" checked> <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
+=======
                     <input type="text" id="inputUserName" name="loginName" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
                     <input type="password" id="inputPassword" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
                     <input type="password" id="reinputPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                    <label>Birth Date</label>                    <div class="row">
@@ -757,14 +824,28 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 </select>                        </div>
                     </div>
                      <label>Gender : </label>                    <label class="radio-inline">
-                        <input type="radio" name="sex" value="Male" id=male />                        Male
+                        <input type="radio" name="sex" value="Male" id="male" />                        Male
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="sex" value="Female" id=female />                        Female
+                        <input type="radio" name="sex" value="Female" id="female" />                        Female
                     </label>
                     <br />
               <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
+               <div class='pact'>
+                     <div>
+                     <label>
+                     <input type="checkbox"> <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
+                         <span id="pactMessege"></span>
+                  </label>
+                         
+                     </div>
+               </div>
+<<<<<<< HEAD
+                    <button id="regestButton" class="btn btn-lg btn-primary btn-block signup-btn"  onclick = "regest()" type = "button">
+=======
                     <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
                         Create my account</button>
             </form>          	
           </div>
@@ -775,6 +856,20 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
   </div>
 </div>
 
+
+
+ <div  id="activeDiv" closed="true" class="easyui-dialog" style="border-width:1px; width:400px;height:400px;padding:10px 20px;overflow-x:hidden;">
+       <div class="toMail">
+       <font  >恭喜您！<span id="name"></span></font><br/>
+       <font >我们已经向您的邮箱  发送了一封激活邮件，请点击邮件中的链接完成激活！</font><br/>
+                前往 <a id='emailId' href="#" style='font-size:16px;'></a> 激活  <br/>
+       </div>
+</div>
+   
+   
+   
+   
+
 <div class = "modal fade" id = "contacts" role = "dialog">
   <div class = "modal-dialog">
     <div class = "modal-content">
@@ -784,7 +879,7 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
       <div class = "modal-body">
               <div class="row">
          <div class="container-modal">
-            <form action="${pageContext.request.contextPath }/sendUsEmail" method="post" accept-charset="utf-8" class="form" role="form"> 
+            <form action="${pageContext.request.contextPath }/sendUsEmail" method="post" accept-charset="utf-8" > 
               <div class="row">
                         <div class="col-xs-12 col-md-12">
                             <input type="text" required=""  name="fromEmail" value="" class="form-control input-lg" placeholder="From" />                        </div>
@@ -815,15 +910,15 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
 <!-- /footer -->
 
   <!-- attach JavaScripts -->
-  <script src="js/main.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/docs.min.js"></script>
+    <script src="${root }/static/js/newhomepage/bootstrap.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   
     <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+    <script src="${root }/static/js/newhomepage/jquery.easing.min.js"></script>
+    <script src="${root }/static/js/newhomepage/scrolling-nav.js"></script>
+
 
   <script>
     $('.carousel').carousel({

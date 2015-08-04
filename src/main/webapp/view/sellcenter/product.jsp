@@ -28,16 +28,16 @@
     <script type="text/javascript" src="<%=basePath%>view/sellcenter/js/product.js"></script>
     <script type="text/javascript"	src="<%=basePath%>static/js/common/date.js"></script>
      <script type="text/javascript"	src="<%=basePath%>static/js/common/common-path.js"></script>
-<title>产品购买中心</title>
+<title>Product purchase center</title>
 </head>
 <body >
        <div class="mainDiv">
-          <div class='title'>产品定制</div>
+          <div class='title'>Product customization</div>
           <div id='menuDiv'>
-            <span onclick="showBox('hs')">按HSCODE定制</span>
-            <span onclick="showBox('de')">按产品描述定制</span>
-            <span onclick="showBox('cy')">按国家定制</span>
-            <span onclick="showBox('nm')">按次数定制</span>
+            <span onclick="showBox('hs')">Subscribe By HSCODE</span>
+            <span onclick="showBox('de')">Subscribe By Product Discription</span>
+            <span onclick="showBox('cy')">Subscribe By Country</span>
+            <span onclick="showBox('nm')">Subscribe By Times</span>
           </div>
           <!-- 存放查询条件 -->
           <div class='conditionDiv'>
@@ -47,22 +47,22 @@
                      <div class='formCondition'>
 	                      <table width="750px">
 	                         <tr>
-	                            <td class='tag'>HSCODE:</td>
+	                            <td class='tag'>HS CODE:</td>
 	                            <td><input class='inputNomarl' type="text" id="hs_code"/></td>
-	                            <td class='tag'>国家：</td>
+	                            <td class='tag'>Country：</td>
                                 <td> <input type="text" id='hs_country' ></td>
-	                            <td class='tag'>进出口类型：</td>
+	                            <td class='tag'>Input and output categories：</td>
 	                            <td><input type="text" id='hs_io'></td>
 	                         </tr>
 	                         <tr>
-	                              <td  class='tag'>时间范围：</td>
+	                              <td  class='tag'>Time range：</td>
 	                              <td colspan="2"><input id="hs_beginTime" name="hs_beginTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> -
 	                              <input id="hs_endTime" name="hs_endTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> 
 	                              </td>
 	                              <td></td>
 	                              <td></td>
-	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('hs')">确定</span>
-	                              <span class='buttonSpan' onclick="cancle('hs')">清空</span></td>
+	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('hs')">OK</span>
+	                              <span class='buttonSpan' onclick="cancle('hs')">Clear</span></td>
 	                         </tr>
 	                      </table>
                       </div>
@@ -74,22 +74,22 @@
                      <div class='formCondition'>
                         <table>
                         <tr>
-	                            <td class='tag'>产品关键词:</td>
+	                            <td class='tag'>Product key word:</td>
 	                            <td><input class='inputNomarl' type="text" id="de_desc"/></td>
-	                            <td class='tag'>国家：</td>
+	                            <td class='tag'>Country：</td>
                                 <td> <input type="text" id='de_country' ></td>
-	                            <td class='tag'>进出口类型：</td>
+	                            <td class='tag'>Input and output categories：</td>
 	                            <td><input type="text" id='de_io'></td>
 	                         </tr>
 	                         <tr>
-	                              <td  class='tag'>时间范围：</td>
+	                              <td  class='tag'>Time range：</td>
 	                              <td colspan="2"><input id="de_beginTime" name="de_beginTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> -
 	                              <input id="de_endTime" name="de_endTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> 
 	                              </td>
 	                              <td></td>
 	                              <td></td>
-	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('de')">确定</span>
-	                              <span class='buttonSpan' onclick="cancle('de')">清空</span></td>
+	                              <td style='padding-left: 30px;'><span class='buttonSpan' onclick="addCar('de')">OK</span>
+	                              <span class='buttonSpan' onclick="cancle('de')">Clear</span></td>
 	                         </tr>
                         </table>
                      </div>
@@ -102,22 +102,22 @@
                         <table>
                         
                          <tr>
-	                            <td class='tag'>国家：</td>
+	                            <td class='tag'>Country：</td>
                                 <td> <input type="text" id='cy_country' ></td>
                                 <td class='tag'></td>
-	                            <td class='tag'>进出口类型：</td>
+	                            <td class='tag'>Input and output categories：</td>
 	                            <td><input type="text" id='cy_io'></td>
 	                         </tr>
 	                         <tr>
-	                              <td  class='tag'>时间范围：</td>
+	                              <td  class='tag'>Time range：</td>
 	                              <td colspan="2"><input id="cy_beginTime" name="cy_beginTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> -
 	                              <input id="cy_endTime" name="cy_endTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> 
 	                              </td>
 	                              <td></td>
 	                              <td></td>
 	                              <td style='padding-left: 30px;'>
-		                              <span class='buttonSpan' onclick="addCar('cy')">确定</span>
-		                              <span class='buttonSpan' onclick="cancle('cy')">清空</span>
+		                              <span class='buttonSpan' onclick="addCar('cy')">OK</span>
+		                              <span class='buttonSpan' onclick="cancle('cy')">Clear</span>
 	                              </td>
 	                         </tr>
                         </table>
@@ -130,12 +130,12 @@
                      <div class='formCondition'>
                         <table >
                            <tr>
-                              <td ><span  class='tag'> 请输入次数:</span><input type="text"  class='inputNomarl' id="times" onblur="checkNum()"></td>
+                              <td ><span  class='tag'> Please input times:</span><input type="text"  class='inputNomarl' id="times" onblur="checkNum()"></td>
                            </tr>
                            <tr>
                              <td style="padding-left: 400px;">
-                                <span class='buttonSpan' onclick="addCar('nm')">确定</span>
-                                <span  class='buttonSpan' onclick="cancle('nm')">清空</span>
+                                <span class='buttonSpan' onclick="addCar('nm')">OK</span>
+                                <span  class='buttonSpan' onclick="cancle('nm')">Clear</span>
                              </td>
                            </tr>
                         </table>
@@ -147,7 +147,7 @@
           <div id='car'  class='car'>
                <div id="tool_bar">
                  	<a	href="javascript:void(0)"	class="easyui-linkbutton"	plain="true" onmouseover="this.style.background='#DA4653';" onmouseout="this.style.background='#EC5565';" onclick="deletePros()">
-							<font style="font-size:16px;color: #ffffff;font-family: Microsoft YaHei;">删除</font>
+							<font style="font-size:16px;color: #ffffff;font-family: Microsoft YaHei;">Delete</font>
 						</a>
                </div>
                <!-- 海关编码或者国家或者产品描述 -->
@@ -156,7 +156,7 @@
 		              </table>
                </div>
                <div class='formButtom' >
-                 <span class='buttonSpan' onclick='buyPro("car_table")'>立即购买</span>
+                 <span class='buttonSpan' onclick='buyPro("car_table")'>Buy now</span>
                </div>
           </div>
        </div>

@@ -26,7 +26,11 @@ public class ChangeOperSystemPath {
        */
       public static String getCachePath(){
     	  //if(JudgeSystem()){
-    			  return "src/main/resources/config/cache/ehcache.xml";
+    			 // return "src/main/resources/config/cache/ehcache.xml";
+	    	  File nowFile = new File(ResolveXMLUtil.class.getClassLoader().getResource("").getFile());
+				String nowPath = new File(nowFile.getParent()).getParent();			
+	    	  if(tomOrJetty(nowPath)) return nowPath+"/WEB-INF/classes/config/cache/ehcache.xml";
+	    	  else return "src/main/resources/config/cache/ehcache.xml";
     	  //}
     	  //else{
     		//  return "//usr//apache-tomcat-6.0.37//webapps//gbdbas//WEB-INF//classes//config//cache//ehcache.xml";
@@ -41,7 +45,9 @@ public class ChangeOperSystemPath {
     		  //window根据获取项目路径
     			File nowFile = new File(ResolveXMLUtil.class.getClassLoader().getResource("").getFile());
     			String nowPath = new File(nowFile.getParent()).getParent();
-			  return nowPath+"/src/main/resources/config/menu/menu.xml";
+			 // return nowPath+"/src/main/resources/config/menu/menu.xml";
+    			if(tomOrJetty(nowPath)) return nowPath+"/WEB-INF/classes/config/menu/menu.xml";
+    			else return nowPath+"/src/main/resources/config/menu/menu.xml";
 		  //}else{
 			 //linux获取绝对路径
 			//  return "//usr//apache-tomcat-6.0.37//webapps//gbdbas//WEB-INF//classes//config//menu//menu.xml";
@@ -56,7 +62,9 @@ public class ChangeOperSystemPath {
     		  //window根据获取项目路径
     			File nowFile = new File(ResolveXMLUtil.class.getClassLoader().getResource("").getFile());
     			String nowPath = new File(nowFile.getParent()).getParent();
-			  return nowPath+"/src/main/resources/config/log4j/log4j.properties";
+			 // return nowPath+"/src/main/resources/config/log4j/log4j.properties";
+    			if(tomOrJetty(nowPath)) return nowPath+"/WEB-INF/classes/config/log4j/log4j.properties";
+    			else return nowPath+"/src/main/resources/config/log4j/log4j.properties";
 		 // }else{
 			 //linux获取绝对路径
 			//  return "//usr//apache-tomcat-6.0.37//webapps//gbdbas//WEB-INF//classes//config//log4j//log4j.properties";
@@ -65,4 +73,9 @@ public class ChangeOperSystemPath {
       public static void main(String[] args) {
 		System.out.println( getMenuPath());
 	}
+      public static boolean tomOrJetty(String nowPath){
+    	  File file=new File(nowPath+"/src");
+    	  if(file.exists()) return false;
+    	  else return true;
+      }
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="root" value="${pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <%
 String path = request.getContextPath();
@@ -9,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 String language = (String)request.getSession().getAttribute("language");
 if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 {
-	language = "message_en_US";
+  language = "message_en_US";
     request.getSession().setAttribute("language","message_en_US");
 }
 
@@ -28,20 +29,21 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- attach CSS styles -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet" />
+  <link href="${root }/static/css/newhomepage/bootstrap.min.css" rel="stylesheet">
+  <link href="${root }/static/css/newhomepage/style.css" rel="stylesheet" />
 
   <!-- Custom CSS -->
 
-  <link href="../css/scrolling-nav.css" rel="stylesheet">
-  <link href="../css/custom.css" rel="stylesheet">
-  <link href="../css/pricing.css" rel="stylesheet">
-  <link href="../carousel.css" rel="stylвesheet">
+  <link href="${root }/static/css/newhomepage/scrolling-nav.css" rel="stylesheet">
+  <link href="${root }/static/css/newhomepage/custom.css" rel="stylesheet">
+  <link href="${root }/static/css/newhomepage/pricing.css" rel="stylesheet">
+
   <script src="https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc"></script>
- <script type="text/javascript" src="${pageContext.request.contextPath }/webInfo/newregister.js"></script>
+ <script type="text/javascript" src="${root }/static/js/newhomepage/newregister.js"></script>
   <link rel="shortcut icon" href="http://usrz.github.io/bootstrap-languages/favicon.ico" />
-  <link rel="stylesheet" href="./css/languages.min.css"/>
-  <script src="/js/jquery-2.1.4.js"></script>
+  <link rel="stylesheet" href="${root }/static/css/newhomepage/languages.min.css"/>
+  <script src="${root }/static/js/newhomepage/jquery-2.1.3.min.js"></script>
+    <script src="${root }/static/js/login/login.js"></script>
    <style>
       h1            { padding-top: 50px; }
       .mynavigation { padding-top: 70px; }
@@ -138,113 +140,109 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   }
   
      function hideCheckShowLogin(){
-    	  $("#loginDialog").modal('show');
-    	  $("#checkUserName").modal('hide');
+        $("#loginDialog").modal('show');
+        $("#checkUserName").modal('hide');
     
-    	  
-    	  
+        
+        
       }
     function startTransaction(value){
-	var money=value;
-	
-	$.post("/saveMoneyAndCheckUser",{money:money},
-		function(data){
-			if(data=="1"){
-				$("#checkUserName").modal('show');
-				
-				
-				//	location.href="www.inforvellor.com/payment.jsp"
-			
-			
-			}else{
-			if(data=="0"){
-				
-				$("#loginDialog").modal('show');
-				//location.href="www.inforvellor.com/payment.jsp"
-					
-			}
-			
-			}
-		
-		
-		}
-	
-	
-	);
+  var money=value;
+  
+  $.post("/gbdbas/saveMoneyAndCheckUser",{money:money},
+    function(data){
+      if(data=="1"){
+        $("#checkUserName").modal('show');
+        
+        
+        //  location.href="www.inforvellor.com/payment.jsp"
+      
+      
+      }else{
+      if(data=="0"){
+        
+        $("#loginDialog").modal('show');
+        //location.href="www.inforvellor.com/payment.jsp"
+          
+      }
+      
+      }
+    
+    
+    }
+  
+  
+  );
   
   
   }
   
   
-  function usersub(){
-//	   var $btnmy=document.getElementById("signIn");
-//	   $btnmy.value="loading..."
-	   //$(this).value="loading";
+  function usersubmit(){
+//     var $btnmy=document.getElementById("signIn");
+//     $btnmy.value="loading..."
+     //$(this).value="loading";
 
-		 // business logic...
-	
+     // business logic...
+  
 
-		var loginName = $("#user_name").val();
-		var loginPassword = $("#user_pass").val();
-		var regCode = $("#checkcode").val();
-		var check  = document.getElementById("rPassword");
-		var rPassword;
-		if(check!=null&&check.checked){
-			rPassword = check.value;
-		}else{
-			rPassword = "";
-		}
-		$("#myModal").modal('show');
-		$.post("/customer_search/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
-						function(data){
-						if("2" == data){
-							 promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>')	;							
-						}
-						else if("3" == data){
-							promptMessage('<fmt:message key="common.Usernotexist" bundle="${messages}"/>')	;								
-						}else if("4"  == data){
-							promptMessage('The identity code is not correct!');	
-						}else if("5"  == data){
-							promptMessage('<fmt:message key="common.usenotplacelogin" bundle="${messages}"/>')	;
-							
-						}else if("1"==data){
-							clearPrompt();
-							location.href = "payment.jsp";
-						}else if("6"==data){
-							promptMessage('<fmt:message key="common.addisnotlogin" bundle="${messages}"/>')	;
-							
-						}else if("7"==data){
-							promptMessage('<fmt:message key="common.hasbeendisabled" bundle="${messages}"/>')	;
-							
-						}else if("8"==data){
-							promptMessage('<fmt:message key="common.isnotactive" bundle="${messages}"/>');	
-						}else{
-							promptMessage('<fmt:message key="common.istemlocke" bundle="${messages}"/>');	
-						}
-					}
-				);
-	
-		 return false;
-			 
+    var loginName = $("#user_name").val();
+    var loginPassword = $("#user_pass").val();
+    var regCode = $("#checkcode").val();
+  
+    var rPassword;
+    
+    $("#myModal").modal('show');
+    $.post("/gbdbas/userLogin",{loginName:loginName,loginPassword :loginPassword,regCode:regCode,rPassword:rPassword,language:'chinese'},
+            function(data){
+            if("2" == data){
+               promptMessage('<fmt:message key="common.passiscorr" bundle="${messages}"/>') ;             
+            }
+            else if("3" == data){
+              promptMessage('<fmt:message key="common.Usernotexist" bundle="${messages}"/>')  ;               
+            }else if("4"  == data){
+              promptMessage('The identity code is not correct!'); 
+            }else if("5"  == data){
+              promptMessage('<fmt:message key="common.usenotplacelogin" bundle="${messages}"/>')  ;
+              
+            }else if("1"==data){
+              clearPrompt();
+              location.href = "payment.jsp";
+            }else if("6"==data){
+              promptMessage('<fmt:message key="common.addisnotlogin" bundle="${messages}"/>') ;
+              
+            }else if("7"==data){
+              promptMessage('<fmt:message key="common.hasbeendisabled" bundle="${messages}"/>') ;
+              
+            }else if("8"==data){
+              promptMessage('<fmt:message key="common.isnotactive" bundle="${messages}"/>');  
+            }else{
+              promptMessage('<fmt:message key="common.istemlocke" bundle="${messages}"/>'); 
+            }
+          }
+        );
+  
+     return false;
+       
 
-	
+  
 
 }
   
-	function promptMessage(m){
-		$("#myModalLabel").text('Prompt');
-		document.getElementById("warn").style.display="block";
-		document.getElementById("prog").style.display="none";
-		document.getElementById("clossBtn").style.display="block";
-		$("#warn").text(m);
-	}
-	function clearPrompt(){
-		document.getElementById("warn").style.display="none";
-		document.getElementById("prog").style.display="block";
-		document.getElementById("clossBtn").style.display="none";
-		$("#myModalLabel").text('Loading');
-		$("#warn").text('');
-	}
+  function promptMessage(m){
+    $("#myModalLabel").text('Prompt');
+    document.getElementById("warn").style.display="block";
+    document.getElementById("prog").style.display="none";
+    document.getElementById("clossBtn").style.display="block";
+    $("#warn").text(m);
+  }
+  function clearPrompt(){
+    document.getElementById("warn").style.display="none";
+    document.getElementById("prog").style.display="block";
+    document.getElementById("clossBtn").style.display="none";
+    $("#myModalLabel").text('Loading');
+    $("#warn").text('');
+  }
   
   
     </script>
@@ -290,31 +288,31 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 </ul>
 <ul class="nav navbar-nav navbar-right">
            <c:if test="${sessionScope.user  eq null}">
-				   <li>
+           <li>
                
-				  <a class="btn btn-success" role="button" href="newLogin/login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
+          <a class="btn btn-success" role="button" href="login.jsp" style="color:white; padding:15px; margin-right:10px;">Login</a>
                  
-				  
-				   
-				  </li>
-				  <li>
+          
+           
+          </li>
+          <li>
                    <a class="btn btn-primary" href="#signup" role="button" data-toggle="modal" style="color:white; padding:15px; margin-right:10px;">Sign up today</a>
                   </li>
-				   </c:if>
-				  <c:if test="${sessionScope.user  ne null}">
-				     <li>
+           </c:if>
+          <c:if test="${sessionScope.user  ne null}">
+             <li>
                
-				  <a class="btn">Hi: ${sessionScope.user.firstName} ${sessionScope.user.lastName}</a>
+          <a class="btn">Hi: ${sessionScope.user.firstName} ${sessionScope.user.lastName}</a>
                  
-				  
-				   
-				  </li>
-				  <li>
+          
+           
+          </li>
+          <li>
                    <a class="btn btn-primary2" href="view/chinese/menu/country.jsp" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
                   </li>
-				 
-				  </c:if>
-				  <li>
+         
+          </c:if>
+          <li>
                       <div class="btn-group dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="padding:12px; margin-right:10px;">
                   <span class="lang-sm lang-lbl" lang="${sessionScope.language}"></span> <span class="caret"></span>
@@ -376,7 +374,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 <div class="db-wrapper">
                     <div class="db-pricing-four">  
                     <div class="a" class="col-lg-3 text-left">
-                    <img class="img-square" src="/img/sale2.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
+                    <img class="img-square" src="${root }/static/img/newhomepage/sale2.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
                     </div>    
                                   
                         <ul>
@@ -406,7 +404,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 <div class="db-wrapper">
                     <div class="db-pricing-four">
                     <div class="a" class="col-lg-3 text-left">
-                    <img class="img-square" src="/img/sale3.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
+                    <img class="img-square" src="${root }/static/img/newhomepage/sale3.png" alt="Generic placeholder image" style="position:absolute; width: 80px; height: 80px; top:0px; left:230px;">
                     </div>
                     
                         <ul>
@@ -436,7 +434,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
                 <div class="db-wrapper">
                     <div class="db-pricing-four">
                     <div class="col-lg-3 text-left">
-                    <img class="img-square" src="/img/sale4.jpg" alt="Generic placeholder image" style="position:absolute; width: 101px; height: 101px; top:-40px; left:210px;">
+                    <img class="img-square" src="${root }/static/img/newhomepage/sale4.jpg" alt="Generic placeholder image" style="position:absolute; width: 101px; height: 101px; top:-40px; left:210px;">
                     </div>
                         <ul>
                             <li class="price">
@@ -648,17 +646,17 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         <h4 class="modal-title text-center">Please check:</h4>   
     </div>
    <duv class="modal-body">
-     	<label class="control-label">The Account You Use:</label>
-     	<div>
-     	<p>
-     	${sessionScope.user.loginName }
-     	
-     	</p>
-     	</div>
-     	<div class="modal-footer">
-     	<button type="button" class="btn btn-default" data-dismiss="modal" onclick="hideCheckShowLogin()">Not me</button>
+      <label class="control-label">The Account You Use:</label>
+      <div class="text-center">
+      <p>
+      ${sessionScope.user.loginName }
+      
+      </p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal" onclick="hideCheckShowLogin()">Not me</button>
         <a type="button" class="btn btn-primary" href="payment.jsp">Continue</a>
-     	</div>
+      </div>
     </div>
   </div>
 </div>
@@ -666,26 +664,39 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 
 <div id="loginDialog" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog bs-example-modal-sm">
-  	
+    
     <div class="modal-content">
     <div class="modal-header">
-  	
-  		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-       			 <h4 class="modal-title" id="gridSystemModalLabel">Please sign in:</h4>
-  	
-  	
-  	</div>
-  	<div class="modal-body">
-      <form class="form-signin" onsubmit="return usersub()"  >
+    
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-title" id="gridSystemModalLabel"><font size="5">Please sign in:</font></h4>
+    
+    
+    </div>
+    <div class="modal-body">
+      <form class="form-signin" onsubmit="return usersubmit()"  >
        
         <label for="inputUser" class="sr-only">Username</label>
         <input type="text" id="user_name" class="form-control" placeholder="Username" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="user_pass" class="form-control" placeholder="Password" required="">
         <div class="checkbox">
-         
- 		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:black">Forget Password</a>
-        </div>
+        <div class="col-md-12 col-md-push-3 text-center">
+         <div class="col-lg-6 text-right">
+    <input type="text" id="checkcode"  placeholder="identify code" class="form-control" style="width:100px;height:43px;"/>
+    </div>
+    
+        <div class="col-lg-6 text-left">
+    <a href="#" onClick="javascript:myRandReload()" alt="重新生成验证吧" title="重新生成验证吧" class="img" style="padding-top: -100px;padding-left: -100px;z-index: 100;position: absolute;"> 
+    <img align="bottom" id="createcheckcode" style="width:115px;height:43px;" border="0">
+    </a>
+    
+    </div>
+    </div>
+    </div>
+    <div class="checkbox2">
+    <a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:black">Forget Password</a>
+    </div>    
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"  type="submit" >Sign in</button>
       </form>
     </div>
@@ -701,15 +712,15 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         <h4 class="modal-title" id="myModalLabel">Loading...</h4>
       </div>
       <div class="modal-body">
-		       <div class="progress" id="prog" >
-		  			<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-		    			
-		  			</div>
-				</div>
-				<div id = "warn" style="display:none">
-				
-				</div>
-				
+           <div class="progress" id="prog" >
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+              
+            </div>
+        </div>
+        <div id = "warn" style="display:none">
+        
+        </div>
+        
       </div>
       <div class="modal-footer" id="clossBtn" style="display:none">
         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearPrompt()">Close</button>
@@ -735,12 +746,12 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   </div>
 </footer>
  <!-- attach JavaScripts -->
-  <script src="js/main.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/docs.min.js"></script>
+    <script src="${root }/static/js/newhomepage/bootstrap.min.js"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   
     <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
+    <script src="${root }/static/js/newhomepage/jquery.easing.min.js"></script>
+    <script src="${root }/static/js/newhomepage/scrolling-nav.js"></script>

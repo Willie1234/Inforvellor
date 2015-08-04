@@ -24,7 +24,7 @@
 <script type="text/javascript" src="${root}/static/js/eachart/reportEcharts.js"></script>
 <script type="text/javascript" src="${root}/static/js/My97DataPicker/WdatePicker.js"></script>
 <script type="text/javascript" src="${root}/view/contrastreport/js/reportCompare.js"></script>
-<title>国际商业智能化数据信息平台</title>
+<title>Inforvellor</title>
 </head>
 
 <body style="background-color: #f0f3f5;height: 100%;padding: 0!important;margin: 0px;">
@@ -39,16 +39,16 @@
 						<div align="right" width="1100px" >
 							<div style="padding-left: 80px;">
 								<div class="queryCss">
-									<font class="fontCss">国家：</font>
+									<font class="fontCss">Country：</font>
 									<input id="countryName" readonly="readonly" value="请选择国家" onclick="changeCountryRepost()" class="inpText2"/>
 								</div>
 								<div class="queryCss">
-									<font class="fontCss">海关编码：</font>
+									<font class="fontCss">Custom code：</font>
 									<input id="hscode_contrast" class="inpText2"/>
 								</div> 		
 								<div class="queryCss">
 									<div>
-										<font class="fontCss">关注时间：</font>
+										<font class="fontCss">Chosen Time：</font>
 										<input id="beginAddDate" class="dateinpText" value="2014-06-01"
 											name="begindateFlexBr" onclick="WdatePicker({lang:'auto',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/>
 										<font class="henggang">-</font>
@@ -57,17 +57,17 @@
 									</div>
 								</div>
 								<div class="querySecondCss">
-									<font class="fontCss">类型：</font>
+									<font class="fontCss">Type：</font>
 									<select id="selectType" class="inpText2" onchange="setParameters();">
 									</select>
 								</div>
 								<div class="querySecondCss">
-									<font class="fontCss">产品描述：</font>
+									<font class="fontCss">Product description：</font>
 									<input id="goodsDesc" class="inpText2" name="hscodeFlexBr"/>
 								</div> 		
 								<div class="querySecondCss">
 									<div style="border: 0px solid red;width: 100%;">
-										<font class="fontCss">历史时间：</font>
+										<font class="fontCss">History Time：</font>
 										<input id="beginDate" class="dateinpText" value="2014-01-01"
 											 onclick="WdatePicker({lang:'auto',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/>
 										<font class="henggang">-</font>
@@ -80,11 +80,11 @@
 						</div>
 						<div class="tips">
 						 	<img src="/gbdbas/static/img/datasearch/tips.png" style="width:25px;"></img>
-							<font size="2" style="line-height: 20px;">根据您选择的关注时间与历史时间，对比两个时间段的贸易差异，帮助您分析市场中您所关注产品的竞争对手、采购商增减情况，分析您所关注的采购商或者竞争对手的供应商、采购商增减情况。</font>
+							<font size="2" style="line-height: 20px;">Depending on your Chosen Time and Historical Time, you can compare the trade differences between the two periods. It can help you analyze the competitive market of the product which you are concerned about</font>
 						</div>
 						<!-- 查询按钮 -->
 						<div style="margin-left:935px;margin-top:-30px;height:60px;">
-							<a href="javascript:setParameters();" title="立即查询" class="btn_cls">立即查询</a>
+							<a href="javascript:setParameters();" title="立即查询" class="btn_cls">Immediate Search</a>
 						</div>
 					</div>
 				</div>
@@ -93,18 +93,18 @@
 	            <div id="tab_barCenter">  
 	                <ul>  
 	                    <li id="tab_report1" onclick="myclick(1)" style="background-image: url(${root}/static/img/datasearch/tabout.png);color:#1369c0;">  
-	                       	新增<span class="text_span"></span>报告  
+	                       	Add<span class="text_span"></span>Report  
 	                    </li>  
 	                    <li id="tab_report2" onclick="myclick(2)">  
-	                                                      流失<span class="text_span"></span>报告 
+	                                                      Turnover<span class="text_span"></span>Report  
 	                    </li>  
 	                    <li id="tab_report3" onclick="myclick(3)">  
-	                       	 保持<span class="text_span"></span>报告
+	                       	 Hold<span class="text_span"></span>Report 
 	                    </li>  
 	                </ul>  
 	                <div id="execl_div" style="width:100px; height:30px; float:right;display: none;">
 		               	<a onclick="exportPDForEXCELPubDuibi()" title="导出execl" class="exportExcl_cls">
-		               		<font style="padding-left: 30px;">导 出</font>
+		               		<font style="padding-left: 30px;">Export</font>
 						</a>
 	            	</div>
 	            </div> 

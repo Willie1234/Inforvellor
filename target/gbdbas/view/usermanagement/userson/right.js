@@ -175,7 +175,7 @@ function loadTableData(colums,codeId)
         fitcolumns:false,
         autoRowHeight:false,
         sortorder: 'asc',
-        loadMsg:'正在查询...',
+        loadMsg:'Loading...',
         pageList:[10,25,50,80,100],
  		columns : [colums],
  		iconCls:'icon-edit',
@@ -189,13 +189,13 @@ function loadTableData(colums,codeId)
  */
 var rightsArr=[
              {field:'ck',checkbox:true},
-             {field:"byHsCode", hidden:false, align:"center",width:'98',title:"海关编码"},
-             {field:"byProductDesc", hidden:false, align:"center",width:'99',title:"产品名称"},
-             {field:"byCountry", hidden:false, align:"center",width:'98',title:"国家"},
-             {field:"startTime", hidden:false, align:"center", width:'99', title:"开始时间",editor:'datebox'},
-             {field:"endTime", hidden:false, align:"center",width:'99',title:"结束时间",editor:'datebox'},
-             {field:"iExportType", hidden:false, align:"center",width:'98',title:"贸易类型"},
-             {field:"rightType", hidden:false, align:"center",width:'99',title:"权限范围",
+             {field:"byHsCode", hidden:false, align:"center",width:'98',title:"Custom Number"},
+             {field:"byProductDesc", hidden:false, align:"center",width:'99',title:"Product Description"},
+             {field:"byCountry", hidden:false, align:"center",width:'98',title:"Country"},
+             {field:"startTime", hidden:false, align:"center", width:'99', title:"Starting Date",editor:'datebox'},
+             {field:"endTime", hidden:false, align:"center",width:'99',title:"Finishing Date",editor:'datebox'},
+             {field:"iExportType", hidden:false, align:"center",width:'98',title:"Import/Export Category"},
+             {field:"rightType", hidden:false, align:"center",width:'99',title:"Whether opens to history data",
             	 formatter:function(value,row,index){
             		    if(value=="国家权限")
             		   {
@@ -236,7 +236,7 @@ function addrow(startTime,endTime,byCountry,rightType,iExportType){
 function addCodeOrDesc(){
 	$("#hs").val("");
 	$("#desc").val("");
-	openDivArtDialog('添加HSCODE或产品描述', 'inputConditionDiv', 'inputConditionDiv', 300, 260,true);
+	openDivArtDialog('Add HSCODE or Product Discription', 'inputConditionDiv', 'inputConditionDiv', 300, 260,true);
 }
 /**
  * 判读用户输入的内容是否为空
@@ -254,7 +254,7 @@ function cofirmIn(id){
  */
 function addDesc(){
 	if(cofirmIn("#desc")){
-	   	  $.messager.alert('警告','HS或产品描述至少有一个不能为空');
+	   	  $.messager.alert('Prompt','HS and Product Discription can not be both empty');
 	   	return;
 	   }
 	//讲产品描述和HScode添加到新的一行上
@@ -269,7 +269,7 @@ function addDesc(){
  */
 function addHS(){
 	if(cofirmIn("#hs")){
-	   	  $.messager.alert('警告','HS或产品描述至少有一个不能为空');
+	   	  $.messager.alert('Prompt','HS and Product Discription can not be both empt');
 	   	return;
 	   }
 	//讲产品描述和HScode添加到新的一行上
@@ -320,7 +320,7 @@ function grantRight()
 		}
 	}
 	if(selectRows.length==0){
-		  $.messager.alert('提示','请至少选择一行');
+		  $.messager.alert('Prompt','Please at least choose one line');
 			return;
 	}
 	var selectRigth={"rights":selectRows,'uid':userSonId};
@@ -340,7 +340,7 @@ function grantRight()
 				   result="授权失败"
 			   }
 				   loadUserInfo();
-					  $.messager.alert('提示','授权成功');
+					  $.messager.alert('Prompt','授权成功');
 				   art.dialog({id:'rightDiv'}).close();
 		   }
 	  });

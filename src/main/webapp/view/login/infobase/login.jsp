@@ -20,7 +20,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>用户-登录</title>
+    <title>User-Login</title>
     <meta name="renderer" content="webkit">  
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css"	href="${root }/static/css/easyui/easyui.css">
@@ -47,8 +47,8 @@
         <div style="width:401px; height:495px; background-image:url(${root }/static/img/login/login_main_bg.png); background-repeat:no-repeat; margin-left:793px">
             <table style="width:100%; font-family:Arial,微软雅黑;">
                 <tr style="height:40px;">
-                    <td style="width:200px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#00a1be">登录</td>
-                    <td id="shiyong" style="width:201px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#ffffff"><a href="#">试用版本</a></td>
+                    <td style="width:200px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#00a1be">Login</td>
+                    <td id="shiyong" style="width:201px; text-align:center; vertical-align:middle; font-size:16px; font-weight:600; color:#ffffff"><a href="#">Trial version</a></td>
                 </tr>
                 <tr style="height:70px;">
                     <td colspan="2">
@@ -72,11 +72,11 @@
                 </tr>
                 <tr>
                     <td id="fp" style="font-size:14px; vertical-align:top;">
-                        <input type="checkbox" style="margin-top:17px; margin-left:30px" id="rPassword" name="rPassword" value='y'/><span style="color:#677176">下次自动登录</span>
+                        <input type="checkbox" style="margin-top:17px; margin-left:30px" id="rPassword" name="rPassword" value='y'/><span style="color:#677176">Remember login</span>
                         <br />
                         <br />
                         <br />
-                        <a href="javascript:forgetPass();"; style="margin-left:30px; font-size:16px; color:#27afc8">忘记密码？</a>
+                        <a href="javascript:forgetPass();"; style="margin-left:30px; font-size:16px; color:#27afc8">Forgot Password？</a>
                     </td>
                     <td>
                         <input type="button" onclick="usersub();" id ="loginInput" class="login_btn" value="登录" onmouseover="overlogin(this)" onmouseout="outlogin(this)"/>

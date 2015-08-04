@@ -43,10 +43,10 @@
 				<div style="padding-top: 2px;padding-left: 85px;">
 					<p>
 						<font style="font-size: 14px; font-weight: border; color: #000000;padding-right:25px;">
-							公司名称
+							Company name
 						</font> 
 						<input name="companyName" style="width: 274px; height: 26px; border: 1px solid #95b8e7; border-color: #e5e5e5; border-radius: 4px 4px 4px 4px;"/>
-						<span id='showSpanOfPage' style="display: none;color: red;">请输入英文</span>
+						<span id='showSpanOfPage' style="display: none;color: red;">Please enter English</span>
 					</p>
 				</div>
 				
@@ -55,7 +55,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									备用名称
+									Alternative Name
 								</font>
 							</td>
 							<td style="width: 248px;">
@@ -63,7 +63,7 @@
 							</td>
 							<td>
 								<font class="characterStyle">
-									联系人
+									Contact person
 								</font>
 							</td>
 							<td>
@@ -73,7 +73,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									国家
+									Country
 								</font>
 							</td>
 							<td>
@@ -83,7 +83,7 @@
 							
 							<td>
 								<font class="characterStyle">
-									电话
+									Tel
 								</font>
 							</td>
 							<td>
@@ -93,7 +93,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									传真
+									Fax
 								</font>
 							</td>
 							<td>
@@ -102,7 +102,7 @@
 							
 							<td>
 								<font class="characterStyle">
-									邮编
+									Zip code
 								</font>
 							</td>
 							<td>
@@ -112,7 +112,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									电子邮件
+									Email
 								</font>
 							</td>
 							<td>
@@ -120,7 +120,7 @@
 							</td>
 							<td>
 								<font class="characterStyle">
-									备用邮件
+									Alternative Email
 								</font>
 							</td>
 							<td>
@@ -130,7 +130,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									公司网址
+									Company Website
 								</font>
 							</td>
 							<td>
@@ -138,7 +138,7 @@
 							</td>
 							<td>
 								<font class="characterStyle">
-									联系地址
+									Contact Address
 								</font>
 							</td>
 							<td>
@@ -148,40 +148,40 @@
 						<tr>
 							<td>
 								<font class="characterStyle"  style="font-weight: lighter; color: #000000;">
-									客户价值
+									Customer Value
 								</font>
 							</td>
 							<td>
 								<input class="shortInputField" id="customerValue" name="customerValue"> 
 								<font class="characterStyle">
-									万元
+									10k
 								</font>
 							</td>
 							<td>
 								<font class="characterStyle">
-									数据来源
+									Data Source
 								</font>
 							</td>
 							<td>
 								<select style="width:174px; height: 28px; border: 1px solid #95b8e7; border-color: #e5e5e5; border-radius: 4px 4px 4px 4px;"
 									name="datasource" id="datasource">
 										<option value="来自第三方的数据">
-											来自第三方的数据
+											Data from a third party
 										</option>
 										<option value="朋友介绍的">
-											朋友介绍的
+											Friend's Recommendation
 										</option>
 										<option value="网站">
-											网站
+											Website
 										</option>
 										<option value="广告">
-											广告	
+											Advertizement
 										</option>
 										<option value="代理渠道">
-											代理渠道
+											Distribution Channel
 										</option>
 										<option value="其他">
-										其他
+										Other
 										</option>
 								</select>
 							</td>
@@ -189,7 +189,7 @@
 						<tr>
 							<td>
 								<font class="characterStyle">
-									备注
+									Remarks
 								</font>
 							</td>
 							<td colspan="3">
@@ -205,13 +205,13 @@
 		<div id="buttonImage" style="padding-left: 280px; padding-top: 20px">
 			<c:if test="${language eq 'message_zh_CN'}">
 				<span id="sureSpan" style="padding-right: 13px;">
-					<a class="confirmOrcancel_cls" title="保存" onclick="saveCompetitorForAllDB()">保存</a>
+					<a class="confirmOrcancel_cls" title="保存" onclick="saveCompetitorForAllDB()">Save</a>
 				</span>
 				<span id="updateSpan" style="padding-right: 13px;">
-					<a class="confirmOrcancel_cls" title="修改" onclick="updateCompetitorForAllDB()">修改</a>
+					<a class="confirmOrcancel_cls" title="修改" onclick="updateCompetitorForAllDB()">Refine</a>
 				</span>
 				<span>
-					<a class="confirmOrcancel_cls" title="取消" onclick="closeCompetitorForAllDB()">取消</a>
+					<a class="confirmOrcancel_cls" title="取消" onclick="closeCompetitorForAllDB()">Delete</a>
 				</span>
 			</c:if>
 		</div>

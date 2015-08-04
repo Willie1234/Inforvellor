@@ -56,11 +56,29 @@ public class CheckSessionFilter implements Filter {
 			} else if(path.indexOf("/findpwd.jsp") > -1) { //如果是找回密码页面，无需过滤
 				chain.doFilter(servletRequest, servletResponse);
 				return;
+			} else if(path.indexOf("/index.jsp")>-1){   //if it is index page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/pricing.jsp")>-1){   //if it is pricing page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;            
+			} else if(path.indexOf("/research.jsp")>-1){   //if it is research page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/buyers.jsp")>-1){   //if it is buyers page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			} else if(path.indexOf("/sellers.jsp")>-1){   //if it is sellers page, do not need filter. 
+				chain.doFilter(servletRequest, servletResponse);
+				return;      
+			}else if(path.endsWith("gbdbas")||path.endsWith("gbdbas/")){
+				chain.doFilter(servletRequest, servletResponse);
+				return; 
 			}
 			// 如果用户为null,则跳转到login.jsp
 			if (null == userModel) {
 				// 跳转login.jsp
-				servletResponse.sendRedirect(servletRequest.getContextPath() + "/view/login/infobase/login.jsp");
+				servletResponse.sendRedirect(servletRequest.getContextPath() + "/view/newhomepage/login.jsp");
 			} else {
 				chain.doFilter(request, response);
 			}

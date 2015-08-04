@@ -168,7 +168,8 @@ public class UserPasswordManageService implements IUserPasswordManageService {
 		emailParamMap.put("companyName", "江苏省南通趣易信息技术有限公司");
 		mailModel.setSubject(sb.toString());
 		mailModel.setToAddreress(userMdoel.getEmail());
-		mailModel.setFromAddress("TradeEasy@163.com");
+	//	mailModel.setFromAddress("TradeEasy@163.com");
+		mailModel.setFromAddress("noreply@inforvellor.com");
 		//发送邮件
 		iEamilService.sendAttachMail(mailModel, emailParamMap, "findPwdTemplate.html");
 		return true;
@@ -246,18 +247,18 @@ public class UserPasswordManageService implements IUserPasswordManageService {
 			UserModel  userModel = userSonBaseOperService.queryUserByLoginName(queryModel);
 			//如果账户存在就判断验证码
 			if (null != userModel) {
-				String chechCode=(String)request.getSession().getAttribute("randCode");
+		//		String chechCode=(String)request.getSession().getAttribute("randCode");
 				//当验证码为空或者验证码不正确时直接返回1
-				if((chechCode==null)||("".equals(veritycode))||!(chechCode.equals(veritycode))){
-					 return "1";
-				}
-				else
-				{
+		//		if((chechCode==null)||("".equals(veritycode))||!(chechCode.equals(veritycode))){
+		//			 return "1";
+		//		}
+		//		else
+		//		{
 					//将获取的用户放入session
 					request.getSession().setAttribute("user", userModel);
 					//所有验证正确直接返回2
 					 return "2";
-				}
+		//		}
 			}else{
 				 //用户账户不存在直接返回0
 				return "0";
@@ -283,12 +284,12 @@ public class UserPasswordManageService implements IUserPasswordManageService {
 		iUserPasswordDao.addEmailModelByModel(emailModel);
 		// 生成模板
 		emailParamMap.put("validateCode", randCode);
-		emailParamMap.put("companyName", "江苏省南通趣易信息技术有限公司");
+		emailParamMap.put("companyName", "Inforvellor.Inc");
 		emailParamMap.put("sendTime", DataUtil.parseDate(new Date(),7));
 		MailModel mailModel = new MailModel();
-		mailModel.setSubject("帐号--邮箱找回密码");
+		mailModel.setSubject("Accounting--Password Retrieve");
 		mailModel.setToAddreress(userMdoel.getEmail());		
-		mailModel.setFromAddress("TradeEasy@163.com");
+		mailModel.setFromAddress("noreply@inforvellor.com");
 		//发送邮件
 		iEamilService.sendAttachMail(mailModel, emailParamMap, "findPwdTemplate.html");
 	}

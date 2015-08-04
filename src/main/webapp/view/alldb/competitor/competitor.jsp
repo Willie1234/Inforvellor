@@ -26,7 +26,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>我的竞争对手</title>
+	<title>My Competitors</title>
 	<style type="text/css">
 	.body_style {
 		font-family: "Microsoft Yahei", Heiti, arial, helvetica,
@@ -76,16 +76,16 @@
 			<div style="padding-top: 10px;background-color: #F5FAF9;width: 100%;height: 32px;text-align: left;">
 				<div style="width: 18%; height: 30px; border: 0px solid red;">
 					<div style="width: 27px; height: 30px;float: left;"><img src="${pageContext.request.contextPath }/static/img/alldb/buyer.png"/></div>
-					<div style="width: 100px; height: 30px;float: left; line-height: 30px;">
-						<b><font color="#1369c0" style="font-size:18px;padding-left: 5px;">我的对手</font></b>
+					<div style="width: 150px; height: 30px;float: left; line-height: 30px;">
+						<b><font color="#1369c0" style="font-size:18px;padding-left: 5px;">My Competitors</font></b>
 					</div>
 				</div>
 			</div>
 			 <div id="customerDg" style="height:30px;line-height:30px;display:none; font-size: 16px;font-family:Microsoft YaHei;background-color:#E7F1FB;">
 			   	<div style="width:100%; height: 30px;line-height: 26px;">
-					<a href="javascript:addCompetitor();" title="立即查询" class="btn_alldb_add"><span style="margin-left: 15px;">新增</span></a>
-					<a href="javascript:updateCompetitor();" title="立即查询" class="btn_alldb_eit"><span style="margin-left: 15px;">修改</span></a>
-					<a href="javascript:del();" title="立即查询" class="btn_alldb_remove"><span style="margin-left: 15px;">删除</span></a>
+					<a href="javascript:addCompetitor();" title="立即查询" class="btn_alldb_add"><span style="margin-left: 15px;">Add</span></a>
+					<a href="javascript:updateCompetitor();" title="立即查询" class="btn_alldb_eit"><span style="margin-left: 15px;">Refine</span></a>
+					<a href="javascript:del();" title="立即查询" class="btn_alldb_remove"><span style="margin-left: 15px;">Delete</span></a>
 					<span style="float: right; margin-top: 5px;">
 						<input class="easyui-searchbox" id="queryCountry" style="width: 200px;">
 					</span>
@@ -93,23 +93,23 @@
 			  </div>
 			<div id="table">
 				<table id="datagrid" title="" style="height: 400px;" pagination="true" toolbar="#customerDg"
-					singleSelect="false" loadMsg="正在加载中……">
+					singleSelect="false" loadMsg="loading……">
 					<thead>
 						<tr>
 							<th data-options="field:'ck',checkbox:true"></th>
 							<th field="collectionId" width="2" align="center" hidden="true">
 								<span style="font-size: 14px;">
-									客户编号
+									Customer ID
 								</span>
 							</th>
 							<th field="companyName" width="245" align="center">
 								<span style="font-size: 14px;">
-									公司名称
+									Company name
 								</span>
 							</th>
 							<th field="address" width="80" align="center">
 								<span style="font-size: 14px;">
-									地址
+									Address
 								</span>
 							</th>
 							<th field="mailBox" width="80" align="center">
@@ -119,42 +119,42 @@
 							</th>
 							<th field="contact" width="80" align="center">
 								<span style="font-size: 14px;">
-									联系人
+									Contact person
 								</span>
 							</th>
 							<th field="country" width="80" align="center">
 								<span style="font-size: 14px;">
-									国家
+									Country
 								</span>
 							</th>
 							<th field="fax" width="80" align="center">
 								<span style="font-size: 14px;">
-									传真
+									Fax
 								</span>
 							</th>
 							<th field="userType" width="80" align="center" hidden="true">
 								<span style="font-size: 14px;">
-									客户类型
+									Customer Type
 								</span>
 							</th>
 							<th field="tel" width="80" align="center">
 								<span style="font-size: 14px;">
-									电话
+									Tel
 								</span>
 							</th>
 							<th field="alternativeName" width="80" align="center" hidden="true">
 								<span style="font-size: 14px;">
-									电话
+									Tel
 								</span>
 							</th>
 							<th field="customerValue" width="80" align="center" hidden="true">
 								<span style="font-size: 14px;">
-									电话
+									Tel
 								</span>
 							</th>
 							<th field="opt" width="210" formatter="addOpss" align="center">
 								<span style="font-size: 14px;">
-									功能大全
+									Other Functions
 								</span>
 							</th>
 							</tr>

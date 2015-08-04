@@ -21,11 +21,11 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 <body>
 	 <!-- 设置用户下载条数 -->
 	<div id="addExcleDlg"  style="display: none;width: 220px; height: 160px;padding:10px 20px;overflow-x:hidden;" >
-		<div style="font-size:14px;font-weight:bold;margin-bottom: 5px;">当前最大下载条数：<span id="maxNum" style="font-size:12px;font-weight:bold;color:red;" /></span></div>
-		<div style="font-size:14px;font-weight:bold;margin-bottom: 5px;padding-top: 10px;">设置下载条数：<input name="setNum"  style="font-size:12px;" id="setNum" type="text" size=10/></div>
+		<div style="font-size:14px;font-weight:bold;margin-bottom: 5px;">The current maximum number of downloads：<span id="maxNum" style="font-size:12px;font-weight:bold;color:red;" /></span></div>
+		<div style="font-size:14px;font-weight:bold;margin-bottom: 5px;padding-top: 10px;">Set the number of downloads：<input name="setNum"  style="font-size:12px;" id="setNum" type="text" size=10/></div>
 		<div style="padding-left: 30px;padding-top: 60px;">
-			<a class="confirmOrcancel_cls" title="保存" onclick="saveExcleNum();">保存</a>
-			<a class="confirmOrcancel_cls" title="取消" onclick="javascript:art.dialog({id:'addExcleDlg'}).close();">取消</a>
+			<a class="confirmOrcancel_cls" title="保存" onclick="saveExcleNum();">Save</a>
+			<a class="confirmOrcancel_cls" title="取消" onclick="javascript:art.dialog({id:'addExcleDlg'}).close();">Cancel</a>
 		</div>
 	</div>
 </body>

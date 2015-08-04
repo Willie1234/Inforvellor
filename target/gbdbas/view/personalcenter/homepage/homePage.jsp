@@ -43,7 +43,7 @@
 					<img src="${root }/static/img/personalcenter/tips.png"></img>
 				</div>
 				<div style="padding-left: 250px;padding-top:20px;width:100px;height:auto;z-index: 200px;position: absolute;">
-					<font>新闻公告</font>
+					<font>News</font>
 				</div>
 				<div style="padding-left: 340px;padding-top:20px;width:700px;height:auto;z-index: 200px;position: absolute;">
 					<marquee id="updateTimeMarquee" style="font-size: 18px">

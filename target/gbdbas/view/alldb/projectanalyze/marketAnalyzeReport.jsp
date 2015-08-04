@@ -42,7 +42,7 @@
 				</div>
 				<div align="left" width="950px" style="border: 0px solid red;">
 					<div class="alldb_firstcols">
-						<font class="alldb_fieldname">海关编码&nbsp;:&nbsp;</font> <input
+						<font class="alldb_fieldname">Custom Code&nbsp;:&nbsp;</font> <input
 							id="quankuhscode" class="reportinpText" disabled="disabled"
 							name="quankuhscode"
 							placeholder="<fmt:message key="allCountry.addHscode" bundle="${messages}"/>" />&nbsp;&nbsp;
@@ -57,13 +57,13 @@
 								bundle="${messages}" /></font>
 					</div>
 					<div class="alldb_firstcols">
-						<font class="alldb_fieldname">产品描述&nbsp;:&nbsp;</font>
+						<font class="alldb_fieldname">Product Description&nbsp;:&nbsp;</font>
 						<input id="quankugoodsdesc" class="reportinpText"
 							disabled="disabled" name="quankugoodsdesc"
 							placeholder="<fmt:message key="allCountry.completeWord" bundle="${messages}"/>" />
 					</div>
 					<div class="alldb_secondcols">
-						<font class="alldb_fieldname">选择国家&nbsp;:&nbsp;</font>
+						<font class="alldb_fieldname">Select country&nbsp;:&nbsp;</font>
 						<select id="equirementSelects9" name="bqopponentcountry"
 							style="width: 190px"></select>
 						<!-- 国家显示列表 -->
@@ -95,7 +95,7 @@
 						<div id="qkqueryDownReportGrey"
 							style="float: left; margin-left: 650px; margin-top: -10px; display: block;">
 							<a class="btn_cls" href="javascript:quankusent(this);" title="立即查询">
-								立即查询
+								Immediate Search
 							</a>
 						</div>
 					</div>

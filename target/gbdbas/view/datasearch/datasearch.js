@@ -145,7 +145,7 @@ function chooseCountry(country)
  */
 function changeCountry()
 {
-	openDivArtDialog("选择国家", "countrysel", "countrysel",500,430,true);
+	openDivArtDialog("Choose a country", "countrysel", "countrysel",500,430,true);
 }
 
 /**
@@ -170,7 +170,7 @@ function addhscode(hscode,addHscodeDialog){
  			$("#addHscodeTable").append(tr);
 		}
 	}
-	openDivArtDialog("添加海关编码", addHscodeDialog, addHscodeDialog, 400, 300,true);
+	openDivArtDialog("Add HsCode", addHscodeDialog, addHscodeDialog, 400, 300,true);
 }
 
 /**
@@ -184,7 +184,7 @@ function addHscodeToTable(addHscodeInp){
 	//海关编码6到10位正则表达式
 	var test = /^\d{6,10}$/;
 	if(!test.test(addHscodeInpValue)){
-		$.messager.alert('提示','您好,请输入海关编码必须是大于6位小于10位的数字！','info');
+		$.messager.alert('Prompt','HsCode you entered must be 6-10 digits！','info');
 		return false;
 	}
 	var tr = '<tr style="line-height: 38px;" ><td width="186px" align="left" style="color:#6B6C72;"><input name="addHscodeTr" type="hidden" value="'+addHscodeInpValue+'"/>'+addHscodeInpValue+'</td><td width="46px" align="right"><img alt="删除海关编码" width="22px" height="22px" src="\/gbdbas\/static\/img\/datasearch\/deleHscode.png"onclick="deleteCustomecodeFlexBr(this)"onmouseover="this.style.cursor=\'pointer\'"></td></tr>';
@@ -195,7 +195,7 @@ function addHscodeToTable(addHscodeInp){
 		{
 	        if(hscodeArray[i].value == addHscodeInpValue.trim())
     	    {
-	    	    $.messager.alert('提示','该海关编码已添加!',"info");
+	    	    $.messager.alert('Prompt','This HsCode have been added!',"info");
 	    	    return false;
     	    }
 	    }
@@ -204,7 +204,8 @@ function addHscodeToTable(addHscodeInp){
 	}else
 	{
 		$("#"+addHscodeInp).val("");
-		$.messager.alert('提示','多海关编码查询最多可以查五个!',"info");
+	//	$.messager.alert('Prompt','多海关编码查询最多可以查五个!',"info");
+		$.messager.alert('Prompt','Five HsCodes can be added on each search!',"info");
 	}
 }
 
@@ -223,7 +224,7 @@ function saveAddedHscode(hscode,addCustomeCode){
 		value = value+custlen[i].value+",";
 	}
 	if(custlen.length>5){
-		$.messager.alert('提示','多海关编码不能多于五位','info');
+		$.messager.alert('Prompt','Five HsCodes can be added on each search!','info');
 	}
 	else if(custlen.length == 0)
 	{
@@ -253,10 +254,10 @@ function deleteCustomecodeFlexBr(ipt){
 function translateValue(id){
 	var countryValue = $("#"+id).val().trim();
 	if(countryValue==""){
-		$.messager.alert('提示','请输入查询框的值！','info');
+		$.messager.alert('Prompt','Please enter search value','info');
 		return;
 	}
-	$("#"+id).val('正在翻译,请等待......');
+	$("#"+id).val('Translating......');
 	$.post('/gbdbas/translate/translateCountry',{"countryValue":countryValue},function(data){
 		$("#"+id).val(data).css({"color":"#EE2C2C"});
 	});
@@ -333,11 +334,11 @@ function loadResultFieldTable(url)
         fitcolumns:false,
         autoRowHeight:false,
         sortorder: 'asc',
-        loadMsg:'正在查询...',
+        loadMsg:'Loading...',
         pageList:[10,25,50,80,100],
         onLoadSuccess: function(data){
 			if(data.rows.length == 0){
-				alertMessage('提示','对不起，你输入的查询条件未检索到结果，请尝试更换条件值!','info');
+				alertMessage('Prompt','对不起，你输入的查询条件未检索到结果，请尝试更换条件值!','info');
 		    } else {
 				queryEndDisplay();
 			}
@@ -488,10 +489,10 @@ function getQueryParam()
 	{
 		if(datasearch.getCountry() == "中国")                                                                                                                                                                                                                                                                                             
 		{
-			alertMessage('提示','请输入海关编码！','info');
+			alertMessage('Prompt','please enter HsCode！','info');
 		}else
 		{
-			alertMessage('提示','请至少输入一个查询必要条件！','info');
+			alertMessage('Prompt','Please enter at least one search value！','info');
 		}
 		return false;
 	}
@@ -543,7 +544,7 @@ function downloadReport()
  * 进度条初始化
  */
 function downLoadDialog(){
-	InitCueBox("数据下载", "数据正在下载中……", "mydlog", 400, 120, true, 0.3, true);
+	InitCueBox("Data Download", "Data is downloading……", "mydlog", 400, 120, true, 0.3, true);
 }
 
 /**
@@ -564,7 +565,7 @@ var downLoadPar = function(){
 				$('#downLoadPro').progressbar({value: data});
 			}
 		},error:function(data){
-			console.debug("错误了");
+			console.debug("error");
 			console.debug(data);
 		}
 	});
@@ -704,7 +705,7 @@ function viewdetail(value, row, index) {
 	{
 		id = row.boliviaImportId;
 	}
-	return '<a href = \'javascript:getRowData(\"' + id + '\");\' style=\"color: #1369c0\" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">查看详情</a>';
+	return '<a href = \'javascript:getRowData(\"' + id + '\");\' style=\"color: #1369c0\" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">More details</a>';
 }
 
 /**
@@ -720,7 +721,7 @@ function getRowData(id)
 		    $("#showArea").html(htmlData);
 		    $("#id_hscode").html(hscode);
 		    $("#country").html(country+"数据");
-		    openDivArtDialog("查看详情", "detailmessageDIV", "detailmessageDIV",900,600,true);
+		    openDivArtDialog("More details", "detailmessageDIV", "detailmessageDIV",900,600,true);
      	},"json");
 }
 
@@ -807,7 +808,7 @@ function formatSearch(value,rowData,rowIndex)
 		{
 			titleValue = value;
 		}
-		return "<a href=\"http://www.baidu.com/s?ie=utf-8&wd="+titleValue+"&cl=3\" target=\"_blank\"><img title=\"在百度上查看更多的信息\" alt=\"在百度上查看更多的信息\" style=\"width: 15px;height:15px;border: 0px;\" src=\"/gbdbas/static/img/datasearch/baidu_logo.png\" ></a>"+"<font title='"+titleValue+"'>"+value+"</font>";
+		return "<a href=\"http://www.baidu.com/s?ie=utf-8&wd="+titleValue+"&cl=3\" target=\"_blank\"><img title=\"More details in Google\" alt=\"More details in Google\" style=\"width: 15px;height:15px;border: 0px;\" src=\"/gbdbas/static/img/datasearch/google-g-logo-vector.png\" ></a>"+"<font title='"+titleValue+"'>"+value+"</font>";
 	}else
 	{
 		return "N/A";
@@ -881,7 +882,7 @@ function saveQueryCon(){
 	var favoritesNameId = $('#favoritesNameId').val()
 	if(favoritesNameId=='' || favoritesNameId==undefined || favoritesNameId==null)
 	{
-  	    $.messager.alert("提示", "您填写的信息不够完整,请确认您的操作!","info");
+  	    $.messager.alert("Prompt", "您填写的信息不够完整,请确认您的操作!","info");
 	}
 	else
 	{
@@ -893,7 +894,7 @@ function saveQueryCon(){
 	        }
 		});
 		art.dialog({id:'addFavoritesDiv'}).close();
-		$.messager.alert("提示", "已添加,请在个人中心下我的收藏中找到它","info");
+		$.messager.alert("Prompt", "已添加,请在个人中心下我的收藏中找到它","info");
 		
 	}
 }
@@ -1038,19 +1039,19 @@ function exportFile(exportType)
 		{
 			if(data.loadDataFlag)
 			{
-				$.messager.alert('提示',data.message);
+				$.messager.alert('Prompt',data.message);
 			}
 			else
 			{
 				if(data.loadNumFlag)
 				{
-					$.messager.alert('提示',data.message);
+					$.messager.alert('Prompt',data.message);
 				}
 				else
 				{
 					if(data.isLog)
 					{
-						$.messager.alert('提示',data.message);
+						$.messager.alert('Prompt',data.message);
 					}
 					else
 					{
@@ -1156,22 +1157,22 @@ function validateNumericType(fieldName,fieldValue)
 		if (!regex.test(valueArray[0])) {
 			if(fieldName == "cif_value")
 			{
-				alertMessage('提示', 'cif价格第一段文本框不是数字','info');
+				alertMessage('Prompt', 'cif价格第一段文本框不是数字','info');
 			}else if(fieldName == "fob_value")
 			{
-				alertMessage('提示', 'fob价格第一段文本框不是数字','info');
+				alertMessage('Prompt', 'fob价格第一段文本框不是数字','info');
 			}else if(fieldName == "g_weight")
 			{
-				alertMessage('提示', '重量第一段文本框不是数字','info');
+				alertMessage('Prompt', '重量第一段文本框不是数字','info');
 			}else if(fieldName == "n_weight")
 			{
-				alertMessage('提示', '净重第一段文本框不是数字','info');
+				alertMessage('Prompt', '净重第一段文本框不是数字','info');
 			}else if(fieldName == "quantity")
 			{
-				alertMessage('提示', '数量第一段文本框不是数字','info');
+				alertMessage('Prompt', '数量第一段文本框不是数字','info');
 			}else if(fieldName == "packages")
 			{
-				alertMessage('提示', '件数第一段文本框不是数字','info');
+				alertMessage('Prompt', '件数第一段文本框不是数字','info');
 			}
 			return false;
 		}
@@ -1180,22 +1181,22 @@ function validateNumericType(fieldName,fieldValue)
 		if (!regex.test(valueArray[1])) {
 			if(fieldName == "cif_value")
 			{
-				alertMessage('提示', 'cif价格第二段文本框不是数字','info');
+				alertMessage('Prompt', 'cif价格第二段文本框不是数字','info');
 			}else if(fieldName == "fob_value")
 			{
-				alertMessage('提示', 'fob价格第二段文本框不是数字','info');
+				alertMessage('Prompt', 'fob价格第二段文本框不是数字','info');
 			}else if(fieldName == "g_weight")
 			{
-				alertMessage('提示', '重量第二段文本框不是数字','info');
+				alertMessage('Prompt', '重量第二段文本框不是数字','info');
 			}else if(fieldName == "n_weight")
 			{
-				alertMessage('提示', '净重第二段文本框不是数字','info');
+				alertMessage('Prompt', '净重第二段文本框不是数字','info');
 			}else if(fieldName == "quantity")
 			{
-				alertMessage('提示', '数量第二段文本框不是数字','info');
+				alertMessage('Prompt', '数量第二段文本框不是数字','info');
 			}else if(fieldName == "packages")
 			{
-				alertMessage('提示', '件数第二段文本框不是数字','info');
+				alertMessage('Prompt', '件数第二段文本框不是数字','info');
 			}
 			return false;
 		}
@@ -1208,22 +1209,22 @@ function validateNumericType(fieldName,fieldValue)
 		{
 			if(fieldName == "cif_value")
 			{
-				alertMessage('提示', '第二段cif价格不能小于第一段cif价格','info');
+				alertMessage('Prompt', '第二段cif价格不能小于第一段cif价格','info');
 			}else if(fieldName == "fob_value")
 			{
-				alertMessage('提示', '第二段fob价格不能小于第一段fob价格','info');
+				alertMessage('Prompt', '第二段fob价格不能小于第一段fob价格','info');
 			}else if(fieldName == "g_weight")
 			{
-				alertMessage('提示', '第二段毛重不能小于第一段毛重','info');
+				alertMessage('Prompt', '第二段毛重不能小于第一段毛重','info');
 			}else if(fieldName == "n_weight")
 			{
-				alertMessage('提示', '第二段净重不能小于第一段净重','info');
+				alertMessage('Prompt', '第二段净重不能小于第一段净重','info');
 			}else if(fieldName == "quantity")
 			{
-				alertMessage('提示', '第二段数量不能小于第一段数量','info');
+				alertMessage('Prompt', '第二段数量不能小于第一段数量','info');
 			}else if(fieldName == "packages")
 			{
-				alertMessage('提示', '第二段件数不能小于第一段件数','info');
+				alertMessage('Prompt', '第二段件数不能小于第一段件数','info');
 			}
 			return false;
 		}
@@ -1241,12 +1242,12 @@ function validateDateType(fieldValue)
 	var valueArray = fieldValue.split(",");
 	//验证第一段日期
 	if (valueArray[0] == null || valueArray[0] == '') {
-		alertMessage('提示', '第一段日期','info');
+		alertMessage('Prompt', '第一段日期','info');
 		return false;
 	}
 	//验证第二段日期
 	if (valueArray[1] == null || valueArray[1] == '') {
-		alertMessage('提示', '第二段日期','info');
+		alertMessage('Prompt', '第二段日期','info');
 		return false;
 	}
 	
@@ -1264,13 +1265,13 @@ function validateDateType(fieldValue)
 	var endTime = endDate.getTime(valueArray[1]);
 	var timeBetween = parseInt(endTime) - parseInt(startTime);
 	if (startDate > endDate) {
-		alertMessage('提示', '第二段日期不能小于第一段日期','info');
+		alertMessage('Prompt', '第二段日期不能小于第一段日期','info');
 		return false;
 	}
 	
 	// 验证时间段不超过三年
 	if (timeBetween > 94608000000) {
-		alertMessage('提示','查询最大的时间差不能超过三年!','info');
+		alertMessage('Prompt','查询最大的时间差不能超过三年!','info');
 		return false;
 	}
 	return true;
@@ -1470,7 +1471,7 @@ function loadReportDataAndChart(url,tableIdArray,type,tableid)
 				autoRowHeight:false,
 				showFooter:true,
 				sortorder: 'asc',
-				loadMsg:'正在查询...',
+				loadMsg:'Loading...',
 				pageList:[10,25,50,80,100],
 				onLoadError: function(){
 					//报表查询数据汇总鼠标悬浮样式以及鼠标离开样式
@@ -1478,7 +1479,7 @@ function loadReportDataAndChart(url,tableIdArray,type,tableid)
 				},
 				onLoadSuccess: function(data){
 					if(data.rows.length == 0){
-						alertMessage('提示','对不起，你输入的查询条件未检索到结果，请尝试更换条件值!','info');
+						alertMessage('Prompt','对不起，你输入的查询条件未检索到结果，请尝试更换条件值!','info');
 					} 
 					else{
 						if(data.total<10)
@@ -1639,7 +1640,7 @@ function dataSearchDetailShowField(countryName,url,hideColumn){
 				//设置国家
 				$("#detailCountry").val(countryName);
 		  }else{
-			  $.messager.alert("提示","没有相关数据!")
+			  $.messager.alert("Prompt","没有相关数据!")
 		  }
 		}
 	});
@@ -1697,7 +1698,7 @@ function openDetailDatagrid(id,queryParam,arr,url,isTrue,isDetail){
 	    columns:[arr],    
 	    onLoadSuccess: function(data){
 			if(data.rows.length == 0){
-				 $.messager.alert("提示","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
+				 $.messager.alert("Prompt","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
 		    } 
 			else{
 				openCompareDataDialog("报表明细","datasearchDetailDiv","datasearchDetailId",1050, 480,true);
@@ -1741,7 +1742,7 @@ function dataCompare(hideColumn)
 	$.post("/gbdbas/getSelectValue",{"hideColumn":hideColumn},function(data){
 		if(data){
 			if (data.selectValue.length<=1) {
-				$.messager.alert("提示","没有对比数据!");
+				$.messager.alert("Prompt","没有对比数据!");
 				bool = false;
 			}
 		}
@@ -1825,7 +1826,7 @@ function saveCompareData()
 		});
 	}else
 	{
-		$.messager.alert("提示","请选择对比的数据!","info");
+		$.messager.alert("Prompt","请选择对比的数据!","info");
 	}
 }
 
@@ -1845,7 +1846,7 @@ function loadDataCompareData(url,hideColumn,selectedValue)
 		autoRowHeight:false,
 		showFooter:true,
 		sortorder: 'asc',
-		loadMsg:'正在查询...',
+		loadMsg:'Loading...',
 		pageList:[25,50,80,100],
 		onLoadSuccess: function(data){
 			if(data.rows.length == 0)
@@ -1945,7 +1946,7 @@ function loadThbReportData(url,reportType,value,thbReport)
 			fitcolumns:false,
 			autoRowHeight:false,
 			sortorder: 'asc',
-			loadMsg:'正在查询...',
+			loadMsg:'Loading...',
 			pageList:[25,50,80,100],
 			onLoadSuccess: function(data){
 				var reportDiv = data.showType+"_thb_div";
@@ -2028,7 +2029,7 @@ function loadDepthDiggingData(url,value,reportTypeArray)
 				fitcolumns:false,
 				autoRowHeight:false,
 				sortorder: 'asc',
-				loadMsg:'正在查询...',
+				loadMsg:'Loading...',
 				pageList:[10,20,40,60],
 				onLoadSuccess: function(data){
 					if(data.rows.length == 0){
@@ -2108,10 +2109,10 @@ function loadMoreReportData(url,tableId,type,reportType,reportTypeZh)
 		autoRowHeight:false,
 		showFooter:false,
 		sortorder: 'asc',
-		loadMsg:'正在查询...',
+		loadMsg:'Loading...',
 		pageList:[10,25,50,80,100]
 	});
-	openDivArtDialog('全部'+reportTypeZh, 'showLoadDataDialog', 'showLoadDataDialog', 900,400,true);
+	openDivArtDialog('All'+reportTypeZh, 'showLoadDataDialog', 'showLoadDataDialog', 900,400,true);
 }
 
 /**
@@ -2156,8 +2157,8 @@ function loadmutiHscodeRemarkData(url,hideColumn)
 		autoRowHeight:false,
 		showFooter:false,
 		sortorder: 'asc',
-		loadMsg:'正在查询...',
+		loadMsg:'Loading...',
 		pageList:[10,25,50,80,100]
 	});
-	openDivArtDialog('多海关编码备注', 'mutiHscodeRemarkDialog', 'mutiHscodeRemarkDialog', 870,220,true);
+	openDivArtDialog('HsCode Commit', 'mutiHscodeRemarkDialog', 'mutiHscodeRemarkDialog', 870,220,true);
 }

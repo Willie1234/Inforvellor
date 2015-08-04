@@ -18,7 +18,7 @@
 <script type="text/javascript" src="<%=basePath%>/static/js/login/findpwd.js"></script>
 <!-- 不要删除 -->
 <script type="text/javascript" src="<%=basePath%>/static/js/common/common-path.js"></script>
-<title>英蓓-安全验证</title>
+<title>Inforvellor-安全验证</title>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#timer_id").one("click", function(){
@@ -38,31 +38,31 @@ $(document).ready(function(){
 	   </div>
 	   <!-- body -->
 	   <div class="sub">
-	    <div class='titleLeft'>会员找回密码</div>
+	    <div class='titleLeft'>To Retrieve Password</div>
 	    <div class='titleRight'>
 	    </div>
 	    <div class="find_div">
 	       <ul class="mod-sub-nav">
-	         <li class="mod-sub-list1" style="font-size: 16px;">确认帐号  </li>
-	         <li class="mod-sub-list2 list2-active" style="font-size: 16px;">安全验证  </li>
-	         <li class="mod-sub-list3" style="font-size: 16px;">重置密码 </li>
+	         <li class="mod-sub-list1" style="font-size: 16px;">Confirm Account  </li>
+	         <li class="mod-sub-list2 list2-active" style="font-size: 16px;">Safety verification  </li>
+	         <li class="mod-sub-list3" style="font-size: 16px;">Reset password </li>
 	       </ul>
 	       <form id='findPwdForm' action="/gbdbas/UserPassword/checkEmailCheckUrl" method='post' onsubmit="return validateEmailCode()">
 	       	<div> 
-		       	<p class="account-info">为了你的帐号安全，请完成身份验证</p>   
-		       	<div class="emailValidate">邮箱验证：</div> 
+		       	<p class="account-info">In order to secure your account , please complete the ID verification</p>   
+		       	<div class="emailValidate">email verification：</div> 
 		       	<div class="clearfix pass-input-container"> 
-			       	<label class="form-2-label">邮箱：</label> 
+			       	<label class="form-2-label">Email：</label> 
 			       	<div class="form-2-content line-32" id="userEmail"> ${sessionScope.user.email} </div> 
 		       	</div>
 		       	<div class="form-2-item clearfix"> 
-			       	<label class="form-2-label">验证证码：</label> 
+			       	<label class="form-2-label">verity security code：</label> 
 			       	<div class="form-2-content pass-input-container vcode-container">
 			       		<!-- 验证码 -->
 				       	<input type="text" class="pass-input vcode-input" placeholder="邮箱验证码" name="sId" value="" id="pass-input-emailVcode"> 
-				       	<div class="pass-button-timer" id="timer_id">发送验证码</div> 
+				       	<div class="pass-button-timer" id="timer_id">Send the verification code</div> 
 				       	<span class="pass-input-stip" id="forgot-emailVcode-success"></span> 
-				       	<span class="pass-input-msg" id="forgot-emailVcode-tip" style="display: none;">请填写验证码</span> 
+				       	<span class="pass-input-msg" id="forgot-emailVcode-tip" style="display: none;">Please fill in the verification code</span> 
 			       	</div>
 		       	</div>
 		       	<div class="p-l80"> 

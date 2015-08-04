@@ -122,12 +122,12 @@ function queryAllFav(){
 			fitcolumns:false,
 			autoRowHeight:false,
 			sortorder: 'asc',
-			loadMsg:'正在查询...',
+			loadMsg:'Loading...',
 			pageList:[50,80,100],
 			onLoadSuccess: function(data){
 				if(data.rows.length == 0) {
 					//没有收藏记录的话隐藏收藏记录表格显示没有收藏记录提示
-					alertMessage('提示','您还没有收藏过宝贝哦','info');
+					alertMessage('rompt','No recorded information found','info');
 				}else {
 					//用户收藏记录
 					$('#userCollectionDiv').animate({opacity:"1"},0);
@@ -135,7 +135,7 @@ function queryAllFav(){
 			}  
 		});
 	} else {
-		$.messager.alert("提示", "开始时间和结束时间不能为空!");
+		$.messager.alert("Prompt", "Start Date or End Date can NOT be empty!");
 	}
 }
 
@@ -166,13 +166,13 @@ function queryUserCollection()
 		fitcolumns:false,
 		autoRowHeight:false,
 		sortorder: 'asc',
-		loadMsg:'正在查询...',
+		loadMsg:'Loading...',
 		pageList:[50,80,100],
 		onLoadSuccess: function(data){
 			if(data.rows.length == 0)
 			{
 				//没有收藏记录的话隐藏收藏记录表格显示没有收藏记录提示
-				alertMessage('提示','您还没有收藏过宝贝哦','info');
+				alertMessage('Prompt','No recorded information found','info');
 			}else
 			{
 				//用户收藏记录
@@ -193,7 +193,7 @@ function delFaving(){
 		for (var i = 0; i < rows.length; i++) {
 			productId += rows[i].id + ",";
 		}
-		$.messager.confirm("提示", "确认删除此产品吗?",
+		$.messager.confirm("Prompt", "Delete this product?",
 			function(r) {
 				if (r) {
 					$.ajax({
@@ -204,19 +204,19 @@ function delFaving(){
 						success : function(data){
 							var result = "";
 							if (data.result == 1) {
-								result = "删除成功!";
+								result = "Delete Successfully!";
 								queryUserCollection();
 							} else {
-								result = "删除失败!";
+								result = "Delete Failed!";
 							}
-							$.messager.alert("提示", result, "info");
+							$.messager.alert("Prompt", result, "info");
 						}
 					});
 				}
 			}
 		);
 	} else {
-		$.messager.alert("提示", "请选择!", "info");
+		$.messager.alert("Prompt", "Please choose one!", "info");
 	}
 }
 
@@ -318,12 +318,12 @@ function loadResultFieldTable(url,queryValue)
         fitcolumns:false,
         autoRowHeight:false,
         sortorder: 'asc',
-        loadMsg:'正在查询...',
+        loadMsg:'Loading...',
         pageList:[25,50,80,100],
         onLoadSuccess: function(data){
 			if(data.rows.length == 0)
 			{
-				alertMessage('提示','对不起，你输入的查询条件未检索到结果，请尝试更换条件值!','info');
+				alertMessage('Prompt','Sorry, no data has been founded, please change your search conditions!','info');
 		    }else
 	    	{
 		    	queryEndDisplay();
@@ -495,13 +495,13 @@ function getRowData(id) {
 		    var hscode = data['hscode'];
 		    var country = data['country'];
 		    var country_cn = data['country_cn'];
-		    openDivArtDialog("查看详情", "detailmessageDIV", "detailmessageDIV",900,600,true);
+		    openDivArtDialog("More details", "detailmessageDIV", "detailmessageDIV",900,600,true);
 		    $("#showArea").html(htmlData);
 		    $("#id_hscode").html(hscode);
-		    $("#name_"+country_cn+"_data").html(country+"数据");
+		    $("#name_"+country_cn+"_data").html(country+"Data");
      	},"json");
 	} else {
-		alertMessage('提示','当前数据没有详情!','info');
+		alertMessage('Prompt','No more details about it!','info');
 	}
 }
 
@@ -767,7 +767,7 @@ function showCustomerName(importer)
 	$("input[name='companyName']").val(importer);
 	updateJsp(false);
 	//打开弹出框
-	openDivArtDialog('添加客户信息', 'showCustomerDlg', 'showCustomerDlg',950, 500,true);
+	openDivArtDialog('Add Customer', 'showCustomerDlg', 'showCustomerDlg',950, 500,true);
 }
 
 /**
@@ -779,7 +779,7 @@ function showCompanyName(exporter)
 {
 	$('#competitorfmForAllDB').form('reset');
 	$("input[name='companyName']").val(exporter);
-	openDivArtDialog('添加竞争对手', 'showEcuadorCompetitorDlg', 'closeCompetitorDialogId',950, 500,true);
+	openDivArtDialog('Add Competitor', 'showEcuadorCompetitorDlg', 'closeCompetitorDialogId',950, 500,true);
 	updateJsp(false);
 }
 
@@ -790,10 +790,10 @@ function showCompanyName(exporter)
 function translateValue(id){
 	var countryValue = $("#"+id).val().trim();
 	if(countryValue==""){
-		$.messager.alert('提示','请输入查询框的值！','info');
+		$.messager.alert('Prompt','Please enter search value！','info');
 		return;
 	}
-	$("#"+id).val('正在翻译,请等待......');
+	$("#"+id).val('Translating, please wait......');
 	$.post('/gbdbas/translate/translateCountry',{"countryValue":countryValue},function(data){
 		$("#"+id).val(data).css({"color":"#EE2C2C"});
 	});
