@@ -38,6 +38,7 @@ function myRandReload(){
 /**
  * 注册
  */
+
 function regest(){
 	 emailValue=$("#email").val();
 
@@ -56,6 +57,7 @@ function regest(){
 	    	  else if(data == '3'){
 	    		  $("#requiredField").text('*This user exists, please log in.');
 	    	  }
+
 	    	  else if (data == '4'){
 	    		  $("#requiredField").text('*This user has not been activated, please check your email');
 	    	  }
@@ -88,38 +90,19 @@ function regest(){
 
 		  }
 
-	$('#regestForm').form('submit', {   
-	       onSubmit: function(){ 
-	    	   if(!checkStatus){
-	    		  $("#pactMessege").text("*请同意协议");
-	    		   return false;
-	    	   }
-	         return $(this).form('validate'); 
-	      } ,  
-	      success:function(data){   
-	    	  if(data=='1'){
-	    		  //注册成功后跳转到邮箱激活页面
-	    		  openActiveDiv();
-	    	  }else if(data=='2'){
-	    		  $('#checkCode').val('验证码错误...');
-	    		  $('#checkCode').css({
-	    			   'font-size':'12px',
-	    			   'color':'skyblue',
-	    			   'background-color':'#FFF3F3'
-	    		  });
-	    	  }
-	    	  else{
-	    		   $.messager.alert('提示','邮箱地址不正确','info');
-	    		   $("#email").val("");
-	    	  }
-	    	  
-	     }   
-	}); 
-}
+
+
+
 
 /**
  * 清理验证码
  */
+
+
+
+
+
+
 function clearMessage(){
 	$('#checkCode').val('');
 	$('#checkCode').css({
@@ -139,6 +122,7 @@ function clearMessage(){
  * 打开激活窗口
  */
 function openActiveDiv(){
+	emailValue=$("#email").val();
 	//根据用户输入的email 获取正确的email地址
 	var url=getEmailUrl(emailValue);
 	//清空页面上的标签地址

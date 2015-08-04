@@ -329,7 +329,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   <div class="col-lg-12 text-center">
     <label>
+<<<<<<< HEAD
       <input type="checkbox" required="true"> I <b>accept</b> the Customer Agreement 
+=======
+      <input type="checkbox"> I <b>accept</b> the Customer Agreement 
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
     </label>
 </div>
      </div>

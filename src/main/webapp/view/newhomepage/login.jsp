@@ -78,7 +78,11 @@ request.getSession().setAttribute("language","message_en_US");
 		document.getElementById("prog").style.display="none";
 		document.getElementById("clossBtn").style.display="block";
 		$("#warn").text(m);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 72ec3ca86f3ce484c4a748363fe7377ef9242403
 	}
 	function clearPrompt(){
 		document.getElementById("warn").style.display="none";
@@ -87,7 +91,20 @@ request.getSession().setAttribute("language","message_en_US");
 		$("#myModalLabel").text('Loading');
 		$("#warn").text('');
 	}
+<<<<<<< HEAD
 
+=======
+=======
+	}
+	function clearPrompt(){
+		document.getElementById("warn").style.display="none";
+		document.getElementById("prog").style.display="block";
+		document.getElementById("clossBtn").style.display="none";
+		$("#myModalLabel").text('Loading');
+		$("#warn").text('');
+	}
+>>>>>>> Willie
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
 		  function usersubmit(){
 // 		   var $btnmy=document.getElementById("signIn");
 // 		   $btnmy.value="loading..."
@@ -188,11 +205,14 @@ request.getSession().setAttribute("language","message_en_US");
 				},"text");
 		}
 
+<<<<<<< HEAD
 
 	
 </script>
 </head><body>
 
+=======
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
     <div class="container">
       <div class="col-md-12 col-md-push-0 text-center">
       <form class="form-signin" onsubmit="return usersubmit()" >
@@ -234,7 +254,11 @@ request.getSession().setAttribute("language","message_en_US");
         <button class="btn btn-lg btn-primary btn-block" data-loading-text="Loading..." id="signIn"   type="submit" >Sign in</button>
         </div>
         <div class="col-lg-13 text-left">
+<<<<<<< HEAD
         <a href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home" class="padding-left:50px" style="color:white">Go back to the home page</a>
+=======
+        <a href="../" class="padding-left:50px" style="color:white">Go back to the home page</a>
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
         </div>
         </div>
         
