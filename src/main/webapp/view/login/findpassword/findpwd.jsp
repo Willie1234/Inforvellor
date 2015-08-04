@@ -78,32 +78,32 @@ $(document).ready(function(){
 	   </div>
 	   <!-- body -->
 	   <div class="sub">
-	    <div class='titleLeft'>会员找回密码</div>
+	    <div class='titleLeft'>To Retrieve Password</div>
 	    <div class='titleRight'>
 	    </div>
 	    <div class="find_div">
 	       <ul class="mod-sub-nav">
-	         <li class="mod-sub-list1 list1-active" style="font-size: 16px;">确认帐号  </li>
+	         <li class="mod-sub-list1 list1-active" style="font-size: 16px;">Confirm Account  </li>
 	         <li class="mod-sub-list2" style="font-size: 16px;">安全验证  </li>
-	         <li class="mod-sub-list3" style="font-size: 16px;">重置密码 </li>
+	         <li class="mod-sub-list3" style="font-size: 16px;">Reset password </li>
 	       </ul>
 	       <form id='findPwdForm' method='post'>
 	       	<div> 
-		       	<p class="account-info">请填写您需要找回的帐号:</p>    
+		       	<p class="account-info">Please fill in the account number:</p>    
 		       	<div class="pass-input-container clearfix" id="pass-auth-select"> 
 			       	<input type="text" class="pass-input pass-input-error" placeholder="请您输入用户名" name="loginName" value="" id="loginName"> 
-			       	<span class="pass-input-msg" id="loginName_msg" style="display: none;">请您输入用户名</span> 
+			       	<span class="pass-input-msg" id="loginName_msg" style="display: none;">Please input Username</span> 
 		       	</div> 
 		       	<div class="pass-input-container vcode-container clearfix"> 
 		       		<input type="text" class="pass-input vcode-input" placeholder="请您输入验证码" name="veritycode" value="" id="veritycode"> 
 		       		<a href="#" onClick="javascript:myRandReload()" alt="验证码图片" title="验证码图片" class="vcode-img"> 
 						<img align="bottom" id="createcheckcode" style="width:90px;height:31px;border: 0px;">
 					</a>
-		       		<a href="javascript:myRandReload()" class="vcode-img-change">看不清？</a> 
+		       		<a href="javascript:myRandReload()" class="vcode-img-change">not clear？</a> 
 		       		<span class="pass-input-msg" id="veritycode_msg" style="display: none;">请您输入验证码</span> 
 		       	</div> 
 		       	<div> 
-		       		<a class="result-title-btn" href="#" onclick="netSetp();">下一步</a> 
+		       		<a class="result-title-btn" href="#" onclick="netSetp();">Next</a> 
 		       	</div> 
 	       	</div>
 	       </form>

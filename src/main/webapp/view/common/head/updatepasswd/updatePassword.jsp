@@ -16,7 +16,7 @@
   	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>修改密码</title>
+    <title>Change Password</title>
     <link rel="stylesheet" type="text/css" href="${root}/static/css/common/button/button.css">
     <link rel="stylesheet" type="text/css" href="${root }/static/css/personalcenter/password/tabLogin.css">
     <script type="text/javascript"  src="${root }/view/common/head/updatepasswd/updatePassword.js"></script>

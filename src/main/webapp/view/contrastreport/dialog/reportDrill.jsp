@@ -6,14 +6,14 @@
 <meta name="renderer" content="webkit">   
 <meta http-equiv="X-UA-Compatible" content="IE=edge">  
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>深度挖取</title>
+<title>Advanced Search</title>
 </head>
 <body style="width: 99%; background-color: white">
 	<div id="drillReportDiv" style="width: 1100px;height:600px;margin: 0  auto; margin-top: 0px;display: none;overflow-x:hidden;">
 		<div id="secodeDiv" style="width: 100%; height: auto !important; border:0px solid blue; margin: 0 auto; margin-top: 0px;">
 			
 			<div style="width: 100%;height: 30px;  line-height: 30px; margin-top: 0px; background-color: #0070C2;display: none;">
-				<span style="color: white; font-family: 宋体; font-weight: 800; font-size: 12px;margin-left: 10px;">深度挖取</span>
+				<span style="color: white; font-family: 宋体; font-weight: 800; font-size: 12px;margin-left: 10px;">Advanced Search</span>
 			</div>
 			
 			<div style="width: 100%;height: 50px;  line-height: 30px; margin-top: 0px;">
@@ -69,7 +69,7 @@
 			<div id="city" title="海关城市汇总" style="width: 100%; height: 300px; border: 1px solid red; margin-top: 10px;display:none;">
 				<div id="toolbaraAdd" style="height:30px;line-height:30px;font-size: 16px;font-family:Microsoft YaHei;background-color:#0070C2;">
 			   		<div style="width: 120px; height: 30px; line-height: 30px; margin-left: 10px;">
-						<span style="font-size:14px;color: white;font-family: 微软雅黑;">交易趋势汇总信息</span>
+						<span style="font-size:14px;color: white;font-family: 微软雅黑;">Trading Trend Summary Information</span>
 			   		</div>
 				 </div>
 			</div>

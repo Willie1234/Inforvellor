@@ -663,7 +663,11 @@ Service Guidelines- We provide sincere and friendly interactions with customers 
                             <input type="text" id="lastName" name="lastName" value="" required="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
                     </div>
                     <input type="text" id="email" name="email" value="" required="" class="form-control input-lg" placeholder="Your Email"  />
+<<<<<<< HEAD
                     <input type="password" id="loginPassword" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
+=======
+                    <input type="password" id="Password" name="loginPassword" required="" value="" class="form-control input-lg" placeholder="Password"  />
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
                     <input type="password" id="confirmPassword" name="password_confirm" required="" value="" class="form-control input-lg" placeholder="Confirm Password"  />                                 
                        
                      

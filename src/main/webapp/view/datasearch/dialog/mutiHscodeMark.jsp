@@ -15,7 +15,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>多海关编码备注</title>
+	<title>Multi-Custom Codes Remarks</title>
     <head>
     </head>
   <body>

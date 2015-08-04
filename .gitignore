@@ -2,5 +2,6 @@
 /logs/*
 .project
 
+*.js
 
-/target
+

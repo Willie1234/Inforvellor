@@ -28,7 +28,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>市场分析</title>
+<title>Market Analysis</title>
 <head>
 </head>
 <body>
@@ -48,7 +48,7 @@
 							placeholder="<fmt:message key="allCountry.addHscode" bundle="${messages}"/>" />&nbsp;&nbsp;
 					</div>
 					<div class="alldb_secondcols">
-						<font class="alldb_fieldname">贸易类型&nbsp;:&nbsp;</font>
+						<font class="alldb_fieldname">Trade Type&nbsp;:&nbsp;</font>
 						<input type="radio" name="quankuiexportFlex" value="进口" onclick="iexportFlexClick('I')"
 							checked="checked" /> <font class="alldb_fieldname"><fmt:message
 								key="allCountry.import" bundle="${messages}" /></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -73,7 +73,7 @@
 					</div>
 					<div class="alldb_firstcols">
 						<div style="float: left;">
-							<font class="alldb_fieldname">时间跨度&nbsp;:&nbsp;</font>
+							<font class="alldb_fieldname">Time Span&nbsp;:&nbsp;</font>
 							<input id="quankubegindate" value="2014-01-01"
 								style="width: 88px; height: 20px; border: 1px solid #95b8e7; border-color: #e5e5e5; border-radius: 4px 4px 4px 4px;"
 								name="quankubegindate"
@@ -107,32 +107,32 @@
 						style="background-image: url('/gbdbas/static/img/datasearch/tabout.png');" class="hover">
 						<!-- 隐藏报告类型 -->
 						<span style="display: none;">PORTOFSHIPMENT</span>
-						<a id="tab_a1" style="color: #1369c0">起运港报告</a>
+						<a id="tab_a1" style="color: #1369c0">POL Report</a>
 					</li>
 					<li id="tab2" name="tab2" onclick="alldb_setTab('tab',2,7);reportTypeClick('PORTOFARRIVAL');"
 						style="background-image: url('/gbdbas/static/img/datasearch/tabbbefore.png');">
 						<span style="display: none;">PORTOFARRIVAL</span>
-						<a id="tab_a2">抵达港报告</a>
+						<a id="tab_a2">POD Report</a>
 					</li>
 					<li id="tab3" name="tab3" onclick="alldb_setTab('tab',3,7);reportTypeClick('IMPORTERSUMMARY');"
 						style="background-image: url('/gbdbas/static/img/datasearch/tabbbefore.png');">
 						<span style="display: none;">IMPORTERSUMMARY</span>
-						<a id="tab_a3">全球采购商报告</a>
+						<a id="tab_a3">Global Buyers Report</a>
 					</li>
 					<li id="tab4" name="tab4" onclick="alldb_setTab('tab',4,7);reportTypeClick('EXPORTERSUMMARY');"
 						style="background-image: url('/gbdbas/static/img/datasearch/tabbbefore.png');">
 						<span style="display: none;">EXPORTERSUMMARY</span>
-						<a id="tab_a4">全球供应商报告</a>
+						<a id="tab_a4">Global Suppliers Report</a>
 					</li>
 					<li id="tab5" name="tab5" onclick="alldb_setTab('tab',5,7);reportTypeClick('TRANSACTIONTREND');"
 						style="background-image: url('/gbdbas/static/img/datasearch/tabbbefore.png');">
 						<span style="display: none;">TRANSACTIONTREND</span>
-						<a id="tab_a5">市场趋势报告</a>
+						<a id="tab_a5">Market Trend Report</a>
 					</li>
 					<li id="tab6" name="tab6" onclick="alldb_setTab('tab',6,7);reportTypeClick('NATIVE');"
 						style="background-image: url('/gbdbas/static/img/datasearch/tabbbefore.png');">
 						<span style="display: none;">NATIVE</span>
-						<a id="tab_a6">原产国报告</a>
+						<a id="tab_a6">Country Of Origin Report</a>
 					</li>
 				</ul>
 			</div>
@@ -153,22 +153,22 @@
 					</div>
 				</div>
 				<div class="alldb_tab_show" id="con_tab_2">
-					<p style="padding-top: 20px">选项卡2的值</p>
+					<p style="padding-top: 20px">The Value Of Tab 2</p>
 				</div>
 				<div class="alldb_tab_show" id="con_tab_3">
-					<p style="padding-top: 20px">选项卡3的值</p>
+					<p style="padding-top: 20px">The Value Of Tab 3</p>
 				</div>
 				<div class="alldb_tab_show" id="con_tab_4">
-					<p style="padding-top: 20px">选项卡4的值</p>
+					<p style="padding-top: 20px">The Value Of Tab 4</p>
 				</div>
 				<div class="alldb_tab_show" id="con_tab_5">
-					<p style="padding-top: 20px">选项卡5的值</p>
+					<p style="padding-top: 20px">The Value Of Tab 5</p>
 				</div>
 				<div class="alldb_tab_show" id="con_tab_6">
-					<p style="padding-top: 20px">选项卡6的值</p>
+					<p style="padding-top: 20px">The Value Of Tab 6</p>
 				</div>
 				<div class="alldb_tab_show" id="con_tab_7">
-					<p style="padding-top: 20px">选项卡6的值</p>
+					<p style="padding-top: 20px">The Value Of Tab 7</p>
 				</div>
 			</div>
 		</div>

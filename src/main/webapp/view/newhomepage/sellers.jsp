@@ -311,7 +311,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
            
           </li>
           <li>
-                   <a class="btn btn-primary2" href="view/chinese/menu/country.jsp" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
+                   <a class="btn btn-primary2" href="${root}/pageJump" role="button" style="color:white; padding:15px; margin-right:10px;">Go to database</a>
                   </li>
          
           </c:if>
@@ -568,13 +568,22 @@ with more buyers and expand the export of products. </h3>
 </select>                        </div>
                     </div>
                      <label>Gender : </label>                    <label class="radio-inline">
-                        <input type="radio" name="sex" value="Male" id=male />                        Male
+                        <input type="radio" name="sex" value="Male" id="male" />                        Male
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="sex" value="Female" id=female />                        Female
+                        <input type="radio" name="sex" value="Female" id="female" />                        Female
                     </label>
                     <br />
               <span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
+               <div class='pact'>
+                     <div>
+                     <label>
+                     <input type="checkbox"> <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
+                         <span id="pactMessege"></span>
+                  </label>
+                         
+                     </div>
+               </div>
                     <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">
                         Create my account</button>
             </form>           
@@ -584,3 +593,4 @@ with more buyers and expand the export of products. </h3>
       </div>
     </div>
   </div>
+</div>

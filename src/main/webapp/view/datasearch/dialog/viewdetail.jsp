@@ -14,7 +14,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>南通趣易——查看详情</title>
+	<title>Inforvellor——View detail</title>
     <head>
 		<link href="${root }/static/css/datasearch/viewdetail/viewdetail.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet/css" href="${root }/static/css/datasearch/viewdetail/print.css" media="print">

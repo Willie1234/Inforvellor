@@ -21,7 +21,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
   <body>
 		<div id="addHscodeDialog" style="width: 450px; height: 280px;display: none;">
 			<div id="" style="margin:14px 0 0 50px;">
-				<div style="float: left;font-size: 16px;color: #777f7f;height: 32px;line-height: 32px;">海关编码:</div>
+				<div style="float: left;font-size: 16px;color: #777f7f;height: 32px;line-height: 32px;">Custom code:</div>
 				<div style="float: left;height: 32px;line-height: 32px;margin-left: 10px;"><input name="addHscodeInp" id="addHscodeInp" class="inpText" style="width: 184px;"/></div>
 				<div style="float: left;margin-left: 24px;">
 					<img  alt="<fmt:message key="commonAll.add" bundle="${messages}"/>" src="${root }/static/img/datasearch/addHscode.png"
@@ -33,8 +33,8 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 				</table>
 			</div>
 			<div id="addHscodeButton" style="float: right;margin:100px 20px 0 0 ;">
-				<a class="confirmOrcancel_cls" title="保存"  onclick="saveAddedHscode('c_hscode','addHscodeDialog');">保存</a>
-				<a class="confirmOrcancel_cls" title="取消" onclick="javascript:art.dialog({id:'addHscodeDialog'}).close();">取消</a>
+				<a class="confirmOrcancel_cls" title="保存"  onclick="saveAddedHscode('c_hscode','addHscodeDialog');">Save</a>
+				<a class="confirmOrcancel_cls" title="取消" onclick="javascript:art.dialog({id:'addHscodeDialog'}).close();">Cancel</a>
 			</div>
 		</div>
   </body>
