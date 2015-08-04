@@ -15,7 +15,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>页面头部</title>
+<title>heading of the page</title>
 <head>
 	<link href="${root }/static/css/common/head/head.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript"  src="${root }/view/common/head/head.js"></script>
@@ -35,8 +35,8 @@
 			</c:if>
 		</div>
 	  	<div id="head" style="background-color: #ffffff;top: 23px;margin:0 auto;align:left;padding: 0;width: 1210px;height:86px;position:absolute;">
-		  	<div style="float:left; width:100px; solid #0000FF;padding-left: 20px">
-				<img alt="logo" src="${root }/static/img/login/infobase_logo.png" >
+		  	<div style="float:left; width:100px; solid #0000FF;padding-left: 20px;">
+				<img alt="logo" src="${root }/static/img/login/INFORVELLOR-LOGO-EMAIL.png">
 		  	</div>
 		  	<div style="float:right;padding-top:6px;right:0px;">
 			  	<div id="nickname" class="loginsms" style="margin-top:0px;padding-right:5px;width:220px">
@@ -68,9 +68,9 @@
 	           </li>
 	             
 	           <li class="menu_line"></li>
-               <li class="nav-item no-subnav active" id="nav-item_2"><a onclick="clickMenuForword(6)" ><span class="primary-link" id="font_color6">Trading Information</span></a></li>
+               <li class="nav-item no-subnav active" id="nav-item_2"><a onclick="clickMenuForword(6)" ><span class="primary-link" id="font_color6">Trading Info</span></a></li>
                <li class="menu_line"></li>
-               <li class="nav-item no-subnav active" id="nav-item_3"><a onclick="clickMenuForword(7)" ><span class="primary-link">Customers/Competitors</span></a>
+               <li class="nav-item no-subnav active" id="nav-item_3"><a onclick="clickMenuForword(7)" ><span class="primary-link">Clients/Rivals</span></a>
                	  <div class="subnav" id="subnav_3">                       
 	                     <div class="subnav-inner">
 		                     <ul>
@@ -88,7 +88,7 @@
                <li class="nav-item no-subnav active" id="nav-item_6"><a onclick="clickMenuForword(11)" ><span class="primary-link">All Library Download</span></a></li>
                <li class="menu_line"></li>
                  
-               <li class="nav-item no-subnav active" id="nav-item_7"><a onclick="clickMenuForword(12)" ><span class="primary-link" id="font_color7">产品定制</span></a></li>
+               <li class="nav-item no-subnav active" id="nav-item_7"><a onclick="clickMenuForword(12)" ><span class="primary-link" id="font_color7">Product customization</span></a></li>
                <li class="menu_line"></li>
                
                <li class="nav-item no-subnav active" id="nav-item_8"><a onclick="clickMenuForword(13)" ><span class="primary-link">Service Center</span></a></li>

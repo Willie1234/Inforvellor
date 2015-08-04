@@ -32,7 +32,7 @@
         	 <!--个人中心二级菜单标题-->
         	<div class="title1" id = "title1">
         		<img src="/gbdbas/static/img/common/subMenu/title_background.png" align="top" />
-        		<div style="position:absolute;top:10px;left:54px;height:30px;line-height:30px;font-size: 14px;color: white;">Personal Center</div>
+        		<div style="position:absolute;top:10px;left:34px;height:30px;line-height:30px;font-size: 14px;color: white;">Personal Center</div>
         	</div>
         	<!--客户/竞争二级菜单标题-->
         	<div class="title2" id = "title2">
@@ -51,11 +51,11 @@
 	        	<div class="menu2" id="menu2">
 	        		<div id="customerId">
 	        			<img id="customerImg" src="/gbdbas/static/img/alldb/customer.png" name="no"/><br/>
-	        			<span>My Customers(<span id="customerSpan"></span>)个</span>
+	        			<span>My Customers(<span id="customerSpan"></span>)</span>
 	        		</div>
 	        		<div id="competorId">
 	        			<img id="competorImg" src="/gbdbas/static/img/alldb/competitor.png" name="no"/><br/>
-	        			<span>My Competitors(<span id="competorSpan"></span>)个</span>
+	        			<span>My Competitors(<span id="competorSpan"></span>)</span>
 	        		</div>
 	            </div>
 	        </div>

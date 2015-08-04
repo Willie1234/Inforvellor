@@ -39,19 +39,9 @@ function myRandReload(){
  * 注册
  */
 
-
-function checkRequired(){
-	if ($("#field").val() != "" )
-        regest();
-    
-	
-}
-
-
-
-
 function regest(){
 	 emailValue=$("#email").val();
+
 	 firstName = $("#firstName").val();
 	 lastName = $("#lastName").val();
 	 password = $("#loginPassword").val();
@@ -100,10 +90,8 @@ function regest(){
 
 		  }
 
-	    	  
-	     }   
-	}); 
-}
+
+
 
 
 /**
@@ -145,9 +133,6 @@ function openActiveDiv(){
 /**
  * 根据输入的email跳转到要激活邮箱的email
  */
-
-
-
 function getEmailUrl(email) {
 	if (email) {
 		var emails = [ {

@@ -24,23 +24,23 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 		<div id="lib_Tab">
 			<div class="lib_Menubox lib_tabborder">
 			<ul>
-			   <li id="one1" onclick="changeTab('one',1,2)" class="hover">海关编码</li>
-			   <li id="one2" onclick="changeTab('one',2,2)" >产品描述</li>
+			   <li id="one1" onclick="changeTab('one',1,2)" class="hover">Custom code</li>
+			   <li id="one2" onclick="changeTab('one',2,2)" >Product Description</li>
 			</ul>
 			</div>
 		</div>
 		<div id="result_Tab">
 				<div style="padding-top: 20px;">
 				 	<div id="con_one_1">
-				 		<font color="#1313FF" style="font-size: 16px">请输入HScode:</font><br><input style="font-size:14px;" size=20 id='hs' type="text"/>
+				 		<font color="#1313FF" style="font-size: 16px">Please enter HScode:</font><br><input style="font-size:14px;" size=20 id='hs' type="text"/>
 			 			<div style="padding-left:195px;padding-top:100px;">
-			 				<a class="confirmOrcancel_cls" title="确定" onclick="addHS();">确定</a>
+			 				<a class="confirmOrcancel_cls" title="确定" onclick="addHS();">Confirm</a>
 			 			</div>
 				 	</div>
 					<div id="con_one_2" style="display:none">
-						<font color="#1313FF" style="font-size: 16px">请输入产品描述:</font><br><input style="font-size:14px;" size=20 id='desc' type="text"/>
+						<font color="#1313FF" style="font-size: 16px">Please enter the product description:</font><br><input style="font-size:14px;" size=20 id='desc' type="text"/>
 						<div style="padding-left:195px;padding-top:100px;">
-							<a class="confirmOrcancel_cls" title="确定" onclick="addDesc();">确定</a>
+							<a class="confirmOrcancel_cls" title="确定" onclick="addDesc();">Confirm</a>
 						</div>
 						
 					</div>

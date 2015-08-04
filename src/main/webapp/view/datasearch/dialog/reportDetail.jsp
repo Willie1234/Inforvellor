@@ -21,7 +21,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>报表明细</title>
+<title>Report Details</title>
 </head>
 <body>
 	<input type="text" id="detailParam" style="display: none;"/>
@@ -33,7 +33,7 @@
 			</a>
 		</div>
 		<div style="width: 100%!important; height: 420px;">
-			<table id='datasearchDetail'  style="width: 1000px; height: 390px;" pagination="true" singleSelect="false" loadMsg="正在加载中……">						
+			<table id='datasearchDetail'  style="width: 1000px; height: 390px;" pagination="true" singleSelect="false" loadMsg="loading……">						
 				 <thead>
 					 <tr>
 					 </tr>

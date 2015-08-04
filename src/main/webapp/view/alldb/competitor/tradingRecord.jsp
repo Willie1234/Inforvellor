@@ -38,7 +38,7 @@
 			<div align="left" width="95%" class="alldb_advancesearch">
 				<div style="padding-top: 14px; background-color: #F5FAF9; width: 100%; height: 30px;">
 					<b><font color="#478DE3" id="fontText" style="font-size: 18px; font-family: 微软雅黑, 宋体; padding-left: 16px">
-							数据列表
+							Data List
 						</font>
 					</b>
 				</div>
@@ -69,7 +69,7 @@
 					</div>
 					<div style="height:50px; width: 32%;float: left;">
 						<font class="alldb_fieldname">
-							贸易类型&nbsp;:&nbsp;</font>
+							Trade Type&nbsp;:&nbsp;</font>
 						<select class="easyui-combobox" panelHeight="auto"
 							style="width: 202px; height: 22px; border-color: #e2e5e7"
 							editable="false" id="competitorIexportType" name="custIexportType">
@@ -80,7 +80,7 @@
 					</div>
 					<div style="height: 50px; width: 30%;float: left;">
 						<font class="alldb_fieldname">
-							原产国&nbsp;:&nbsp;</font> 
+							Country of Origin&nbsp;:&nbsp;</font> 
 							<select id="equirementSelects" name="equirementSelects" 
 								style="width: 205px; height: 22px; border-color: #e2e5e7">
 							</select>

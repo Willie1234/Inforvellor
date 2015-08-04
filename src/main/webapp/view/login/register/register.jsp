@@ -18,7 +18,7 @@
 
 <script type="text/javascript" src="<%=basePath%>/static/js/login/regest.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/common/check.js"></script>
-<title>英蓓-注册</title>
+<title>Inforvellor-register</title>
 <script type="text/javascript">
 $(document).ready(function(){
 	myRandReload();
@@ -27,18 +27,18 @@ $(document).ready(function(){
 	$('#loginName').validatebox({    
 	    required: true,   
 	    validType: ['account[4,12]',"remote['/gbdbas/userSon/checkUserSonName','loginName']"],
-	    missingMessage:'账号必须由英文字母、数字(0-9)、汉字组成，长度在4-12个字符之间。',
+	    missingMessage:'The account must have letters, numbers (0-9), or Chinese characters. The length should be between 4 to 12 characters',
 	    delay:300
 	}); 
 	$('#loginPassword').validatebox({    
 	    required: true,    
 	    validType: 'passwd[6,20]',
-	    missingMessage:'只能包含字母、数字以及标点符号，长度为6～12。'
+	    missingMessage:'It can only contain letters, numbers and punctuation marks, within a length of 6 to 12'
 	}); 
 	$('#email').validatebox({    
 	    required: true,    
 	    validType: 'myEmail',
-	    missingMessage:'邮箱不能为空'
+	    missingMessage:'Email cannot be empty'
 	}); 
 	//关键激活窗口时刷新验证码
 	$('#activeDiv').dialog({
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	    <div class='titleLeft'>Member registration center</div>
 	    <div class='titleRight'>
 	    	<div class='imgDiv'><a href="/gbdbas/view/login/infobase/login.jsp" target="_self"><img src="/gbdbas/static/img/login/login.png"/></a></div>
-	    	<div class='textDiv'>我已注册，现在就</div>
+	    	<div class='textDiv'>I have registed now</div>
 	    </div>
 	    <div class="mainDiv">
 	       <form id='regestForm' action="/gbdbas/userRegest" method='post'>
@@ -91,7 +91,7 @@ $(document).ready(function(){
 	         	    </div>
 	         	  </li>
 	         	  <li>
-	         	   <div class='a_text'>验证码:</div>
+	         	   <div class='a_text'>Verification code:</div>
 	         	    <div class="a_input">
 						<div style='float:left;'>
 							<input name="checkCode" id="checkCode"  onfocus="clearMessage()"  type="text" style="width:85px;" class="inputbox" />
@@ -113,8 +113,13 @@ $(document).ready(function(){
 	         	             <span id="ag"><img src="/gbdbas/static/img/login/ok.png"></span>
 	         	             <span id="ug"><img src="/gbdbas/static/img/login/no.png"></span>
 	         	         </div>
+<<<<<<< HEAD
 	         	      <div>  
 	         	      <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
+=======
+	         	         <div>
+	         	             <span>I have read the</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《registration agreement》</a></span>
+>>>>>>> 72ec3ca86f3ce484c4a748363fe7377ef9242403
 	         	             <span id="pactMessege"></span>
 	         	         </div>
 	         	        
@@ -125,7 +130,7 @@ $(document).ready(function(){
 	       </form>
 	    </div>
 	    
-	    <div id="regestButton" onclick="regest()"><div>注&nbsp;&nbsp;册</div></div>
+	    <div id="regestButton" onclick="regest()"><div>Registration</div></div>
 	   </div>
 	   <!-- bottom -->
 	   <div class="bottomDiv">
@@ -134,10 +139,11 @@ $(document).ready(function(){
    <!-- 激活邮箱 -->
    <div  id="activeDiv" closed="true" class="easyui-dialog" style="border-width:1px; width:400px;height:400px;padding:10px 20px;overflow-x:hidden;">
        <div class="toMail">
-       <font  >恭喜您！<span id="name"></span></font><br/>
-       <font >我们已经向您的邮箱  发送了一封激活邮件，请点击邮件中的链接完成激活！</font><br/>
-                前往 <a id='emailId' href="#" style='font-size:16px;'></a> 激活  <br/>
+       <font  >Congratulations!<span id="name"></span></font><br/>
+       <font>We have sent an activation email to your email. Please click the link in the email to complete your account activation</font><br/>
+                Go to <a id='emailId' href="#" style='font-size:16px;'></a> Activate  <br/>
        </div>
+        <!--  <button id="redoButton" onclick="sendAgin()">重新发送</button>-->
    </div>
    
 </body>

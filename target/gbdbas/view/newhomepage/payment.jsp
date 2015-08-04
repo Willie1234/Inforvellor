@@ -79,7 +79,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	$('#invoice').modal('hide');
        $('#myModal').modal('show');
    		
+<<<<<<< HEAD
        $.post("${ctx}/gavin2", $("#wholeForm").serialize(),
+=======
+       $.post("${root}/creditCardTransaction", $(".myform").serialize(),
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
 			function(data){
     	   		if("0"==data){
     	   			promptMessage('Sorry, there is something wrong with your payment information. Please have a check.');
@@ -95,7 +99,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     }
     function jumpToSystem(){
     	
+<<<<<<< HEAD
     	window.location.replace("${ctx}/view/chinese/menu/country.jsp");
+=======
+    	window.location.replace("${root}/view/chinese/menu/country.jsp");
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
     }
 </script>
   </head>
@@ -229,10 +237,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="col-xs-9">
               <select class="form-control col-sm-7" name="visa" id="visa" required>
                 <option selected disabled hidden value=''>Select</option>
-                <option value="1">Visa</option>
-                <option value="2">MasterCard</option>
-                <option value="3">Discover</option>
-                <option value="4">American Express</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="discover">Discover</option>
+                <option value="amex">American Express</option>
                 
               </select>
             </div>

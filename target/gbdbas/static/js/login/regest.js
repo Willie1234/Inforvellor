@@ -50,17 +50,30 @@ function checkRequired(){
 
 function regest(){
 	 emailValue=$("#email").val();
+<<<<<<< HEAD
 	 firstName = $("#firstName").val();
 	 lastName = $("#lastName").val();
 	 password = $("#loginPassword").val();
 	 confirmPassword = $("#confirmPassword").val();
 	 
 	 if (emailValue != "" & firstName != "" & lastName != "" & password != "" & confirmPassword != "" & document.getElementById('checkRead').checked & (password == confirmPassword)){
+=======
+	 firstName = $("#FirstName").val();
+	 lastName = $("#LastName").val();
+	 password = $("#Password").val();
+	 confirmPassword = $("#confirmPassword").val();
+	 male = $("#male").val();
+	 female = $("#female").val();
+	 checkRead = $("#checkRead").val();
+	 
+	 if (emailValue != "" & firstName != "" & lastName != "" & password != "" & confirmPassword != "" & document.getElementById('checkRead').checked){
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
 	   $.post("/gbdbas/userRegest", $("#regestForm").serialize(), 
 	      function(data){   
 	    	  if(data=='1'|| data == '2'){
 	    			 openActiveDiv();
 	    		 
+<<<<<<< HEAD
 	    	  }
 	    	  else if(data == '3'){
 	    		  $("#requiredField").text('*You have registed');
@@ -70,6 +83,13 @@ function regest(){
 	    	  }
 
 
+=======
+	    	  }
+	    	  else{
+	    		   $.messager.alert('提示','邮箱地址不正确','info');
+	    		   $("#email").val("");
+	    	  }  
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
 	     }    
 	   );
 	 }
@@ -88,9 +108,12 @@ function regest(){
 	 else  if(confirmPassword == ""){
 		 $("#requiredField").text('*You must confirm your password');
 	 }
+<<<<<<< HEAD
 	 else if (password != confirmPassword){
 		 $("#requiredField").text('*Passwords do not match');
 	 }
+=======
+>>>>>>> 70e0fb87eb9d8ec72d5a8a974fb240c4ce2f9fa8
 	 else if(!document.getElementById('checkRead').checked){
 		 $("#requiredField").text('*You must agree with our contact');
 	 }

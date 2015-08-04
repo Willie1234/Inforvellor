@@ -8,7 +8,7 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<title>重新激活用户</title>
+<title>Re activate user</title>
 <link rel="stylesheet" type='text/css' href="<%=basePath%>static/css/easyui/easyui.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>static/css/login/register.css">
 
@@ -30,17 +30,17 @@
 <body>
 <!-- 重新激活页面 -->
    <div class="main"> 
-        <div>对不起！邮件已超时，请您重新激活</div>
+        <div>Sorry. The email account has expired. Please reactivate</div>
         <div>
-           <button id="reActive" onclick="reActive()">再次发送邮件</button>
+           <button id="reActive" onclick="reActive()">Send email again</button>
         </div>
    </div>
   <!-- 激活邮箱 -->
    <div  id="activeDiv" closed="true" class="easyui-dialog" style="border-width:1px; width:400px;height:400px;padding:10px 20px;overflow-x:hidden;">
        <div class="toMail">
-       <font  >恭喜您！<span id="name"></span></font><br/>
-       <font >我们已经向您的邮箱  发送了一封激活邮件，请点击邮件中的链接完成激活！</font><br/>
-                前往 <a id='emailId' href="#" style='font-size:16px;'></a> 激活  <br/>
+       <font  >Congratulations! <span id="name"></span></font><br/>
+       <font >We have sent an activation email to your email. Please click the link in the email to complete your account activation</font><br/>
+                Go to <a id='emailId' href="#" style='font-size:16px;'></a> Activate  <br/>
        </div>
         <!--  <button id="redoButton" onclick="sendAgin()">重新发送</button>-->
    </div>

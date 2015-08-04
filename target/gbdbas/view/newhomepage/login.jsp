@@ -210,7 +210,7 @@ request.getSession().setAttribute("language","message_en_US");
           <label>
             <input type="checkbox" value="forever" id="rPassword" name="rPassword"> Remember me
           </label>
- 		<a href="#passwordRetrive" class="padding-right:50px" role="button" data-toggle="modal" style="color:white">Forget Password</a>
+ 		<a href="${root}/view/login/findpassword/findpwd.jsp" class="padding-right:50px" role="button" data-toggle="modal" style="color:white">Forget Password</a>
         </div>
         </div>
         <div class="col-lg-13 text-left">

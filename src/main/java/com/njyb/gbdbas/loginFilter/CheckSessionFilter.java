@@ -71,6 +71,9 @@ public class CheckSessionFilter implements Filter {
 			} else if(path.indexOf("/sellers.jsp")>-1){   //if it is sellers page, do not need filter. 
 				chain.doFilter(servletRequest, servletResponse);
 				return;      
+			}else if(path.endsWith("gbdbas")||path.endsWith("gbdbas/")){
+				chain.doFilter(servletRequest, servletResponse);
+				return; 
 			}
 			// 如果用户为null,则跳转到login.jsp
 			if (null == userModel) {

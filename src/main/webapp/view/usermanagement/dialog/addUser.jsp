@@ -34,27 +34,27 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 	           <input name="userDesc" id="userDesc" class="inputTextcss">
     	   </div>
            <div class="fitem">
-               <font>用户名：</font>
+               <font>User status：</font>
                <input id="inputLoginName"  name="loginName" class="inputTextcss"  onfocus="fouceAccount()" onblur="checkAccount()">
                <span class="help-inline"  id="userNameMessage" style="width:200px;padding-left: 8px;"></span>
            </div>
            <div class="fitem">
-               <font>密码：</font>
+               <font>Password：</font>
                <input id="inputPassword" name="loginPassword" class="inputTextcss" onblur="checkPassword()" onfocus="foucsPassword()"> 
                         <span class="help-inline" id="passMessage" style="width:200px;padding-left: 8px;"></span>
            </div>
            <div class="fitem">
-               <font>邮箱：</font>
+               <font>E-mail：</font>
                <input name="email" id="inputEmail" class="inputTextcss" onblur="checkEmail()">
             	<span class="help-inline" id="emailMessage" style="width:200px;padding-left: 8px;"></span>
            </div>
         <div class="fitem">
-               <font>电话:</font>
+               <font>Tel:</font>
                <input name="tel" id="inputTel" class="inputTextcss" onblur="checkTel()">
             	<span class="help-inline" id="telMessage" style="width:200px;padding-left: 8px;"></span>
            </div>
             <div class="fitem">
-               <font>手机:</font>
+               <font>Cell phone:</font>
                <input name="phone" id="inputPhone" class="inputTextcss" onblur="checkPhone()">
             	<span class="help-inline" id="phoneMessage" style="width:200px;padding-left: 8px;"></span>
            </div>
@@ -64,14 +64,14 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
             	<span class="help-inline" id="qqMessage" style="width:200px;padding-left: 8px;"></span>
            </div>
            <div class="fitem">
-          	 	<font>有效期:</font>
+          	 	<font>Expiry date:</font>
           	 	<input id="beginTime" name="beginTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> 
 	            <span style="line-height:30px;">-</span>
 	            <input id="endTime" name="endTime"  class="doubleinpText" onclick="WdatePicker({lang:'<%=dateLanguage%>',quickSel:['2010-1-1','2011-1-1','2012-1-1','2013-1-1','2014-1-1'],readOnly:true})"/> 
            </div>
           <div style="padding-left: 392px;padding-top: 30px">
-              <a class="confirmOrcancel_cls" title="保存" onclick="operUserSon();">保存</a>
-              <a class="confirmOrcancel_cls" title="取消" onclick="javascript:art.dialog({id:'addUserdlg'}).close();">取消</a>
+              <a class="confirmOrcancel_cls" title="保存" onclick="operUserSon();">Save</a>
+              <a class="confirmOrcancel_cls" title="取消" onclick="javascript:art.dialog({id:'addUserdlg'}).close();">Cancel</a>
            </div>
        </form>
   	</div>

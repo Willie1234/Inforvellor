@@ -6,7 +6,7 @@
 <meta name="renderer" content="webkit">  
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>报表明细</title>
+<title>Report Details</title>
 </head>
 <body>
 	<div id="detailDiv" title="报表明细"  style="width:1000px;height:440px;width: 100%!important;display: none;">

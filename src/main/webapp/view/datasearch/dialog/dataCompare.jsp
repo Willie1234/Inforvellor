@@ -15,7 +15,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>深度挖取</title>
+	<title>Advanced Search</title>
     <head>
     </head>
   <body>

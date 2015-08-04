@@ -55,7 +55,7 @@
 	               <th field="companyName" width="150" align="center" formatter="isNullFormat"><span style="font-size: 14px;"><fmt:message key="allCountry.companyName" bundle="${messages}"/></span></th>
 	               <th field="hscode" width="150" align="center" formatter="isNullFormat"><span style="font-size: 14px;"><fmt:message key="allCountry.hscode" bundle="${messages}"/></span></th>
 	               <th field="goodsDescription" width="150" align="center" formatter="isNullFormat"><span style="font-size: 14px;"><fmt:message key="allCountry.goodsdesp" bundle="${messages}"/></span></th>
-	               <th field="opt" width="180" align="center" formatter="addDetials"><span style="font-size: 14px;">添加客户</span></th> 
+	               <th field="opt" width="180" align="center" formatter="addDetials"><span style="font-size: 14px;">Add Customer</span></th> 
 	           </tr>
 	       </thead>
 		</table>
