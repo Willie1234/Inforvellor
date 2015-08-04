@@ -49,11 +49,11 @@ $(function() {
 function returnMethod(data){
 	var result = "";
 	if (data.result == 1) {
-		result = "删除成功!";
+		result = "Delete Successfully!";
 	} else {
-		result = "删除失败!";
+		result = "Delete failed!";
 	}
-	$.messager.alert("提示", result, "info");
+	$.messager.alert("Prompt", result, "info");
 	// 查询
 	queryDataGrid();
 };
@@ -120,10 +120,10 @@ function updateCompetitor() {
 	//只能修改一条数据
 	if (rows.length == 1) {
 		setHtmlParam(rows);
-		openDivArtDialog("修改我的客户信息", 'showCustomerDlg',
+		openDivArtDialog("Change Customer Information", 'showCustomerDlg',
 		'showCustomerDlg',750, 500, true);
 	} else {
-		$.messager.alert("提示", "只能选择一行数据!", 'info');
+		$.messager.alert("Prompt", "Only one line of data can be chosen!", 'info');
 	}
 }
 
@@ -186,7 +186,7 @@ function mycompetitorcountrys() {
 			if (e == 0) {
 				var option = document.createElement("option");
 				option.width = "190px"
-				option.value = "选择全部";
+				option.value = "Select All";
 				option.innerHTML = allDataJs.all_selectAll;
 				document.getElementById("opponentcountry").appendChild(option);
 			}
@@ -261,7 +261,7 @@ function loadMethod(data) {
 	// 查询个数
 	queryCusAndComCount($("#competorSpan"),$("#customerSpan"));
 	if (data.rows.length == 0) {
-		$.messager.alert("提示", "未查询到我的客户数据!", 'info');
+		$.messager.alert("Prompt", "No customer data founded!", 'info');
 	} else {
 		flagPage = data.flag;
 		console.debug(flagPage);
@@ -283,7 +283,7 @@ function del() {
 		}
 		// var searchParam = $("#companyName").val().trim();
 		var countryname = checkCountryName($("#opponentcountry").val());
-		$.messager.confirm("提示","确认删除吗?",
+		$.messager.confirm("Prompt","Delete?",
 			function(r) {
 				if (r) {
 					ajaxLoadJava(getRootPath() + '/customer/delCustomer', {
@@ -293,7 +293,7 @@ function del() {
 				}
 			});
 	} else {
-		$.messager.alert("提示", "请选择!", "info");
+		$.messager.alert("Prompt", "Please choose!", "info");
 	}
 }
 
@@ -339,7 +339,7 @@ function sfenxi(v) {
 	qkreportQueryEndDisplay();// 查询按钮还原样式
 	$("#rivalRateProgress").hide();
 	$("#rivalRateProgressBar").progressbar('setValue', 0);
-	openDivArtDialog("市场分析", 'qkCompeterDiv', 'qkCompeterDiv', 950, 600, true);
+	openDivArtDialog("Market Analyse", 'qkCompeterDiv', 'qkCompeterDiv', 950, 600, true);
 	$("#hcomp").val(v);
 	$("#jzcompanytext").val(v);
 	// 修改样式
@@ -380,7 +380,7 @@ function queryDataGrid(flagNum) {
  */
 function competitorDeal(v){
 	if(!v){
-		$.messager.alert("提示","对不起,没有查询到此竞争对手的交易记录！");
+		$.messager.alert("Prompt","No competitor trade data founded！");
 		return;
 	}
 	// 展示国家列表
