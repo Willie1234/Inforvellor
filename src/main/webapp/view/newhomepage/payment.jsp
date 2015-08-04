@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	$('#invoice').modal('hide');
        $('#myModal').modal('show');
    		
-       $.post("${root}/creditCardTransaction", $(".myform").serialize(),
+       $.post("${ctx}/gavin2", $("#wholeForm").serialize(),
 			function(data){
     	   		if("0"==data){
     	   			promptMessage('Sorry, there is something wrong with your payment information. Please have a check.');
@@ -95,7 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     }
     function jumpToSystem(){
     	
-    	window.location.replace("${root}/view/chinese/menu/country.jsp");
+    	window.location.replace("${ctx}/view/chinese/menu/country.jsp");
     }
 </script>
   </head>
@@ -103,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   <div class="col-lg-12 text-center">
   <p></p><br><br>
-        <img class="img-square" src="${root}/static/img/newhomepage/INFORVELLOR LOGO.jpg" alt="Generic placeholder image" style="width: 640px; height: 150px;">
+        <a class="logo" href="${pageContext.request.contextPath }\view\newhomepage\index.jsp#home"><img class="img-square" src="${root}/static/img/newhomepage/INFORVELLOR LOGO.jpg" alt="Generic placeholder image" style="width: 640px; height: 150px;"></a>
         </div><br>
     
 <div class="container">
@@ -229,10 +229,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="col-xs-9">
               <select class="form-control col-sm-7" name="visa" id="visa" required>
                 <option selected disabled hidden value=''>Select</option>
-                <option value="visa">Visa</option>
-                <option value="mastercard">MasterCard</option>
-                <option value="discover">Discover</option>
-                <option value="amex">American Express</option>
+                <option value="1">Visa</option>
+                <option value="2">MasterCard</option>
+                <option value="3">Discover</option>
+                <option value="4">American Express</option>
                 
               </select>
             </div>

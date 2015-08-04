@@ -14,13 +14,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>页面尾部</title>
+<title>footer of the page</title>
 <head>
 <link href="${root }/static/css/common/footer/footer.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="footer_z_div footer_position">
-	<div class="footer_div">南通趣易信息技术有限公司版权所有 ©2013-<script>document.write((new Date()).getFullYear());</script> 苏ICP备14029798号-1
+	<div class="footer_div">Copyright © Inforvellor 2014-<script>document.write((new Date()).getFullYear());</script> 
 	</div>
 	</div>
 </body>

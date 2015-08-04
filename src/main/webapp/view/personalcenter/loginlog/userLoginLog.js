@@ -34,22 +34,22 @@ $(document).ready(function()
  */
 var arr = [ {
 	field : 'loginName',
-	title : "User Name",
+	title : "用户名",
 	width : 224,
 	align:'center'
 }, {
 	field : 'loginTime',
-	title : "Time",
+	title : "时间",
 	width : 224,
 	align:'center'
 }, {
 	field : 'ipAddress',
-	title : "IP Address",
+	title : "IP地址",
 	width : 224,
 	align:'center'
 }, {
 	field : 'ipAttribution',
-	title : "IP Location",
+	title : "IP归属地",
 	width : 226,
 	align:'center'
 } ];
@@ -67,7 +67,7 @@ function reload(url,queryParams){
 		pageSize :15,
 		pageList : [ 15, 30, 60, 80, 100 ],
 		// queryParams:{},
-		loadMsg : "Loading Data……",
+		loadMsg : "数据加载中请稍后……",
 		columns : [arr],
 		toolbar : "#toolbar",
 		onLoadSuccess: function(data){

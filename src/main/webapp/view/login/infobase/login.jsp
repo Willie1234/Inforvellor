@@ -72,7 +72,7 @@
                 </tr>
                 <tr>
                     <td id="fp" style="font-size:14px; vertical-align:top;">
-                        <input type="checkbox" style="margin-top:17px; margin-left:30px" id="rPassword" name="rPassword" value='y'/><span style="color:#677176">下次自动登录</span>
+                        <input type="checkbox" style="margin-top:17px; margin-left:30px" id="rPassword" name="rPassword" value='y'/><span style="color:#677176">Remember login</span>
                         <br />
                         <br />
                         <br />

@@ -6,18 +6,18 @@
 <meta name="renderer" content="webkit">  
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>报表对比</title>
+<title>Report Comparison</title>
 </head>
 <body>
 	 <div id="reportDuibi" title="报表对比"  style=" width:380px;height:400px;display: none;">
 		<div class="" style="width: 380px; height: 350px;">
 				<div class="">
 					<div id="selectName" style="width: 350px; height: 50px;line-height:50px; margin: 0 auto;">
-						<font class="fieldname2">选中数据:</font>
+						<font class="fieldname2">Selected Data:</font>
 						<input type="text" name="" id="inputName" class="inpText2" style="width: 250px; height: 25px;" readonly="readonly"/>
 					</div>
 					<div id="selectDiv" style="width: 350px; height: 50px;line-height:50px;  margin: 0 auto; margin-top: 20px;">
-						<font class="fieldname2">选中对比:</font>
+						<font class="fieldname2">Select to compare:</font>
 						<select id="selectValue" style="width: 250px; height: 35px;"></select>
 						<div id="sp"></div>
 					</div>

@@ -64,7 +64,7 @@
 			 <div id="customerDg" style="height:30px;line-height:30px;display:none; font-size: 16px;font-family:Microsoft YaHei;background-color:#E7F1FB;">
 			   	<div style="width:100%; height: 30px;line-height: 26px;">
 					<a href="javascript:addProduct();" title="立即查询" class="btn_alldb_add"><span style="margin-left: 15px;">New</span></a>
-					<a href="javascript:updateproduct();" title="立即查询" class="btn_alldb_eit"><span style="margin-left: 15px;">Refine</span></a>
+					<a href="javascript:updateproduct();" title="立即查询" class="btn_alldb_eit"><span style="margin-left: 15px;">Refise</span></a>
 					<a href="javascript:delproduct();" title="立即查询" class="btn_alldb_remove"><span style="margin-left: 15px;">Delete</span></a>
 			   		<span style="float: right; margin-top: 5px;">
 						<input class="easyui-searchbox" id="queryHscode" style="width: 200px;">

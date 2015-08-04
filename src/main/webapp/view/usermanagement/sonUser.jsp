@@ -19,7 +19,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>国际商业智能化数据信息平台</title>
+	<title>Inforvellor</title>
 <head>
 	<meta name="renderer" content="webkit">  
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,7 +59,7 @@
 		   	 	    <!-- 新增用户 -->
 					<a class="btn_alldb_add" onclick="addUser()" title="新增用户"  href="javascript:void(0);">&nbsp;&nbsp;Add</a>
 					<!-- 修改用户 -->
-					<a class="btn_alldb_eit"  onclick="updateUser()" title="编辑用户"  href="javascript:void(0);">&nbsp;&nbsp;Refine</a>
+					<a class="btn_alldb_eit"  onclick="updateUser()" title="编辑用户"  href="javascript:void(0);">&nbsp;&nbsp;Refise</a>
 					<!-- 删除用户 -->
 					<a class="btn_alldb_remove" onclick="deleteUsers()" title="删除用户" href="javascript:void(0);">&nbsp;&nbsp;Delete</a>
 					<div style="float: right;">

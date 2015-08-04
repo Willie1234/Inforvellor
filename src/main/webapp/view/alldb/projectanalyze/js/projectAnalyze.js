@@ -1125,7 +1125,7 @@ function buyer(hsCode,productName){
  */
 function initCountry(){
 	var countryArray = reportArray.BUYER;
-	var countryJson="[{\"id\":\"全部\",\"text\":\"Select All\",\"selected\":true},";
+	var countryJson="[{\"id\":\"全部\",\"text\":\"选择全部\",\"selected\":true},";
 	for (var i = 0; i < countryArray.length; i++) {
 		countryJson += "{";
 		countryJson +='"id":"'+ countryArray[i]+'",';

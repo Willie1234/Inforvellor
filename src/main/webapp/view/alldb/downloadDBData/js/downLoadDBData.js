@@ -44,7 +44,7 @@ function searchGroupClick(){
  * 进度条初始化
  */
 function downLoadDialog(){
-	InitCueBox("全库下载", "Data Downloading……", "mydlog", 400, 120, true, 0.3, true);
+	InitCueBox("全库下载", "数据正在下载中……", "mydlog", 400, 120, true, 0.3, true);
 //	art.dialog({
 //		title:"全库下载",
 //	    content: "<div style='text-align: center; color:#0066CC'>数据正在下载中……</div><br/><div id='downLoadPro' style='width:300px;'></div>",  
@@ -89,7 +89,7 @@ function initCountrySelect() {
 	var countryArray = reportArray.ALLDBDOWN;
 	var countrySelect = $("#dowloadSpanel");
 	countrySelect.empty();
-	countrySelect.append("<input type=\"checkbox\" onClick=\"selAllCountryChange(this)\" name=\"allDowloadNames\"><span>Select All</span><br/>")
+	countrySelect.append("<input type=\"checkbox\" onClick=\"selAllCountryChange(this)\" name=\"allDowloadNames\"><span>选择全部</span><br/>")
 	for(var i=0;i<countryArray.length;i++){
 		countrySelect.append("<input type=\"checkbox\" onClick=\"selOnlyCountryAddText(this)\" name=\"dowloadName\"  value=\""+countryArray[i]+"\"><span>"+countryArray[i]+"</span><br/>")
 	}
@@ -159,34 +159,34 @@ function dowloadAllDataClick(v){
 	var radioVal = $("input[name='searchGroupRadio']:checked").val();
 	if("hscode" == radioVal){				//hscode
 		if(!hscode){
-			$.messager.alert('Prompt',"HS Code CAN NOT be Empty！");
+			$.messager.alert('提示',"HS编码不能为空！");
 			return;
 		} else {
 		    var test = /^\d{6,10}$/;
 		    if(!test.test(hscode)){
-		    	$.messager.alert('Prompt',"Hs Code must be 6-10 digits!");
+		    	$.messager.alert('提示',"您好,请输入海关编码必须是大于6位小于10位的数字!");
 				return;
 		    }
 		}
 	}else if ('product' == radioVal){			//产品描述
 		if(productDesc==""){
-			$.messager.alert('Prompt',"Product Description CAN NOT be Empty！");
+			$.messager.alert('提示',"产品描述不能为空！");
 			return;
 		}
 	}
    if((startDate != "" && endDate == "")||(startDate == "" && endDate != "")||(startDate == "" && endDate == "")) {
-	   $.messager.alert('Prompt',"Date CAN NOT be Empty!");
+	   $.messager.alert('提示',"时间不能够为空!");
 		return;
    }
    if(endDate != ""){
 	   if(!(verifyDate(startDate)&&verifyDate(endDate))){
-		   $.messager.alert('Prompt',"Date Format is not correct!");
+		   $.messager.alert('提示',"时间格式不正确!");
 		   return;
 	   }
 	   var sDate = new Date(startDate);
 	   var eDate = new Date(endDate);
 	   if(eDate < sDate){
-		   $.messager.alert('Prompt',"Finishing Date CAN NOT earlier than Starting Date!");
+		   $.messager.alert('提示',"您输入的查询结束时间不能够小于查询开始时间!");
 		   return;
 	   }
 	   var date1 = new Date(startDate);
@@ -195,12 +195,12 @@ function dowloadAllDataClick(v){
 	   var etime = date2.getTime(endDate);	
 	   var time = parseInt(etime)-parseInt(btime);
 	   if(time>2678400000){
-		   $.messager.alert('Prompt',"Time span for downloading CAN NOT exceed one month!");
+		   $.messager.alert('提示',"下载查询时间不能超过一个月!");
 		   return;
 	   }
 	}
    	if(countryName==null||countryName=='') {
-   		$.messager.alert("Prompt","Please choose a country！",'info');
+   		$.messager.alert("提示","请选择国家！",'info');
 		return;
 	}
    	window.location.href = getRootPath() + "/downloadDB/downLoadDBByParams?goodsdescription="+ encodeURI(encodeURI(productDesc))

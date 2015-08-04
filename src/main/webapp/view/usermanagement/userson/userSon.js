@@ -57,7 +57,7 @@ function queryUserSons()
 	        fitcolumns:false,
 	        autoRowHeight:false,
 	        sortorder: 'asc',
-	        loadMsg:'Loading...',
+	        loadMsg:'正在查询...',
 	        pageList:[10,25,50,80,100],
 	 		columns : [sonsArr]
 	});
@@ -326,7 +326,7 @@ function selectmyRight(v){
         fitcolumns:false,
         autoRowHeight:false,
         sortorder: 'asc',
-        loadMsg:'Loading...',
+        loadMsg:'正在查询...',
         pageList:[10,25,50,80,100],
 		onLoadSuccess: function(data){ 
 		    if(data.rows.length == 0)
@@ -350,7 +350,7 @@ function selectmyRight(v){
         fitcolumns:false,
         autoRowHeight:false,
         sortorder: 'asc',
-        loadMsg:'Loading...',
+        loadMsg:'正在查询...',
         pageList:[10,25,50,80,100],
 		onLoadSuccess: function(data){ 
 		    if(data.rows.length == 0)

@@ -26,7 +26,7 @@
    <!-- 订单列表 -->
    <div>
      <div id='odBar'>
-       <input id='orderNo'  placeholder="请输入订单号..." type='text'><input type='button' onclick='searchOrder()'  value='查询'>
+       <input id='orderNo'  placeholder="Please enter your order number..." type='text'><input type='button' onclick='searchOrder()'  value='查询'>
      </div>
       <table id='odTable' toolbar='#odBar' title='我的订单'>
       </table>

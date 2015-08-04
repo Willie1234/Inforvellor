@@ -29,13 +29,13 @@ function queryUserRight()
 		fitcolumns:false,
 		autoRowHeight:false,
 		sortorder: 'asc',
-		loadMsg:'Loading...',
+		loadMsg:'正在查询...',
 		pageList:[50,80,100],
 		onLoadSuccess: function(data){
 			if(data.rows.length ==0)
 			{
 				$('#rightDiv').animate({opacity:"0"},0);
-				alertMessage('Tips','Sorry, no permission for checking','info');
+				alertMessage('提示','对不起，没有可查看的权限','info');
 			}else
 			{
 				$('#rightDiv').animate({opacity:"1"},0);

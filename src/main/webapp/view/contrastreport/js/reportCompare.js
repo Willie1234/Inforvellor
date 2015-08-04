@@ -150,7 +150,7 @@ function changeCountryRepost()
 	$("#hdls_click").css('display','none');
 	$("#agt_export_click").css('display','none');
 	//打开对话框
-	openDivArtDialog("Choose a country", "countrysel", "country",500,430,true);
+	openDivArtDialog("选择国家", "countrysel", "country",500,430,true);
 }
 
 /**
@@ -168,7 +168,7 @@ function chooseCountry(countryEnName){
 			$("#hscode_contrast").val("");
 		}else{
 			$("#hscode_contrast").attr("disabled","disabled");//再改成disabled  
-			$("#hscode_contrast").val("This country do not use Hs Code！");
+			$("#hscode_contrast").val("此国家没有海关编码！");
 		}
 		
 		//判断是否存在产品描述
@@ -208,7 +208,7 @@ function chooseCountry(countryEnName){
  		}
  	});
  	if (names.length == 0) {
- 		$.messager.alert("Prompt","Please choose the information want to be export!");
+ 		$.messager.alert("提示","请勾选要导出的信息!");
  		return false;
  	}
  }
@@ -314,14 +314,14 @@ function chooseCountry(countryEnName){
  	$.post("/gbdbas/contrastre/selectValues",function(data){
  		if(data){
 			if (data.selectValue.length<=1) {
-				$.messager.alert("Prompt","No comparison data!");
+				$.messager.alert("提示","没有对比数据!");
 				bool = false;
 			}
 		}
  		fillingCompareSelect(data.selectValue,type,$("#inputName").val());
  		//打开对话框
  		if(bool){
- 	 		openCompareDataDialog("Comparison Report","reportDuibi","duibi",500, 300,true);
+ 	 		openCompareDataDialog("报表对比","reportDuibi","duibi",500, 300,true);
  	 	}
  	},"json");
  }
@@ -384,7 +384,7 @@ function chooseCountry(countryEnName){
 		 console.debug(selectValue);
 		 openDatagrid("duiBiTable",{"val":val,"arr":arr,"imexType":imexType},array,"/gbdbas/contrastre/contrastByImportOrExport",true,false,1180,300,selectValue);
 	 }else{
-		 $.messager.alert("Prompt","Please choose the data for comparison!");
+		 $.messager.alert("提示","请选择要对比的数据!");
 	 }
  }
  
@@ -452,7 +452,7 @@ function chooseCountry(countryEnName){
 			$("#fontId").html("供应商");
 		}
 		$("#value").html(param);
-		openCompareDataDialog("Advanced Search","drillReportDiv","drillId",1100, 600,true);
+		openCompareDataDialog("深度挖取","drillReportDiv","drillId",1100, 600,true);
 		//new汇总model
 		var reportSum = new reportDrill(param,country,isAdd,imexType);
 		//初始化深度挖取报告类型
@@ -545,13 +545,13 @@ function chooseCountry(countryEnName){
  	    pageNumber:1,
  	    queryParams:queryParam,
  	    columns:[arr_drill],    
- 	    loadMsg:'Loading……',
+ 	    loadMsg:'正在加载中……',
  	    width:1084,
  	    pagination:true,
  	    autoRowHeight:false,
  	    onLoadSuccess: function(data){
  			if(data.rows.length == 0){
- 				 $.messager.alert("Prompt","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
+ 				 $.messager.alert("提示","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
  		    } 
  			else{
  				//给相应的toolbar加上标题信息
@@ -585,7 +585,7 @@ function chooseCountry(countryEnName){
  	    autoRowHeight:false,
 	    onLoadSuccess: function(data){
 			if(data.rows.length == 0){
-				 $.messager.alert("Prompt","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
+				 $.messager.alert("提示","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
 		    } 
 			else{
 				
@@ -671,7 +671,7 @@ function chooseCountry(countryEnName){
  		showElement(id,showChart);
  		$('#'+id).datagrid({    
  		    url:url, 
- 		    loadMsg:'Loading……',
+ 		    loadMsg:'正在查询中……',
  		    pagination:true,
  		    pageNumber:1,
  		    singleSelect:false, //取消单选
@@ -683,7 +683,7 @@ function chooseCountry(countryEnName){
  		    columns:[arr],
  		    onLoadSuccess: function(data){
  				if(data.rows.length == 0){
- 					 $.messager.alert("Prompt","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
+ 					 $.messager.alert("提示","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
  					 //隐藏元素
  					hideElement(id,"contrastreCenter");
  			    } 
@@ -718,7 +718,7 @@ function chooseCountry(countryEnName){
  		{
  			$('#'+id+i).datagrid({    
  			    url:url, 
- 			    loadMsg:'Loading……',
+ 			    loadMsg:'正在查询中……',
  			    pagination:true,
  			    pageNumber:1,
  			    pageSize:20,
@@ -729,7 +729,7 @@ function chooseCountry(countryEnName){
  			    columns:[arr],
  			    onLoadSuccess: function(data){
  					if(data.rows.length == 0){
- 						 $.messager.alert("Prompt","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
+ 						 $.messager.alert("提示","对不起，你输入的查询条件未检索到结果，请尝试更换条件值!");
  						 //隐藏元素
 // 						 $("#tt").css("height","150px");
  				    } 
@@ -766,23 +766,23 @@ function chooseCountry(countryEnName){
  	{
  		if(countryName == '请选择国家')
  		{
- 			 $.messager.alert("Prompt",'Please choose a country!');
+ 			 $.messager.alert("提示",'请选择国家!');
  			return false;
  		}else if(hscode == '' && goodsDesc == '')
  		{
- 			 $.messager.alert("Prompt","Hs code or product description CAN NOT be empty!");
+ 			 $.messager.alert("提示","海关编码或产品描述不能为空!");
  			return false;
- 		}else if(hscode == 'This country do not use Hs Code！' && goodsDesc == '')
+ 		}else if(hscode == '此国家没有海关编码！' && goodsDesc == '')
  		{
- 			 $.messager.alert("Prompt","Good description can NOT be empty!");
+ 			 $.messager.alert("提示","产品描述不能为空!");
  			return false;
  		}else if(beginDate == '' || endDate == '')
  		{
- 			 $.messager.alert("Prompt","Starting Date and Finishing Date CAN NOT be empty!");
+ 			 $.messager.alert("提示","第一段开始时间以及结束时间不能为空!");
  			return false;
  		}else if(beginAddDate == '' || endAddDate == '')
  		{
- 			 $.messager.alert("Prompt","Starting Date and Finishing Date for history CAN NOT be empty!");
+ 			 $.messager.alert("提示","第二段开始时间以及结束时间不能为空!");
  			return false;
  		}else if(validateTime(beginDate, endDate, beginAddDate, endAddDate) == false)
  		{
@@ -815,16 +815,16 @@ function chooseCountry(countryEnName){
  	
  	if(feDate < fsDate)
  	{
- 		 $.messager.alert("Prompt",'Finishing Date of histroy CAN NOT be earlier than Starting Date');
+ 		 $.messager.alert("提示",'历史时间的结束时间不能小于历史时间的开始时间');
  		return false;
  	}
  	else if(feAddDate < fsAddDate)
  	{
- 		 $.messager.alert("Prompt",'Finishing Date of Chosen Time CAN NOT be earlier than Starting Date');
+ 		 $.messager.alert("提示",'关注时间的结束时间不能小于关注时间的开始时间');
  		return false;
  	}else if(fsAddDate < fsDate)
  	{
- 		 $.messager.alert("Prompt",'Starting Date of Chosen Time CAN NOT be earlier than Starting Date of history time');
+ 		 $.messager.alert("提示",'关注时间的开始时间不能小于历史时间的开始时间');
  		return false;
  	}
  	else 

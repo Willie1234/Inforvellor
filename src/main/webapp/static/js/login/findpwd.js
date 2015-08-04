@@ -50,14 +50,14 @@ function netSetp(){
 			{
 				$("#loginName").addClass('red_cls'); 
 				$("#loginName_msg").empty();
-				$("#loginName_msg").append("Account does NOT exist!");
+				$("#loginName_msg").append("用户名不存在");
 				$("#loginName_msg").css("display","block");
 			}
 			else if(data == "1")
 			{
 				$("#veritycode").addClass('red_cls'); 
 				$("#veritycode_msg").empty();
-				$("#veritycode_msg").append("Check Code Error");
+				$("#veritycode_msg").append("验证码错误");
 				$("#veritycode_msg").css("display","block");
 			}
 			else if (data == "2")
@@ -74,13 +74,13 @@ function sendValidate(num){
 	num -=1;
 	$("#timer_id").empty();
 	$("#timer_id").addClass('gray_cls'); 
-	$("#timer_id").append("Send again("+num+")");
+	$("#timer_id").append("重新发送("+num+")");
 	if(num == 0)
 	{
 		window.clearTimeout(tt);
 		$("#timer_id").empty();
 		$("#timer_id").removeClass('gray_cls'); 
-		$("#timer_id").append("Send again");
+		$("#timer_id").append("重新发送");
 		$("#timer_id").one("click", function(){
 			//发送邮件
 			sendEmail();
@@ -102,12 +102,12 @@ function sendEmail(){
 			if(data == "0")
 			{
 				$("#forgot-emailVcode-success").empty();
-				$("#forgot-emailVcode-success").append("Verification Code sent failed");
+				$("#forgot-emailVcode-success").append("验证码发送失败");
 			}
 			else if(data == "1")
 			{
 				$("#forgot-emailVcode-success").empty();
-				$("#forgot-emailVcode-success").append("Verification Code sent successfully");
+				$("#forgot-emailVcode-success").append("验证码已发送");
 			}
 		}
 		,"text"); 
@@ -158,7 +158,7 @@ function validateUserPwd()
 		    if (password.trim().length < 4 || password.trim().length > 12) {
 				$("#password").addClass('red_cls'); 
 	        	$("#pwd-msg").empty();
-				$("#pwd-msg").append("Password must be longer than 4 digits");
+				$("#pwd-msg").append("密码长度必须大于4");
 				$("#pwd-msg").css("display","block");
 				return false;
 	        } else {
@@ -166,7 +166,7 @@ function validateUserPwd()
 	            if (!test.test(password.trim())) {
 	            	$("#password").addClass('red_cls'); 
 	            	$("#pwd-msg").empty();
-	    			$("#pwd-msg").append("Password does not satisfy requirement!");
+	    			$("#pwd-msg").append("密码不符合格式");
 	    			$("#pwd-msg").css("display","block");
 	    			return false;
 	            }
@@ -199,7 +199,7 @@ function validateUserPwd()
 			{
 				$("#verifypwd").addClass('red_cls'); 
 				$("#verifypwd-msg").empty();
-				$("#verifypwd-msg").append("Your re-type password is not constant with your password");
+				$("#verifypwd-msg").append("您输入的密码与确认密码不一致");
 				$("#verifypwd-msg").css("display","block");
 				return false;
 			}

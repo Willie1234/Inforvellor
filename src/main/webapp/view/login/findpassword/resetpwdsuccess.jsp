@@ -13,36 +13,39 @@
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/login/findpwd.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/easyui/icon.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/easyui/easyui.css">
-<link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/newhomepage/bootstrap.css">
 <script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/login/findpwd.js"></script>
-<title>Password reset successfully</title>
+<title>Inforvellor-Reset password successfully</title>
 </head>
 <body>
    <!--主DIV-->
-   <div class="container">
-     <div class="col-md-12 col-md-push-0  panel panel-primary text-center">
+   <div class="all">
 	   <!-- head -->
-	    <div class="panel-heading text-center">Password Retrieve Processing
+	   <div class="header">
 	   </div>
 	   <!-- body -->
-	     <div class="panel-body">
-	   
+	   <div class="sub">
+	    <div class='titleLeft'>To Retrieve Password</div>
+	    <div class='titleRight'>
+	    </div>
 	    <div class="find_div">
-	      
+	       <ul class="mod-sub-nav">
+	         <li class="mod-sub-list1" style="font-size: 16px;">Confirm Account  </li>
+	         <li class="mod-sub-list2" style="font-size: 16px;">Safety verification  </li>
+	         <li class="mod-sub-list3 list3-active" style="font-size: 16px;">Reset password </li>
+	       </ul>
 	       <div class="mod-step-detail"> 
 	       	<div class="result-info"> 
 	       		<div class="result-message"> 
 	       			<img src="/gbdbas/static/img/login/success_icon.png"> 
-	       			<span style="font-size: 18px;">Congratulations! You have successfully reset password for ${sessionScope.user.loginName }</span> 
+	       			<span style="font-size: 18px;">Congratulations! Your account${sessionScope.user.loginName }password has been successfully reset</span> 
 	       			<div class="login_div_cls">
-	       				<a class="btn btn-default" href="/gbdbas/UserPassword/login">Log in directly</a> 
+	       				<a class="result-title-btn" href="/gbdbas/UserPassword/login">Direct Login</a> 
 	       			</div>
 	       		</div>
 		   </div>
 	    </div>
-	   </div>
 	   </div>
    </div>
 </body>

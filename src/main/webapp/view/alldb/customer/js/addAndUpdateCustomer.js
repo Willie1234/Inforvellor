@@ -81,24 +81,24 @@ function saveCustomer() {
 	// 验证公司名称是否为英文
 	var companyNameReg = /[\u4E00-\u9FA5]/i;
 	if (checkObjIsRegular(companyNameReg, companyName)){
-		$.messager.alert('Prompt', 'Name of customer can ONLY be digits or letters', 'info');
+		$.messager.alert('提示', '请输入客户名称为英文或者数字', 'info');
 		$("#companyName").focus();
 		return false;
 	}
 	// 验证客户价值是否为10位以下的数字
 	var patter = /^\d{0,10}$/;
 	if (!companyName) {
-		$.messager.alert('Prompt', '请输入客户的名称', 'info');
+		$.messager.alert('提示', '请输入客户的名称', 'info');
 		$("#agt_companyName").focus();
 		return false;
 	}
 	// 客户价值必填项校验控制
 	if (!customerValue) {
-		$.messager.alert('Prompt','请输入客户价值', 'info');
+		$.messager.alert('提示','请输入客户价值', 'info');
 		$("#customerValue").focus();
 		return false;
 	} else if (!patter.test(customerValue)) {
-		$.messager.alert('Prompt', '客户价值必须是数字', 'info');
+		$.messager.alert('提示', '客户价值必须是数字', 'info');
 		$("#customerValue").focus();
 		return false;
 	}
@@ -111,8 +111,8 @@ function saveCustomer() {
 		},
 		success : function(data) {
 			var dataObj = eval("(" + data + ")");
-			result = dataObj.result == 1 ? "Save Successfully!" : "Save Failed";
-			$.messager.alert('Prompt', result);
+			result = dataObj.result == 1 ? "保存成功!" : "保存失败";
+			$.messager.alert('提示', result);
 			art.dialog({
 				id : 'showCustomerDlg'
 			}).close();
@@ -131,11 +131,11 @@ function updateJspForCustomer(flag){
 	var titleSpan = $("#titleSpan");
 	var titalText = "";
 	if (flag) {
-		titalText = "Change Customer Information";
+		titalText = "修改我的客户信息";
 		$("#sureSpan").hide();
 		$("#updateSpan").show();
 	} else {
-		titalText = "Add Customer Information";
+		titalText = "添加我的客户信息";
 		$("#sureSpan").show();
 		$("#updateSpan").hide();
 	}
@@ -154,25 +154,25 @@ function updateCustomer() {
 	// 验证公司名称是否为英文
 	var companyNameReg = /[\u4E00-\u9FA5]/i;
 	if (checkObjIsRegular(companyNameReg, companyName)){
-		$.messager.alert('Prompt', '请输入客户名称为英文或者数字', 'info');
+		$.messager.alert('提示', '请输入客户名称为英文或者数字', 'info');
 		$("#companyName").focus();
 		return false;
 	}
 	// 验证客户价值是否为10位以下的数字
 	var patter = /^\d{0,10}$/;
 	if (companyName == "" || companyName == null || companyName == "undefined") {
-		$.messager.alert('Prompt', '请输入客户的名称', 'info');
+		$.messager.alert('提示', '请输入客户的名称', 'info');
 		$("#agt_companyName").focus();
 		return false;
 	}
 	// 客户价值必填项校验控制
 	if (customerValue == "" || customerValue == null
 			|| customerValue == "undefined") {
-		$.messager.alert('Prompt','请输入客户价值', 'info');
+		$.messager.alert('提示','请输入客户价值', 'info');
 		$("#customerValue").focus();
 		return false;
 	} else if (!patter.test(customerValue)) {
-		$.messager.alert('Prompt', '客户价值必须是数字', 'info');
+		$.messager.alert('提示', '客户价值必须是数字', 'info');
 		$("#customerValue").focus();
 		return false;
 	}
@@ -185,8 +185,8 @@ function updateCustomer() {
 		},
 		success : function(data) {
 			var dataObj = eval("(" + data + ")");
-			result = dataObj.result == 1 ? "Change Successfully!" : "Change Failed";
-			$.messager.alert('Prompt', result);
+			result = dataObj.result == 1 ? "修改成功!" : "修改失败";
+			$.messager.alert('提示', result);
 			art.dialog({
 				id : 'showCustomerDlg'
 			}).close();

@@ -24,7 +24,7 @@
         //设置登录窗口
         function openPwd() {
             $('#w').window({
-                title: '修改密码',
+                title: 'Change Password',
                 width: 300,
                 modal: true,
                 shadow: true,
@@ -46,21 +46,21 @@
             var $rePass = $('#txtRePass');
 
             if ($newpass.val() == '') {
-                msgShow('系统提示', '请输入密码！', 'warning');
+                msgShow('System Hint', 'Please type password！', 'warning');
                 return false;
             }
             if ($rePass.val() == '') {
-                msgShow('系统提示', '请在一次输入密码！', 'warning');
+                msgShow('System Hint', 'Please type password again！', 'warning');
                 return false;
             }
 
             if ($newpass.val() != $rePass.val()) {
-                msgShow('系统提示', '两次密码不一至！请重新输入', 'warning');
+                msgShow('System Hint', 'The two password entries do not match! Please retype new password', 'warning');
                 return false;
             }
 
             $.post('/ajax/editpassword.ashx?newpass=' + $newpass.val(), function(msg) {
-                msgShow('系统提示', '恭喜，密码修改成功！<br>您的新密码为：' + msg, 'info');
+                msgShow('System Hint', 'Congratulations! Your password has been successfully changed！<br>Your new password is：' + msg, 'info');
                 $newpass.val('');
                 $rePass.val('');
                 close();
@@ -83,7 +83,7 @@
 			$('#btnCancel').click(function(){closePwd();})
 
             $('#loginOut').click(function() {
-                $.messager.confirm('系统提示', '您确定要退出本次登录吗?', function(r) {
+                $.messager.confirm('System Hint', 'Are you sure you want to log out?', function(r) {
                     if (r) {
                         $.post("/dbas/userOff",function(){
                			 //window.location.href="/dbas/webInfo/infobase_login/login.jsp";
@@ -101,18 +101,18 @@
 <noscript>
 
 <div style=" position:absolute; z-index:100000; height:2046px;top:0px;left:0px; width:100%; background:white; text-align:center;">
-    <img src="images/noscript.gif" alt='抱歉，请开启脚本支持！' />
+    <img src="images/noscript.gif" alt='Sorry. Please enable script support!' />
 </div></noscript>
 
 <div id="loading-mask" style="position:absolute;top:0px; left:0px; width:100%; height:100%; background:#D2E0F2; z-index:20000">
 <div id="pageloading" style="position:absolute; top:50%; left:50%; margin:-120px 0px 0px -120px; text-align:center;  border:2px solid #8DB2E3; width:200px; height:40px;  font-size:14px;padding:10px; font-weight:bold; background:#fff; color:#15428B;"> 
-    <img src="images/loading.gif" align="absmiddle" /> 正在加载中,请稍候...</div>
+    <img src="images/loading.gif" align="absmiddle" /> Loading…Please wait..</div>
 </div>
 
     <div region="north" split="true" border="false" style="overflow: hidden; height: 40px;
         background: url(images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
         line-height: 20px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
-        <span style="float:right; padding-right:20px;" class="head">欢迎 ${sessionScope.user.loginName } <a href="#" id="editpass">修改密码</a> <a href="#" id="loginOut">安全退出</a></span>
+        <span style="float:right; padding-right:20px;" class="head">Welcome ${sessionScope.user.loginName } <a href="#" id="editpass">Change password</a> <a href="#" id="loginOut">Exit safely.</a></span>
         <span style="padding-left:10px; font-size: 16px;"><img src="<%=basePath%>static/js/menu/images/logo.png"  align="absmiddle" /></span>
     </div>
       <div  region="south" split="true" style="height: 40px; background: #D2E0F2; ">
@@ -138,36 +138,36 @@
             <div region="center" border="false" style="padding: 10px; background: #fff; border: 1px solid #ccc;">
                 <table cellpadding=3>
                 	<tr>
-                        <td>原密码：</td>
+                        <td>Original password：</td>
                         <td><input id="txtRegPass" type="password" class="txt01" /></td>
                     </tr>
                     <tr>
-                        <td>新密码：</td>
+                        <td>New password：</td>
                         <td><input id="txtNewPass" type="password" class="txt01" /></td>
                     </tr>
                     <tr>
-                        <td>确认密码：</td>
+                        <td>Confirm password：</td>
                         <td><input id="txtRePass" type="password" class="txt01" /></td>
                     </tr>
                 </table>
             </div>
             <div region="south" border="false" style="text-align: right; height: 30px; line-height: 30px;">
                 <a id="btnEp" class="easyui-linkbutton" icon="icon-ok" href="javascript:void(0)" >
-                    确定</a> <a id="btnCancel" class="easyui-linkbutton" icon="icon-cancel" href="javascript:void(0)">取消</a>
+                    Confirm</a> <a id="btnCancel" class="easyui-linkbutton" icon="icon-cancel" href="javascript:void(0)">Cancel</a>
             </div>
         </div>
     </div>
    <div id="mm" class="easyui-menu" style="width:150px;">
-		<div id="tabupdate">刷新</div>
+		<div id="tabupdate">Refresh</div>
 		<div class="menu-sep"></div>
-		<div id="close">关闭</div>
-		<div id="closeall">全部关闭</div>
-		<div id="closeother">除此之外全部关闭</div>
+		<div id="close">Clsoe</div>
+		<div id="closeall">Close all</div>
+		<div id="closeother">Close other tabs</div>
 		<div class="menu-sep"></div>
-		<div id="closeright">当前页右侧全部关闭</div>
-		<div id="closeleft">当前页左侧全部关闭</div>
+		<div id="closeright">Close tabs to the right</div>
+		<div id="closeleft">Close tabs to the left</div>
 		<div class="menu-sep"></div>
-		<div id="exit">退出</div>
+		<div id="exit">Quit</div>
 	</div>
 </body>
 </html>

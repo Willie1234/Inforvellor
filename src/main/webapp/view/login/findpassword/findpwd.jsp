@@ -13,11 +13,10 @@
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/login/findpwd.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/easyui/icon.css">
 <link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/easyui/easyui.css">
-<link rel="stylesheet" type='text/css' href="<%=basePath%>/static/css/newhomepage/bootstrap.css">
 <script type="text/javascript" src="<%=basePath%>/static/js/jquery/jquery-1.8.2.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/static/js/login/findpwd.js"></script>
-<title>Password Retrieve</title>
+<title>英蓓-找回密码</title>
 <script type="text/javascript">
 //初始化页面
 $(document).ready(function(){
@@ -35,7 +34,7 @@ $(document).ready(function(){
 			$(this).removeClass('blue_cls'); 
 			$("#loginName").addClass('red_cls'); 
 			$("#loginName_msg").empty();
-			$("#loginName_msg").append("*Please enter your account");
+			$("#loginName_msg").append("请您输入用户名");
 			$("#loginName_msg").css("display","block");
 		}
 		else
@@ -58,7 +57,7 @@ $(document).ready(function(){
 			$(this).removeClass('blue_cls'); 
 			$("#veritycode").addClass('red_cls'); 
 			$("#veritycode_msg").empty();
-			$("#veritycode_msg").append("*Please enter check code");
+			$("#veritycode_msg").append("请您输入验证码");
 			$("#veritycode_msg").css("display","block");
 		}
 		else
@@ -73,36 +72,35 @@ $(document).ready(function(){
 </head>
 <body>
    <!--主DIV-->
-    <div class="container">
-     <div class="col-md-12 col-md-push-0  panel panel-primary">
-   
+   <div class="all">
 	   <!-- head -->
-	   <div class="panel-heading text-center">Password Retrieve Processing
+	   <div class="header">
 	   </div>
 	   <!-- body -->
-
-	    <div class="panel-body">
+	   <div class="sub">
+	    <div class='titleLeft'>To Retrieve Password</div>
+	    <div class='titleRight'>
+	    </div>
 	    <div class="find_div">
-	     
-	       <ul class="nav nav-tabs nav-justified">
-			  <li role="presentation" class="active"><a href="#">Check Account</a></li>
-			  <li role="presentation"><a >Security Verification</a></li>
-			  <li role="presentation"><a >Reset password</a></li>
-			</ul>
+	       <ul class="mod-sub-nav">
+	         <li class="mod-sub-list1 list1-active" style="font-size: 16px;">Confirm Account  </li>
+	         <li class="mod-sub-list2" style="font-size: 16px;">安全验证  </li>
+	         <li class="mod-sub-list3" style="font-size: 16px;">Reset password </li>
+	       </ul>
 	       <form id='findPwdForm' method='post'>
 	       	<div> 
-		       	<p class="account-info">Please type in your account:</p>    
+		       	<p class="account-info">Please fill in the account number:</p>    
 		       	<div class="pass-input-container clearfix" id="pass-auth-select"> 
-			       	<input type="text" class="form-control" placeholder="Your Account" name="loginName" value="" id="loginName"> 
-			       	<span class="pass-input-msg" id="loginName_msg" style="display: none;">*Please type in your Account!</span> 
+			       	<input type="text" class="pass-input pass-input-error" placeholder="请您输入用户名" name="loginName" value="" id="loginName"> 
+			       	<span class="pass-input-msg" id="loginName_msg" style="display: none;">Please input Username</span> 
 		       	</div> 
 		       	<div class="pass-input-container vcode-container clearfix"> 
-		       		<input type="text" class="form-control col-md-6" placeholder="Check Code" name="veritycode" value="" id="veritycode"> 
-		       		<a href="#" onClick="javascript:myRandReload()" alt="验证码图片" title="CheckCode" class="vcode-img "> 
+		       		<input type="text" class="pass-input vcode-input" placeholder="请您输入验证码" name="veritycode" value="" id="veritycode"> 
+		       		<a href="#" onClick="javascript:myRandReload()" alt="验证码图片" title="验证码图片" class="vcode-img"> 
 						<img align="bottom" id="createcheckcode" style="width:90px;height:31px;border: 0px;">
 					</a>
-		       		<a href="javascript:myRandReload()" class="vcode-img-change">Refresh</a> 
-		       		<span class="pass-input-msg" id="veritycode_msg" style="display: none;">*Please type in check code</span> 
+		       		<a href="javascript:myRandReload()" class="vcode-img-change">not clear？</a> 
+		       		<span class="pass-input-msg" id="veritycode_msg" style="display: none;">请您输入验证码</span> 
 		       	</div> 
 		       	<div> 
 		       		<a class="result-title-btn" href="#" onclick="netSetp();">Next</a> 
@@ -112,7 +110,5 @@ $(document).ready(function(){
 	    </div>
 	   </div>
    </div>
-   </div>
-   
 </body>
 </html>
