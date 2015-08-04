@@ -39,12 +39,14 @@ function myRandReload(){
  * 注册
  */
 
+
 function checkRequired(){
 	if ($("#field").val() != "" )
         regest();
     
 	
 }
+
 
 
 
@@ -65,6 +67,7 @@ function regest(){
 	    	  else if(data == '3'){
 	    		  $("#requiredField").text('*This user exists, please log in.');
 	    	  }
+
 	    	  else if (data == '4'){
 	    		  $("#requiredField").text('*This user has not been activated, please check your email');
 	    	  }
@@ -96,9 +99,22 @@ function regest(){
 	 }
 
 		  }
+
+	    	  
+	     }   
+	}); 
+}
+
+
 /**
  * 清理验证码
  */
+
+
+
+
+
+
 function clearMessage(){
 	$('#checkCode').val('');
 	$('#checkCode').css({
@@ -118,6 +134,7 @@ function clearMessage(){
  * 打开激活窗口
  */
 function openActiveDiv(){
+	emailValue=$("#email").val();
 	//根据用户输入的email 获取正确的email地址
 	var url=getEmailUrl(emailValue);
 	//清空页面上的标签地址

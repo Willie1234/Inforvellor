@@ -107,15 +107,17 @@ $(document).ready(function(){
 	         	    </div>
 	         	  </li>
 	         	  <li>
-	         	     <div class='pact'>
+	         	    
+	         	    <div class='pact'>
 	         	         <div id="agreeDiv" onclick="changeSatus()"> 
 	         	             <span id="ag"><img src="/gbdbas/static/img/login/ok.png"></span>
 	         	             <span id="ug"><img src="/gbdbas/static/img/login/no.png"></span>
 	         	         </div>
-	         	         <div>
-	         	             <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
+	         	      <div>  
+	         	      <span>我已阅读</span><span><a href="<%=basePath%>/view/login/register/argeement.pdf" target="_blank" title='用户注册协议'>《用户注册协议》</a></span>
 	         	             <span id="pactMessege"></span>
 	         	         </div>
+	         	        
 		         	 </div>
 	         	  </li>
 	         	 </ul>

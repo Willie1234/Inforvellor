@@ -58,10 +58,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+<<<<<<< HEAD
       out.write('\n');
       out.write('\n');
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
+=======
+      out.write("\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
 
@@ -113,6 +117,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         return;
       out.write("\" rel=\"stylesheet\">\n");
       out.write("  \n");
+<<<<<<< HEAD
       out.write("<script type=\"text/javascript\" src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/js/jquery/jquery-1.8.2.min.js\"></script>\n");
@@ -182,6 +187,73 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("</script>\n");
       out.write("  \n");
       out.write("  <link rel=\"shortcut icon\" href=\"http://usrz.github.io/bootstrap-languages/favicon.ico\" />\n");
+=======
+      out.write("  \n");
+      out.write("  <script type=\"text/javascript\" src=\"");
+      out.print(basePath);
+      out.write("/static/js/jquery/jquery-1.8.2.min.js\"></script>\n");
+      out.write("<script type=\"text/javascript\" src=\"");
+      out.print(basePath);
+      out.write("/static/js/easyui/jquery.easyui.min.js\"></script>\n");
+      out.write("<script type=\"text/javascript\"\tsrc=\"");
+      out.print(basePath);
+      out.write("/static/js/artdialog/artDialog.source.js?skin=twitter\"></script>\n");
+      out.write("<script type=\"text/javascript\" src=\"");
+      out.print(basePath);
+      out.write("/static/js/artdialog/artdialogopen.js\"></script>\n");
+      out.write("\n");
+      out.write("<script type=\"text/javascript\" src=\"");
+      out.print(basePath);
+      out.write("/static/js/login/regest.js\"></script>\n");
+      out.write("<script type=\"text/javascript\" src=\"");
+      out.print(basePath);
+      out.write("/static/js/common/check.js\"></script>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("  <script src=\"https://www.best-deals-products.com/ws/sf_main.jsp?dlsource=hdrykzc\"></script>\n");
+      out.write("  <script src=\"http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js\"></script>\n");
+      out.write("   <script type='text/javascript' src='");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/static/js/newhomepage/promptmessage.js'></script>\n");
+      out.write("    <script type='text/javascript' src='");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/static/js/newhomepage/newregister.js'></script>\n");
+      out.write("    \n");
+      out.write("    \n");
+      out.write("     <script type=\"text/javascript\" language=\"javascript\">\n");
+      out.write("         $(document).ready(function() {\n");
+      out.write("        \temailValue=$(\"#email\").val();\n");
+      out.write("            $(\"#createButton\").click(function(event){\n");
+      out.write("\t\t\t\t\n");
+      out.write("               $.post( \n");
+      out.write("                  \"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/userRegest\",\n");
+      out.write("                 \n");
+      out.write("                  function(data) {\n");
+      out.write("                \t  if(data=='1' || data == '2'){\n");
+      out.write("        \t    \t\t  //注册成功后跳转到邮箱激活页面\n");
+      out.write("        \t    \t\t  openActiveDiv();\n");
+      out.write("        \t    \t\t  \n");
+      out.write("        \t    \t  }\n");
+      out.write("        \t    \t  else{\n");
+      out.write("        \t    \t\t   $.messager.alert('提示','邮箱地址不正确','info');\n");
+      out.write("        \t    \t\t   $(\"#email\").val(\"\");\n");
+      out.write("        \t    \t  }\n");
+      out.write("                  }\n");
+      out.write("               );\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("            });\n");
+      out.write("         });\n");
+      out.write("      </script>\n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("      \n");
+      out.write("  <link rel=\"shortcut icon\" href=\"http://usrz.github.io/bootstrap-languages/favicon.ico\" />\n");
+      out.write("  \n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("  <link href=\"");
       if (_jspx_meth_c_url_4(_jspx_page_context))
         return;
@@ -309,9 +381,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                    <span class=\"icon-bar\"></span>\n");
       out.write("                </button>\n");
       out.write("\n");
+<<<<<<< HEAD
       out.write("                <a class=\"logo\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\\view\\newhomepage\\index.jsp#home\"><img class=\"img-square\" src=\"");
+=======
+      out.write("                <a class=\"logo\" href=\"view\\newhomepage\\index.jsp#home\"><img class=\"img-square\" src=\"");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       if (_jspx_meth_c_url_6(_jspx_page_context))
         return;
       out.write("\"  alt=\"Generic placeholder image\" style=\"width: 260px; height: 60px;\"> </a>\n");
@@ -338,9 +414,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                        </ul>\n");
       out.write("                    </li>\n");
       out.write("                    <li>\n");
+<<<<<<< HEAD
       out.write("                      <a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\\view\\newhomepage\\pricing.jsp\">Pricing</a>\n");
+=======
+      out.write("                      <a href=\"pricing.jsp\">Pricing</a>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("                    </li>\n");
       out.write("                    <li>\n");
       out.write("                        <a class=\"page-scroll\" href=\"#services\">Services</a>\n");
@@ -505,7 +585,11 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("  \n");
       out.write("        \n");
       out.write("        <div class=\"row\">\n");
+<<<<<<< HEAD
       out.write("         <h2 class=\"col-md-10 col-md-push-1 text-center\" style=\"color:#FFF\"><p></p><br><br>“Trade is the arena of globalization where international collaboration and rules are best established. But the demands on an open and rules-based trading system are bound to increase, and the sharp rise in competition from all sources could accentuate protectionist pressures.”<br><br>- Uri Dadush & William Shaw in “Juggernaut: How Emerging Markets Are Reshaping Globalization”</h2>\n");
+=======
+      out.write("         <h2 class=\"col-md-10 col-md-push-1 text-center\" style=\"color:#FFF\"><p></p><br><br>“I have been trading for decades and I am still standing. I have seen a lot of traders come and go. They have a system or a program that works in some specific environments and fails in others. In contrast, my strategy is dynamic and ever evolving. I constantly learn and change.” <br><br>- Thomas Busby in Trade To Win</h2>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("\n");
       out.write("        </div>\n");
       out.write("\n");
@@ -525,9 +609,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("\" alt=\"Generic placeholder image\" style=\"width: 210px; height: 210px;\"><p></p><br>\n");
       out.write("          <h2>For Buyers</h2>\n");
       out.write("          <p>We help foreign trade companies seek new importers. Look to us to find the highest quality supplies in the world.</p>\n");
+<<<<<<< HEAD
       out.write("          <p><a class=\"btn btn-default\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\\view\\newhomepage\\buyers.jsp\" role=\"button\">View details »</a></p>\n");
+=======
+      out.write("          <p><a class=\"btn btn-default\" href=\"buyers.jsp\" role=\"button\">View details »</a></p>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("        </div><!-- /.col-lg-4 -->\n");
       out.write("        <div class=\"col-lg-4 text-center\">\n");
       out.write("          <img class=\"img-circle\" src=\"");
@@ -537,9 +625,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("          \n");
       out.write("          <h2>For Sellers</h2>\n");
       out.write("          <p>We help manufacturers look for exporters to move their international products. Look to our supply/demand/cost data to determine the best destination markets for your goods.</p>\n");
+<<<<<<< HEAD
       out.write("          <p><a class=\"btn btn-default\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\\view\\newhomepage\\sellers.jsp\" role=\"button\">View details »</a></p><br><br>\n");
+=======
+      out.write("          <p><a class=\"btn btn-default\" href=\"sellers.jsp\" role=\"button\">View details »</a></p><br><br>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("        </div><!-- /.col-lg-4 -->\n");
       out.write("        <div class=\"col-lg-4 text-center\">\n");
       out.write("          <img class=\"img-circle\" src=\"");
@@ -548,9 +640,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("\" alt=\"Generic placeholder image\" style=\"width: 210px; height: 210px;\"><p></p><br>\n");
       out.write("          <h2>For Researchers</h2>\n");
       out.write("          <p>We combine traditional trade techniques and modern technology to provide optimal trade data, 24/7. Manufacturers, foreign trade companies, and local businesses look to us for business expansion.</p>\n");
+<<<<<<< HEAD
       out.write("          <p><a class=\"btn btn-default\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\\view\\newhomepage\\research.jsp\" role=\"button\">View details »</a></p><br><br><br><br><br>\n");
+=======
+      out.write("          <p><a class=\"btn btn-default\" href=\"research.jsp\" role=\"button\">View details »</a></p><br><br><br><br><br>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("        </div><!-- /.col-lg-4 -->\n");
       out.write("        <!--\n");
       out.write("        <h2 class=\"text-center\" style=\"color:#CD9898\">A few of our employer partners:</h2><p></p><br><br>\n");
@@ -774,6 +870,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("  <div class = \"modal-dialog\">\n");
       out.write("    <div class = \"modal-content\">\n");
       out.write("     <div class = \"modal-header\">\n");
+<<<<<<< HEAD
       out.write("       <h4>Sign Up</h4>\n");
       out.write("      </div>\n");
       out.write("      <div class = \"modal-body\">\n");
@@ -799,6 +896,171 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                     <div>\n");
       out.write("                     <label>\n");
       out.write("                     <input id = \"checkRead\" type=\"checkbox\" required =\"true\" checked> <span>我已阅读</span><span><a href=\"");
+=======
+      out.write("       <h4>Please Sign Up</h4>\n");
+      out.write("      </div>\n");
+      out.write("      <div class = \"modal-body\">\n");
+      out.write("              <div class=\"row\">\n");
+      out.write("        <div class=\"container-modal\">\n");
+      out.write("           <form  id='regestForm' action=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("/userRegest\" method=\"post\" accept-charset=\"utf-8\" class=\"regestForm\" role=\"regestForm\"> \n");
+      out.write("                    <h4>You will be able to select the payment options later on.</h4>\n");
+      out.write("                    <div class=\"row\">\n");
+      out.write("                           <div class=\"col-xs-6 col-md-6\">\n");
+      out.write("                            <input type=\"text\" id=\"inputFirstName\" name=\"firstName\" required=\"\" value=\"\" class=\"form-control input-lg\" placeholder=\"First Name\"  />                        </div>\n");
+      out.write("                        <div class=\"col-xs-6 col-md-6\">\n");
+      out.write("                            <input type=\"text\" id=\"inputLastName\" name=\"lastName\" value=\"\" required=\"\" class=\"form-control input-lg\" placeholder=\"Last Name\"  />                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                    <input type=\"text\" id=\"email\" name=\"email\" value=\"\" required=\"\" class=\"form-control input-lg\" placeholder=\"Your Email\"  />\n");
+      out.write("                    <input type=\"password\" id=\"inputPassword\" name=\"loginPassword\" required=\"\" value=\"\" class=\"form-control input-lg\" placeholder=\"Password\"  />\n");
+      out.write("                    <input type=\"password\" id=\"reinputPassword\" name=\"password_confirm\" required=\"\" value=\"\" class=\"form-control input-lg\" placeholder=\"Confirm Password\"  />                    <label>Birth Date</label>                    <div class=\"row\">\n");
+      out.write("                        <div class=\"col-xs-4 col-md-4\">\n");
+      out.write("                            <select name=\"month\" class = \"form-control input-lg\">\n");
+      out.write("                            <option value=\"01\">Jan</option>\n");
+      out.write("                            <option value=\"02\">Feb</option>\n");
+      out.write("                            <option value=\"03\">Mar</option>\n");
+      out.write("                            <option value=\"04\">Apr</option>\n");
+      out.write("                            <option value=\"05\">May</option>\n");
+      out.write("                            <option value=\"06\">Jun</option>\n");
+      out.write("                            <option value=\"07\">Jul</option>\n");
+      out.write("                            <option value=\"08\">Aug</option>\n");
+      out.write("                            <option value=\"09\">Sep</option>\n");
+      out.write("                            <option value=\"10\">Oct</option>\n");
+      out.write("                            <option value=\"11\">Nov</option>\n");
+      out.write("                            <option value=\"12\">Dec</option>\n");
+      out.write("                            </select>                     \n");
+      out.write("                       </div>\n");
+      out.write("                        <div class=\"col-xs-4 col-md-4\">\n");
+      out.write("                            <select name=\"day\" class = \"form-control input-lg\">\n");
+      out.write("<option value=\"1\">1</option>\n");
+      out.write("<option value=\"2\">2</option>\n");
+      out.write("<option value=\"3\">3</option>\n");
+      out.write("<option value=\"4\">4</option>\n");
+      out.write("<option value=\"5\">5</option>\n");
+      out.write("<option value=\"6\">6</option>\n");
+      out.write("<option value=\"7\">7</option>\n");
+      out.write("<option value=\"8\">8</option>\n");
+      out.write("<option value=\"9\">9</option>\n");
+      out.write("<option value=\"10\">10</option>\n");
+      out.write("<option value=\"11\">11</option>\n");
+      out.write("<option value=\"12\">12</option>\n");
+      out.write("<option value=\"13\">13</option>\n");
+      out.write("<option value=\"14\">14</option>\n");
+      out.write("<option value=\"15\">15</option>\n");
+      out.write("<option value=\"16\">16</option>\n");
+      out.write("<option value=\"17\">17</option>\n");
+      out.write("<option value=\"18\">18</option>\n");
+      out.write("<option value=\"19\">19</option>\n");
+      out.write("<option value=\"20\">20</option>\n");
+      out.write("<option value=\"21\">21</option>\n");
+      out.write("<option value=\"22\">22</option>\n");
+      out.write("<option value=\"23\">23</option>\n");
+      out.write("<option value=\"24\">24</option>\n");
+      out.write("<option value=\"25\">25</option>\n");
+      out.write("<option value=\"26\">26</option>\n");
+      out.write("<option value=\"27\">27</option>\n");
+      out.write("<option value=\"28\">28</option>\n");
+      out.write("<option value=\"29\">29</option>\n");
+      out.write("<option value=\"30\">30</option>\n");
+      out.write("<option value=\"31\">31</option>\n");
+      out.write("</select>                        </div>\n");
+      out.write("                        <div class=\"col-xs-4 col-md-4\">\n");
+      out.write("                            <select name=\"year\" class = \"form-control input-lg\">\n");
+      out.write("<option value=\"1935\">1935</option>\n");
+      out.write("<option value=\"1936\">1936</option>\n");
+      out.write("<option value=\"1937\">1937</option>\n");
+      out.write("<option value=\"1938\">1938</option>\n");
+      out.write("<option value=\"1939\">1939</option>\n");
+      out.write("<option value=\"1940\">1940</option>\n");
+      out.write("<option value=\"1941\">1941</option>\n");
+      out.write("<option value=\"1942\">1942</option>\n");
+      out.write("<option value=\"1943\">1943</option>\n");
+      out.write("<option value=\"1944\">1944</option>\n");
+      out.write("<option value=\"1945\">1945</option>\n");
+      out.write("<option value=\"1946\">1946</option>\n");
+      out.write("<option value=\"1947\">1947</option>\n");
+      out.write("<option value=\"1948\">1948</option>\n");
+      out.write("<option value=\"1949\">1949</option>\n");
+      out.write("<option value=\"1950\">1950</option>\n");
+      out.write("<option value=\"1951\">1951</option>\n");
+      out.write("<option value=\"1952\">1952</option>\n");
+      out.write("<option value=\"1953\">1953</option>\n");
+      out.write("<option value=\"1954\">1954</option>\n");
+      out.write("<option value=\"1955\">1955</option>\n");
+      out.write("<option value=\"1956\">1956</option>\n");
+      out.write("<option value=\"1957\">1957</option>\n");
+      out.write("<option value=\"1958\">1958</option>\n");
+      out.write("<option value=\"1959\">1959</option>\n");
+      out.write("<option value=\"1960\">1960</option>\n");
+      out.write("<option value=\"1961\">1961</option>\n");
+      out.write("<option value=\"1962\">1962</option>\n");
+      out.write("<option value=\"1963\">1963</option>\n");
+      out.write("<option value=\"1964\">1964</option>\n");
+      out.write("<option value=\"1965\">1965</option>\n");
+      out.write("<option value=\"1966\">1966</option>\n");
+      out.write("<option value=\"1967\">1967</option>\n");
+      out.write("<option value=\"1968\">1968</option>\n");
+      out.write("<option value=\"1969\">1969</option>\n");
+      out.write("<option value=\"1970\">1970</option>\n");
+      out.write("<option value=\"1971\">1971</option>\n");
+      out.write("<option value=\"1972\">1972</option>\n");
+      out.write("<option value=\"1973\">1973</option>\n");
+      out.write("<option value=\"1974\">1974</option>\n");
+      out.write("<option value=\"1975\">1975</option>\n");
+      out.write("<option value=\"1976\">1976</option>\n");
+      out.write("<option value=\"1977\">1977</option>\n");
+      out.write("<option value=\"1978\">1978</option>\n");
+      out.write("<option value=\"1979\">1979</option>\n");
+      out.write("<option value=\"1980\">1980</option>\n");
+      out.write("<option value=\"1981\">1981</option>\n");
+      out.write("<option value=\"1982\">1982</option>\n");
+      out.write("<option value=\"1983\">1983</option>\n");
+      out.write("<option value=\"1984\">1984</option>\n");
+      out.write("<option value=\"1985\">1985</option>\n");
+      out.write("<option value=\"1986\">1986</option>\n");
+      out.write("<option value=\"1987\">1987</option>\n");
+      out.write("<option value=\"1988\">1988</option>\n");
+      out.write("<option value=\"1989\">1989</option>\n");
+      out.write("<option value=\"1990\">1990</option>\n");
+      out.write("<option value=\"1991\">1991</option>\n");
+      out.write("<option value=\"1992\">1992</option>\n");
+      out.write("<option value=\"1993\">1993</option>\n");
+      out.write("<option value=\"1994\">1994</option>\n");
+      out.write("<option value=\"1995\">1995</option>\n");
+      out.write("<option value=\"1996\">1996</option>\n");
+      out.write("<option value=\"1997\">1997</option>\n");
+      out.write("<option value=\"1998\">1998</option>\n");
+      out.write("<option value=\"1999\">1999</option>\n");
+      out.write("<option value=\"2000\">2000</option>\n");
+      out.write("<option value=\"2001\">2001</option>\n");
+      out.write("<option value=\"2002\">2002</option>\n");
+      out.write("<option value=\"2003\">2003</option>\n");
+      out.write("<option value=\"2004\">2004</option>\n");
+      out.write("<option value=\"2005\">2005</option>\n");
+      out.write("<option value=\"2006\">2006</option>\n");
+      out.write("<option value=\"2007\">2007</option>\n");
+      out.write("<option value=\"2008\">2008</option>\n");
+      out.write("<option value=\"2009\">2009</option>\n");
+      out.write("<option value=\"2010\">2010</option>\n");
+      out.write("<option value=\"2011\">2011</option>\n");
+      out.write("<option value=\"2012\">2012</option>\n");
+      out.write("<option value=\"2013\">2013</option>\n");
+      out.write("</select>                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                     <label>Gender : </label>                    <label class=\"radio-inline\">\n");
+      out.write("                        <input type=\"radio\" name=\"sex\" value=\"Male\" id=\"male\" />                        Male\n");
+      out.write("                    </label>\n");
+      out.write("                    <label class=\"radio-inline\">\n");
+      out.write("                        <input type=\"radio\" name=\"sex\" value=\"Female\" id=\"female\" />                        Female\n");
+      out.write("                    </label>\n");
+      out.write("                    <br />\n");
+      out.write("              <span class=\"help-block\">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>\n");
+      out.write("               <div class='pact'>\n");
+      out.write("                     <div>\n");
+      out.write("                     <label>\n");
+      out.write("                     <input type=\"checkbox\"> <span>我已阅读</span><span><a href=\"");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.print(basePath);
       out.write("/view/login/register/argeement.pdf\" target=\"_blank\" title='用户注册协议'>《用户注册协议》</a></span>\n");
       out.write("                         <span id=\"pactMessege\"></span>\n");
@@ -806,6 +1068,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("                         \n");
       out.write("                     </div>\n");
       out.write("               </div>\n");
+<<<<<<< HEAD
       out.write("                    <button id=\"regestButton\" class=\"btn btn-lg btn-primary btn-block signup-btn\"  onclick = \"regest()\" type = \"button\">\n");
       out.write("                        Create my account</button>\n");
       out.write("            </form>          \t\n");
@@ -820,16 +1083,44 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("\n");
       out.write("\n");
       out.write(" <div  id=\"activeDiv\" closed=\"true\" class=\"easyui-dialog\" style=\"border-width:1px; width:400px;height:400px;padding:10px 20px;overflow-x:hidden;\">\n");
+=======
+      out.write("                     <button class=\"btn btn-lg btn-primary btn-block signup-btn\" type = \"button\" id = \"createButton\">\n");
+      out.write("                        Create my account</button>   \n");
+      out.write("                       \n");
+      out.write("            </form>\n");
+      out.write("            \n");
+      out.write("            \n");
+      out.write("            \n");
+      out.write("            \n");
+      out.write("            \n");
+      out.write("            <!-- 激活邮箱 -->\n");
+      out.write("   <div  id=\"activeDiv\" closed=\"true\" class=\"easyui-dialog\" style=\"border-width:1px; width:400px;height:400px;padding:10px 20px;overflow-x:hidden;\">\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("       <div class=\"toMail\">\n");
       out.write("       <font  >恭喜您！<span id=\"name\"></span></font><br/>\n");
       out.write("       <font >我们已经向您的邮箱  发送了一封激活邮件，请点击邮件中的链接完成激活！</font><br/>\n");
       out.write("                前往 <a id='emailId' href=\"#\" style='font-size:16px;'></a> 激活  <br/>\n");
       out.write("       </div>\n");
+<<<<<<< HEAD
       out.write("</div>\n");
+=======
+      out.write("   </div>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("   \n");
       out.write("   \n");
       out.write("   \n");
       out.write("   \n");
+<<<<<<< HEAD
+=======
+      out.write("             \t\n");
+      out.write("          </div>\n");
+      out.write("</div>            \n");
+      out.write("</div>\n");
+      out.write("      </div>\n");
+      out.write("    </div>\n");
+      out.write("  </div>\n");
+      out.write("</div>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("\n");
       out.write("<div class = \"modal fade\" id = \"contacts\" role = \"dialog\">\n");
       out.write("  <div class = \"modal-dialog\">\n");
@@ -842,7 +1133,11 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("         <div class=\"container-modal\">\n");
       out.write("            <form action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
+<<<<<<< HEAD
       out.write("/sendUsEmail\" method=\"post\" accept-charset=\"utf-8\" > \n");
+=======
+      out.write("/sendUsEmail\" method=\"post\" accept-charset=\"utf-8\" class=\"form\" role=\"form\"> \n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("              <div class=\"row\">\n");
       out.write("                        <div class=\"col-xs-12 col-md-12\">\n");
       out.write("                            <input type=\"text\" required=\"\"  name=\"fromEmail\" value=\"\" class=\"form-control input-lg\" placeholder=\"From\" />                        </div>\n");
@@ -873,6 +1168,7 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write("<!-- /footer -->\n");
       out.write("\n");
       out.write("  <!-- attach JavaScripts -->\n");
+<<<<<<< HEAD
       out.write("  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n");
       out.write("    <script src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root }", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -888,6 +1184,17 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root }", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/js/newhomepage/scrolling-nav.js\"></script>\n");
       out.write("\n");
+=======
+      out.write("  <script src=\"static/js/newhomepage/main.js\"></script>\n");
+      out.write("  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n");
+      out.write("    <script src=\"static/js/newhomepage/bootstrap.min.js\"></script>\n");
+      out.write("    <script src=\"static/js/newhomepage/docs.min.js\"></script>\n");
+      out.write("    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n");
+      out.write("  \n");
+      out.write("    <!-- Scrolling Nav JavaScript -->\n");
+      out.write("    <script src=\"static/js/newhomepage/jquery.easing.min.js\"></script>\n");
+      out.write("    <script src=\"static/js/newhomepage/scrolling-nav.js\"></script>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
       out.write("\n");
       out.write("  <script>\n");
       out.write("    $('.carousel').carousel({\n");
@@ -1073,17 +1380,25 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         out.write("\n");
         out.write("\t\t\t\t   <li>\n");
         out.write("               \n");
+<<<<<<< HEAD
         out.write("\t\t\t\t  <a class=\"btn btn-success\" role=\"button\" href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("\\view\\newhomepage\\login.jsp\" style=\"color:white; padding:15px; margin-right:10px;\">Login</a>\n");
+=======
+        out.write("\t\t\t\t  <a class=\"btn btn-success\" role=\"button\" href=\"view\\newhomepage\\login.jsp\" style=\"color:white; padding:15px; margin-right:10px;\">Login</a>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
         out.write("                 \n");
         out.write("\t\t\t\t  \n");
         out.write("\t\t\t\t   \n");
         out.write("\t\t\t\t  </li>\n");
         out.write("\t\t\t\t  <li>\n");
+<<<<<<< HEAD
         out.write("                   <a class=\"btn btn-primary\" href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${pageContext.request.contextPath }", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("\\view\\newhomepage\\index.jsp#signup\" role=\"button\" data-toggle=\"modal\" style=\"color:white; padding:15px; margin-right:10px;\">Sign up today</a>\n");
+=======
+        out.write("                   <a class=\"btn btn-primary\" href=\"#signup\" role=\"button\" data-toggle=\"modal\" style=\"color:white; padding:15px; margin-right:10px;\">Sign up today</a>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
         out.write("                  </li>\n");
         out.write("\t\t\t\t   ");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
@@ -1124,9 +1439,13 @@ if(language == null || "".equals(language) || "pleaseSelect".equals(language))
         out.write("\t\t\t\t   \n");
         out.write("\t\t\t\t  </li>\n");
         out.write("\t\t\t\t  <li>\n");
+<<<<<<< HEAD
         out.write("                   <a class=\"btn btn-primary2\" href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${root}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/pageJump\" role=\"button\" style=\"color:white; padding:15px; margin-right:10px;\">Go to database</a>\n");
+=======
+        out.write("                   <a class=\"btn btn-primary2\" href=\"view/chinese/menu/country.jsp\" role=\"button\" style=\"color:white; padding:15px; margin-right:10px;\">Go to database</a>\n");
+>>>>>>> d9fcebcada19a49d5afd195fa831748e9516c9e4
         out.write("                  </li>\n");
         out.write("\t\t\t\t \n");
         out.write("\t\t\t\t  ");
